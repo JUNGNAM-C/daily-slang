@@ -102,8 +102,10 @@ def clean_opposites(items, foreign=False, allowed=None):
 
 
 def past_rules(lang_label, year):
-    return (f"- past: 지금 고른 단어와 같은 의미로 10년 전({year - 10}년경), 20년 전({year - 20}년경), 30년 전({year - 30}년경)에 {lang_label}에서 쓰이던 말을 시기마다 최대 2개 찾아 넣으세요. "
-            "해당 시기에 쓰였다는 것이 출처에서 실제로 확인된 말만 넣고, 확인되지 않으면 그 시기는 비우세요. 억지로 채우지 마세요. 각 항목에 years(10|20|30), word, meaning(한 문장), source(https)를 넣으세요.")
+    return (f"- past: 지금 고른 단어와 10년 전({year - 10}년경), 20년 전({year - 20}년경), 30년 전({year - 30}년경)에 쓰이던 {lang_label} 말을 시기마다 최대 2개 찾아 넣으세요. "
+            "뜻이 같은 말뿐 아니라, 같은 상황에서 같은 역할로 쓰이던 말도 넣으세요(예: 놀람·당황·짜증·감탄 같은 반응 표현, 같은 방식으로 말을 줄이거나 비틀어 만든 말, 외국어에서 들어와 쓰이던 표현 포함). "
+            "각 항목의 meaning에는 그 말의 뜻과, 지금 단어와 어떤 점이 비슷한지를 한 문장으로 쓰세요. "
+            "해당 시기에 쓰였다는 것이 출처에서 실제로 확인된 말만 넣고, 확인되지 않으면 그 시기는 비우세요. 억지로 채우지 마세요. 각 항목에 years(10|20|30), word, meaning, source(https)를 넣으세요.")
 
 
 def opposite_rules(lang_label):

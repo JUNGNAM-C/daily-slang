@@ -1,0 +1,64 @@
+{
+  "updated": "2026-10-16",
+  "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
+  "words": [
+    {
+      "lang": "en",
+      "word": "brain rot",
+      "pron_ko": "브레인 롯",
+      "meaning": "자극적이고 질 낮은 온라인 콘텐츠를 지나치게 소비해서 정신이나 사고력이 무뎌지는 상태, 또는 그런 콘텐츠를 가리키는 말이에요.",
+      "origin": "2024년 옥스퍼드 대학 출판부가 올해의 단어로 뽑았어요. 말 자체는 오래전부터 있었지만 온라인에서 자조하는 말로 크게 퍼졌어요.",
+      "example": "I scrolled for three hours straight. My brain rot is real.",
+      "example_ko": "세 시간 내내 스크롤만 했어. 나 진짜 브레인 롯이야.",
+      "category": "SNS 표현",
+      "source": "https://www.axios.com/2024/12/02/brain-rot-meaning-word-of-the-year"
+    },
+    {
+      "lang": "en",
+      "word": "rizz",
+      "pron_ko": "리즈",
+      "meaning": "이성이나 사람을 끌어당기는 매력, 또는 능숙한 말솜씨를 뜻해요.",
+      "origin": "charisma(카리스마)의 가운데 부분을 따서 줄인 말로, 2023년 옥스퍼드 올해의 단어로 선정됐어요.",
+      "example": "He has serious rizz. Everyone wants to talk to him.",
+      "example_ko": "걔는 리즈가 대단해. 다들 걔랑 얘기하고 싶어 해.",
+      "category": "줄임말",
+      "source": "https://thenewdaily.com.au/news/world/2023/12/05/rizz-word-of-the-year-oxford"
+    },
+    {
+      "lang": "zh",
+      "word": "躺平",
+      "reading": "tǎng píng",
+      "pron_ko": "탕핑",
+      "meaning": "과도한 경쟁과 성과 압박을 거부하고 최소한만 하며 느긋하게 사는 태도를 뜻해요.",
+      "origin": "글자 그대로 '누워서 평평해지다'라는 뜻으로, 2021년 중국 온라인에서 퍼져 청년 세대의 삶의 태도를 가리키는 말이 됐어요.",
+      "example": "我决定躺平了，不再加班。",
+      "example_ko": "나는 탕핑하기로 했어, 더는 야근 안 해.",
+      "category": "사회 현상",
+      "source": "https://en.wikipedia.org/wiki/Tang_ping"
+    },
+    {
+      "lang": "zh",
+      "word": "内卷",
+      "reading": "nèi juǎn",
+      "pron_ko": "네이쥐안",
+      "meaning": "의미 없는 과열 경쟁에 모두가 휘말려 서로 지치기만 하는 현상을 가리켜요.",
+      "origin": "사회학·인류학의 '내향적 발전(involution)' 개념에서 온 말로, 중국 온라인에서 치열한 경쟁 문화를 비꼬는 말로 널리 쓰여요.",
+      "example": "大家都在加班，真是太内卷了。",
+      "example_ko": "다들 야근하네, 정말 너무 네이쥐안이야.",
+      "category": "사회 현상",
+      "source": "https://en.wikipedia.org/wiki/Neijuan"
+    },
+    {
+      "lang": "ja",
+      "word": "推し活",
+      "reading": "おしかつ",
+      "pron_ko": "오시카쓰",
+      "meaning": "좋아하는 아이돌이나 캐릭터, 배우 같은 '최애(推し)'를 응원하는 활동 전반을 가리키는 말이에요.",
+      "origin": "'推し(최애)'와 '活(활동)'을 합친 말이에요. 2021년 일본 10대 유행어 조사에서 핵심 키워드로 꼽힐 만큼 널리 퍼졌어요.",
+      "example": "週末は推し活でライブに行くんだ。",
+      "example_ko": "주말엔 오시카쓰로 라이브 보러 가.",
+      "category": "SNS 표현",
+      "source": "https://www.itmedia.co.jp/business/spv/2112/26/news009_3.html"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 // 앱 껍데기는 캐시해 두고, 단어 목록(words.json)은 항상 네트워크를 먼저 시도합니다.
 // 앱 파일을 고쳤다면 아래 VERSION 숫자를 올려야 기존 사용자에게 반영됩니다.
-const VERSION = 'v10';
+const VERSION = 'v11';
 const CACHE = 'shinjoeo-' + VERSION;
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon.svg', './assets/title-bg.png', './icons/icon-192.png', './icons/icon-512.png', './fonts/Mona12-Bold.woff2', './fonts/Mona10-Bold.woff2', './fonts/MonaS10x12.woff2', './fonts/MonaS8x12.woff2'];
 
@@ -22,8 +22,8 @@ self.addEventListener('fetch', (e) => {
   const url = new URL(req.url);
   if (url.origin !== location.origin) return;
 
-  // 단어 목록: 네트워크 우선, 실패하면 마지막으로 저장된 것을 사용
-  if (url.pathname.endsWith('/words.json')) {
+  // 단어 목록(한국어·외국어): 네트워크 우선, 실패하면 마지막으로 저장된 것을 사용
+  if (url.pathname.endsWith('/words.json') || url.pathname.endsWith('/foreign.json')) {
     e.respondWith(
       fetch(req)
         .then((res) => {

@@ -1,0 +1,37 @@
+name: 오늘의 외국어 신조어 자동 갱신
+
+on:
+  schedule:
+    # 매일 한국 시간 오전 6시 30분 (UTC 21:30, 전날)
+    - cron: "30 21 * * *"
+  workflow_dispatch: {}   # Actions 탭에서 수동 실행도 가능
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 패키지 설치
+        run: pip install -r requirements.txt
+
+      - name: 오늘의 외국어 신조어 생성
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python generate_foreign.py
+
+      - name: 변경 사항 저장
+        run: |
+          git config user.name "slang-bot"
+          git config user.email "slang-bot@users.noreply.github.com"
+          git add foreign.json
+          git diff --staged --quiet || git commit -m "오늘의 외국어 신조어 추가"
+          git pull --rebase origin main
+          git push

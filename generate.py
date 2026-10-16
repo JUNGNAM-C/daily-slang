@@ -49,26 +49,11 @@ PROMPT = """오늘은 {today}입니다. 웹 검색을 사용해서 지금 한국
 - 선택한 단어와 관련된 단어도 최대 3개 찾아 related에 넣으세요. 종류는 '반대 뜻'(반대말), '비슷한 뜻'(같은 뜻의 다른 말), '비슷한 구성'(같은 방식으로 만들어진 말) 중 하나입니다.
 - related 항목은 출처에서 실제로 확인된 것만 넣으세요. 확인되지 않으면 빈 배열 []로 두세요. 억지로 채우지 마세요.
 - related의 각 항목에도 직접 쓴 한 문장 뜻풀이(meaning)와 https://로 시작하는 출처(source)를 넣으세요.
-{foreign_rules}
 
 이미 소개한 단어: {known}
 
 마지막에는 설명 없이, 아래 형식의 JSON 객체 하나만 출력하세요.
-{{"word": "...", "meaning": "한두 문장", "example": "예문 한 줄", "origin": "유래 한두 문장", "category": "줄임말|감탄사|감성 리액션|SNS 표현|사람 유형|커뮤니티 중 하나", "note": "없으면 빈 문자열", "source": "https://로 시작하는 출처 주소", "related": [{{"type": "반대 뜻|비슷한 뜻|비슷한 구성", "word": "...", "meaning": "한 문장", "source": "https://..."}}], "foreign": [{{"lang": "en|ja|zh", "word": "원어 표기", "reading": "일본어는 읽는 법, 중국어는 병음, 영어는 빈 문자열", "meaning": "한국어 한 문장", "diff": "한국어 한 문장: 비슷한 점과 다른 점", "source": "https://..."}}]}}
-"""
-
-FOREIGN_RULES = """- 선택한 단어와 뜻이나 쓰임이 가까운 외국어 신조어도 찾아 foreign에 넣으세요. 영어(en), 일본어(ja), 중국어(zh) 각각 최대 1개입니다.
-- foreign 항목은 출처에서 실제로 확인된 것만 넣고, 확인되지 않은 언어는 빼세요. 하나도 없으면 빈 배열 []로 두세요. 억지로 채우지 마세요.
-- foreign의 diff에는 한국어 단어와 비슷한 점과 다른 점을 한국어 한 문장으로 쓰세요. 비속어·혐오 표현은 넣지 마세요."""
-
-BACKFILL_PROMPT = """한국 신조어 '{word}'(뜻: {meaning})와 뜻이나 쓰임이 가까운 외국어 신조어를 웹 검색으로 찾아 주세요.
-
-규칙
-{foreign_rules}
-- word는 원어 표기, reading은 일본어면 읽는 법, 중국어면 병음, 영어면 빈 문자열, meaning과 diff는 한국어 한 문장, source는 https://로 시작하는 출처입니다.
-
-마지막에는 설명 없이, 아래 형식의 JSON 배열 하나만 출력하세요.
-[{{"lang": "en|ja|zh", "word": "...", "reading": "...", "meaning": "...", "diff": "...", "source": "https://..."}}]
+{{"word": "...", "meaning": "한두 문장", "example": "예문 한 줄", "origin": "유래 한두 문장", "category": "줄임말|감탄사|감성 리액션|SNS 표현|사람 유형|커뮤니티 중 하나", "note": "없으면 빈 문자열", "source": "https://로 시작하는 출처 주소", "related": [{{"type": "반대 뜻|비슷한 뜻|비슷한 구성", "word": "...", "meaning": "한 문장", "source": "https://..."}}]}}
 """
 
 
@@ -82,14 +67,6 @@ def extract_json(text):
     m = re.search(r"\{.*\}", text, re.S)
     if not m:
         raise ValueError("응답에서 JSON을 찾지 못했습니다:\n" + text[:500])
-    return json.loads(m.group(0))
-
-
-def extract_json_list(text):
-    """응답 글에서 JSON 배열 하나를 꺼냅니다. (빈 배열도 허용)"""
-    m = re.search(r"\[.*\]", text, re.S)
-    if not m:
-        raise ValueError("응답에서 JSON 배열을 찾지 못했습니다:\n" + text[:500])
     return json.loads(m.group(0))
 
 
@@ -118,33 +95,6 @@ def clean(entry):
         related.append({"type": rtype, "word": word, "meaning": meaning, "source": src})
     if related:
         out["related"] = related[:3]
-    foreign = clean_foreign(entry.get("foreign"))
-    if foreign:
-        out["foreign"] = foreign
-    return out
-
-
-def clean_foreign(items):
-    """외국어 항목 정리: 언어마다 1개, 출처(https)가 없거나 불완전하면 버립니다."""
-    out, seen = [], set()
-    for f in items or []:
-        if not isinstance(f, dict):
-            continue
-        lang = str(f.get("lang", "")).strip().lower()
-        word = str(f.get("word", "")).strip()
-        meaning = str(f.get("meaning", "")).strip()
-        src = str(f.get("source", "")).strip()
-        if lang not in ("en", "ja", "zh") or lang in seen or not word or not meaning or not src.startswith("https://"):
-            continue
-        seen.add(lang)
-        item = {"lang": lang, "word": word, "meaning": meaning, "source": src}
-        reading = str(f.get("reading", "")).strip()
-        diff = str(f.get("diff", "")).strip()
-        if reading and reading != word:
-            item["reading"] = reading
-        if diff:
-            item["diff"] = diff
-        out.append(item)
     return out
 
 
@@ -160,9 +110,9 @@ def generate_one(client, today, words):
         try:
             resp = client.messages.create(
                 model=MODEL,
-                max_tokens=4000,
-                tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 8}],
-                messages=[{"role": "user", "content": PROMPT.format(today=today, known=known, foreign_rules=FOREIGN_RULES)}],
+                max_tokens=3000,
+                tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
+                messages=[{"role": "user", "content": PROMPT.format(today=today, known=known)}],
             )
             text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
             entry = clean(extract_json(text))
@@ -174,36 +124,6 @@ def generate_one(client, today, words):
             last_err = e
             print("    실패:", e)
     raise RuntimeError(f"3번 시도했지만 실패했습니다. 마지막 오류: {last_err}")
-
-
-BACKFILL_PER_RUN = 4  # 한 번 실행할 때 외국어 표현을 채워 주는 기존 단어 수 (오늘 단어 우선)
-
-
-def backfill_foreign(client, words, limit):
-    """foreign 항목이 아직 없는 단어에 외국어 표현을 채웁니다. 한 번 찾아본 단어는 foreign_checked로 표시해 다시 찾지 않습니다."""
-    todo = [w for w in words if "foreign_checked" not in w and "foreign" not in w]
-    todo.sort(key=lambda w: w.get("date") or "", reverse=True)  # 날짜가 붙은 최근 단어부터
-    done = 0
-    for w in todo[:limit]:
-        print(f"  외국어 표현 찾는 중: {w['word']}")
-        try:
-            resp = client.messages.create(
-                model=MODEL,
-                max_tokens=2500,
-                tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}],
-                messages=[{"role": "user", "content": BACKFILL_PROMPT.format(word=w["word"], meaning=w["meaning"], foreign_rules=FOREIGN_RULES)}],
-            )
-            text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
-            items = clean_foreign(extract_json_list(text))
-        except Exception as e:
-            print("    실패(다음에 다시 시도):", e)
-            continue
-        if items:
-            w["foreign"] = items
-        else:
-            w["foreign_checked"] = True  # 확인된 표현이 없으면 표시만 해 두고 다시 찾지 않습니다
-        done += 1
-    return done
 
 
 def save(data, words, today):
@@ -221,8 +141,6 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="파일을 수정하지 않고 결과만 출력")
     ap.add_argument("--force", action="store_true", help="오늘 단어가 이미 있어도 지우고 새로 만듦")
     ap.add_argument("--count", type=int, default=PER_DAY, help=f"하루에 만들 단어 수 (기본 {PER_DAY})")
-    ap.add_argument("--no-backfill", action="store_true", help="기존 단어의 외국어 표현 채우기를 건너뜀")
-    ap.add_argument("--backfill-limit", type=int, default=BACKFILL_PER_RUN, help=f"이번에 외국어 표현을 채울 단어 수 (기본 {BACKFILL_PER_RUN})")
     args = ap.parse_args()
 
     if not os.environ.get("ANTHROPIC_API_KEY"):
@@ -236,11 +154,13 @@ def main():
         words = [w for w in words if w.get("date") != today]
     have = [w for w in words if w.get("date") == today]
     need = args.count - len(have)
-    client = anthropic.Anthropic()
-    made = 0
     if need <= 0:
         print(f"오늘({today}) 단어가 이미 {len(have)}개 있습니다: {', '.join(w['word'] for w in have)}  (다시 만들려면 --force)")
-    for n in range(max(need, 0)):
+        return
+
+    client = anthropic.Anthropic()
+    made = 0
+    for n in range(need):
         print(f"\n[{len(have) + n + 1}/{args.count}번째 단어]")
         try:
             entry = generate_one(client, today, words)
@@ -255,16 +175,9 @@ def main():
             save(data, words, today)  # 하나 만들 때마다 바로 저장
             print(f"words.json에 저장했습니다. (총 {len(words)}개)")
 
-    if not args.no_backfill:
-        print("\n[외국어 표현 채우기]")
-        n = backfill_foreign(client, words, args.backfill_limit)
-        if n and not args.dry_run:
-            save(data, words, today)
-            print(f"{n}개 단어를 확인했고 words.json에 저장했습니다.")
-
     if args.dry_run:
         print("\n(--dry-run) words.json은 수정하지 않았습니다.")
-    if made == 0 and need > 0:
+    if made == 0:
         sys.exit("새 단어를 만들지 못했습니다.")
 
 

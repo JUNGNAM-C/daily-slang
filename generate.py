@@ -98,32 +98,15 @@ def clean(entry):
     return out
 
 
-def main():
-    ap = argparse.ArgumentParser(description="오늘의 신조어를 words.json에 추가합니다.")
-    ap.add_argument("--dry-run", action="store_true", help="파일을 수정하지 않고 결과만 출력")
-    ap.add_argument("--force", action="store_true", help="오늘 단어가 이미 있어도 새로 만듦")
-    args = ap.parse_args()
+PER_DAY = 2  # 하루에 만드는 단어 수 (앱의 B 버튼, A 버튼에 하나씩 연결됩니다)
 
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        sys.exit("ANTHROPIC_API_KEY 환경변수가 설정되어 있지 않습니다. README의 '2단계'를 따라 설정해 주세요.")
 
-    today = datetime.now(KST).strftime("%Y-%m-%d")
-    data = load_words()
-    words = data.get("words", [])
-
-    existing_today = [w for w in words if w.get("date") == today]
-    if existing_today and not args.force:
-        print(f"오늘({today}) 단어는 이미 있습니다: {existing_today[0]['word']}  (다시 만들려면 --force)")
-        return
-    if args.force:
-        words = [w for w in words if w.get("date") != today]
-
+def generate_one(client, today, words):
+    """웹 검색으로 새 단어 1개를 만들어 돌려줍니다. 3번까지 다시 시도합니다."""
     known = ", ".join(w["word"] for w in words)
-    client = anthropic.Anthropic()
-
     last_err = None
     for attempt in range(1, 4):
-        print(f"[{attempt}/3] 신조어를 검색하는 중… (1~2분 걸릴 수 있어요)")
+        print(f"  [{attempt}/3] 신조어를 검색하는 중… (1~2분 걸릴 수 있어요)")
         try:
             resp = client.messages.create(
                 model=MODEL,
@@ -135,22 +118,15 @@ def main():
             entry = clean(extract_json(text))
             if entry["word"] in {w["word"] for w in words}:
                 raise ValueError(f"이미 있는 단어가 다시 나왔습니다: {entry['word']}")
-            break
+            entry["date"] = today
+            return entry
         except Exception as e:  # 형식 오류나 중복이면 다시 시도
             last_err = e
-            print("  실패:", e)
-    else:
-        sys.exit(f"3번 시도했지만 실패했습니다. 마지막 오류: {last_err}")
+            print("    실패:", e)
+    raise RuntimeError(f"3번 시도했지만 실패했습니다. 마지막 오류: {last_err}")
 
-    entry["date"] = today
-    print("\n선정된 단어:")
-    print(json.dumps(entry, ensure_ascii=False, indent=2))
 
-    if args.dry_run:
-        print("\n(--dry-run) words.json은 수정하지 않았습니다.")
-        return
-
-    words.append(entry)
+def save(data, words, today):
     data["words"] = words
     data["updated"] = today
     tmp = WORDS_PATH.with_suffix(".json.tmp")
@@ -158,7 +134,51 @@ def main():
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
     tmp.replace(WORDS_PATH)
-    print(f"\nwords.json에 저장했습니다. (총 {len(words)}개)")
+
+
+def main():
+    ap = argparse.ArgumentParser(description="오늘의 신조어를 words.json에 추가합니다.")
+    ap.add_argument("--dry-run", action="store_true", help="파일을 수정하지 않고 결과만 출력")
+    ap.add_argument("--force", action="store_true", help="오늘 단어가 이미 있어도 지우고 새로 만듦")
+    ap.add_argument("--count", type=int, default=PER_DAY, help=f"하루에 만들 단어 수 (기본 {PER_DAY})")
+    args = ap.parse_args()
+
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        sys.exit("ANTHROPIC_API_KEY 환경변수가 설정되어 있지 않습니다. README의 '2단계'를 따라 설정해 주세요.")
+
+    today = datetime.now(KST).strftime("%Y-%m-%d")
+    data = load_words()
+    words = data.get("words", [])
+
+    if args.force:
+        words = [w for w in words if w.get("date") != today]
+    have = [w for w in words if w.get("date") == today]
+    need = args.count - len(have)
+    if need <= 0:
+        print(f"오늘({today}) 단어가 이미 {len(have)}개 있습니다: {', '.join(w['word'] for w in have)}  (다시 만들려면 --force)")
+        return
+
+    client = anthropic.Anthropic()
+    made = 0
+    for n in range(need):
+        print(f"\n[{len(have) + n + 1}/{args.count}번째 단어]")
+        try:
+            entry = generate_one(client, today, words)
+        except RuntimeError as e:
+            print(e)
+            break  # 이미 만든 단어는 그대로 저장하고 끝냅니다
+        words.append(entry)
+        made += 1
+        print("\n선정된 단어:")
+        print(json.dumps(entry, ensure_ascii=False, indent=2))
+        if not args.dry_run:
+            save(data, words, today)  # 하나 만들 때마다 바로 저장
+            print(f"words.json에 저장했습니다. (총 {len(words)}개)")
+
+    if args.dry_run:
+        print("\n(--dry-run) words.json은 수정하지 않았습니다.")
+    if made == 0:
+        sys.exit("새 단어를 만들지 못했습니다.")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#f4ecdc"/>
-  <rect x="0" y="0" width="512" height="40" fill="#d8432b"/>
-  <text x="256" y="360" text-anchor="middle" font-family="'Noto Serif KR','Nanum Myeongjo','Batang',serif" font-weight="900" font-size="300" fill="#1d1a16">新</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="72" fill="#bfbcb8"/><rect x="52" y="52" width="408" height="340" rx="20" fill="#575762"/><rect x="72" y="72" width="368" height="300" fill="#4a5b15"/><text x="256" y="300" text-anchor="middle" font-size="230" font-weight="900" fill="#c9d983" font-family="'Noto Sans KR',sans-serif">新</text><circle x="0" cx="340" cy="450" r="28" fill="#7f0946"/><circle cx="410" cy="436" r="28" fill="#7f0946"/></svg>

@@ -1,0 +1,9 @@
+Mona fonts (MonaS10x12, MonaS8x12, Mona10 Bold, Mona12 Bold)
+Copyright (c) 2025, Monad ABXY
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+The license is available with a FAQ at: https://openfontlicense.org
+
+The .woff2 files in this folder are subsets of the original fonts
+(Latin, punctuation, symbols, Hangul and fullwidth forms only), converted to WOFF2.
+No glyph outlines were changed.

@@ -46,11 +46,14 @@ PROMPT = """오늘은 {today}입니다. 웹 검색을 사용해서 지금 한국
 - 출처 문장을 그대로 베끼지 말고 직접 쓴 문장으로 설명하세요.
 - 뜻이 출처마다 갈리면 note에 그 사실을 적으세요.
 - example은 직접 지어낸 짧은 대화체 문장 한 줄로 쓰세요.
+- 선택한 단어와 관련된 단어도 최대 3개 찾아 related에 넣으세요. 종류는 '반대 뜻'(반대말), '비슷한 뜻'(같은 뜻의 다른 말), '비슷한 구성'(같은 방식으로 만들어진 말) 중 하나입니다.
+- related 항목은 출처에서 실제로 확인된 것만 넣으세요. 확인되지 않으면 빈 배열 []로 두세요. 억지로 채우지 마세요.
+- related의 각 항목에도 직접 쓴 한 문장 뜻풀이(meaning)와 https://로 시작하는 출처(source)를 넣으세요.
 
 이미 소개한 단어: {known}
 
 마지막에는 설명 없이, 아래 형식의 JSON 객체 하나만 출력하세요.
-{{"word": "...", "meaning": "한두 문장", "example": "예문 한 줄", "origin": "유래 한두 문장", "category": "줄임말|감탄사|감성 리액션|SNS 표현|사람 유형|커뮤니티 중 하나", "note": "없으면 빈 문자열", "source": "https://로 시작하는 출처 주소"}}
+{{"word": "...", "meaning": "한두 문장", "example": "예문 한 줄", "origin": "유래 한두 문장", "category": "줄임말|감탄사|감성 리액션|SNS 표현|사람 유형|커뮤니티 중 하나", "note": "없으면 빈 문자열", "source": "https://로 시작하는 출처 주소", "related": [{{"type": "반대 뜻|비슷한 뜻|비슷한 구성", "word": "...", "meaning": "한 문장", "source": "https://..."}}]}}
 """
 
 
@@ -78,6 +81,20 @@ def clean(entry):
         out["note"] = note
     if not out["source"].startswith("https://"):
         out["source"] = ""
+    allowed = {"반대 뜻", "비슷한 뜻", "비슷한 구성"}
+    related = []
+    for r in entry.get("related") or []:
+        if not isinstance(r, dict):
+            continue
+        word = str(r.get("word", "")).strip()
+        meaning = str(r.get("meaning", "")).strip()
+        src = str(r.get("source", "")).strip()
+        rtype = str(r.get("type", "")).strip()
+        if not word or not meaning or rtype not in allowed or not src.startswith("https://"):
+            continue  # 불완전하거나 출처 없는 항목은 버립니다
+        related.append({"type": rtype, "word": word, "meaning": meaning, "source": src})
+    if related:
+        out["related"] = related[:3]
     return out
 
 
@@ -110,7 +127,7 @@ def main():
         try:
             resp = client.messages.create(
                 model=MODEL,
-                max_tokens=2000,
+                max_tokens=3000,
                 tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
                 messages=[{"role": "user", "content": PROMPT.format(today=today, known=known)}],
             )

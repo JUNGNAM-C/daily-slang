@@ -82,6 +82,12 @@
     background: var(--bg); border-radius: 14px; padding: 12px 14px; border-left: 4px solid var(--accent);
   }
   .note { font-size: 13px; color: var(--muted); }
+  .related { display: grid; gap: 10px; }
+  .rel { background: var(--bg); border-radius: 14px; padding: 12px 14px; }
+  .rel-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .rel-word { font-size: 18px; }
+  .rel-meaning { margin: 6px 0 0; font-size: 14.5px; }
+  .rel-src { display: inline-block; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
   .actions { display: flex; gap: 10px; padding: 18px 26px 24px; }
   button, .btn {
     appearance: none; border: 0; cursor: pointer; font: inherit; font-weight: 700; font-size: 15px;
@@ -178,6 +184,25 @@
     }
     if (w.origin) secs.appendChild(section('어디서 왔을까', el('p', null, w.origin)));
     if (w.note) secs.appendChild(section('참고', el('p', 'note', w.note)));
+    if (w.related && w.related.length) {
+      var box = el('div', 'related');
+      w.related.forEach(function (r) {
+        if (!r || !r.word) return;
+        var item = el('div', 'rel');
+        var head = el('div', 'rel-head');
+        head.appendChild(el('span', 'chip', r.type || '관련'));
+        head.appendChild(el('strong', 'rel-word', r.word));
+        item.appendChild(head);
+        if (r.meaning) item.appendChild(el('p', 'rel-meaning', r.meaning));
+        if (r.source && /^https:\/\//.test(r.source)) {
+          var a = el('a', 'rel-src', '출처');
+          a.href = r.source; a.target = '_blank'; a.rel = 'noopener noreferrer';
+          item.appendChild(a);
+        }
+        box.appendChild(item);
+      });
+      if (box.childNodes.length) secs.appendChild(section('함께 알아두면 좋아요', box));
+    }
     card.appendChild(secs);
 
     var actions = el('div', 'actions');

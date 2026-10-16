@@ -51,9 +51,9 @@
     -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent;
     touch-action: manipulation; font-synthesis: none;
   }
-  #fit { width: calc(352px * var(--s, 1)); height: calc(592px * var(--s, 1)); }
+  #fit { width: calc(394px * var(--s, 1)); height: calc(634px * var(--s, 1)); }
   #device {
-    position: relative; width: 352px; height: 592px;
+    position: relative; width: 394px; height: 634px;
     transform: scale(var(--s, 1)); transform-origin: 0 0;
     background: var(--body); border-radius: 8px 8px 72px 12px;
     box-shadow: inset 2px 2px 0 var(--body-hi), inset -2px -3px 0 var(--body-lo), 0 0 0 1px #0004;
@@ -62,32 +62,32 @@
   .abs { position: absolute; }
 
   /* 상단 띠 */
-  #strip { left: 0; top: 0; width: 352px; height: 34px; background: var(--strip); border-radius: 8px 8px 0 0;
+  #strip { left: 0; top: 0; width: 394px; height: 34px; background: var(--strip); border-radius: 8px 8px 0 0;
            box-shadow: inset 0 -1px 0 var(--body-lo), inset 0 1px 0 var(--body-hi); }
   #strip i { position: absolute; top: 11px; left: 22px; width: 44px; height: 10px; border-radius: 5px; background: var(--body-lo);
              box-shadow: inset 0 1px 0 #0003; }
   #strip i::after { content: ""; position: absolute; top: 1px; left: 3px; width: 14px; height: 8px; border-radius: 4px; background: var(--body-hi); }
 
   /* 화면 테두리 */
-  #bezel { left: 53px; top: 53px; width: 252px; height: 255px; background: var(--bezel); border-radius: 8px 8px 36px 8px;
+  #bezel { left: 53px; top: 53px; width: 294px; height: 297px; background: var(--bezel); border-radius: 8px 8px 36px 8px;
            box-shadow: inset 0 1px 0 #7a7a86, inset 0 -1px 0 #3f3f49; }
   .stripe { position: absolute; height: 1px; }
   .stripe.p { background: var(--pink); } .stripe.n { background: var(--navy); }
-  #bz-text { position: absolute; left: 83px; top: 3px; width: 124px; text-align: center; font: 12px/14px 'MonaS8', monospace; color: #b8b8b6; white-space: nowrap; }
-  #led { position: absolute; left: 9px; top: 237px; width: 5px; height: 5px; border-radius: 50%; background: #3a0d24; box-shadow: 0 0 0 1px #0004; }
+  #bz-text { position: absolute; left: 85px; top: 3px; width: 124px; text-align: center; font: 12px/14px 'MonaS8', monospace; color: #b8b8b6; white-space: nowrap; }
+  #led { position: absolute; left: 9px; top: 279px; width: 5px; height: 5px; border-radius: 50%; background: #3a0d24; box-shadow: 0 0 0 1px #0004; }
   #led.on { background: #d41f6f; box-shadow: 0 0 3px 1px #d41f6f88; }
-  #led-t { position: absolute; left: 20px; top: 233px; font: 12px/12px 'MonaS8', monospace; color: #b8b8b6; }
+  #led-t { position: absolute; left: 20px; top: 275px; font: 12px/12px 'MonaS8', monospace; color: #b8b8b6; }
 
-  /* ── 게임 화면 (208×208) ── */
-  #screen { position: absolute; left: 22px; top: 23px; width: 208px; height: 208px; overflow: hidden;
+  /* ── 게임 화면 (250×250, 이전보다 1.2배) ── */
+  #screen { position: absolute; left: 22px; top: 23px; width: 250px; height: 250px; overflow: hidden;
             background: linear-gradient(var(--scr-a), var(--scr-b)); outline: 1px solid var(--ink);
             box-shadow: 0 0 0 3px #46464f, 0 0 0 4px #0006; color: var(--pale); }
-  #world { position: absolute; left: 0; top: 0; width: 624px; height: 624px; transform: translate(-208px, -208px); }
+  #world { position: absolute; left: 0; top: 0; width: 750px; height: 750px; transform: translate(-250px, -250px); }
   #world.anim { transition: transform .26s steps(9, end); }
-  .panel { position: absolute; width: 208px; height: 208px; }
-  .panel[data-p="c"] { left: 208px; top: 208px; } .panel[data-p="u"] { left: 208px; top: 0; }
-  .panel[data-p="d"] { left: 208px; top: 416px; } .panel[data-p="l"] { left: 0; top: 208px; }
-  .panel[data-p="r"] { left: 416px; top: 208px; }
+  .panel { position: absolute; width: 250px; height: 250px; }
+  .panel[data-p="c"] { left: 250px; top: 250px; } .panel[data-p="u"] { left: 250px; top: 0; }
+  .panel[data-p="d"] { left: 250px; top: 500px; } .panel[data-p="l"] { left: 0; top: 250px; }
+  .panel[data-p="r"] { left: 500px; top: 250px; }
   .pb { position: absolute; left: 8px; right: 8px; top: 21px; bottom: 6px; overflow: hidden; }
   .pb.foot { bottom: 20px; }
   .inner { will-change: transform; }
@@ -117,17 +117,16 @@
            background: var(--pale); border: 1px solid var(--ink); border-radius: 3px; padding: 1px 5px; box-shadow: inset 0 -1px 0 var(--mid), 1px 1px 0 var(--ink); }
 
   /* 시작 화면 */
-  #title { position: absolute; inset: 0; background: var(--scr-a); }
-  #title canvas { position: absolute; left: 0; top: 0; width: 208px; height: 208px; image-rendering: pixelated; }
-  #t1 { position: absolute; left: 7px; top: 7px; font: 24px/26px 'Mona12B', sans-serif; color: #eef6c4; text-shadow: 1px 1px 0 var(--ink), 2px 2px 0 var(--ink); }
-  #t2 { position: absolute; left: 8px; top: 66px; font: 12px/12px 'MonaS8', monospace; color: var(--pale); text-shadow: 1px 1px 0 var(--ink); }
-  #t3 { position: absolute; left: 0; right: 0; top: 173px; text-align: center; font: 12px/14px 'MonaS10', sans-serif; color: var(--pale); }
+  #title { position: absolute; inset: 0; background: var(--scr-a) url('assets/title-bg.png') 0 0 / 250px 250px no-repeat; image-rendering: pixelated; }
+  #t1 { position: absolute; left: 6px; top: 6px; background: #0b0c18b8; padding: 3px 6px 2px; font: 24px/26px 'Mona12B', sans-serif; color: #eef6c4; text-shadow: 1px 1px 0 var(--ink), 2px 2px 0 var(--ink); }
+  #t2 { position: absolute; left: 6px; top: 70px; background: #0b0c18b8; padding: 2px 5px; font: 12px/12px 'MonaS8', monospace; color: var(--pale); text-shadow: 1px 1px 0 var(--ink); }
+  #t3 { position: absolute; left: 0; right: 0; top: 218px; height: 22px; background: #0b0c18c8; text-align: center; font: 12px/22px 'MonaS10', sans-serif; color: var(--pale); }
 
   /* 라벨 */
-  #brand { left: 51px; top: 318px; font: 24px/26px 'Mona12B', sans-serif; color: var(--label); white-space: nowrap; transform: scale(.7); transform-origin: 0 0; }
+  #brand { left: 51px; top: 360px; font: 24px/26px 'Mona12B', sans-serif; color: var(--label); white-space: nowrap; transform: scale(.7); transform-origin: 0 0; }
 
   /* 십자키 */
-  #dpad { left: 52px; top: 375px; width: 76px; height: 76px; }
+  #dpad { left: 52px; top: 417px; width: 76px; height: 76px; }
   #dpad .shape { position: absolute; inset: 0; transition: transform .05s; }
   #dpad .shape::before, #dpad .shape::after { content: ""; position: absolute; background: var(--dpad); border-radius: 4px;
        box-shadow: inset 1px 1px 0 #2a2d3a, inset -1px -1px 0 #000; }
@@ -153,22 +152,34 @@
         box-shadow: 0 2px 0 #0005, inset -1px -2px 0 #0004; }
   .rb:active, .rb.press { transform: translateY(2px); box-shadow: 0 0 0 #0005, inset -1px -2px 0 #0004; }
   .rb:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-  #bB { left: 220px; top: 401px; } #bA { left: 269px; top: 378px; }
+  #bB { left: 262px; top: 443px; } #bA { left: 311px; top: 420px; }
   .rl { position: absolute; font: 10px/10px 'Mona10B', sans-serif; color: var(--label); }
 
-  /* 회색 버튼 (기능은 나중에) */
+  /* 회색 버튼: SHARE(카드 JPG 공유), MEMO(메모장) */
   .gb { position: absolute; width: 36px; height: 14px; border-radius: 7px; border: 0; padding: 0; cursor: pointer; transform: rotate(-25deg);
         background: var(--pill); box-shadow: inset 0 1px 0 #8d8c94, inset 0 -2px 0 #55545c, 0 1px 0 #0003; }
   .gb:active { transform: rotate(-25deg) translateY(1px); box-shadow: inset 0 1px 0 #55545c; }
-  #bSel { left: 119px; top: 478px; } #bSta { left: 170px; top: 478px; }
+  #bSel { left: 140px; top: 520px; } #bSta { left: 191px; top: 520px; }
   .gl { position: absolute; font: 12px/12px 'MonaS8', monospace; color: var(--label); transform: rotate(-25deg); white-space: nowrap; }
 
   /* 스피커 홈 */
-  #spk { left: 216px; top: 480px; width: 100px; height: 90px; }
+  #spk { left: 258px; top: 522px; width: 100px; height: 90px; }
   #spk i { position: absolute; top: 0; width: 5px; height: 46px; border-radius: 3px; background: var(--body-lo); transform: rotate(30deg);
            box-shadow: 1px 1px 0 var(--body-hi), inset 1px 1px 0 #0003; }
 
-  #note { margin: 10px 8px 0; max-width: 352px; text-align: center; font: 12px/16px 'MonaS10', 'Noto Sans KR', sans-serif; color: #9a9ba6; }
+  /* 메모장 */
+  #memo { position: absolute; inset: 0; display: none; z-index: 5; background: linear-gradient(var(--scr-a), var(--scr-b)); }
+  #memo.open { display: block; }
+  #memo .mh { position: absolute; left: 4px; right: 4px; top: 3px; height: 14px; }
+  #mtag { position: absolute; left: 0; top: 0; font: 10px/10px 'Mona10B', sans-serif; color: var(--ink); background: var(--pale); border: 1px solid var(--ink); border-radius: 3px; padding: 1px 5px; box-shadow: inset 0 -1px 0 var(--mid), 1px 1px 0 var(--ink); }
+  #mst { position: absolute; right: 2px; top: 2px; font: 12px/12px 'MonaS8', monospace; color: var(--mid); }
+  #mta { position: absolute; left: 6px; right: 6px; top: 24px; bottom: 6px; width: auto; height: auto; resize: none; margin: 0; padding: 5px 6px;
+         border: 1px solid var(--pale); border-radius: 3px; background: #0b0c1833; box-shadow: 2px 2px 0 var(--ink); color: #eef6c4;
+         font: 12px/16px 'MonaS10', 'Noto Sans KR', sans-serif; caret-color: var(--pale); outline: none; -webkit-user-select: text; user-select: text; }
+  #mta::placeholder { color: var(--mid); }
+  #toast { position: absolute; left: 10px; right: 10px; bottom: 8px; z-index: 6; display: none; text-align: center; font: 12px/14px 'MonaS10', 'Noto Sans KR', sans-serif;
+           color: var(--pale); background: #0b0c18; border: 1px solid var(--pale); border-radius: 3px; padding: 3px 4px; }
+  #note { margin: 10px 8px 0; max-width: 394px; text-align: center; font: 12px/16px 'MonaS10', 'Noto Sans KR', sans-serif; color: #9a9ba6; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   @media (prefers-reduced-motion: reduce) { #world.anim { transition: none; } .blink { animation: none; } }
 </style>
@@ -181,7 +192,7 @@
     <div id="bezel" class="abs">
       <span class="stripe p" style="left:12px;top:8px;width:66px"></span><span class="stripe n" style="left:12px;top:13px;width:66px"></span>
       <div id="bz-text">PIXEL SLANG DISPLAY</div>
-      <span class="stripe p" style="left:213px;top:8px;width:29px"></span><span class="stripe n" style="left:213px;top:13px;width:29px"></span>
+      <span class="stripe p" style="left:255px;top:8px;width:29px"></span><span class="stripe n" style="left:255px;top:13px;width:29px"></span>
       <div id="led"></div><div id="led-t">PWR</div>
 
       <div id="screen" role="img" aria-label="신조어 게임 화면">
@@ -190,8 +201,10 @@
           <div class="panel" data-p="l"></div><div class="panel" data-p="r"></div>
         </div>
         <div id="hud"><div id="hearts"></div><div id="label">뜻</div></div>
+        <div id="memo"><div class="mh"><div id="mtag">MEMO</div><div id="mst">자동 저장</div></div>
+          <textarea id="mta" maxlength="4000" spellcheck="false" placeholder="여기에 적으면 자동으로 저장돼요." aria-label="메모장"></textarea></div>
+        <div id="toast" role="status"></div>
         <div id="title">
-          <canvas id="scene" width="208" height="208"></canvas>
           <div id="t1">오늘의<br>신조어</div>
           <div id="t2"></div>
           <div id="t3" class="blink">B · A 버튼을 눌러요</div>
@@ -212,13 +225,13 @@
 
     <button class="rb" id="bB" aria-label="B 버튼: 오늘의 신조어 첫 번째"></button>
     <button class="rb" id="bA" aria-label="A 버튼: 오늘의 신조어 두 번째"></button>
-    <div class="rl" style="left:252px;top:445px">B</div>
-    <div class="rl" style="left:299px;top:423px">A</div>
+    <div class="rl" style="left:294px;top:487px">B</div>
+    <div class="rl" style="left:341px;top:465px">A</div>
 
-    <button class="gb" id="bSel" aria-label="SELECT (아직 기능 없음)"></button>
-    <button class="gb" id="bSta" aria-label="START (아직 기능 없음)"></button>
-    <div class="gl" style="left:121px;top:501px">SELECT</div>
-    <div class="gl" style="left:178px;top:495px">START</div>
+    <button class="gb" id="bSel" aria-label="SHARE: 오늘의 신조어 카드를 JPG로 공유"></button>
+    <button class="gb" id="bSta" aria-label="MEMO: 메모장 열기·닫기"></button>
+    <div class="gl" style="left:141px;top:543px">SHARE</div>
+    <div class="gl" style="left:201px;top:537px">MEMO</div>
 
     <div id="spk" class="abs"><i style="left:0"></i><i style="left:13px"></i><i style="left:26px"></i><i style="left:39px"></i><i style="left:52px"></i><i style="left:65px"></i></div>
   </div>
@@ -273,7 +286,7 @@
   var DIRKEY = { up: 'u', down: 'd', left: 'l', right: 'r' };
 
   function arrows(p, keys) {   // 갈 수 있는 방향 표시
-    var pos = { u: [100, 2], d: [100, 202], l: [2, 100], r: [202, 100] };
+    var pos = { u: [121, 2], d: [121, 244], l: [2, 121], r: [244, 121] };
     keys.forEach(function (k) { p.appendChild(sprite(ARR[k], PALE, 'blink', pos[k][0], pos[k][1])); });
   }
   function body(p, foot) { var b = el('div', 'pb' + (foot ? ' foot' : '')); var i = el('div', 'inner'); b.appendChild(i); p.appendChild(b); return i; }
@@ -338,18 +351,19 @@
   function setPos(k, animate) {
     st.pos = k; var xy = { c: [1, 1], u: [1, 0], d: [1, 2], l: [0, 1], r: [2, 1] }[k];
     world.classList.toggle('anim', !!animate);
-    world.style.transform = 'translate(' + (-208 * xy[0]) + 'px,' + (-208 * xy[1]) + 'px)';
+    world.style.transform = 'translate(' + (-250 * xy[0]) + 'px,' + (-250 * xy[1]) + 'px)';
     $('label').textContent = NAME[k];
     var p = panels[k]; $('sr').textContent = NAME[k] + ': ' + (p.innerText || p.textContent);
   }
   function pickWord(i) {
     if (!words[i]) return;
+    memoOpen(false);
     $('title').style.display = 'none'; $('hud').style.display = 'block'; $('led').classList.add('on');
     if (st.cur !== i) { st.cur = i; render(words[i]); hearts(); }
     setPos('c', false);
   }
   function go(dir) {
-    if (st.cur < 0) return; var k = DIRKEY[dir];
+    if (st.cur < 0 || memoEl.classList.contains('open')) return; var k = DIRKEY[dir];
     if (st.pos === 'c') setPos(k, true); else if (BACK[st.pos] === k) setPos('c', true);
   }
 
@@ -362,10 +376,98 @@
   });
   $('bB').addEventListener('click', function () { pickWord(0); });
   $('bA').addEventListener('click', function () { pickWord(1); });
-  // 회색 버튼: 모양만 있고 기능은 나중에
+  var memoEl = $('memo'), mta = $('mta'), mst = $('mst'), toastT;
+  function toast(m) { var t = $('toast'); t.textContent = m; t.style.display = 'block'; $('sr').textContent = m; clearTimeout(toastT); toastT = setTimeout(function () { t.style.display = 'none'; }, 2200); }
+
+  /* ── 메모장: 입력할 때마다 자동 저장 (이 기기 브라우저에 저장) ── */
+  var MK = 'shinjoeo-memo', saveT;
+  function memoLoad() { try { mta.value = localStorage.getItem(MK) || ''; } catch (e) {} }
+  function memoSave() { clearTimeout(saveT); try { localStorage.setItem(MK, mta.value); mst.textContent = '저장됨'; } catch (e) { mst.textContent = '저장 불가'; } }
+  mta.addEventListener('input', function () { mst.textContent = '저장 중…'; clearTimeout(saveT); saveT = setTimeout(memoSave, 350); });
+  mta.addEventListener('blur', memoSave);
+  window.addEventListener('pagehide', memoSave);
+  document.addEventListener('visibilitychange', function () { if (document.hidden) memoSave(); });
+  function memoOpen(on) {
+    if (on === memoEl.classList.contains('open')) return;
+    memoEl.classList.toggle('open', on);
+    if (on) { mst.textContent = '자동 저장'; try { mta.focus({ preventScroll: true }); } catch (e) {} } else { memoSave(); mta.blur(); }
+  }
+  $('bSta').addEventListener('click', function () { memoOpen(!memoEl.classList.contains('open')); });
+  memoLoad();
+
+  /* ── 공유: 지금 보는 신조어를 카드 그림(JPG)으로 만들어 다른 앱으로 보냅니다 ── */
+  function wrap(g, text, maxW) {
+    var lines = [], cur = '';
+    String(text || '').split('\n').forEach(function (para) {
+      cur = '';
+      para.split(' ').forEach(function (tok) {
+        var t = cur ? cur + ' ' + tok : tok;
+        if (g.measureText(t).width <= maxW) { cur = t; return; }
+        if (cur) { lines.push(cur); cur = ''; }
+        if (g.measureText(tok).width <= maxW) { cur = tok; return; }
+        tok.split('').forEach(function (ch) { if (g.measureText(cur + ch).width > maxW) { lines.push(cur); cur = ch; } else cur += ch; });
+      });
+      lines.push(cur);
+    });
+    return lines;
+  }
+  function cardCanvas(w) {
+    var W = 250, X = 14, IW = W - X * 2, K = 4, c = document.createElement('canvas'), g = c.getContext('2d');
+    c.width = W * K; c.height = 250 * K;
+    function setf(f) { g.font = f; g.textBaseline = 'top'; }
+    function layout() {
+      var y = 14, o = {};
+      if (w.category) { o.catY = y; y += 18; }
+      setf("24px Mona12B, 'Noto Sans KR', sans-serif"); o.word = wrap(g, w.word, IW); o.wordY = y; y += o.word.length * 28 + 6;
+      setf("12px MonaS10, 'Noto Sans KR', sans-serif"); o.mean = wrap(g, w.meaning, IW); o.meanY = y; y += o.mean.length * 16 + 12;
+      if (w.example) { o.ex = wrap(g, w.example, IW - 14); o.exY = y; o.exH = o.ex.length * 16 + 12; y += o.exH + 12; }
+      o.footY = y; o.H = Math.max(250, y + 26); return o;
+    }
+    var o = layout(), H = o.H; c.height = H * K; g = c.getContext('2d'); g.scale(K, K);
+    var bg = g.createLinearGradient(0, 0, 0, H); bg.addColorStop(0, '#425213'); bg.addColorStop(1, '#526417'); g.fillStyle = bg; g.fillRect(0, 0, W, H);
+    g.strokeStyle = '#8a9f3a'; g.lineWidth = 1; g.strokeRect(5.5, 5.5, W - 11, H - 11);
+    function text(arr, x, y, lh) { arr.forEach(function (t, i) { g.fillText(t, x, y + i * lh); }); }
+    if (w.category) {
+      setf("10px Mona10B, 'Noto Sans KR', sans-serif"); var cw = Math.ceil(g.measureText(w.category).width) + 10;
+      g.fillStyle = '#0b0c18'; g.fillRect(X, o.catY + 1, cw + 2, 15); g.fillStyle = PALE; g.fillRect(X + 1, o.catY + 2, cw, 13);
+      g.fillStyle = INK; g.fillText(w.category, X + 6, o.catY + 5);
+    }
+    setf("24px Mona12B, 'Noto Sans KR', sans-serif"); g.fillStyle = INK; text(o.word, X + 1, o.wordY + 1, 28); g.fillStyle = '#eef6c4'; text(o.word, X, o.wordY, 28);
+    setf("12px MonaS10, 'Noto Sans KR', sans-serif"); g.fillStyle = PALE; text(o.mean, X, o.meanY, 16);
+    if (w.example) {
+      g.fillStyle = INK; g.fillRect(X + 2, o.exY + 2, IW, o.exH); g.fillStyle = '#3a4a10'; g.fillRect(X, o.exY, IW, o.exH);
+      g.strokeStyle = PALE; g.strokeRect(X + .5, o.exY + .5, IW - 1, o.exH - 1);
+      setf("12px MonaS10, 'Noto Sans KR', sans-serif"); g.fillStyle = PALE; text(o.ex, X + 7, o.exY + 6, 16);
+    }
+    setf("12px MonaS8, monospace"); g.fillStyle = MID; g.fillText('오늘의 신조어 · ' + String(w.date || today).replace(/-/g, '.'), X, H - 24);
+    return c;
+  }
+  var sharing = false;
+  function shareCard() {
+    var w = words[st.cur >= 0 ? st.cur : 0];
+    if (!w) { toast('단어를 불러온 뒤에 눌러 주세요'); return; }
+    if (sharing) return; sharing = true;
+    var done = function () { sharing = false; };
+    try {
+      cardCanvas(w).toBlob(function (blob) {
+        if (!blob) { toast('카드를 만들지 못했어요'); return done(); }
+        var name = 'shinjoeo-' + (w.date || today).replace(/-/g, '') + '-' + w.word.replace(/[^0-9A-Za-z가-힣ㄱ-ㅎ]/g, '') + '.jpg';
+        var file; try { file = new File([blob], name, { type: 'image/jpeg' }); } catch (e) { file = null; }
+        if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+          navigator.share({ files: [file], title: '오늘의 신조어: ' + w.word }).then(function () { toast('공유했어요'); }, function (e) { if (!e || e.name !== 'AbortError') toast('공유하지 못했어요'); }).then(done);
+        } else {   // 공유를 지원하지 않는 브라우저: JPG 파일로 저장
+          var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000); toast('JPG로 저장했어요'); done();
+        }
+      }, 'image/jpeg', .92);
+    } catch (e) { toast('카드를 만들지 못했어요'); done(); }
+  }
+  $('bSel').addEventListener('click', shareCard);
   var KEYS = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right' };
   document.addEventListener('keydown', function (e) {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.target === mta) { if (e.key === 'Escape') memoOpen(false); return; }
+    if (e.key === 'Escape' && memoEl.classList.contains('open')) { memoOpen(false); return; }
     if (KEYS[e.key]) { e.preventDefault(); go(KEYS[e.key]); }
     else if (e.key === 'b' || e.key === 'B' || e.key === 'z' || e.key === 'Z') pickWord(0);
     else if (e.key === 'a' || e.key === 'A' || e.key === 'x' || e.key === 'X') pickWord(1);
@@ -373,43 +475,11 @@
 
   /* ── 크기 맞추기: 정수 배율이면 픽셀이 선명합니다 ── */
   function rescale() {
-    var w = window.innerWidth - 8, h = window.innerHeight - 50, s = Math.min(Math.floor(w / 352), Math.floor(h / 592));
-    if (s < 1) s = Math.min(1, w / 352, h / 592);
+    var w = window.innerWidth - 8, h = window.innerHeight - 50, s = Math.min(Math.floor(w / 394), Math.floor(h / 634));
+    if (s < 1) s = Math.min(1, w / 394, h / 634);
     document.documentElement.style.setProperty('--s', Math.max(.5, s));
   }
   window.addEventListener('resize', rescale); rescale();
-
-  /* ── 시작 화면 그림 (208×208 픽셀) ── */
-  function lerp(a, b, t) { return Math.round(a + (b - a) * t); }
-  function drawScene() {
-    var W = 208, GY = 160;   // GY: 땅이 시작하는 높이
-    var c = $('scene'), g = c.getContext('2d');
-    function R(x, y, w, h, col) { g.fillStyle = col; g.fillRect(x, y, w, h); }
-    for (var y = 0; y < GY; y += 4) { var t = y / GY; R(0, y, W, 4, 'rgb(' + lerp(66, 82, t) + ',' + lerp(82, 100, t) + ',' + lerp(19, 23, t) + ')'); }
-    // 해
-    var SX = 160, SY = 58;
-    g.fillStyle = MID; for (var yy = -17; yy <= 17; yy++) for (var xx = -17; xx <= 17; xx++) { var d = xx * xx + yy * yy; if (d < 289 && d >= 169 && (xx + yy) % 2 === 0) g.fillRect(SX + xx, SY + yy, 1, 1); }
-    g.fillStyle = PALE; for (yy = -13; yy <= 13; yy++) for (xx = -13; xx <= 13; xx++) if (xx * xx + yy * yy < 169) g.fillRect(SX + xx, SY + yy, 1, 1);
-    // 먼 건물
-    var B = [[0, 22, 62], [20, 18, 86], [38, 26, 52], [62, 16, 76], [78, 28, 58], [106, 20, 98], [126, 24, 48], [150, 18, 70], [168, 26, 84], [194, 14, 58]];
-    B.forEach(function (b, n) {
-      R(b[0], GY - b[2], b[1], b[2], n % 2 ? DEEP : '#394a10');
-      for (var wy = GY - b[2] + 5; wy < GY - 6; wy += 6) for (var wx = b[0] + 3; wx < b[0] + b[1] - 2; wx += 5) if ((wx * 7 + wy * 3 + n) % 5 < 2) R(wx, wy, 2, 2, PALE);
-    });
-    // 전봇대와 전선
-    [[84, 40], [178, 30]].forEach(function (p) { R(p[0], p[1], 2, GY - p[1], INK); R(p[0] - 6, p[1] + 6, 14, 2, INK); R(p[0] - 5, p[1] + 16, 12, 2, INK); [-6, 5].forEach(function (o) { R(p[0] + o, p[1] + 3, 2, 3, MID); R(p[0] + o, p[1] + 13, 2, 3, MID); }); });
-    for (var i = 0; i < 3; i++) for (var x = 85; x <= 179; x++) { var u = (x - 85) / 94; g.fillStyle = INK; g.fillRect(x, Math.round(46 + i * 10 + 10 * Math.sin(Math.PI * u)), 1, 1); }
-    // 땅과 벽돌
-    R(0, GY, W, 208 - GY, DEEP); R(0, GY, W, 2, INK);
-    for (var r = 0; r < 4; r++) { R(0, GY + 12 + r * 12, W, 1, INK); for (x = (r % 2) * 7; x < W; x += 14) R(x, GY + 2 + r * 12, 1, 10, INK); }
-    // 사람
-    var P = ['..XXX..', '.XXXXX.', '.XXXXX.', '..XXX..', '.XXXXXX', 'XXXXXXX', 'X.XXX.X', '..XXX..', '..X.X..', '..X.X..'];
-    P[4] = '.XXXXX.';
-    var s = document.createElement('canvas'); s.width = 7; s.height = 10; var sg = s.getContext('2d');
-    for (var j = 0; j < 10; j++) for (i = 0; i < 7; i++) if (P[j][i] === 'X') { sg.fillStyle = j < 2 ? INK : (j < 4 ? PALE : MID); sg.fillRect(i, j, 1, 1); }
-    g.drawImage(s, 40, GY - 10);
-  }
-  drawScene();
 
   /* ── 불러오기 ── */
   function start() {

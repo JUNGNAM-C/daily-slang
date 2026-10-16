@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>오늘의 신조어</title>
 <meta name="description" content="매일 새로운 신조어를 뜻·유래·예문·반대어·유사어와 함께 알려드립니다.">
 <meta name="theme-color" content="#2b2c36">
@@ -44,12 +44,12 @@
     --pale:   #c9d983;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--page); }
+  html, body { margin: 0; background: var(--page); height: 100%; overflow: hidden; overscroll-behavior: none; touch-action: none; }
   body {
     min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center;
     padding: max(10px, env(safe-area-inset-top)) 4px max(10px, env(safe-area-inset-bottom));
     -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation; font-synthesis: none;
+    font-synthesis: none;
   }
   #fit { width: calc(394px * var(--s, 1)); height: calc(634px * var(--s, 1)); }
   #device {
@@ -88,19 +88,21 @@
   .panel[data-p="c"] { left: 250px; top: 250px; } .panel[data-p="u"] { left: 250px; top: 0; }
   .panel[data-p="d"] { left: 250px; top: 500px; } .panel[data-p="l"] { left: 0; top: 250px; }
   .panel[data-p="r"] { left: 500px; top: 250px; }
-  .pb { position: absolute; left: 8px; right: 8px; top: 21px; bottom: 6px; overflow: hidden; }
+  .pb { position: absolute; left: 8px; right: 8px; top: 21px; bottom: 6px; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y;
+        -webkit-user-select: none; scrollbar-width: thin; scrollbar-color: var(--pale) transparent; }
+  .pb::-webkit-scrollbar { width: 4px; } .pb::-webkit-scrollbar-thumb { background: var(--pale); } .pb::-webkit-scrollbar-track { background: #0b0c1844; }
   .pb.foot { bottom: 20px; }
   .inner { will-change: transform; }
   .txt { margin: 0; font: 24px/28px 'MonaS10', 'Noto Sans KR', sans-serif; color: var(--pale); word-break: keep-all; overflow-wrap: anywhere; }
-  .pb.f8 .txt { font-family: 'MonaS8', 'MonaS10', sans-serif; line-height: 26px; }
-  .cat { display: inline-block; font: 10px/10px 'Mona10B', sans-serif; color: var(--ink); background: var(--pale); border: 1px solid var(--ink);
+    .cat { display: inline-block; font: 10px/10px 'Mona10B', sans-serif; color: var(--ink); background: var(--pale); border: 1px solid var(--ink);
          padding: 1px 4px; border-radius: 2px; box-shadow: inset 0 -1px 0 var(--mid); }
   .word { margin: 5px 0 6px; font: 36px/40px 'Mona12B', sans-serif; color: #eef6c4; text-shadow: 1px 1px 0 var(--ink); word-break: keep-all; overflow-wrap: anywhere; }
   .word.sm { font-size: 18px; line-height: 21px; margin: 7px 0 7px; }
   .bubble { border: 1px solid var(--pale); border-radius: 3px; padding: 5px 6px; background: #0b0c1822; box-shadow: 2px 2px 0 var(--ink); }
   .pfoot { position: absolute; left: 8px; right: 8px; bottom: 5px; font: 12px/12px 'MonaS8', monospace; color: var(--mid); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .rel + .rel { margin-top: 7px; }
-  .rel b { font: 18px/21px 'Mona12B', sans-serif; color: #eef6c4; text-shadow: 1px 1px 0 var(--ink); }
+  .rel b { font: 36px/40px 'Mona12B', sans-serif; word-break: keep-all; overflow-wrap: anywhere; color: #eef6c4; text-shadow: 1px 1px 0 var(--ink); }
+  .rel b.sm { font-size: 18px; line-height: 21px; }
   .rel .tg { margin-left: 4px; font: 10px/10px 'Mona10B', sans-serif; color: var(--ink); background: var(--mid); padding: 0 3px; border-radius: 2px; }
   .rel .txt { margin-top: 2px; }
   .empty { text-align: center; padding-top: 18px; }
@@ -169,6 +171,7 @@
            box-shadow: 1px 1px 0 var(--body-hi), inset 1px 1px 0 #0003; }
 
   /* 메모장 */
+  #mta { touch-action: pan-y; }
   #memo { position: absolute; inset: 0; display: none; z-index: 5; background: linear-gradient(var(--scr-a), var(--scr-b)); }
   #memo.open { display: block; }
   #memo .mh { position: absolute; left: 4px; right: 4px; top: 3px; height: 14px; }
@@ -301,7 +304,7 @@
     if (!items.length) {
       var e = el('div', 'empty'); e.appendChild(el('p', 'txt', emptyMsg)); inner.appendChild(e);
     } else items.forEach(function (r) {
-      var d = el('div', 'rel'); var h = el('div'); h.appendChild(el('b', null, r.word)); h.appendChild(el('span', 'tg', r.type));
+      var d = el('div', 'rel'); var h = el('div'); h.appendChild(el('b', r.word.length > 6 ? 'sm' : null, r.word)); h.appendChild(el('span', 'tg', r.type));
       d.appendChild(h); d.appendChild(el('p', 'txt', r.meaning || '')); inner.appendChild(d);
     });
     arrows(p, [back]);
@@ -328,21 +331,8 @@
     requestAnimationFrame(function () { Object.keys(panels).forEach(function (k) { fit(panels[k].querySelector('.pb')); }); });
   }
 
-  // 글자가 넘치면 좁은 글꼴로 바꾸고, 그래도 넘치면 천천히 자동 스크롤합니다.
-  function fit(b) {
-    if (!b) return; var inner = b.firstElementChild;
-    if (inner._a) { inner._a.cancel(); inner._a = null; }
-    b.classList.remove('f8'); inner.style.transform = '';
-    if (inner.scrollHeight <= b.clientHeight) return;
-    b.classList.add('f8');
-    var over = inner.scrollHeight - b.clientHeight; if (over <= 0) return;
-    inner._a = inner.animate([
-      { transform: 'translateY(0)' },
-      { transform: 'translateY(0)', offset: .18, easing: 'steps(' + over + ', end)' },
-      { transform: 'translateY(-' + over + 'px)', offset: .82 },
-      { transform: 'translateY(-' + over + 'px)' }
-    ], { duration: Math.max(5000, over * 260), iterations: Infinity });
-  }
+  // 긴 글은 자동으로 움직이지 않고, 화면 안에서 손가락·휠로 직접 넘겨 봅니다.
+  function fit(b) { if (b) b.scrollTop = 0; }
 
   /* ── 상태·조작 ── */
   var words = [], today = todayKST(), st = { cur: -1, pos: 'c' }, world = $('world');
@@ -372,6 +362,13 @@
     if (st.cur < 0 || memoEl.classList.contains('open')) return; var k = DIRKEY[dir];
     if (st.pos === 'c') setPos(k, true); else if (BACK[st.pos] === k) setPos('c', true);
   }
+
+  /* ── 확대·축소·끌어서 이동 막기 (화면 안 글 스크롤과 버튼만 허용) ── */
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (n) { document.addEventListener(n, function (e) { e.preventDefault(); }); });
+  document.addEventListener('touchmove', function (e) { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
+  document.addEventListener('wheel', function (e) { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
+  document.addEventListener('keydown', function (e) { if ((e.ctrlKey || e.metaKey) && ['+', '-', '=', '0', '_'].indexOf(e.key) >= 0) e.preventDefault(); });
+  document.addEventListener('contextmenu', function (e) { if (e.target !== mta) e.preventDefault(); });
 
   /* ── 입력: 화면 버튼 + 키보드 ── */
   Array.prototype.forEach.call(document.querySelectorAll('#dpad button'), function (b) {

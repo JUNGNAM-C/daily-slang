@@ -37,6 +37,7 @@ import slang_common as sc  # noqa: E402
 HERE = Path(__file__).resolve().parent
 WORDS_PATH = HERE / "words.json"
 MODEL = os.environ.get("SLANG_MODEL", "claude-sonnet-5-5")
+ENRICH_MODEL = os.environ.get("SLANG_ENRICH_MODEL", "claude-haiku-5-5")  # 기존 단어 채우기는 저렴한 모델
 KST = ZoneInfo("Asia/Seoul")
 
 PROMPT = """오늘은 {today}입니다. 웹 검색을 사용해서 지금 한국의 SNS(특히 X(트위터)와 인스타그램)·커뮤니티·뉴스에서 실제로 쓰이는 '새로운 신조어' 후보를 찾아 주세요.
@@ -187,7 +188,7 @@ def main():
 
     if not args.no_enrich:
         print("\n[10·20·30년 전 유사어·반대어 채우기]")
-        n = sc.enrich(client, MODEL, words, "한국어", False, args.enrich_limit, int(today[:4]))
+        n = sc.enrich(client, ENRICH_MODEL, words, "한국어", False, args.enrich_limit, int(today[:4]))
         if n and not args.dry_run:
             save(data, words, today)
             print(f"{n}개 단어를 확인했고 words.json에 저장했습니다.")

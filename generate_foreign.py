@@ -37,6 +37,7 @@ import slang_common as sc  # noqa: E402
 HERE = Path(__file__).resolve().parent
 PATH = HERE / "foreign.json"
 MODEL = os.environ.get("SLANG_MODEL", "claude-sonnet-5-5")
+ENRICH_MODEL = os.environ.get("SLANG_ENRICH_MODEL", "claude-haiku-5-5")  # 기존 단어 채우기는 저렴한 모델
 KST = ZoneInfo("Asia/Seoul")
 
 LANGS = {
@@ -184,7 +185,7 @@ def main():
             print(f"foreign.json에 저장했습니다. (총 {len(words)}개)")
     if not args.no_enrich:
         print("\n[10·20·30년 전 유사어·반대어 채우기]")
-        n = sc.enrich(client, MODEL, words, lambda w: LANGS[w["lang"]][0], True, args.enrich_limit, int(today[:4]))
+        n = sc.enrich(client, ENRICH_MODEL, words, lambda w: LANGS[w["lang"]][0], True, args.enrich_limit, int(today[:4]))
         if n and not args.dry_run:
             save(data, words, today)
             print(f"{n}개 단어를 확인했고 foreign.json에 저장했습니다.")

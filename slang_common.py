@@ -103,7 +103,7 @@ def clean_opposites(items, foreign=False, allowed=None):
 
 def past_rules(lang_label, year, only=None):
     """only=10/20/30이면 그 시기만, None이면 세 시기 모두."""
-    eras = [only] if only else [10, 20, 30]
+    eras = list(only) if only else [10, 20, 30]
     spans = ", ".join(f"{e}년 전({year - e}년경)" for e in eras)
     return (f"- past: 지금 고른 단어와 {spans}에 쓰이던 {lang_label} 말을 시기마다 최대 2개 찾아 넣으세요. "
             "정확히 그 해가 아니어도, 출처에 그 시기 전후 5년 안에 쓰였다고 나오면 됩니다. "
@@ -143,8 +143,10 @@ def enrich(client, model, words, lang_label, foreign, limit, today_year):
         label_l = lang_label(w) if callable(lang_label) else lang_label
         print(f"  유사어·반대어 찾는 중: {w['word']}")
         past, opp, failed = [], [], False
-        jobs = [(e, past_rules(label_l, today_year, e),
-                 '{"past": [{"years": %d, "word": "...", "meaning": "...", "source": "https://..."%s}]}' % (e, extra)) for e in (10, 20, 30)]
+        # 검색은 10년 / 20·30년 / 반대어 세 번으로 나눕니다 (30년 전은 출처가 드물어 20년 전과 묶음)
+        jobs = [(eras, past_rules(label_l, today_year, eras),
+                 '{"past": [{"years": %s, "word": "...", "meaning": "...", "source": "https://..."%s}]}' % ("|".join(map(str, eras)), extra))
+                for eras in ((10,), (20, 30))]
         if not any(r.get("type") == "반대 뜻" for r in w.get("related", [])):
             jobs.append(("opp", opposite_rules(label_l),
                          '{"opposite": [{"word": "...", "meaning": "...", "source": "https://..."%s}]}' % extra))
@@ -153,7 +155,7 @@ def enrich(client, model, words, lang_label, foreign, limit, today_year):
                 resp = client.messages.create(
                     model=model,
                     max_tokens=2500,
-                    tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}],
+                    tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
                     messages=[{"role": "user", "content": ENRICH_PROMPT.format(
                         lang_label=label_l, word=w["word"], meaning=w["meaning"], rules=rules, pron_rule=pron_rule, shape=shape)}],
                 )
@@ -167,7 +169,7 @@ def enrich(client, model, words, lang_label, foreign, limit, today_year):
             if key == "opp":
                 opp = clean_opposites(data.get("opposite"), foreign, allowed)
             else:
-                past += [x for x in clean_past(data.get("past"), foreign, allowed) if x["years"] == key]
+                past += [x for x in clean_past(data.get("past"), foreign, allowed) if x["years"] in key]
         if failed:
             continue  # 한 번이라도 실패한 단어는 enriched로 표시하지 않고 다음에 다시 시도합니다
         if past and "past" not in w:

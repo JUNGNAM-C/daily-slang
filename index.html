@@ -247,7 +247,7 @@
     <div class="rl" style="left:278px;top:429px">B</div>
     <div class="rl" style="left:327px;top:406px">A</div>
 
-    <button class="gb" id="bSel" aria-label="SHARE: 오늘의 신조어 카드를 JPG로 공유"></button>
+    <button class="gb" id="bSel" aria-label="SHARE: 오늘의 신조어 카드(메모장이 열려 있으면 메모)를 JPG로 공유"></button>
     <button class="gb" id="bSta" aria-label="MEMO: 메모장 열기·닫기"></button>
     <div class="rl" style="left:287px;top:531px">JP/CN</div><div class="rl" style="left:345px;top:508px">EN</div>
     <div class="gl" style="left:141px;top:543px">SHARE</div>
@@ -492,25 +492,47 @@
     setf("12px MonaS8, monospace"); g.fillStyle = MID; g.fillText('오늘의 신조어 · ' + String(w.date || today).replace(/-/g, '.'), X, H - 24);
     return c;
   }
+  // 메모 내용을 카드 그림으로 만듭니다 (글이 길면 카드가 세로로 길어집니다)
+  function memoCard(text) {
+    var W = 250, X = 14, IW = W - X * 2, c = document.createElement('canvas'), g = c.getContext('2d'), F = "12px MonaS10, 'Noto Sans KR', sans-serif";
+    g.font = F; var lines = wrap(g, text, IW), H = Math.max(250, 14 + 24 + lines.length * 16 + 40), K = H * 4 > 8000 ? 2 : 4;
+    c.width = W * K; c.height = H * K; g = c.getContext('2d'); g.scale(K, K); g.textBaseline = 'top';
+    var bg = g.createLinearGradient(0, 0, 0, H); bg.addColorStop(0, '#425213'); bg.addColorStop(1, '#526417'); g.fillStyle = bg; g.fillRect(0, 0, W, H);
+    g.strokeStyle = '#8a9f3a'; g.lineWidth = 1; g.strokeRect(5.5, 5.5, W - 11, H - 11);
+    g.font = "10px Mona10B, 'Noto Sans KR', sans-serif"; g.fillStyle = INK; g.fillRect(X, 15, 39, 15); g.fillStyle = PALE; g.fillRect(X + 1, 16, 37, 13); g.fillStyle = INK; g.fillText('MEMO', X + 7, 20);
+    g.font = F; g.fillStyle = '#eef6c4'; lines.forEach(function (t, i) { g.fillText(t, X, 40 + i * 16); });
+    g.font = "12px MonaS8, monospace"; g.fillStyle = MID; g.fillText('오늘의 신조어 · ' + today.replace(/-/g, '.'), X, H - 24);
+    return c;
+  }
   var sharing = false;
-  function shareCard() {
-    var w = words[st.cur >= 0 ? st.cur : 0];
-    if (!w) { toast('단어를 불러온 뒤에 눌러 주세요'); return; }
+  function shareCanvas(canvas, name, title) {
     if (sharing) return; sharing = true;
     var done = function () { sharing = false; };
     try {
-      cardCanvas(w).toBlob(function (blob) {
+      canvas.toBlob(function (blob) {
         if (!blob) { toast('카드를 만들지 못했어요'); return done(); }
-        var name = 'shinjoeo-' + (w.date || today).replace(/-/g, '') + '-' + w.word.replace(/[^0-9A-Za-z가-힣ㄱ-ㅎ]/g, '') + '.jpg';
         var file; try { file = new File([blob], name, { type: 'image/jpeg' }); } catch (e) { file = null; }
         if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
-          navigator.share({ files: [file], title: '오늘의 신조어: ' + w.word }).then(function () { toast('공유했어요'); }, function (e) { if (!e || e.name !== 'AbortError') toast('공유하지 못했어요'); }).then(done);
+          navigator.share({ files: [file], title: title }).then(function () { toast('공유했어요'); }, function (e) { if (!e || e.name !== 'AbortError') toast('공유하지 못했어요'); }).then(done);
         } else {   // 공유를 지원하지 않는 브라우저: JPG 파일로 저장
           var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
           setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000); toast('JPG로 저장했어요'); done();
         }
       }, 'image/jpeg', .92);
     } catch (e) { toast('카드를 만들지 못했어요'); done(); }
+  }
+  function shareCard() {
+    if (memoEl.classList.contains('open')) {   // 메모장이 열려 있으면 메모를 공유
+      var t = mta.value.trim();
+      if (!t) { toast('메모가 비어 있어요'); return; }
+      memoSave();
+      var n = new Date(), p2 = function (v) { return String(v).padStart(2, '0'); };
+      shareCanvas(memoCard(t), 'shinjoeo-memo-' + today.replace(/-/g, '') + '-' + p2(n.getHours()) + p2(n.getMinutes()) + '.jpg', '메모');
+      return;
+    }
+    var w = words[st.cur >= 0 ? st.cur : 0];
+    if (!w) { toast('단어를 불러온 뒤에 눌러 주세요'); return; }
+    shareCanvas(cardCanvas(w), 'shinjoeo-' + (w.date || today).replace(/-/g, '') + '-' + w.word.replace(/[^0-9A-Za-z가-힣ㄱ-ㅎ]/g, '') + '.jpg', '오늘의 신조어: ' + w.word);
   }
   $('bSel').addEventListener('click', shareCard);
   var KEYS = { ArrowUp: 'up', ArrowDown: 'down', ArrowLeft: 'left', ArrowRight: 'right' };

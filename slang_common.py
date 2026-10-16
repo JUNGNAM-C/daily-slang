@@ -5,6 +5,43 @@
 """
 import json
 import re
+from urllib.parse import urlparse
+
+
+def norm_url(u):
+    """주소 비교용: 앞뒤 공백·#조각·끝의 /를 없애고 주소 앞부분(도메인)은 소문자로."""
+    u = str(u or "").strip().split("#")[0].rstrip("/")
+    try:
+        p = urlparse(u)
+        return f"{p.scheme.lower()}://{p.netloc.lower()}{p.path}" + (f"?{p.query}" if p.query else "")
+    except Exception:
+        return u
+
+
+def search_urls(resp):
+    """이번 응답에서 AI가 웹 검색으로 실제로 받아 본 페이지 주소(검색 결과·인용)만 모읍니다.
+    출처로 적힌 주소가 이 목록에 없으면 AI가 지어낸 주소일 수 있으므로 버립니다."""
+    urls = set()
+    for b in getattr(resp, "content", []) or []:
+        t = getattr(b, "type", "")
+        if t == "web_search_tool_result":
+            c = getattr(b, "content", None)
+            if isinstance(c, list):
+                for r in c:
+                    u = getattr(r, "url", None)
+                    if u:
+                        urls.add(norm_url(u))
+        for c in getattr(b, "citations", None) or []:
+            u = getattr(c, "url", None)
+            if u:
+                urls.add(norm_url(u))
+    return urls
+
+
+def source_ok(src, allowed):
+    """출처는 https 주소이고, (allowed가 주어지면) 실제 검색에서 본 주소여야 합니다."""
+    src = str(src or "").strip()
+    return src.startswith("https://") and (allowed is None or norm_url(src) in allowed)
 
 
 def extract_json(text, kind="{"):
@@ -15,13 +52,13 @@ def extract_json(text, kind="{"):
     return json.loads(m.group(0))
 
 
-def _item(r, foreign):
+def _item(r, foreign, allowed=None):
     if not isinstance(r, dict):
         return None
     word = str(r.get("word", "")).strip()
     meaning = str(r.get("meaning", "")).strip()
     src = str(r.get("source", "")).strip()
-    if not word or not meaning or not src.startswith("https://"):
+    if not word or not meaning or not source_ok(src, allowed):
         return None
     out = {"word": word, "meaning": meaning, "source": src}
     if foreign:
@@ -35,7 +72,7 @@ def _item(r, foreign):
     return out
 
 
-def clean_past(items, foreign=False):
+def clean_past(items, foreign=False, allowed=None):
     """10·20·30년 전 유사어: 시기마다 최대 2개."""
     out, count = [], {10: 0, 20: 0, 30: 0}
     for r in items or []:
@@ -45,7 +82,7 @@ def clean_past(items, foreign=False):
             continue
         if years not in count or count[years] >= 2:
             continue
-        it = _item(r, foreign)
+        it = _item(r, foreign, allowed)
         if it:
             it["years"] = years
             out.append(it)
@@ -54,10 +91,10 @@ def clean_past(items, foreign=False):
     return out
 
 
-def clean_opposites(items, foreign=False):
+def clean_opposites(items, foreign=False, allowed=None):
     out = []
     for r in items or []:
-        it = _item(r, foreign)
+        it = _item(r, foreign, allowed)
         if it:
             it["type"] = "반대 뜻"
             out.append(it)
@@ -79,6 +116,7 @@ ENRICH_PROMPT = """{lang_label} 신조어 '{word}'(뜻: {meaning})에 대해 웹
 {past_rules}
 {opp_rules}
 {pron_rule}
+- 출처(source) 주소는 웹 검색 결과에 실제로 나온 페이지 주소만 쓰세요. 주소를 짐작하거나 지어내면 그 항목은 버려집니다.
 - 설명은 출처 문장을 베끼지 말고 직접 쓴 한국어 문장으로 쓰세요. 비속어·혐오 표현은 넣지 마세요.
 
 마지막에는 설명 없이 아래 형식의 JSON 객체 하나만 출력하세요. 없는 항목은 빈 배열입니다.
@@ -110,8 +148,9 @@ def enrich(client, model, words, lang_label, foreign, limit, today_year, label=l
         except Exception as e:
             print("    실패(다음에 다시 시도):", e)
             continue
-        past = clean_past(data.get("past"), foreign)
-        opp = clean_opposites(data.get("opposite"), foreign)
+        allowed = search_urls(resp)
+        past = clean_past(data.get("past"), foreign, allowed)
+        opp = clean_opposites(data.get("opposite"), foreign, allowed)
         if past and "past" not in w:
             w["past"] = past
         if opp and not any(r.get("type") == "반대 뜻" for r in w.get("related", [])):

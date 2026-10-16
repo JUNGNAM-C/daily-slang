@@ -46,6 +46,7 @@ PROMPT = """오늘은 {today}입니다. 웹 검색을 사용해서 지금 한국
 - 최근 몇 달 안에 퍼진 말을 우선하고, 오래된 유행어(예: 갓생, 중꺾마)는 피하세요.
 - 신뢰할 만한 출처(뉴스, 국립국어원, 나무위키 등)에서 뜻이 확인되는 단어만 고르세요.
 - 비속어·혐오 표현·특정 집단 비하 표현은 고르지 마세요.
+- 출처(source) 주소는 웹 검색 결과에 실제로 나온 페이지 주소만 쓰세요. 주소를 짐작하거나 지어내면 그 항목은 버려집니다.
 - 출처 문장을 그대로 베끼지 말고 직접 쓴 문장으로 설명하세요.
 - 뜻이 출처마다 갈리면 note에 그 사실을 적으세요.
 - example은 직접 지어낸 짧은 대화체 문장 한 줄로 쓰세요.
@@ -74,7 +75,7 @@ def extract_json(text):
     return json.loads(m.group(0))
 
 
-def clean(entry):
+def clean(entry, allowed=None):
     need = ["word", "meaning", "example", "origin", "category", "source"]
     for k in need:
         if not str(entry.get(k, "")).strip():
@@ -83,9 +84,9 @@ def clean(entry):
     note = str(entry.get("note", "")).strip()
     if note:
         out["note"] = note
-    if not out["source"].startswith("https://"):
-        out["source"] = ""
-    allowed = {"반대 뜻", "비슷한 뜻", "비슷한 구성"}
+    if not sc.source_ok(out["source"], allowed):
+        raise ValueError("출처가 없거나, 실제 검색에서 확인되지 않은 주소입니다: " + out["source"])
+    allowed_types = {"반대 뜻", "비슷한 뜻", "비슷한 구성"}
     related = []
     for r in entry.get("related") or []:
         if not isinstance(r, dict):
@@ -94,12 +95,12 @@ def clean(entry):
         meaning = str(r.get("meaning", "")).strip()
         src = str(r.get("source", "")).strip()
         rtype = str(r.get("type", "")).strip()
-        if not word or not meaning or rtype not in allowed or not src.startswith("https://"):
+        if not word or not meaning or rtype not in allowed_types or not sc.source_ok(src, allowed):
             continue  # 불완전하거나 출처 없는 항목은 버립니다
         related.append({"type": rtype, "word": word, "meaning": meaning, "source": src})
     if related:
         out["related"] = related[:3]
-    past = sc.clean_past(entry.get("past"))
+    past = sc.clean_past(entry.get("past"), False, allowed)
     if past:
         out["past"] = past
     out["enriched"] = True  # 생성할 때 이미 함께 찾았으므로 나중에 다시 채우지 않습니다
@@ -123,7 +124,7 @@ def generate_one(client, today, words):
                 messages=[{"role": "user", "content": PROMPT.format(today=today, known=known, past_rules=sc.past_rules('한국어', int(today[:4])))}],
             )
             text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
-            entry = clean(extract_json(text))
+            entry = clean(extract_json(text), sc.search_urls(resp))
             if entry["word"] in {w["word"] for w in words}:
                 raise ValueError(f"이미 있는 단어가 다시 나왔습니다: {entry['word']}")
             entry["date"] = today

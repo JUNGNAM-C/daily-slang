@@ -51,6 +51,7 @@ PROMPT = """오늘은 {today}입니다. 웹 검색을 사용해서 {where}에서
 - 아래 '이미 소개한 단어'에 있는 단어는 고르지 마세요.
 - 최근 몇 년 안에 퍼진 말을 우선하고, 신뢰할 만한 출처(뉴스, 사전, 위키백과 등)에서 뜻이 확인되는 단어만 고르세요.
 - 비속어·혐오 표현·특정 집단 비하 표현은 고르지 마세요.
+- 출처(source) 주소는 웹 검색 결과에 실제로 나온 페이지 주소만 쓰세요. 주소를 짐작하거나 지어내면 그 항목은 버려집니다.
 - 출처 문장을 그대로 베끼지 말고 직접 쓴 한국어 문장으로 설명하세요.
 - pron_ko는 원어 발음을 한글로 적은 것입니다. 반드시 한글로만 쓰세요. {pron_hint}
 - {reading_hint}
@@ -81,7 +82,7 @@ def extract_json(text):
     return json.loads(m.group(0))
 
 
-def clean(entry, lang):
+def clean(entry, lang, allowed=None):
     need = ["word", "pron_ko", "meaning", "origin", "example", "example_ko", "source"]
     for k in need:
         if not str(entry.get(k, "")).strip():
@@ -90,16 +91,16 @@ def clean(entry, lang):
     out.update({k: str(entry[k]).strip() for k in need})
     if not re.search(r"[가-힣]", out["pron_ko"]):
         raise ValueError(f"pron_ko가 한글이 아닙니다: {out['pron_ko']}")
-    if not out["source"].startswith("https://"):
-        raise ValueError("출처(https)가 없습니다")
+    if not sc.source_ok(out["source"], allowed):
+        raise ValueError("출처가 없거나, 실제 검색에서 확인되지 않은 주소입니다: " + out["source"])
     for k in ("reading", "category", "note"):
         v = str(entry.get(k, "")).strip()
         if v and v != out["word"]:
             out[k] = v
-    past = sc.clean_past(entry.get("past"), True)
+    past = sc.clean_past(entry.get("past"), True, allowed)
     if past:
         out["past"] = past
-    opp = sc.clean_opposites(entry.get("related"), True)
+    opp = sc.clean_opposites(entry.get("related"), True, allowed)
     if opp:
         out["related"] = opp
     out["enriched"] = True  # 생성할 때 이미 함께 찾았으므로 나중에 다시 채우지 않습니다
@@ -122,7 +123,7 @@ def generate_one(client, lang, today, words):
                     past_rules=sc.past_rules(name, int(today[:4])), opp_rules=sc.opposite_rules(name))}],
             )
             text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
-            entry = clean(extract_json(text), lang)
+            entry = clean(extract_json(text), lang, sc.search_urls(resp))
             if entry["word"] in {w["word"] for w in words if w.get("lang") == lang}:
                 raise ValueError(f"이미 있는 단어가 다시 나왔습니다: {entry['word']}")
             entry["date"] = today

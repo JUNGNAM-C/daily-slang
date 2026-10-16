@@ -223,7 +223,7 @@
         <div id="title">
           <div id="t1">오늘의<br>신조어</div>
           <div id="t2"></div>
-          <div id="t3" class="blink">B · A 버튼을 눌러요</div>
+          <div id="t3" class="blink">A · B 버튼을 눌러요</div>
         </div>
       </div>
     </div>
@@ -374,7 +374,7 @@
   function fgnItems(w, lang) { return (w.foreign || []).filter(function (f) { return f && f.lang === lang && f.word && f.meaning; }); }
   function fgnClose() { fgnEl.classList.remove('open'); st.fgn = null; }
   function fgnShow(kind) {
-    if (st.cur < 0) { toast('먼저 B나 A로 신조어를 골라 주세요'); return; }
+    if (st.cur < 0) { toast('먼저 A나 B로 신조어를 골라 주세요'); return; }
     if (st.fgn === kind) { fgnClose(); return; }
     var w = words[st.cur], lang = 'en', inner = $('fin'); inner.textContent = '';
     if (kind === 'jz') {
@@ -401,6 +401,7 @@
     $('sr').textContent = '홈 화면';
   }
   function go(dir) {
+    if (!DIRKEY[dir]) return;
     if (st.fgn) { fgnClose(); return; }
     if (st.cur < 0 || memoEl.classList.contains('open')) return; var k = DIRKEY[dir];
     if (st.pos === 'c') setPos(k, true); else if (BACK[st.pos] === k) setPos('c', true);
@@ -414,7 +415,7 @@
   document.addEventListener('contextmenu', function (e) { if (e.target !== mta) e.preventDefault(); });
 
   /* ── 입력: 화면 버튼 + 키보드 ── */
-  Array.prototype.forEach.call(document.querySelectorAll('#dpad button'), function (b) {
+  Array.prototype.forEach.call(document.querySelectorAll('#dpad button[data-dir]'), function (b) {
     var d = $('dpad'), c = 'p' + DIRKEY[b.dataset.dir];
     b.addEventListener('click', function () { go(b.dataset.dir); });
     b.addEventListener('pointerdown', function () { d.classList.add(c); });

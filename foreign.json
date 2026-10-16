@@ -11,7 +11,40 @@
       "example": "I scrolled for three hours straight. My brain rot is real.",
       "example_ko": "세 시간 내내 스크롤만 했어. 나 진짜 브레인 롯이야.",
       "category": "SNS 표현",
-      "source": "https://www.axios.com/2024/12/02/brain-rot-meaning-word-of-the-year"
+      "source": "https://www.axios.com/2024/12/02/brain-rot-meaning-word-of-the-year",
+      "past": [
+        {
+          "word": "brain candy",
+          "meaning": "진지함이나 실속 없이 즐기기만 하는 가벼운 오락을 뜻하며, 2000년과 2005년 신문 기사에서 TV 리얼리티 쇼나 대중소설을 가리킬 때 쓰였습니다.",
+          "source": "https://www.merriam-webster.com/dictionary/brain%20candy",
+          "pron_ko": "브레인 캔디",
+          "years": 20
+        },
+        {
+          "word": "brain candy",
+          "meaning": "재미는 있지만 깊이나 지적 가치는 거의 없는 오락물을 가리키는 말로, 뉴욕타임스 1992년 글에서 추리소설을 두고 이 표현을 썼습니다.",
+          "source": "https://en.wiktionary.org/wiki/brain_candy",
+          "pron_ko": "브레인 캔디",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "lucidity",
+          "meaning": "생각이 맑고 또렷한 상태를 뜻하며, 동의어·반의어 사전에서 brain rot의 반대말 후보로 올라 있습니다.",
+          "source": "https://www.powerthesaurus.org/brain_rot/antonyms",
+          "pron_ko": "루시디티",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "mindfulness",
+          "meaning": "지금 하는 일에 주의를 모으고 깨어 있는 상태를 뜻하며, 같은 사전의 brain rot 반의어 목록에 들어 있습니다.",
+          "source": "https://www.powerthesaurus.org/brain_rot/antonyms",
+          "pron_ko": "마인드풀니스",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true
     },
     {
       "lang": "en",
@@ -22,7 +55,40 @@
       "example": "He has serious rizz. Everyone wants to talk to him.",
       "example_ko": "걔는 리즈가 대단해. 다들 걔랑 얘기하고 싶어 해.",
       "category": "줄임말",
-      "source": "https://thenewdaily.com.au/news/world/2023/12/05/rizz-word-of-the-year-oxford"
+      "source": "https://thenewdaily.com.au/news/world/2023/12/05/rizz-word-of-the-year-oxford",
+      "past": [
+        {
+          "word": "game",
+          "meaning": "이성을 능숙하게 꼬시거나 매력으로 끌어당기는 솜씨를 뜻하는 속어예요. 1999년과 2002년 용례가 사전에 실려 있어요.",
+          "source": "https://greensdictofslang.com/entry/evv3qzy",
+          "pron_ko": "게임",
+          "years": 20
+        },
+        {
+          "word": "mack",
+          "meaning": "달콤한 말로 이성의 마음을 사로잡는 데 능한 사람, 또는 그런 사람처럼 이성에게 작업을 거는 것을 가리켜요. 2002년 청소년 속어 용례가 확인돼요.",
+          "source": "https://greensdictofslang.com/entry/f7xldey",
+          "pron_ko": "맥",
+          "years": 20
+        }
+      ],
+      "related": [
+        {
+          "word": "L rizz",
+          "meaning": "작업이 크게 실패해서 상대의 호감을 얻지 못하는 상태나 그런 서툰 매력을 뜻하는 말이에요.",
+          "source": "https://www.purewow.com/wellness/rizz-trend",
+          "pron_ko": "엘 리즈",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "cringe",
+          "meaning": "민망하고 어색해서 오그라드는 느낌을 주는 상태로, 리즈의 반대말로 소개돼요.",
+          "source": "https://www.yahoo.com/lifestyle/rizz-guide-becoming-rizzard-oz-233836726.html",
+          "pron_ko": "크린지",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true
     },
     {
       "lang": "zh",
@@ -34,7 +100,26 @@
       "example": "我决定躺平了，不再加班。",
       "example_ko": "나는 탕핑하기로 했어, 더는 야근 안 해.",
       "category": "사회 현상",
-      "source": "https://en.wikipedia.org/wiki/Tang_ping"
+      "source": "https://en.wikipedia.org/wiki/Tang_ping",
+      "past": [
+        {
+          "word": "葛优躺",
+          "meaning": "2016년경 유행한 말로, 배우 거유의 축 늘어져 앉은 모습을 따서 경쟁 압박 속에서 늘어져 쉬는 모습을 자조적으로 나타냈어요.",
+          "source": "https://m.fx361.com/news/2022/0728/14038651.html",
+          "pron_ko": "거유탕",
+          "reading": "gě yōu tǎng",
+          "years": 10
+        },
+        {
+          "word": "丧",
+          "meaning": "2016년경 퍼진 '상(喪)문화'의 핵심어로, 의욕 없이 처지고 좌절한 심리를 자조적으로 표현했어요.",
+          "source": "https://www.tsyzm.com/fileup/1004-2229/NEWS/20220118000850.pdf",
+          "pron_ko": "상",
+          "reading": "sàng",
+          "years": 10
+        }
+      ],
+      "enriched": true
     },
     {
       "lang": "zh",
@@ -46,7 +131,36 @@
       "example": "大家都在加班，真是太内卷了。",
       "example_ko": "다들 야근하네, 정말 너무 네이쥐안이야.",
       "category": "사회 현상",
-      "source": "https://en.wikipedia.org/wiki/Neijuan"
+      "source": "https://en.wikipedia.org/wiki/Neijuan",
+      "past": [
+        {
+          "word": "过度竞争",
+          "meaning": "기업이 너무 많이 몰려 이익이 바닥이 되고 자원만 낭비되는 산업 내 경쟁을 가리키는 경제학 용어로, 1997년 중국 경제 학술지 논문에 이미 쓰였어요.",
+          "source": "https://qks.sufe.edu.cn/J/CJYJ/Article/Details/A160824005950/CN",
+          "pron_ko": "궈두징쩡",
+          "reading": "guòdù jìngzhēng",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "躺平",
+          "meaning": "치열한 경쟁에서 스스로 빠져나와 욕심과 노력을 줄이고 현실을 받아들이며 자기 속도대로 사는 태도를 말해요.",
+          "source": "https://www.sh.jcy.gov.cn/jcfy/msbd/78682.jhtml",
+          "pron_ko": "탕핑",
+          "reading": "tǎngpíng",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "佛系",
+          "meaning": "바라는 것도 다투는 것도 없이 담담하게 마음의 평온을 추구하는 삶의 태도로, 내권과 대비되는 말로 소개돼요.",
+          "source": "https://zhuanlan.zhihu.com/p/376935472",
+          "pron_ko": "포시",
+          "reading": "fóxì",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true
     },
     {
       "lang": "ja",
@@ -59,6 +173,69 @@
       "example_ko": "주말엔 오시카쓰로 라이브 보러 가.",
       "category": "SNS 표현",
       "source": "https://www.itmedia.co.jp/business/spv/2112/26/news009_3.html"
+    },
+    {
+      "lang": "en",
+      "word": "aura farming",
+      "pron_ko": "오라 파밍",
+      "meaning": "일부러, 혹은 우연인 듯 멋있고 무심해 보이는 행동을 해서 '아우라'(분위기, 존재감)를 쌓는 일을 뜻합니다. 쓰레기를 안 보고 휴지통에 던져 넣는 것처럼 사소한 일을 쿨하게 보이게 하는 경우에 씁니다.",
+      "origin": "'아우라'라는 슬랭과 게임 용어 'farming'(같은 행동을 반복해 점수를 모음)을 합친 말입니다. 2024년 초 TikTok과 X에서 쓰이기 시작했고, 2025년 중반 인도네시아 소년이 전통 보트 위에서 춤추는 영상이 퍼지면서 널리 알려졌습니다.",
+      "example": "He walked into class holding his coffee like that, totally aura farming.",
+      "example_ko": "그 애는 커피를 들고 그렇게 교실에 들어오더라, 완전 아우라 파밍이야.",
+      "source": "https://www.dictionary.com/culture/slang/aura-farming",
+      "category": "SNS 표현",
+      "note": "출처마다 어감이 조금 다릅니다. 무심하게 멋있다는 칭찬으로 쓰이기도 하고, 멋있어 보이려고 너무 애쓴다고 놀리는 말로 쓰이기도 합니다.",
+      "related": [
+        {
+          "word": "negative aura",
+          "meaning": "민망하거나 촌스러운 행동으로 쿨함이나 존재감을 잃는 것을 가리키며, '아우라 포인트'를 얻는 것과 반대되는 개념입니다.",
+          "source": "https://www.yahoo.com/lifestyle/aura-points-viral-slang-among-201002292.html",
+          "pron_ko": "네거티브 오라",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-16"
+    },
+    {
+      "lang": "ja",
+      "word": "ビジュ",
+      "pron_ko": "비주",
+      "meaning": "'비주얼(ビジュアル)'의 줄임말로 겉모습이나 외모를 뜻합니다. 얼굴 생김새뿐 아니라 메이크업, 옷차림, 전체 분위기까지 포함해서, 오늘 모습이 잘 어울린다고 칭찬할 때 자주 씁니다.",
+      "origin": "예전부터 아이돌 팬들 사이에서 쓰이던 줄임말입니다. 2025년에 댄스 보컬 그룹 M!LK의 노래 '이이쟌(イイじゃん)'에 나오는 '오늘 비주 좋잖아' 같은 가사가 틱톡 등에서 유행하면서 널리 퍼졌습니다. 산세이도의 '올해의 신어 2025'에서 대상을 받았습니다.",
+      "example": "今日のビジュ、いつもよりいい気がする。",
+      "example_ko": "오늘 내 비주(외모), 평소보다 좋은 것 같아.",
+      "source": "https://dictionary.sanseido-publ.co.jp/shingo/2025/best10/Preference02.html",
+      "reading": "びじゅ",
+      "category": "줄임말",
+      "note": "사전마다 풀이가 조금 다릅니다. 신메이카이는 '겉으로 보이는 모습과 인상'이라고 풀이하고, 다이지린은 '추는 대상의 메이크업·옷차림·분위기까지 포함한 모습'이라고 풀이합니다. 또 'ビジュアル系' 밴드를 가리키는 말로 쓰인 적도 있지만 그 용법은 일부 사람들에게만 쓰였습니다. past에 넣은 '이케멘'은 남성에게만 쓰는 말이라 의미 범위가 완전히 같지는 않습니다. 10년 전과 30년 전에 같은 뜻으로 쓰인 말은 출처에서 확인하지 못해 비워 두었습니다.",
+      "past": [
+        {
+          "word": "イケメン",
+          "meaning": "2000년대부터 널리 쓰이기 시작한, 외모가 멋진 남성을 가리키는 속어입니다(남성에게만 쓴다는 점이 ビジュ와 다릅니다).",
+          "source": "https://dic.pixiv.net/a/%E3%82%A4%E3%82%B1%E3%83%A1%E3%83%B3",
+          "pron_ko": "이케멘",
+          "reading": "いけめん",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-16"
+    },
+    {
+      "lang": "zh",
+      "word": "搭子",
+      "pron_ko": "다쯔",
+      "meaning": "같은 취미나 목적, 특정 상황에서 함께 행동하는 사람을 가리킵니다. 친구보다는 가볍고 동료보다는 가까운 관계로, 대개 임시적입니다. '밥 搭子'(밥 먹는 짝)나 '여행 搭子'(여행 짝)처럼 앞에 활동 이름을 붙여 씁니다.",
+      "origin": "원래 상하이 등 우어(吳語) 지역 방언으로, 함께 카드놀이를 하는 사람이나 동업자를 뜻했습니다. 2023년 젊은 층의 새로운 사교 방식을 가리키는 말로 퍼졌고, 《교문작자(咬文嚼字)》 '2023 올해의 십대 유행어'에 뽑혔습니다.",
+      "example": "我周末想去看展,正在找一个展览搭子。",
+      "example_ko": "주말에 전시를 보러 가고 싶어서 같이 갈 전시 짝을 찾고 있어요.",
+      "source": "https://baike.baidu.com/item/%E6%90%AD%E5%AD%90/62974309",
+      "reading": "dāzi",
+      "category": "사람 유형",
+      "note": "출처마다 풀이가 조금 다릅니다. 2007년 《상하이어 대사전》은 '함께 카드놀이를 하는 사람, 확장하면 동업자'라고 풀이합니다. 일부 사전에는 '미녀'(옛 방언), '버클'(우한 방언) 같은 전혀 다른 뜻도 올라 있습니다. 신조어로서의 뜻은 2023년 이후 퍼진 '특정 목적의 임시 동반자'입니다. 과거(10·20·30년 전)의 같은 뜻 단어와 반대어는 출처에서 확인하지 못해 비워 두었습니다.",
+      "enriched": true,
+      "date": "2026-10-16"
     }
   ]
 }

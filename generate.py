@@ -151,7 +151,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="파일을 수정하지 않고 결과만 출력")
     ap.add_argument("--force", action="store_true", help="오늘 단어가 이미 있어도 지우고 새로 만듦")
     ap.add_argument("--no-enrich", action="store_true", help="기존 단어의 10·20·30년 전 유사어·반대어 채우기를 건너뜀")
-    ap.add_argument("--enrich-limit", type=int, default=4, help="이번에 채워 줄 기존 단어 수 (기본 4, 최근 날짜 단어부터)")
+    ap.add_argument("--enrich-limit", type=int, default=3, help="이번에 채워 줄 기존 단어 수 (기본 3, 최근 날짜 단어부터)")
     ap.add_argument("--count", type=int, default=PER_DAY, help=f"하루에 만들 단어 수 (기본 {PER_DAY})")
     args = ap.parse_args()
 

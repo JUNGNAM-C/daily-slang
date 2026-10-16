@@ -40,7 +40,34 @@
       "example": "막 저장 누르려는데 앱이 꺼졌어. 아 샤갈!",
       "origin": "화가 샤갈의 이름으로 하는 말장난이에요. 입에 담기 거친 말을 비슷한 소리로 바꿔 쓴 거예요.",
       "category": "감탄사",
-      "source": "https://dailyttut.blogspot.com/2026/09/50.html"
+      "source": "https://dailyttut.blogspot.com/2026/09/50.html",
+      "past": [
+        {
+          "years": 10,
+          "word": "헐",
+          "meaning": "어이없거나 황당할 때 쓰는 감탄사예요. 샤갈처럼 어이없는 순간에 터져 나오는 말이라는 점이 비슷해요. (2000년대~2010년대 초 전성기)",
+          "source": "https://thewiki.kr/w/헐"
+        },
+        {
+          "years": 10,
+          "word": "OMG",
+          "meaning": "놀랍거나 충격적일 때 쓰는 영어 감탄 표현이에요. 'oh my God'를 줄여 센 말을 돌려 쓰는 점이 샤갈과 닮았어요. (2016년 가요 가사에서도 확인)",
+          "source": "https://seoulbeats.com/2016/01/music-lyrics-the-subtle-nuances-of-omg/"
+        },
+        {
+          "years": 20,
+          "word": "허걱",
+          "meaning": "'헉'과 같은 뜻으로 깜짝 놀랐을 때 쓰던 말이에요. 놀람을 소리로 터뜨리는 감탄사라는 점이 비슷해요. (2001년 유행어)",
+          "source": "https://www.i-boss.co.kr/ab-1486505-10081"
+        },
+        {
+          "years": 20,
+          "word": "대박",
+          "meaning": "뜻밖의 일에 놀라거나 감탄할 때 쓰던 유행어예요. 예상 밖의 상황에 반응하는 말이라는 점이 비슷해요. (2000년 유행어)",
+          "source": "https://www.i-boss.co.kr/ab-1486505-10081"
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "아자스",

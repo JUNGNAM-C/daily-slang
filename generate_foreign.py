@@ -150,7 +150,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true", help="오늘 단어가 이미 있어도 지우고 새로 만듦")
     ap.add_argument("--no-enrich", action="store_true", help="기존 단어의 10·20·30년 전 유사어·반대어 채우기를 건너뜀")
-    ap.add_argument("--enrich-limit", type=int, default=4, help="이번에 채워 줄 기존 단어 수 (기본 4, 최근 날짜 단어부터)")
+    ap.add_argument("--enrich-limit", type=int, default=3, help="이번에 채워 줄 기존 단어 수 (기본 3, 최근 날짜 단어부터)")
     ap.add_argument("--lang", choices=list(LANGS), action="append", help="만들 언어 (여러 번 지정 가능, 기본: 전부)")
     args = ap.parse_args()
     if not os.environ.get("ANTHROPIC_API_KEY"):

@@ -31,6 +31,9 @@ try:
 except ImportError:
     sys.exit("anthropic 패키지가 없습니다. 먼저 'pip install anthropic'을 실행해 주세요.")
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import slang_common as sc  # noqa: E402
+
 HERE = Path(__file__).resolve().parent
 WORDS_PATH = HERE / "words.json"
 MODEL = os.environ.get("SLANG_MODEL", "claude-sonnet-5-5")
@@ -49,11 +52,12 @@ PROMPT = """오늘은 {today}입니다. 웹 검색을 사용해서 지금 한국
 - 선택한 단어와 관련된 단어도 최대 3개 찾아 related에 넣으세요. 종류는 '반대 뜻'(반대말), '비슷한 뜻'(같은 뜻의 다른 말), '비슷한 구성'(같은 방식으로 만들어진 말) 중 하나입니다.
 - related 항목은 출처에서 실제로 확인된 것만 넣으세요. 확인되지 않으면 빈 배열 []로 두세요. 억지로 채우지 마세요.
 - related의 각 항목에도 직접 쓴 한 문장 뜻풀이(meaning)와 https://로 시작하는 출처(source)를 넣으세요.
+{past_rules}
 
 이미 소개한 단어: {known}
 
 마지막에는 설명 없이, 아래 형식의 JSON 객체 하나만 출력하세요.
-{{"word": "...", "meaning": "한두 문장", "example": "예문 한 줄", "origin": "유래 한두 문장", "category": "줄임말|감탄사|감성 리액션|SNS 표현|사람 유형|커뮤니티 중 하나", "note": "없으면 빈 문자열", "source": "https://로 시작하는 출처 주소", "related": [{{"type": "반대 뜻|비슷한 뜻|비슷한 구성", "word": "...", "meaning": "한 문장", "source": "https://..."}}]}}
+{{"word": "...", "meaning": "한두 문장", "example": "예문 한 줄", "origin": "유래 한두 문장", "category": "줄임말|감탄사|감성 리액션|SNS 표현|사람 유형|커뮤니티 중 하나", "note": "없으면 빈 문자열", "source": "https://로 시작하는 출처 주소", "related": [{{"type": "반대 뜻|비슷한 뜻|비슷한 구성", "word": "...", "meaning": "한 문장", "source": "https://..."}}], "past": [{{"years": 10, "word": "...", "meaning": "한 문장", "source": "https://..."}}]}}
 """
 
 
@@ -95,6 +99,10 @@ def clean(entry):
         related.append({"type": rtype, "word": word, "meaning": meaning, "source": src})
     if related:
         out["related"] = related[:3]
+    past = sc.clean_past(entry.get("past"))
+    if past:
+        out["past"] = past
+    out["enriched"] = True  # 생성할 때 이미 함께 찾았으므로 나중에 다시 채우지 않습니다
     return out
 
 
@@ -110,9 +118,9 @@ def generate_one(client, today, words):
         try:
             resp = client.messages.create(
                 model=MODEL,
-                max_tokens=3000,
-                tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
-                messages=[{"role": "user", "content": PROMPT.format(today=today, known=known)}],
+                max_tokens=4000,
+                tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 8}],
+                messages=[{"role": "user", "content": PROMPT.format(today=today, known=known, past_rules=sc.past_rules('한국어', int(today[:4])))}],
             )
             text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
             entry = clean(extract_json(text))
@@ -140,6 +148,8 @@ def main():
     ap = argparse.ArgumentParser(description="오늘의 신조어를 words.json에 추가합니다.")
     ap.add_argument("--dry-run", action="store_true", help="파일을 수정하지 않고 결과만 출력")
     ap.add_argument("--force", action="store_true", help="오늘 단어가 이미 있어도 지우고 새로 만듦")
+    ap.add_argument("--no-enrich", action="store_true", help="기존 단어의 10·20·30년 전 유사어·반대어 채우기를 건너뜀")
+    ap.add_argument("--enrich-limit", type=int, default=4, help="이번에 채워 줄 기존 단어 수 (기본 4, 최근 날짜 단어부터)")
     ap.add_argument("--count", type=int, default=PER_DAY, help=f"하루에 만들 단어 수 (기본 {PER_DAY})")
     args = ap.parse_args()
 
@@ -154,13 +164,11 @@ def main():
         words = [w for w in words if w.get("date") != today]
     have = [w for w in words if w.get("date") == today]
     need = args.count - len(have)
-    if need <= 0:
-        print(f"오늘({today}) 단어가 이미 {len(have)}개 있습니다: {', '.join(w['word'] for w in have)}  (다시 만들려면 --force)")
-        return
-
     client = anthropic.Anthropic()
     made = 0
-    for n in range(need):
+    if need <= 0:
+        print(f"오늘({today}) 단어가 이미 {len(have)}개 있습니다: {', '.join(w['word'] for w in have)}  (다시 만들려면 --force)")
+    for n in range(max(need, 0)):
         print(f"\n[{len(have) + n + 1}/{args.count}번째 단어]")
         try:
             entry = generate_one(client, today, words)
@@ -175,9 +183,16 @@ def main():
             save(data, words, today)  # 하나 만들 때마다 바로 저장
             print(f"words.json에 저장했습니다. (총 {len(words)}개)")
 
+    if not args.no_enrich:
+        print("\n[10·20·30년 전 유사어·반대어 채우기]")
+        n = sc.enrich(client, MODEL, words, "한국어", False, args.enrich_limit, int(today[:4]))
+        if n and not args.dry_run:
+            save(data, words, today)
+            print(f"{n}개 단어를 확인했고 words.json에 저장했습니다.")
+
     if args.dry_run:
         print("\n(--dry-run) words.json은 수정하지 않았습니다.")
-    if made == 0:
+    if made == 0 and need > 0:
         sys.exit("새 단어를 만들지 못했습니다.")
 
 

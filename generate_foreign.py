@@ -31,6 +31,9 @@ try:
 except ImportError:
     sys.exit("anthropic 패키지가 없습니다. 먼저 'pip install anthropic'을 실행해 주세요.")
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import slang_common as sc  # noqa: E402
+
 HERE = Path(__file__).resolve().parent
 PATH = HERE / "foreign.json"
 MODEL = os.environ.get("SLANG_MODEL", "claude-sonnet-5-5")
@@ -53,11 +56,14 @@ PROMPT = """오늘은 {today}입니다. 웹 검색을 사용해서 {where}에서
 - {reading_hint}
 - example은 직접 지어낸 짧은 원어 문장 한 줄, example_ko는 그 한국어 번역입니다.
 - 뜻이 출처마다 갈리면 note에 그 사실을 적으세요.
+{past_rules}
+{opp_rules}
+- past·반대어 항목에도 pron_ko(한글 발음)를 반드시 넣고, reading은 위와 같은 규칙으로 쓰세요.
 
 이미 소개한 단어: {known}
 
 마지막에는 설명 없이, 아래 형식의 JSON 객체 하나만 출력하세요.
-{{"word": "원어 표기", "reading": "...", "pron_ko": "한글 발음", "meaning": "한국어 한두 문장", "origin": "한국어 한두 문장", "example": "원어 예문", "example_ko": "한국어 번역", "category": "줄임말|감탄사|SNS 표현|사람 유형|사회 현상|커뮤니티 중 하나", "note": "없으면 빈 문자열", "source": "https://로 시작하는 출처 주소"}}
+{{"word": "원어 표기", "reading": "...", "pron_ko": "한글 발음", "meaning": "한국어 한두 문장", "origin": "한국어 한두 문장", "example": "원어 예문", "example_ko": "한국어 번역", "category": "줄임말|감탄사|SNS 표현|사람 유형|사회 현상|커뮤니티 중 하나", "note": "없으면 빈 문자열", "source": "https://로 시작하는 출처 주소", "past": [{{"years": 10, "word": "원어", "reading": "...", "pron_ko": "한글 발음", "meaning": "한국어 한 문장", "source": "https://..."}}], "related": [{{"word": "원어", "reading": "...", "pron_ko": "한글 발음", "meaning": "한국어 한 문장", "source": "https://..."}}]}}
 """
 
 
@@ -90,6 +96,13 @@ def clean(entry, lang):
         v = str(entry.get(k, "")).strip()
         if v and v != out["word"]:
             out[k] = v
+    past = sc.clean_past(entry.get("past"), True)
+    if past:
+        out["past"] = past
+    opp = sc.clean_opposites(entry.get("related"), True)
+    if opp:
+        out["related"] = opp
+    out["enriched"] = True  # 생성할 때 이미 함께 찾았으므로 나중에 다시 채우지 않습니다
     return out
 
 
@@ -102,10 +115,11 @@ def generate_one(client, lang, today, words):
         try:
             resp = client.messages.create(
                 model=MODEL,
-                max_tokens=3000,
-                tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
+                max_tokens=4500,
+                tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 8}],
                 messages=[{"role": "user", "content": PROMPT.format(
-                    today=today, where=where, lang=name, known=known, reading_hint=reading_hint, pron_hint=pron_hint)}],
+                    today=today, where=where, lang=name, known=known, reading_hint=reading_hint, pron_hint=pron_hint,
+                    past_rules=sc.past_rules(name, int(today[:4])), opp_rules=sc.opposite_rules(name))}],
             )
             text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
             entry = clean(extract_json(text), lang)
@@ -133,6 +147,8 @@ def main():
     ap = argparse.ArgumentParser(description="오늘의 외국어 신조어를 foreign.json에 추가합니다.")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true", help="오늘 단어가 이미 있어도 지우고 새로 만듦")
+    ap.add_argument("--no-enrich", action="store_true", help="기존 단어의 10·20·30년 전 유사어·반대어 채우기를 건너뜀")
+    ap.add_argument("--enrich-limit", type=int, default=4, help="이번에 채워 줄 기존 단어 수 (기본 4, 최근 날짜 단어부터)")
     ap.add_argument("--lang", choices=list(LANGS), action="append", help="만들 언어 (여러 번 지정 가능, 기본: 전부)")
     args = ap.parse_args()
     if not os.environ.get("ANTHROPIC_API_KEY"):
@@ -164,6 +180,12 @@ def main():
         if not args.dry_run:
             save(data, words, today)
             print(f"foreign.json에 저장했습니다. (총 {len(words)}개)")
+    if not args.no_enrich:
+        print("\n[10·20·30년 전 유사어·반대어 채우기]")
+        n = sc.enrich(client, MODEL, words, lambda w: LANGS[w["lang"]][0], True, args.enrich_limit, int(today[:4]))
+        if n and not args.dry_run:
+            save(data, words, today)
+            print(f"{n}개 단어를 확인했고 foreign.json에 저장했습니다.")
     if args.dry_run:
         print("\n(--dry-run) foreign.json은 수정하지 않았습니다.")
     if made == 0 and failed:

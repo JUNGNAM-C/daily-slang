@@ -82,12 +82,12 @@
   #screen { position: absolute; left: 22px; top: 23px; width: 250px; height: 250px; overflow: hidden;
             background: linear-gradient(var(--scr-a), var(--scr-b)); outline: 1px solid var(--ink);
             box-shadow: 0 0 0 3px #46464f, 0 0 0 4px #0006; color: var(--pale); }
-  #world { position: absolute; left: 0; top: 0; width: 750px; height: 750px; transform: translate(-250px, -250px); }
+  #world { position: absolute; left: 0; top: 0; width: 1250px; height: 750px; transform: translate(-750px, -250px); }
   #world.anim { transition: transform .26s steps(9, end); }
   .panel { position: absolute; width: 250px; height: 250px; }
-  .panel[data-p="c"] { left: 250px; top: 250px; } .panel[data-p="u"] { left: 250px; top: 0; }
-  .panel[data-p="d"] { left: 250px; top: 500px; } .panel[data-p="l"] { left: 0; top: 250px; }
-  .panel[data-p="r"] { left: 500px; top: 250px; }
+  .panel[data-p="c"] { left: 750px; top: 250px; } .panel[data-p="u"] { left: 750px; top: 0; }
+  .panel[data-p="d"] { left: 750px; top: 500px; } .panel[data-p="r"] { left: 1000px; top: 250px; }
+  .panel[data-p="l1"] { left: 500px; top: 250px; } .panel[data-p="l2"] { left: 250px; top: 250px; } .panel[data-p="l3"] { left: 0; top: 250px; }
   .pb { position: absolute; left: 8px; right: 8px; top: 21px; bottom: 6px; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y;
         -webkit-user-select: none; scrollbar-width: thin; scrollbar-color: var(--pale) transparent; }
   .pb::-webkit-scrollbar { width: 4px; } .pb::-webkit-scrollbar-thumb { background: var(--pale); } .pb::-webkit-scrollbar-track { background: #0b0c1844; }
@@ -113,7 +113,7 @@
 
   /* HUD */
   #hud { position: absolute; left: 4px; right: 4px; top: 3px; height: 14px; display: none; }
-  #hearts { position: absolute; left: 0; top: 3px; display: flex; gap: 2px; }
+  #hearts { position: absolute; left: 0; top: 3px; display: flex; gap: 2px; align-items: center; }
   #hearts canvas { position: static; }
   #label { position: absolute; right: 0; top: 0; min-width: 40px; text-align: center; font: 10px/10px 'Mona10B', sans-serif; color: var(--ink);
            background: var(--pale); border: 1px solid var(--ink); border-radius: 3px; padding: 1px 5px; box-shadow: inset 0 -1px 0 var(--mid), 1px 1px 0 var(--ink); }
@@ -185,12 +185,6 @@
   #mta::placeholder { color: var(--mid); }
   #toast { position: absolute; left: 10px; right: 10px; bottom: 8px; z-index: 6; display: none; text-align: center; font: 12px/14px 'MonaS10', 'Noto Sans KR', sans-serif;
            color: var(--pale); background: #0b0c18; border: 1px solid var(--pale); border-radius: 3px; padding: 3px 4px; }
-  /* 외국어 표현 화면 */
-  #fgn { position: absolute; inset: 0; display: none; z-index: 4; background: linear-gradient(var(--scr-a), var(--scr-b)); }
-  #fgn.open { display: block; }
-  #fgn .mh { position: absolute; left: 4px; right: 4px; top: 3px; height: 14px; }
-  #ftag { position: absolute; right: 0; top: 0; min-width: 40px; text-align: center; font: 10px/10px 'Mona10B', sans-serif; color: var(--ink); background: var(--pale); border: 1px solid var(--ink); border-radius: 3px; padding: 1px 5px; box-shadow: inset 0 -1px 0 var(--mid), 1px 1px 0 var(--ink); }
-  #fnote { position: absolute; left: 2px; top: 2px; font: 12px/12px 'MonaS8', monospace; color: var(--mid); }
   .rd { margin: -2px 0 4px; font: 12px/14px 'MonaS10', 'Noto Sans KR', sans-serif; color: var(--mid); }
   .fb { font-family: 'Mona12B', 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif; }
   .pr { margin: 2px 0 6px; display: flex; align-items: center; gap: 6px; }
@@ -215,12 +209,11 @@
       <div id="screen" role="img" aria-label="신조어 게임 화면">
         <div id="world">
           <div class="panel" data-p="c"></div><div class="panel" data-p="u"></div><div class="panel" data-p="d"></div>
-          <div class="panel" data-p="l"></div><div class="panel" data-p="r"></div>
+          <div class="panel" data-p="l1"></div><div class="panel" data-p="l2"></div><div class="panel" data-p="l3"></div><div class="panel" data-p="r"></div>
         </div>
         <div id="hud"><div id="hearts"></div><div id="label">뜻</div></div>
         <div id="memo"><div class="mh"><div id="mtag">MEMO</div><div id="mst">자동 저장</div></div>
           <textarea id="mta" maxlength="4000" spellcheck="false" placeholder="여기에 적으면 자동으로 저장돼요." aria-label="메모장"></textarea></div>
-        <div id="fgn"><div class="mh"><div id="fnote">오늘의 외국어</div><div id="ftag">영어</div></div><div class="pb foot"><div class="inner" id="fin"></div></div><div class="pfoot" id="fsrc"></div></div>
         <div id="toast" role="status"></div>
         <div id="title">
           <div id="t1">오늘의<br>신조어</div>
@@ -238,8 +231,8 @@
       <button class="bc" id="bHome" aria-label="가운데 버튼: 홈 화면으로"></button>
       <button class="bu" data-dir="up"    aria-label="위쪽: 유래"></button>
       <button class="bd" data-dir="down"  aria-label="아래쪽: 예문"></button>
-      <button class="bl" data-dir="left"  aria-label="왼쪽: 반대어"></button>
-      <button class="br" data-dir="right" aria-label="오른쪽: 유사어"></button>
+      <button class="bl" data-dir="left"  aria-label="왼쪽: 10년 전·20년 전·30년 전 유사어"></button>
+      <button class="br" data-dir="right" aria-label="오른쪽: 반대어"></button>
     </div>
 
     <button class="rb" id="bB" aria-label="B 버튼: 오늘의 신조어 첫 번째"></button>
@@ -302,78 +295,99 @@
   };
 
   /* ── 패널 만들기 ── */
-  var panels = {}; ['c', 'u', 'd', 'l', 'r'].forEach(function (k) { panels[k] = document.querySelector('.panel[data-p="' + k + '"]'); });
-  var NAME = { c: '뜻', u: '유래', d: '예문', l: '반대어', r: '유사어' };
-  var BACK = { u: 'd', d: 'u', l: 'r', r: 'l' };       // 되돌아가는 방향
+  var PKEYS = ['c', 'u', 'd', 'l1', 'l2', 'l3', 'r'];
+  var panels = {}; PKEYS.forEach(function (k) { panels[k] = document.querySelector('.panel[data-p="' + k + '"]'); });
+  var NAME = { c: '뜻', u: '유래', d: '예문', l1: '10년 전', l2: '20년 전', l3: '30년 전', r: '반대어' };
+  // 30년 전 < 20년 전 < 10년 전 < 단어 > 반대어   (위: 유래, 아래: 예문)
+  var NEXT = { c: { u: 'u', d: 'd', l: 'l1', r: 'r' }, u: { d: 'c' }, d: { u: 'c' }, l1: { r: 'c', l: 'l2' }, l2: { r: 'l1', l: 'l3' }, l3: { r: 'l2' }, r: { l: 'c' } };
+  var GRID = { c: [3, 1], u: [3, 0], d: [3, 2], l1: [2, 1], l2: [1, 1], l3: [0, 1], r: [4, 1] };
   var DIRKEY = { up: 'u', down: 'd', left: 'l', right: 'r' };
+  var FL = { en: '영어', ja: '일본어', zh: '중국어' };
 
-  function arrows(p, keys) {   // 갈 수 있는 방향 표시
+  function arrows(p, k) {   // 갈 수 있는 방향 표시
     var pos = { u: [121, 2], d: [121, 244], l: [2, 121], r: [244, 121] };
-    keys.forEach(function (k) { p.appendChild(sprite(ARR[k], PALE, 'blink', pos[k][0], pos[k][1])); });
+    Object.keys(NEXT[k]).forEach(function (d) { p.appendChild(sprite(ARR[d], PALE, 'blink', pos[d][0], pos[d][1])); });
   }
   function body(p, foot) { var b = el('div', 'pb' + (foot ? ' foot' : '')); var i = el('div', 'inner'); b.appendChild(i); p.appendChild(b); return i; }
-
-  function relList(w, types) {
-    return (w.related || []).filter(function (r) { return r && r.word && types.indexOf(r.type) >= 0; });
+  function langOf(w) { return w.lang === 'zh' ? 'zh-CN' : (w.lang || ''); }
+  function pronRow(inner, r) {   // 읽는 법 + 한글 발음 (외국어)
+    if (r.reading) inner.appendChild(el('div', 'rd', r.reading));
+    if (r.pron_ko) { var pr = el('div', 'pr'); pr.appendChild(el('span', 'cat', '발음')); pr.appendChild(el('b', null, r.pron_ko)); inner.appendChild(pr); }
   }
-  function fillRel(p, items, emptyMsg, back) {
-    var inner = body(p);
+
+  // 목록 화면: 10·20·30년 전 유사어, 반대어
+  function fillItems(k, w, items, emptyMsg, head, tag) {
+    var inner = body(panels[k]);
+    if (head) inner.appendChild(el('div', 'cat', head));
     if (!items.length) {
       var e = el('div', 'empty'); e.appendChild(el('p', 'txt', emptyMsg)); inner.appendChild(e);
     } else items.forEach(function (r) {
-      var d = el('div', 'rel'); var h = el('div'); h.appendChild(el('b', r.word.length > 6 ? 'sm' : null, r.word)); h.appendChild(el('span', 'tg', r.type));
-      d.appendChild(h); d.appendChild(el('p', 'txt', r.meaning || '')); inner.appendChild(d);
+      var d = el('div', 'rel'), h = el('div'), b = el('b', r.word.length > 6 ? 'sm' : null, r.word);
+      if (w.lang) { b.lang = langOf(w); b.classList.add('fb'); }
+      h.appendChild(b); if (tag) h.appendChild(el('span', 'tg', tag)); d.appendChild(h);
+      pronRow(d, r); d.appendChild(el('p', 'txt', r.meaning || ''));
+      var dm = domain(r.source); if (dm) d.appendChild(el('div', 'rd', '출처 ' + dm));
+      inner.appendChild(d);
     });
-    arrows(p, [back]);
+    arrows(panels[k], k);
   }
 
   function render(w) {
-    Object.keys(panels).forEach(function (k) { panels[k].textContent = ''; });
+    PKEYS.forEach(function (k) { panels[k].textContent = ''; });
     // 가운데: 뜻
     var c = body(panels.c);
     if (w.category) c.appendChild(el('div', 'cat', w.category));
-    c.appendChild(el('div', 'word' + (w.word.length > 6 ? ' sm' : ''), w.word));
+    var hw = el('div', 'word' + (w.lang ? ' fb' : '') + (w.word.length > 6 ? ' sm' : ''), w.word); if (w.lang) hw.lang = langOf(w);
+    c.appendChild(hw); pronRow(c, w);
     c.appendChild(el('p', 'txt', w.meaning));
-    arrows(panels.c, ['u', 'd', 'l', 'r']);
+    arrows(panels.c, 'c');
     // 위: 유래
     var u = body(panels.u, true); u.appendChild(el('p', 'txt', w.origin || '유래가 아직 정리되지 않았어요.'));
     var dm = domain(w.source); if (dm) panels.u.appendChild(el('div', 'pfoot', '출처 ' + dm));
-    arrows(panels.u, ['d']);
+    arrows(panels.u, 'u');
     // 아래: 예문
-    var d = body(panels.d); var bub = el('div', 'bubble'); bub.appendChild(el('p', 'txt', w.example || '예문이 아직 없어요.')); d.appendChild(bub);
-    arrows(panels.d, ['u']);
-    // 왼쪽: 반대어, 오른쪽: 유사어
-    fillRel(panels.l, relList(w, ['반대 뜻']), '출처에서 확인된 반대어가 아직 없어요.', 'r');
-    fillRel(panels.r, relList(w, ['비슷한 뜻', '비슷한 구성']), '출처에서 확인된 유사어가 아직 없어요.', 'l');
-    requestAnimationFrame(function () { Object.keys(panels).forEach(function (k) { fit(panels[k].querySelector('.pb')); }); });
+    var d = body(panels.d), bub = el('div', 'bubble'), ex = el('p', 'txt', w.example || '예문이 아직 없어요.'); if (w.lang) { ex.lang = langOf(w); ex.classList.add('fb'); }
+    bub.appendChild(ex);
+    if (w.example_ko) { var ek = el('p', 'txt', w.example_ko); ek.style.color = 'var(--mid)'; ek.style.marginTop = '4px'; bub.appendChild(ek); }
+    d.appendChild(bub); arrows(panels.d, 'd');
+    // 왼쪽: 10·20·30년 전에 같은 뜻으로 쓰인 말, 오른쪽: 반대어
+    var yr = Number(today.slice(0, 4));
+    [[10, 'l1'], [20, 'l2'], [30, 'l3']].forEach(function (e) {
+      var items = (w.past || []).filter(function (r) { return r && r.word && Number(r.years) === e[0]; });
+      fillItems(e[1], w, items, '출처에서 확인된 ' + e[0] + '년 전 유사어가 아직 없어요.', e[0] + '년 전 · ' + (yr - e[0]) + '년쯤');
+    });
+    fillItems('r', w, (w.related || []).filter(function (r) { return r && r.word && r.type === '반대 뜻'; }), '출처에서 확인된 반대어가 아직 없어요.', null, '반대 뜻');
+    requestAnimationFrame(function () { PKEYS.forEach(function (k) { fit(panels[k].querySelector('.pb')); }); });
   }
 
   // 긴 글은 자동으로 움직이지 않고, 화면 안에서 손가락·휠로 직접 넘겨 봅니다.
   function fit(b) { if (b) b.scrollTop = 0; }
 
   /* ── 상태·조작 ── */
-  var words = [], today = todayKST(), st = { cur: -1, pos: 'c', fgn: null }, world = $('world');
+  var words = [], fdata = null, today = todayKST(), st = { cur: -1, w: null, fv: null, home: true, pos: 'c' }, world = $('world');
   function hearts() {
     var h = $('hearts'); h.textContent = '';
+    if (st.fv) { h.style.top = '0'; h.appendChild(el('span', 'cat', FL[st.fv])); return; }   // 외국어: 언어 표시
+    h.style.top = '3px';
     for (var i = 0; i < 2; i++) h.appendChild(sprite(i === st.cur ? HEART : HEART_O, PALE, '', 0, 0)).style.position = 'static';
   }
   function setPos(k, animate) {
-    st.pos = k; var xy = { c: [1, 1], u: [1, 0], d: [1, 2], l: [0, 1], r: [2, 1] }[k];
+    st.pos = k; var xy = GRID[k];
     world.classList.toggle('anim', !!animate);
     world.style.transform = 'translate(' + (-250 * xy[0]) + 'px,' + (-250 * xy[1]) + 'px)';
     $('label').textContent = NAME[k];
     var p = panels[k]; $('sr').textContent = NAME[k] + ': ' + (p.innerText || p.textContent);
   }
-  function pickWord(i) {
-    if (!words[i]) return;
-    memoOpen(false); fgnClose();
-    $('title').style.display = 'none'; $('hud').style.display = 'block'; $('led').classList.add('on');
-    if (st.cur !== i) { st.cur = i; render(words[i]); hearts(); }
-    setPos('c', false);
+  function show(w) {   // 단어를 가운데(뜻) 화면에 띄움 — 한국어·외국어 공통
+    memoOpen(false);
+    $('title').style.display = 'none'; $('hud').style.display = 'block'; $('led').classList.add('on'); st.home = false;
+    if (st.w !== w) { st.w = w; render(w); }
+    hearts(); setPos('c', false);
   }
-  /* ── 외국어 신조어 (한국어 신조어와 별개): 노란 버튼=영어, 초록 버튼=일본어/중국어 무작위 ── */
-  var fgnEl = $('fgn'), FL = { en: '영어', ja: '일본어', zh: '중국어' }, fdata = null;
-  // 언어별 오늘의 단어: 오늘 날짜가 붙은 것 → 없으면 기본 목록에서 날짜에 따라 돌려 가며 → 그것도 없으면 가장 최근 것
+  function pickWord(i) { if (!words[i]) return; st.cur = i; st.fv = null; show(words[i]); }
+
+  // 외국어 신조어(한국어와 별개 데이터): 노란 버튼=영어, 초록 버튼=일본어/중국어 무작위. 화면 조작은 한국어와 똑같습니다.
+  // 오늘 날짜가 붙은 단어 → 없으면 기본 목록에서 날짜에 따라 돌려 가며 → 그것도 없으면 가장 최근 것
   function foreignToday(lang) {
     var all = ((fdata && fdata.words) || []).filter(function (f) { return f && f.lang === lang && f.word && f.meaning; });
     var t = all.filter(function (f) { return f.date === today; });
@@ -382,47 +396,22 @@
     if (base.length) return base[dayNumber(today) % base.length];
     return all.length ? all[all.length - 1] : null;
   }
-  function fgnClose() { fgnEl.classList.remove('open'); st.fgn = null; }
-  function fgnShow(kind) {
-    if (st.fgn === kind) { fgnClose(); return; }
+  function pickForeign(kind) {
     if (!fdata) { toast('외국어 신조어를 불러오는 중이에요'); return; }
-    var inner = $('fin'), lang = 'en', f = null; inner.textContent = '';
-    if (kind === 'jz') {
-      var c = ['ja', 'zh'].filter(function (l) { return foreignToday(l); });
-      lang = c.length ? c[Math.floor(Math.random() * c.length)] : null;
-    }
-    f = lang ? foreignToday(lang) : null;
-    memoOpen(false); st.fgn = kind; fgnEl.classList.add('open'); $('fsrc').textContent = '';
-    $('ftag').textContent = lang ? FL[lang] : (kind === 'en' ? '영어' : '일·중');
-    $('fin').parentNode.scrollTop = 0;
-    if (!f) {
-      var e = el('div', 'empty'); e.appendChild(el('p', 'txt', (kind === 'en' ? '영어' : '일본어·중국어') + ' 신조어가 아직 없어요.')); inner.appendChild(e);
-      $('sr').textContent = e.textContent; return;
-    }
-    var hw = el('div', 'word fb' + (f.word.length > 6 ? ' sm' : ''), f.word);
-    hw.lang = lang === 'zh' ? 'zh-CN' : lang; inner.appendChild(hw);
-    if (f.reading) inner.appendChild(el('div', 'rd', f.reading));
-    var pr = el('div', 'pr'); pr.appendChild(el('span', 'cat', '발음')); pr.appendChild(el('b', null, f.pron_ko || '')); inner.appendChild(pr);
-    inner.appendChild(el('p', 'txt', f.meaning));
-    if (f.example) {
-      var b = el('div', 'bubble'); b.style.marginTop = '8px'; var ex = el('p', 'txt fb', f.example); ex.lang = hw.lang; b.appendChild(ex);
-      if (f.example_ko) { var ek = el('p', 'txt', f.example_ko); ek.style.color = 'var(--mid)'; ek.style.marginTop = '4px'; b.appendChild(ek); }
-      inner.appendChild(b);
-    }
-    if (f.origin) { var og = el('p', 'txt', f.origin); og.style.marginTop = '8px'; inner.appendChild(og); }
-    var dm = domain(f.source); if (dm) $('fsrc').textContent = '출처 ' + dm;
-    $('sr').textContent = FL[lang] + ': ' + f.word + ', 발음 ' + (f.pron_ko || '') + ', ' + f.meaning;
+    var lang = 'en';
+    if (kind === 'jz') { var c = ['ja', 'zh'].filter(function (l) { return foreignToday(l); }); lang = c.length ? c[Math.floor(Math.random() * c.length)] : null; }
+    var f = lang && foreignToday(lang);
+    if (!f) { toast((kind === 'en' ? '영어' : '일본어·중국어') + ' 신조어가 아직 없어요'); return; }
+    st.cur = -1; st.fv = lang; show(f);
   }
-  function goHome() {
-    fgnClose();   // 십자키 가운데 버튼: 시작(홈) 화면으로
-    memoOpen(false); $('title').style.display = 'block'; $('hud').style.display = 'none'; $('led').classList.remove('on'); setPos('c', false);
+  function goHome() {   // 십자키 가운데 버튼: 시작(홈) 화면으로
+    memoOpen(false); $('title').style.display = 'block'; $('hud').style.display = 'none'; $('led').classList.remove('on'); st.home = true; setPos('c', false);
     $('sr').textContent = '홈 화면';
   }
   function go(dir) {
-    if (!DIRKEY[dir]) return;
-    if (st.fgn) { fgnClose(); return; }
-    if (st.cur < 0 || memoEl.classList.contains('open')) return; var k = DIRKEY[dir];
-    if (st.pos === 'c') setPos(k, true); else if (BACK[st.pos] === k) setPos('c', true);
+    var k = DIRKEY[dir];
+    if (!k || st.home || !st.w || memoEl.classList.contains('open')) return;
+    var nx = NEXT[st.pos][k]; if (nx) setPos(nx, true);
   }
 
   /* ── 확대·축소·끌어서 이동 막기 (화면 안 글 스크롤과 버튼만 허용) ── */
@@ -440,8 +429,8 @@
     ['pointerup', 'pointerleave', 'pointercancel'].forEach(function (e) { b.addEventListener(e, function () { d.classList.remove(c); }); });
   });
   $('bHome').addEventListener('click', goHome);
-  $('bG').addEventListener('click', function () { fgnShow('jz'); });
-  $('bY').addEventListener('click', function () { fgnShow('en'); });
+  $('bG').addEventListener('click', function () { pickForeign('jz'); });
+  $('bY').addEventListener('click', function () { pickForeign('en'); });
   $('bB').addEventListener('click', function () { pickWord(0); });
   $('bA').addEventListener('click', function () { pickWord(1); });
   var memoEl = $('memo'), mta = $('mta'), mst = $('mst'), toastT;
@@ -458,7 +447,7 @@
   function memoOpen(on) {
     if (on === memoEl.classList.contains('open')) return;
     memoEl.classList.toggle('open', on);
-    if (on) { fgnClose(); mst.textContent = '자동 저장'; try { mta.focus({ preventScroll: true }); } catch (e) {} } else { memoSave(); mta.blur(); }
+    if (on) { mst.textContent = '자동 저장'; try { mta.focus({ preventScroll: true }); } catch (e) {} } else { memoSave(); mta.blur(); }
   }
   $('bSta').addEventListener('click', function () { memoOpen(!memoEl.classList.contains('open')); });
   memoLoad();
@@ -487,6 +476,7 @@
       var y = 14, o = {};
       if (w.category) { o.catY = y; y += 18; }
       setf("24px Mona12B, 'Noto Sans KR', sans-serif"); o.word = wrap(g, w.word, IW); o.wordY = y; y += o.word.length * 28 + 6;
+      if (w.pron_ko) { o.pronY = y; y += 18; }
       setf("12px MonaS10, 'Noto Sans KR', sans-serif"); o.mean = wrap(g, w.meaning, IW); o.meanY = y; y += o.mean.length * 16 + 12;
       if (w.example) { o.ex = wrap(g, w.example, IW - 14); o.exY = y; o.exH = o.ex.length * 16 + 12; y += o.exH + 12; }
       o.footY = y; o.H = Math.max(250, y + 26); return o;
@@ -501,6 +491,7 @@
       g.fillStyle = INK; g.fillText(w.category, X + 6, o.catY + 5);
     }
     setf("24px Mona12B, 'Noto Sans KR', sans-serif"); g.fillStyle = INK; text(o.word, X + 1, o.wordY + 1, 28); g.fillStyle = '#eef6c4'; text(o.word, X, o.wordY, 28);
+    if (w.pron_ko) { setf("12px MonaS10, 'Noto Sans KR', sans-serif"); g.fillStyle = MID; g.fillText((w.reading ? w.reading + '  ' : '') + '발음 ' + w.pron_ko, X, o.pronY); }
     setf("12px MonaS10, 'Noto Sans KR', sans-serif"); g.fillStyle = PALE; text(o.mean, X, o.meanY, 16);
     if (w.example) {
       g.fillStyle = INK; g.fillRect(X + 2, o.exY + 2, IW, o.exH); g.fillStyle = '#3a4a10'; g.fillRect(X, o.exY, IW, o.exH);
@@ -548,7 +539,7 @@
       shareCanvas(memoCard(t), 'shinjoeo-memo-' + today.replace(/-/g, '') + '-' + p2(n.getHours()) + p2(n.getMinutes()) + '.jpg', '메모');
       return;
     }
-    var w = words[st.cur >= 0 ? st.cur : 0];
+    var w = (!st.home && st.w) || words[0];
     if (!w) { toast('단어를 불러온 뒤에 눌러 주세요'); return; }
     shareCanvas(cardCanvas(w), 'shinjoeo-' + (w.date || today).replace(/-/g, '') + '-' + w.word.replace(/[^0-9A-Za-z가-힣ㄱ-ㅎ]/g, '') + '.jpg', '오늘의 신조어: ' + w.word);
   }
@@ -557,12 +548,12 @@
   document.addEventListener('keydown', function (e) {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.target === mta) { if (e.key === 'Escape') memoOpen(false); return; }
-    if (e.key === 'Escape') { if (st.fgn) fgnClose(); else if (memoEl.classList.contains('open')) memoOpen(false); else goHome(); return; }
+    if (e.key === 'Escape') { if (memoEl.classList.contains('open')) memoOpen(false); else goHome(); return; }
     if (KEYS[e.key]) { e.preventDefault(); go(KEYS[e.key]); }
     else if (e.key === 'b' || e.key === 'B' || e.key === 'z' || e.key === 'Z') pickWord(0);
     else if (e.key === 'a' || e.key === 'A' || e.key === 'x' || e.key === 'X') pickWord(1);
-    else if (e.key === 'g' || e.key === 'G') fgnShow('jz');
-    else if (e.key === 'y' || e.key === 'Y') fgnShow('en');
+    else if (e.key === 'g' || e.key === 'G') pickForeign('jz');
+    else if (e.key === 'y' || e.key === 'Y') pickForeign('en');
   });
 
   /* ── 크기 맞추기: 정수 배율이면 픽셀이 선명합니다 ── */

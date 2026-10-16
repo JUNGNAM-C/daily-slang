@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#f4ecdc"/>
+  <rect x="0" y="0" width="512" height="40" fill="#d8432b"/>
+  <text x="256" y="360" text-anchor="middle" font-family="'Noto Serif KR','Nanum Myeongjo','Batang',serif" font-weight="900" font-size="300" fill="#1d1a16">新</text>
+</svg>

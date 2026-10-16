@@ -91,16 +91,16 @@
   .pb { position: absolute; left: 8px; right: 8px; top: 21px; bottom: 6px; overflow: hidden; }
   .pb.foot { bottom: 20px; }
   .inner { will-change: transform; }
-  .txt { margin: 0; font: 12px/14px 'MonaS10', 'Noto Sans KR', sans-serif; color: var(--pale); word-break: keep-all; overflow-wrap: anywhere; }
-  .pb.f8 .txt { font-family: 'MonaS8', 'MonaS10', sans-serif; line-height: 13px; }
+  .txt { margin: 0; font: 24px/28px 'MonaS10', 'Noto Sans KR', sans-serif; color: var(--pale); word-break: keep-all; overflow-wrap: anywhere; }
+  .pb.f8 .txt { font-family: 'MonaS8', 'MonaS10', sans-serif; line-height: 26px; }
   .cat { display: inline-block; font: 10px/10px 'Mona10B', sans-serif; color: var(--ink); background: var(--pale); border: 1px solid var(--ink);
          padding: 1px 4px; border-radius: 2px; box-shadow: inset 0 -1px 0 var(--mid); }
-  .word { margin: 5px 0 6px; font: 24px/26px 'Mona12B', sans-serif; color: #eef6c4; text-shadow: 1px 1px 0 var(--ink); word-break: keep-all; overflow-wrap: anywhere; }
-  .word.sm { font-size: 12px; line-height: 14px; margin: 7px 0 7px; }
+  .word { margin: 5px 0 6px; font: 36px/40px 'Mona12B', sans-serif; color: #eef6c4; text-shadow: 1px 1px 0 var(--ink); word-break: keep-all; overflow-wrap: anywhere; }
+  .word.sm { font-size: 18px; line-height: 21px; margin: 7px 0 7px; }
   .bubble { border: 1px solid var(--pale); border-radius: 3px; padding: 5px 6px; background: #0b0c1822; box-shadow: 2px 2px 0 var(--ink); }
   .pfoot { position: absolute; left: 8px; right: 8px; bottom: 5px; font: 12px/12px 'MonaS8', monospace; color: var(--mid); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .rel + .rel { margin-top: 7px; }
-  .rel b { font: 12px/14px 'Mona12B', sans-serif; color: #eef6c4; text-shadow: 1px 1px 0 var(--ink); }
+  .rel b { font: 18px/21px 'Mona12B', sans-serif; color: #eef6c4; text-shadow: 1px 1px 0 var(--ink); }
   .rel .tg { margin-left: 4px; font: 10px/10px 'Mona10B', sans-serif; color: var(--ink); background: var(--mid); padding: 0 3px; border-radius: 2px; }
   .rel .txt { margin-top: 2px; }
   .empty { text-align: center; padding-top: 18px; }
@@ -136,6 +136,7 @@
                 box-shadow: inset 1px 1px 0 #3c3f48; }
   #dpad.pu .shape { transform: perspective(120px) rotateX(8deg); } #dpad.pd .shape { transform: perspective(120px) rotateX(-8deg); }
   #dpad.pl .shape { transform: perspective(120px) rotateY(-8deg); } #dpad.pr .shape { transform: perspective(120px) rotateY(8deg); }
+  #dpad .bc { left: 29px; top: 29px; width: 18px; height: 18px; border-radius: 50%; z-index: 3; }
   #dpad button { position: absolute; width: 26px; height: 26px; margin: 0; padding: 0; border: 0; background: transparent; cursor: pointer; z-index: 2; }
   #dpad .bu { left: 25px; top: 0; height: 28px; } #dpad .bd { left: 25px; top: 48px; height: 28px; }
   #dpad .bl { left: 0; top: 25px; width: 28px; } #dpad .br { left: 48px; top: 25px; width: 28px; }
@@ -175,7 +176,7 @@
   #mst { position: absolute; right: 2px; top: 2px; font: 12px/12px 'MonaS8', monospace; color: var(--mid); }
   #mta { position: absolute; left: 6px; right: 6px; top: 24px; bottom: 6px; width: auto; height: auto; resize: none; margin: 0; padding: 5px 6px;
          border: 1px solid var(--pale); border-radius: 3px; background: #0b0c1833; box-shadow: 2px 2px 0 var(--ink); color: #eef6c4;
-         font: 12px/16px 'MonaS10', 'Noto Sans KR', sans-serif; caret-color: var(--pale); outline: none; -webkit-user-select: text; user-select: text; }
+         font: 24px/28px 'MonaS10', 'Noto Sans KR', sans-serif; caret-color: var(--pale); outline: none; -webkit-user-select: text; user-select: text; }
   #mta::placeholder { color: var(--mid); }
   #toast { position: absolute; left: 10px; right: 10px; bottom: 8px; z-index: 6; display: none; text-align: center; font: 12px/14px 'MonaS10', 'Noto Sans KR', sans-serif;
            color: var(--pale); background: #0b0c18; border: 1px solid var(--pale); border-radius: 3px; padding: 3px 4px; }
@@ -217,6 +218,7 @@
     <div id="dpad" class="abs">
       <div class="shape"></div><div class="dome"></div>
       <i class="iu"></i><i class="id"></i><i class="il"></i><i class="ir"></i>
+      <button class="bc" id="bHome" aria-label="가운데 버튼: 홈 화면으로"></button>
       <button class="bu" data-dir="up"    aria-label="위쪽: 유래"></button>
       <button class="bd" data-dir="down"  aria-label="아래쪽: 예문"></button>
       <button class="bl" data-dir="left"  aria-label="왼쪽: 반대어"></button>
@@ -362,6 +364,10 @@
     if (st.cur !== i) { st.cur = i; render(words[i]); hearts(); }
     setPos('c', false);
   }
+  function goHome() {   // 십자키 가운데 버튼: 시작(홈) 화면으로
+    memoOpen(false); $('title').style.display = 'block'; $('hud').style.display = 'none'; $('led').classList.remove('on'); setPos('c', false);
+    $('sr').textContent = '홈 화면';
+  }
   function go(dir) {
     if (st.cur < 0 || memoEl.classList.contains('open')) return; var k = DIRKEY[dir];
     if (st.pos === 'c') setPos(k, true); else if (BACK[st.pos] === k) setPos('c', true);
@@ -374,6 +380,7 @@
     b.addEventListener('pointerdown', function () { d.classList.add(c); });
     ['pointerup', 'pointerleave', 'pointercancel'].forEach(function (e) { b.addEventListener(e, function () { d.classList.remove(c); }); });
   });
+  $('bHome').addEventListener('click', goHome);
   $('bB').addEventListener('click', function () { pickWord(0); });
   $('bA').addEventListener('click', function () { pickWord(1); });
   var memoEl = $('memo'), mta = $('mta'), mst = $('mst'), toastT;
@@ -467,7 +474,7 @@
   document.addEventListener('keydown', function (e) {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
     if (e.target === mta) { if (e.key === 'Escape') memoOpen(false); return; }
-    if (e.key === 'Escape' && memoEl.classList.contains('open')) { memoOpen(false); return; }
+    if (e.key === 'Escape') { if (memoEl.classList.contains('open')) memoOpen(false); else goHome(); return; }
     if (KEYS[e.key]) { e.preventDefault(); go(KEYS[e.key]); }
     else if (e.key === 'b' || e.key === 'B' || e.key === 'z' || e.key === 'Z') pickWord(0);
     else if (e.key === 'a' || e.key === 'A' || e.key === 'x' || e.key === 'X') pickWord(1);

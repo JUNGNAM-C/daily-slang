@@ -522,7 +522,7 @@
         if (!blob) { toast('카드를 만들지 못했어요'); return done(); }
         var file; try { file = new File([blob], name, { type: 'image/jpeg' }); } catch (e) { file = null; }
         if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
-          navigator.share({ files: [file], title: title }).then(function () { toast('공유했어요'); }, function (e) { if (!e || e.name !== 'AbortError') toast('공유하지 못했어요'); }).then(done);
+          navigator.share({ files: [file] }).then(function () { toast('공유했어요'); }, function (e) { if (!e || e.name !== 'AbortError') toast('공유하지 못했어요'); }).then(done);
         } else {   // 공유를 지원하지 않는 브라우저: JPG 파일로 저장
           var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click(); a.remove();
           setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000); toast('JPG로 저장했어요'); done();

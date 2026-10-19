@@ -40,6 +40,17 @@ def resolve_url(uri, timeout=12):
         return None
 
 
+def _domain(x):
+    """주소나 사이트 이름에서 도메인만 소문자로 뽑습니다(www. 제외)."""
+    x = str(x or "").strip().lower()
+    if not x:
+        return ""
+    if "://" in x:
+        x = x.split("://", 1)[1]
+    x = x.split("/")[0].split("?")[0]
+    return x[4:] if x.startswith("www.") else x
+
+
 def fetch_text(url, timeout=12, limit=800_000):
     """페이지를 실제로 받아 봅니다. 성공(200)하면 본문 글자, 아니면 None."""
     try:
@@ -95,6 +106,8 @@ class _Messages:
 
     def create(self, model, max_tokens, messages, tools=None, **_):
         prompt = "\n".join(m["content"] for m in messages if m.get("role") == "user")
+        prompt += ("\n\n[추가 규칙] 모든 항목의 source에는 주소(URL)를 쓰지 말고, 방금 검색에서 실제로 읽은 사이트의 도메인 이름만 쓰세요"
+                   "(예: namu.wiki, chosun.com). 주소는 시스템이 검색 결과에서 채웁니다. 검색에서 읽지 않은 사이트는 쓰지 마세요.")
         body = {
             "contents": [{"role": "user", "parts": [{"text": prompt}]}],
             "tools": [{"google_search": {}}],
@@ -108,18 +121,17 @@ class _Messages:
         cand = cands[0]
         text = "".join(p.get("text", "") for p in (cand.get("content") or {}).get("parts", []) if not p.get("thought"))
         chunks = (cand.get("groundingMetadata") or {}).get("groundingChunks") or []
-        results, seen = [], set()
+        grounded = []   # (사이트 도메인, 원래 페이지 주소) — 검색에서 실제로 받아 본 페이지들
         for ch in chunks:
-            raw = (ch.get("web") or {}).get("uri")
-            u = self.resolver(raw)
-            if u:
-                if raw and u != raw:
-                    text = text.replace(raw, u)   # 답변이 중계 주소를 그대로 적었다면 원래 주소로 바꿈
-                if u not in seen:
-                    seen.add(u)
-                    results.append(NS(url=u))
-        # 답변이 적은 출처 중 검색 결과에 없는 주소는, 지금 실제로 열어 보고 그 단어가 본문에 있으면 인정합니다.
-        # (열리지 않거나 단어가 없으면 인정하지 않습니다 = 지어낸 주소는 여전히 버려집니다)
+            web = ch.get("web") or {}
+            u = self.resolver(web.get("uri"))
+            if u and all(u != g[1] for g in grounded):
+                grounded.append((_domain(web.get("title")) or _domain(u), u))
+        results = [NS(url=u) for _, u in grounded]
+        seen = {u for _, u in grounded}
+        # 모델이 출처 주소를 직접 쓰면 지어낸 주소가 많아서, 출처는 '사이트 도메인'만 적게 하고
+        # 주소는 검색 결과(grounded)에서 찾아 채웁니다. 단어가 본문에 있는 페이지를 우선하고,
+        # 페이지가 열리지 않는(봇 차단) 경우에만 그 사이트의 검색된 페이지를 그대로 씁니다.
         try:
             from slang_common import extract_json
             obj = extract_json(text)
@@ -127,21 +139,33 @@ class _Messages:
             obj = None
         if obj is not None:
             for d in _walk(obj):
-                src, word = str(d.get("source", "")).strip(), str(d.get("word", "")).strip()
-                if not src.startswith("https://") or not word or src in seen:
+                if "source" not in d:
                     continue
-                if any(h in src for h in REDIRECT_HOSTS):
-                    fixed = self.resolver(src)
-                    if not fixed:
+                src, word = str(d.get("source", "")).strip(), str(d.get("word", "")).strip()
+                host = _domain(src)
+                cands = [u for dom, u in grounded if host and (dom == host or dom.endswith("." + host) or host.endswith("." + dom))]
+                if src in seen:                      # 이미 검색 결과에 있는 주소
+                    continue
+                pick = None
+                blocked = []
+                for u in cands[:4]:
+                    body = self.fetcher(u)
+                    if body is None:
+                        blocked.append(u)
+                    elif word and word.lower() in body.lower():
+                        pick = u
+                        break
+                if pick is None and blocked:
+                    pick = blocked[0]
+                if pick is None and not cands and src.startswith("https://") and word:   # 검색 결과에 없는 사이트면 직접 열어 확인
+                    body = self.fetcher(src)
+                    if body and word.lower() in body.lower():
+                        seen.add(src)
+                        results.append(NS(url=src))
                         continue
-                    text = text.replace(src, fixed)
-                    src = fixed
-                    if src in seen:
-                        continue
-                body = self.fetcher(src)
-                if body and word.lower() in body.lower():
-                    seen.add(src)
-                    results.append(NS(url=src))
+                if pick:
+                    d["source"] = pick
+            text = json.dumps(obj, ensure_ascii=False)
         return NS(content=[NS(type="web_search_tool_result", content=results), NS(type="text", text=text)])
 
 

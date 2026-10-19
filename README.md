@@ -143,7 +143,7 @@ python generate.py
 
 ## AI 선택: Gemini(무료) 또는 Claude
 
-- `GEMINI_API_KEY`가 있으면 **Gemini 2.5 Flash + 구글 검색 연결**을 씁니다. 없고 `ANTHROPIC_API_KEY`만 있으면 Claude를 씁니다. 둘 다 없으면 오류 없이 그 실행을 건너뜁니다.
+- `GEMINI_API_KEY`가 있으면 **Gemini 3.8 Flash + 구글 검색 연결**을 씁니다. 없고 `ANTHROPIC_API_KEY`만 있으면 Claude를 씁니다. 둘 다 없으면 오류 없이 그 실행을 건너뜁니다.
 - 강제로 고르려면 환경변수 `SLANG_PROVIDER`를 `gemini` 또는 `anthropic`으로 지정합니다. Gemini 모델은 `SLANG_GEMINI_MODEL`로 바꿉니다.
 - Gemini가 주는 출처 주소는 구글 중계 주소라서 `gemini_client.py`가 원래 페이지 주소로 풀어 줍니다. 풀지 못했거나 검색에 나오지 않은 주소는 버리는 규칙(출처 없는 자료 반입 금지)은 Claude일 때와 똑같습니다.
 - 키 발급: aistudio.google.com → Get API key. 등록: 저장소 Settings → Secrets and variables → Actions → New repository secret, 이름 `GEMINI_API_KEY`.

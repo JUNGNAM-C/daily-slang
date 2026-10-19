@@ -193,7 +193,7 @@ def make_client():
         if not key:
             return None, None, None, "gemini"
         from gemini_client import GeminiClient
-        m = os.environ.get("SLANG_GEMINI_MODEL", "gemini-2.5-flash")
+        m = os.environ.get("SLANG_GEMINI_MODEL", "gemini-3.8-flash")
         return GeminiClient(key), m, m, "gemini"
     if not os.environ.get("ANTHROPIC_API_KEY"):
         return None, None, None, "anthropic"

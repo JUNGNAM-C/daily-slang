@@ -1,0 +1,17 @@
+name: Gemini 검색 점검 (진단용)
+
+on:
+  workflow_dispatch: {}   # Actions 탭에서 수동 실행만 가능합니다
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Gemini 검색 점검
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python gemini_probe.py

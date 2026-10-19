@@ -133,23 +133,33 @@ class _Messages:
             raise RuntimeError("Gemini가 답을 주지 않았습니다: " + json.dumps(data.get("promptFeedback", data), ensure_ascii=False)[:200])
         cand = cands[0]
         text = "".join(p.get("text", "") for p in (cand.get("content") or {}).get("parts", []) if not p.get("thought"))
-        chunks = (cand.get("groundingMetadata") or {}).get("groundingChunks") or []
-        grounded = []   # (사이트 도메인, 원래 페이지 주소) — 검색에서 실제로 받아 본 페이지들
+        gm = cand.get("groundingMetadata") or {}
+        chunks = gm.get("groundingChunks") or []
+        info = []   # 청크 순서대로 (사이트 도메인, 원래 페이지 주소 또는 None)
         for ch in chunks:
             web = ch.get("web") or {}
             u = self.resolver(web.get("uri"))
+            info.append((_domain(web.get("title")) or _domain(u), u))
+        grounded = []
+        for dom, u in info:
             if u and all(u != g[1] for g in grounded):
-                grounded.append((_domain(web.get("title")) or _domain(u), u))
-        print(f"    [Gemini 검색] 검색 결과 {len(chunks)}건 → 주소 확인 {len(grounded)}건 · 사이트: {', '.join(sorted({d for d, _ in grounded})) or '없음'}")
+                grounded.append((dom, u))
+        # 답변의 어느 문장이 어느 검색 결과(청크)에서 나왔는지(지지 정보)
+        said = {}
+        for sp in gm.get("groundingSupports") or []:
+            seg = ((sp.get("segment") or {}).get("text") or "")
+            for i in sp.get("groundingChunkIndices") or []:
+                said[i] = said.get(i, "") + " " + seg
+        print(f"    [Gemini 검색] 검색 결과 {len(chunks)}건 → 주소 확인 {len(grounded)}건 · 문장 연결 {len(said)}건 · 사이트: {', '.join(sorted({d for d, _ in grounded})) or '없음'}")
         if chunks and not grounded:
             print("::warning title=Gemini 검색 주소::검색 결과는 있었지만 원래 주소로 풀지 못했습니다(중계 주소 해석 실패)")
         if not chunks:
             print("::warning title=Gemini 검색::이번 답변에는 검색 결과(groundingChunks)가 없었습니다")
         results = [NS(url=u) for _, u in grounded]
         seen = {u for _, u in grounded}
-        # 모델이 출처 주소를 직접 쓰면 지어낸 주소가 많아서, 출처는 '사이트 도메인'만 적게 하고
-        # 주소는 검색 결과(grounded)에서 찾아 채웁니다. 단어가 본문에 있는 페이지를 우선하고,
-        # 페이지가 열리지 않는(봇 차단) 경우에만 그 사이트의 검색된 페이지를 그대로 씁니다.
+        # 모델이 출처 주소를 직접 쓰면 지어낸 주소가 많아서, 출처는 '사이트 도메인'만 적게 하고 주소는 시스템이 채웁니다.
+        # 같은 사이트의 검색된 페이지 중, ① 그 단어가 들어간 문장이 그 페이지에서 나왔다고 연결돼 있거나
+        # ② 페이지를 열어 보니 본문에 그 단어가 있는 것만 씁니다. 둘 다 확인되지 않으면 버립니다.
         try:
             from slang_common import extract_json
             obj = extract_json(text)
@@ -161,23 +171,25 @@ class _Messages:
                     continue
                 src, word = str(d.get("source", "")).strip(), str(d.get("word", "")).strip()
                 host = _domain(src)
-                cands = [u for dom, u in grounded if host and (dom == host or dom.endswith("." + host) or host.endswith("." + dom))]
                 if src in seen:                      # 이미 검색 결과에 있는 주소
                     continue
+                cand_idx = [i for i, (dom, u) in enumerate(info)
+                            if u and host and (dom == host or dom.endswith("." + host) or host.endswith("." + dom))]
                 pick = None
-                blocked = []
-                for u in cands[:4]:
-                    body = self.fetcher(u)
-                    if body is None:
-                        blocked.append(u)
-                    elif word and word.lower() in body.lower():
-                        pick = u
+                w = word.lower()
+                for i in cand_idx:                   # ① 문장 연결
+                    if w and w in said.get(i, "").lower():
+                        pick = info[i][1]
                         break
-                if pick is None and blocked:
-                    pick = blocked[0]
-                if pick is None and not cands and src.startswith("https://") and word:   # 검색 결과에 없는 사이트면 직접 열어 확인
+                if pick is None:
+                    for i in cand_idx[:4]:           # ② 페이지 본문 확인
+                        body = self.fetcher(info[i][1])
+                        if body and w and w in body.lower():
+                            pick = info[i][1]
+                            break
+                if pick is None and not cand_idx and src.startswith("https://") and w:   # 검색 결과에 없는 사이트면 직접 열어 확인
                     body = self.fetcher(src)
-                    if body and word.lower() in body.lower():
+                    if body and w in body.lower():
                         seen.add(src)
                         results.append(NS(url=src))
                         continue

@@ -118,7 +118,22 @@ class _Messages:
         raise last
 
     def create(self, model, max_tokens, messages, tools=None, **_):
-        prompt = "\n".join(m["content"] for m in messages if m.get("role") == "user")
+        """검색 없이 기억만으로 답하면 출처를 붙일 수 없으므로, 검색 결과가 있는 답이 나올 때까지 최대 3번 다시 요청합니다."""
+        base = "\n".join(m["content"] for m in messages if m.get("role") == "user")
+        last = None
+        for k in range(3):
+            last = self._once(model, max_tokens, base, k)
+            if getattr(last, "grounded", 0) > 0:
+                return last
+            print(f"    [Gemini 검색] 검색 없이 답해서 다시 요청합니다 ({k + 1}/3)")
+        return last   # 끝내 검색이 없으면 출처 없는 답이라 호출한 쪽에서 버려집니다
+
+    def _once(self, model, max_tokens, base, k=0):
+        lead = ("[필수] 답하기 전에 반드시 구글 검색 도구를 먼저 사용해 최소 3번 검색하세요. "
+                "검색 없이 기억만으로 답하면 그 답은 전부 버려집니다. 검색 결과에서 읽은 내용만 쓰세요.\n\n")
+        if k >= 1:
+            lead += "(지난 답변은 검색을 하지 않아 버려졌습니다. 이번에는 꼭 검색부터 하세요.)\n\n"
+        prompt = lead + base
         prompt += ("\n\n[추가 규칙] 모든 항목의 source에는 주소(URL)를 쓰지 말고, 방금 검색에서 실제로 읽은 사이트의 도메인 이름만 쓰세요"
                    "(예: namu.wiki, chosun.com). 주소는 시스템이 검색 결과에서 채웁니다. 검색에서 읽지 않은 사이트는 쓰지 마세요.")
         body = {
@@ -196,7 +211,7 @@ class _Messages:
                 if pick:
                     d["source"] = pick
             text = json.dumps(obj, ensure_ascii=False)
-        return NS(content=[NS(type="web_search_tool_result", content=results), NS(type="text", text=text)])
+        return NS(content=[NS(type="web_search_tool_result", content=results), NS(type="text", text=text)], grounded=len(grounded))
 
 
 class GeminiClient:

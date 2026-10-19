@@ -13,6 +13,7 @@ import os
 import time
 import urllib.error
 import urllib.request
+from urllib.parse import urljoin
 from types import SimpleNamespace as NS
 
 API = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
@@ -20,24 +21,36 @@ REDIRECT_HOSTS = ("vertexaisearch.cloud.google.com", "grounding-api-redirect")
 UA = "Mozilla/5.0 (compatible; daily-slang-bot/1.0)"
 
 
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):
+        return None   # 따라가지 않고 멈춤 → 응답 머리글의 Location만 읽습니다
+
+
+_opener_noredir = urllib.request.build_opener(_NoRedirect)
+
+
 def resolve_url(uri, timeout=12):
-    """구글 중계 주소면 최종 페이지 주소로 풀고, 아니면 그대로 돌려줍니다. 실패하면 None."""
+    """구글 중계 주소면 가리키는 원래 페이지 주소로 풀고, 아니면 그대로 돌려줍니다. 실패하면 None.
+    목적지 사이트에는 접속하지 않고, 구글이 알려 주는 이동 주소(Location)만 읽습니다."""
     if not uri:
         return None
-    if not any(h in uri for h in REDIRECT_HOSTS):
-        return uri
-    try:
-        req = urllib.request.Request(uri, headers={"User-Agent": UA})
-        with urllib.request.urlopen(req, timeout=timeout) as r:  # 리다이렉트를 따라감
-            final = r.geturl()
-        if any(h in final for h in REDIRECT_HOSTS):
+    cur = uri
+    for _ in range(4):
+        if not any(h in cur for h in REDIRECT_HOSTS):
+            return cur
+        try:
+            req = urllib.request.Request(cur, headers={"User-Agent": UA})
+            with _opener_noredir.open(req, timeout=timeout) as r:   # 200이면 이동 주소가 없는 것
+                return None
+        except urllib.error.HTTPError as e:
+            loc = e.headers.get("Location") if e.headers else None
+            if e.code in (301, 302, 303, 307, 308) and loc:
+                cur = urljoin(cur, loc)
+                continue
             return None
-        return final
-    except urllib.error.HTTPError as e:   # 목적지가 403 등을 줘도 최종 주소는 알 수 있음
-        final = getattr(e, "url", None) or e.geturl()
-        return None if (not final or any(h in final for h in REDIRECT_HOSTS)) else final
-    except Exception:
-        return None
+        except Exception:
+            return None
+    return None if any(h in cur for h in REDIRECT_HOSTS) else cur
 
 
 def _domain(x):
@@ -127,6 +140,11 @@ class _Messages:
             u = self.resolver(web.get("uri"))
             if u and all(u != g[1] for g in grounded):
                 grounded.append((_domain(web.get("title")) or _domain(u), u))
+        print(f"    [Gemini 검색] 검색 결과 {len(chunks)}건 → 주소 확인 {len(grounded)}건 · 사이트: {', '.join(sorted({d for d, _ in grounded})) or '없음'}")
+        if chunks and not grounded:
+            print("::warning title=Gemini 검색 주소::검색 결과는 있었지만 원래 주소로 풀지 못했습니다(중계 주소 해석 실패)")
+        if not chunks:
+            print("::warning title=Gemini 검색::이번 답변에는 검색 결과(groundingChunks)가 없었습니다")
         results = [NS(url=u) for _, u in grounded]
         seen = {u for _, u in grounded}
         # 모델이 출처 주소를 직접 쓰면 지어낸 주소가 많아서, 출처는 '사이트 도메인'만 적게 하고

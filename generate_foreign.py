@@ -9,7 +9,7 @@
 
 앱에서는 노란 버튼이 영어, 초록 버튼이 일본어/중국어(무작위)를 보여 줍니다.
 
-필요한 것: Python 3.9+, pip install anthropic, 환경변수 ANTHROPIC_API_KEY
+필요한 것: Python 3.9+, 환경변수 GEMINI_API_KEY(무료) 또는 ANTHROPIC_API_KEY
 
 사용법
   python generate_foreign.py                 # 오늘 없는 언어만 새로 만들어 추가
@@ -26,18 +26,11 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-try:
-    import anthropic
-except ImportError:
-    sys.exit("anthropic 패키지가 없습니다. 먼저 'pip install anthropic'을 실행해 주세요.")
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import slang_common as sc  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 PATH = HERE / "foreign.json"
-MODEL = os.environ.get("SLANG_MODEL", "claude-sonnet-5-5")
-ENRICH_MODEL = os.environ.get("SLANG_ENRICH_MODEL", "claude-haiku-5-5")  # 기존 단어 채우기는 저렴한 모델
 KST = ZoneInfo("Asia/Seoul")
 
 LANGS = {
@@ -146,7 +139,11 @@ def save(data, words, today):
     tmp.replace(PATH)
 
 
+MODEL = ENRICH_MODEL = None  # main()에서 고른 AI에 맞춰 정해집니다
+
+
 def main():
+    global MODEL, ENRICH_MODEL
     ap = argparse.ArgumentParser(description="오늘의 외국어 신조어를 foreign.json에 추가합니다.")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true", help="오늘 단어가 이미 있어도 지우고 새로 만듦")
@@ -154,8 +151,11 @@ def main():
     ap.add_argument("--enrich-limit", type=int, default=3, help="이번에 채워 줄 기존 단어 수 (기본 3, 최근 날짜 단어부터)")
     ap.add_argument("--lang", choices=list(LANGS), action="append", help="만들 언어 (여러 번 지정 가능, 기본: 전부)")
     args = ap.parse_args()
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        sys.exit("ANTHROPIC_API_KEY 환경변수가 설정되어 있지 않습니다.")
+    client, MODEL, ENRICH_MODEL, provider = sc.make_client()
+    if client is None:
+        print("::warning::GEMINI_API_KEY(또는 ANTHROPIC_API_KEY)가 설정되어 있지 않아 이번 실행은 건너뜁니다.")
+        sys.exit(0)
+    print(f"사용하는 AI: {provider} ({MODEL})")
 
     today = datetime.now(KST).strftime("%Y-%m-%d")
     data = load()
@@ -163,7 +163,6 @@ def main():
     langs = args.lang or list(LANGS)
     if args.force:
         words = [w for w in words if not (w.get("date") == today and w.get("lang") in langs)]
-    client = anthropic.Anthropic()
     made = failed = 0
     for lang in langs:
         if any(w.get("date") == today and w.get("lang") == lang for w in words):

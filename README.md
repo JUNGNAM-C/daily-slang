@@ -139,3 +139,12 @@ python generate.py
 - 단어, 10·20·30년 전 유사어, 반대어, 외국어 단어 모두 **출처 주소(https)가 없으면 저장하지 않습니다.**
 - 출처 주소는 AI가 웹 검색으로 실제로 받아 본 페이지 주소여야 합니다. AI가 주소를 짐작하거나 지어낸 경우(검색 결과에 없는 주소)는 그 항목을 버립니다. 이 검사는 `slang_common.py`의 `search_urls`·`source_ok`가 합니다.
 - 확인되지 않으면 억지로 채우지 않고 화면에 "출처에서 확인된 ○○이 아직 없어요"라고 표시합니다.
+
+
+## AI 선택: Gemini(무료) 또는 Claude
+
+- `GEMINI_API_KEY`가 있으면 **Gemini 2.5 Flash + 구글 검색 연결**을 씁니다. 없고 `ANTHROPIC_API_KEY`만 있으면 Claude를 씁니다. 둘 다 없으면 오류 없이 그 실행을 건너뜁니다.
+- 강제로 고르려면 환경변수 `SLANG_PROVIDER`를 `gemini` 또는 `anthropic`으로 지정합니다. Gemini 모델은 `SLANG_GEMINI_MODEL`로 바꿉니다.
+- Gemini가 주는 출처 주소는 구글 중계 주소라서 `gemini_client.py`가 원래 페이지 주소로 풀어 줍니다. 풀지 못했거나 검색에 나오지 않은 주소는 버리는 규칙(출처 없는 자료 반입 금지)은 Claude일 때와 똑같습니다.
+- 키 발급: aistudio.google.com → Get API key. 등록: 저장소 Settings → Secrets and variables → Actions → New repository secret, 이름 `GEMINI_API_KEY`.
+- 무료 티어는 입력 내용이 구글 제품 개선에 쓰일 수 있습니다(이 앱은 공개된 신조어 정보만 보냅니다).

@@ -9,8 +9,7 @@
 
 필요한 것
   - Python 3.9 이상
-  - pip install anthropic
-  - 환경변수 ANTHROPIC_API_KEY (Anthropic Console에서 발급)
+  - 환경변수 GEMINI_API_KEY (Google AI Studio에서 발급, 무료) 또는 ANTHROPIC_API_KEY
 
 사용법
   python generate.py            # 오늘 단어가 없으면 새로 만들어 추가
@@ -26,18 +25,11 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-try:
-    import anthropic
-except ImportError:
-    sys.exit("anthropic 패키지가 없습니다. 먼저 'pip install anthropic'을 실행해 주세요.")
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import slang_common as sc  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 WORDS_PATH = HERE / "words.json"
-MODEL = os.environ.get("SLANG_MODEL", "claude-sonnet-5-5")
-ENRICH_MODEL = os.environ.get("SLANG_ENRICH_MODEL", "claude-haiku-5-5")  # 기존 단어 채우기는 저렴한 모델
 KST = ZoneInfo("Asia/Seoul")
 
 PROMPT = """오늘은 {today}입니다. 웹 검색을 사용해서 지금 한국의 SNS(특히 X(트위터)와 인스타그램)·커뮤니티·뉴스에서 실제로 쓰이는 '새로운 신조어' 후보를 찾아 주세요.
@@ -147,7 +139,11 @@ def save(data, words, today):
     tmp.replace(WORDS_PATH)
 
 
+MODEL = ENRICH_MODEL = None  # main()에서 고른 AI에 맞춰 정해집니다
+
+
 def main():
+    global MODEL, ENRICH_MODEL
     ap = argparse.ArgumentParser(description="오늘의 신조어를 words.json에 추가합니다.")
     ap.add_argument("--dry-run", action="store_true", help="파일을 수정하지 않고 결과만 출력")
     ap.add_argument("--force", action="store_true", help="오늘 단어가 이미 있어도 지우고 새로 만듦")
@@ -156,8 +152,11 @@ def main():
     ap.add_argument("--count", type=int, default=PER_DAY, help=f"하루에 만들 단어 수 (기본 {PER_DAY})")
     args = ap.parse_args()
 
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        sys.exit("ANTHROPIC_API_KEY 환경변수가 설정되어 있지 않습니다. README의 '2단계'를 따라 설정해 주세요.")
+    client, MODEL, ENRICH_MODEL, provider = sc.make_client()
+    if client is None:
+        print("::warning::GEMINI_API_KEY(또는 ANTHROPIC_API_KEY)가 설정되어 있지 않아 이번 실행은 건너뜁니다.")
+        sys.exit(0)
+    print(f"사용하는 AI: {provider} ({MODEL})")
 
     today = datetime.now(KST).strftime("%Y-%m-%d")
     data = load_words()
@@ -167,7 +166,6 @@ def main():
         words = [w for w in words if w.get("date") != today]
     have = [w for w in words if w.get("date") == today]
     need = args.count - len(have)
-    client = anthropic.Anthropic()
     made = 0
     if need <= 0:
         print(f"오늘({today}) 단어가 이미 {len(have)}개 있습니다: {', '.join(w['word'] for w in have)}  (다시 만들려면 --force)")

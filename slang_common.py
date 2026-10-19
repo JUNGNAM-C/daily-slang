@@ -4,7 +4,9 @@
 출처(https)가 확인되지 않은 항목은 모두 버립니다.
 """
 import json
+import os
 import re
+import sys
 from urllib.parse import urlparse
 
 
@@ -179,3 +181,25 @@ def enrich(client, model, words, lang_label, foreign, limit, today_year):
         w["enriched"] = True
         done += 1
     return done
+
+
+def make_client():
+    """쓸 AI를 고릅니다. 돌려주는 값: (client, 새 단어용 모델, 기존 단어 채우기용 모델, 이름)
+    - 환경변수 SLANG_PROVIDER가 gemini/anthropic이면 그대로, 없으면 GEMINI_API_KEY가 있을 때 Gemini, 아니면 Anthropic.
+    - 모델 이름은 SLANG_GEMINI_MODEL / SLANG_MODEL / SLANG_ENRICH_MODEL로 바꿀 수 있습니다."""
+    prov = os.environ.get("SLANG_PROVIDER") or ("gemini" if os.environ.get("GEMINI_API_KEY") else "anthropic")
+    if prov == "gemini":
+        key = os.environ.get("GEMINI_API_KEY")
+        if not key:
+            return None, None, None, "gemini"
+        from gemini_client import GeminiClient
+        m = os.environ.get("SLANG_GEMINI_MODEL", "gemini-2.5-flash")
+        return GeminiClient(key), m, m, "gemini"
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        return None, None, None, "anthropic"
+    try:
+        import anthropic
+    except ImportError:
+        sys.exit("anthropic 패키지가 없습니다. 'pip install anthropic'을 실행해 주세요.")
+    return (anthropic.Anthropic(), os.environ.get("SLANG_MODEL", "claude-sonnet-5-5"),
+            os.environ.get("SLANG_ENRICH_MODEL", "claude-haiku-5-5"), "anthropic")

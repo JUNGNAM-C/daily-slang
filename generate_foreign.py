@@ -125,7 +125,7 @@ def generate_one(client, lang, today, words):
             return entry
         except Exception as e:
             last = e
-            print("    실패:", e)
+            print("    실패:", e); print("::error title=신조어 생성 실패::" + str(e).replace("\n", " ")[:400])
     raise RuntimeError(f"3번 시도했지만 실패했습니다. 마지막 오류: {last}")
 
 

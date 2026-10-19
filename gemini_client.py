@@ -53,6 +53,12 @@ def resolve_url(uri, timeout=12):
     return None if any(h in cur for h in REDIRECT_HOSTS) else cur
 
 
+def norm_eq(a, b):
+    """두 주소가 같은 페이지를 가리키는지(끝의 / 와 대소문자 차이 무시)."""
+    f = lambda u: str(u or "").strip().split("#")[0].rstrip("/").lower()
+    return f(a) == f(b)
+
+
 def _domain(x):
     """주소나 사이트 이름에서 도메인만 소문자로 뽑습니다(www. 제외)."""
     x = str(x or "").strip().lower()
@@ -117,37 +123,28 @@ class _Messages:
             time.sleep(8 * (i + 1))
         raise last
 
-    def create(self, model, max_tokens, messages, tools=None, **_):
-        """검색 없이 기억만으로 답하면 출처를 붙일 수 없으므로, 검색 결과가 있는 답이 나올 때까지 최대 3번 다시 요청합니다."""
-        base = "\n".join(m["content"] for m in messages if m.get("role") == "user")
-        last = None
-        for k in range(3):
-            last = self._once(model, max_tokens, base, k)
-            if getattr(last, "grounded", 0) > 0:
-                return last
-            print(f"    [Gemini 검색] 검색 없이 답해서 다시 요청합니다 ({k + 1}/3)")
-        return last   # 끝내 검색이 없으면 출처 없는 답이라 호출한 쪽에서 버려집니다
-
-    def _once(self, model, max_tokens, base, k=0):
-        lead = ("[필수] 답하기 전에 반드시 구글 검색 도구를 먼저 사용해 최소 3번 검색하세요. "
-                "검색 없이 기억만으로 답하면 그 답은 전부 버려집니다. 검색 결과에서 읽은 내용만 쓰세요.\n\n")
-        if k >= 1:
-            lead += "(지난 답변은 검색을 하지 않아 버려졌습니다. 이번에는 꼭 검색부터 하세요.)\n\n"
-        prompt = lead + base
-        prompt += ("\n\n[추가 규칙] 모든 항목의 source에는 주소(URL)를 쓰지 말고, 방금 검색에서 실제로 읽은 사이트의 도메인 이름만 쓰세요"
-                   "(예: namu.wiki, chosun.com). 주소는 시스템이 검색 결과에서 채웁니다. 검색에서 읽지 않은 사이트는 쓰지 마세요.")
-        body = {
-            "contents": [{"role": "user", "parts": [{"text": prompt}]}],
-            "tools": [{"google_search": {}}],
-            "generationConfig": {"maxOutputTokens": max(int(max_tokens), 8000),
-                                 "temperature": 0.4, "thinkingConfig": {"thinkingBudget": 1024}},
-        }
-        data = self._post(model, body)
+    @staticmethod
+    def _text(data):
         cands = data.get("candidates") or []
         if not cands:
             raise RuntimeError("Gemini가 답을 주지 않았습니다: " + json.dumps(data.get("promptFeedback", data), ensure_ascii=False)[:200])
         cand = cands[0]
         text = "".join(p.get("text", "") for p in (cand.get("content") or {}).get("parts", []) if not p.get("thought"))
+        return cand, text
+
+    def _research(self, model, base, k):
+        """1단계: 'JSON으로만 답하라'는 형식 요구가 있으면 Gemini가 검색을 건너뛰므로(진단 결과),
+        먼저 형식 없이 자유롭게 검색·조사만 시킵니다."""
+        prompt = ("아래 과제를 수행하는 데 필요한 자료를 구글 검색으로 충분히 조사해서, 서술형 메모로 정리해 주세요.\n"
+                  "- 최종 답(JSON)은 아직 쓰지 마세요. 어떤 말을 찾았는지, 뜻, 쓰임, 어느 시기에 쓰였는지를 근거와 함께 적으세요.\n"
+                  "- 검색에서 읽은 내용만 쓰고, 어느 사이트에서 읽었는지 사이트 이름을 함께 적으세요.\n\n"
+                  "[과제 설명]\n" + base)
+        if k >= 1:
+            prompt = "(지난번에는 검색을 하지 않았습니다. 이번에는 반드시 구글 검색부터 하세요.)\n" + prompt
+        data = self._post(model, {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                                   "tools": [{"google_search": {}}],
+                                   "generationConfig": {"maxOutputTokens": 8000, "temperature": 0.4}})
+        cand, notes = self._text(data)
         gm = cand.get("groundingMetadata") or {}
         chunks = gm.get("groundingChunks") or []
         info = []   # 청크 순서대로 (사이트 도메인, 원래 페이지 주소 또는 None)
@@ -155,26 +152,47 @@ class _Messages:
             web = ch.get("web") or {}
             u = self.resolver(web.get("uri"))
             info.append((_domain(web.get("title")) or _domain(u), u))
-        grounded = []
-        for dom, u in info:
-            if u and all(u != g[1] for g in grounded):
-                grounded.append((dom, u))
-        # 답변의 어느 문장이 어느 검색 결과(청크)에서 나왔는지(지지 정보)
-        said = {}
+        said = {}   # 청크 번호 → 그 청크에서 나왔다고 연결된 조사 메모 문장들
         for sp in gm.get("groundingSupports") or []:
             seg = ((sp.get("segment") or {}).get("text") or "")
             for i in sp.get("groundingChunkIndices") or []:
                 said[i] = said.get(i, "") + " " + seg
-        print(f"    [Gemini 검색] 검색 결과 {len(chunks)}건 → 주소 확인 {len(grounded)}건 · 문장 연결 {len(said)}건 · 사이트: {', '.join(sorted({d for d, _ in grounded})) or '없음'}")
-        if chunks and not grounded:
+        ok = sum(1 for _, u in info if u)
+        print(f"    [Gemini 검색] 검색 결과 {len(chunks)}건 → 주소 확인 {ok}건 · 문장 연결 {len(said)}건 · 사이트: {', '.join(sorted({d for d, u in info if u})) or '없음'}")
+        if chunks and not ok:
             print("::warning title=Gemini 검색 주소::검색 결과는 있었지만 원래 주소로 풀지 못했습니다(중계 주소 해석 실패)")
         if not chunks:
-            print("::warning title=Gemini 검색::이번 답변에는 검색 결과(groundingChunks)가 없었습니다")
-        results = [NS(url=u) for _, u in grounded]
-        seen = {u for _, u in grounded}
-        # 모델이 출처 주소를 직접 쓰면 지어낸 주소가 많아서, 출처는 '사이트 도메인'만 적게 하고 주소는 시스템이 채웁니다.
-        # 같은 사이트의 검색된 페이지 중, ① 그 단어가 들어간 문장이 그 페이지에서 나왔다고 연결돼 있거나
-        # ② 페이지를 열어 보니 본문에 그 단어가 있는 것만 씁니다. 둘 다 확인되지 않으면 버립니다.
+            print("::warning title=Gemini 검색::이번 조사에는 검색 결과(groundingChunks)가 없었습니다")
+        return notes, info, said
+
+    def _format(self, model, max_tokens, base, notes, info):
+        """2단계: 조사 메모와 실제 검색 출처 목록을 주고, 원래 과제의 형식(JSON)으로 정리시킵니다. (검색 도구 없이)"""
+        lst = "\n".join(f"[{i + 1}] {dom} — {u}" for i, (dom, u) in enumerate(info) if u)
+        prompt = (base + "\n\n[조사 메모 — 방금 구글 검색으로 조사한 결과입니다. 이 안의 내용만 쓰세요]\n" + notes +
+                  "\n\n[출처 후보 — 실제로 검색에서 읽은 페이지 목록]\n" + lst +
+                  "\n\n[규칙] 모든 항목의 source에는 위 목록의 주소를 한 글자도 바꾸지 말고 그대로 쓰세요. "
+                  "그 말이 실제로 나온 페이지를 고르고, 목록에 근거가 없는 말은 항목에서 빼세요. 설명 없이 요구된 JSON만 출력하세요.")
+        data = self._post(model, {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                                   "generationConfig": {"maxOutputTokens": max(int(max_tokens), 8000), "temperature": 0.3}})
+        return self._text(data)[1]
+
+    def create(self, model, max_tokens, messages, tools=None, **_):
+        base = "\n".join(m["content"] for m in messages if m.get("role") == "user")
+        notes, info, said = "", [], {}
+        for k in range(3):   # 검색이 한 번도 안 된 조사는 최대 3번까지 다시
+            notes, info, said = self._research(model, base, k)
+            if any(u for _, u in info):
+                break
+            print(f"    [Gemini 검색] 검색 없이 답해서 다시 요청합니다 ({k + 1}/3)")
+        urls = [u for _, u in info if u]
+        if not urls:   # 끝내 검색이 없으면 출처를 붙일 수 없으니 답을 만들지 않습니다
+            return NS(content=[NS(type="web_search_tool_result", content=[]),
+                               NS(type="text", text="검색 결과가 없어 답을 만들지 못했습니다.")], grounded=0)
+        text = self._format(model, max_tokens, base, notes, info)
+        results = [NS(url=u) for u in dict.fromkeys(urls)]
+        # 검증: 모델이 고른 출처가 그 단어의 근거인지 확인합니다. 근거가 확인된 출처만 남기고 나머지는 비웁니다(→ 버려짐).
+        #  ① 조사 메모에서 그 단어가 든 문장이 그 페이지에서 나왔다고 연결돼 있거나
+        #  ② 그 페이지를 열어 보니 본문에 그 단어가 있으면 인정합니다.
         try:
             from slang_common import extract_json
             obj = extract_json(text)
@@ -185,33 +203,26 @@ class _Messages:
                 if "source" not in d:
                     continue
                 src, word = str(d.get("source", "")).strip(), str(d.get("word", "")).strip()
-                host = _domain(src)
-                if src in seen:                      # 이미 검색 결과에 있는 주소
-                    continue
-                cand_idx = [i for i, (dom, u) in enumerate(info)
-                            if u and host and (dom == host or dom.endswith("." + host) or host.endswith("." + dom))]
-                pick = None
                 w = word.lower()
-                for i in cand_idx:                   # ① 문장 연결
+                chosen = [i for i, (_, u) in enumerate(info) if u and norm_eq(u, src)]
+                host = _domain(src)
+                same = [i for i, (dom, u) in enumerate(info)
+                        if u and host and i not in chosen and (dom == host or dom.endswith("." + host) or host.endswith("." + dom))]
+                order = chosen + [i for i in same] + [i for i, (_, u) in enumerate(info) if u and i not in chosen and i not in same]
+                pick = None
+                for i in order:                               # ① 문장 연결
                     if w and w in said.get(i, "").lower():
                         pick = info[i][1]
                         break
                 if pick is None:
-                    for i in cand_idx[:4]:           # ② 페이지 본문 확인
+                    for i in (chosen + same)[:4]:             # ② 페이지 본문 확인 (모델이 고른 곳과 같은 사이트만)
                         body = self.fetcher(info[i][1])
                         if body and w and w in body.lower():
                             pick = info[i][1]
                             break
-                if pick is None and not cand_idx and src.startswith("https://") and w:   # 검색 결과에 없는 사이트면 직접 열어 확인
-                    body = self.fetcher(src)
-                    if body and w in body.lower():
-                        seen.add(src)
-                        results.append(NS(url=src))
-                        continue
-                if pick:
-                    d["source"] = pick
+                d["source"] = pick or ""
             text = json.dumps(obj, ensure_ascii=False)
-        return NS(content=[NS(type="web_search_tool_result", content=results), NS(type="text", text=text)], grounded=len(grounded))
+        return NS(content=[NS(type="web_search_tool_result", content=results), NS(type="text", text=text)], grounded=len(urls))
 
 
 class GeminiClient:

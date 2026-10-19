@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17",
+  "updated": "2026-10-19",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -172,7 +172,52 @@
       "example": "週末は推し活でライブに行くんだ。",
       "example_ko": "주말엔 오시카쓰로 라이브 보러 가.",
       "category": "SNS 표현",
-      "source": "https://www.itmedia.co.jp/business/spv/2112/26/news009_3.html"
+      "source": "https://www.itmedia.co.jp/business/spv/2112/26/news009_3.html",
+      "past": [
+        {
+          "word": "ヲタ活",
+          "meaning": "오타쿠 활동의 줄임말로 애니메이션이나 아이돌 관련 이벤트 참여 및 굿즈 수집 등을 뜻하며, 좋아하는 대상을 열성적으로 지지하고 소비한다는 점에서 오늘날의 오시카츠와 역할이 같습니다.",
+          "source": "https://www.weblio.jp/content/%E3%83%B2%E3%82%BF%E6%B4%BB",
+          "pron_ko": "워타카츠",
+          "reading": "をたかつ",
+          "years": 10
+        },
+        {
+          "word": "推し事",
+          "meaning": "최애를 응원하는 일을 직장 업무에 빗대어 표현한 팬 은어로, 자신이 좋아하는 대상을 위해 시간과 정성을 들여 지지 활동을 펼친다는 점에서 현재의 오시카츠와 비슷합니다.",
+          "source": "https://t-machine.jp/121/",
+          "pron_ko": "오시고토",
+          "reading": "おしごと",
+          "years": 10
+        },
+        {
+          "word": "推しメン",
+          "meaning": "다인원 그룹 중에서 자신이 가장 추천하고 응원하는 멤버를 뜻하는 말로, 오늘날 최애를 열렬히 지지하는 팬 활동인 '오시카츠'의 직접적인 어원이자 핵심 개념이라는 점에서 비슷합니다.",
+          "source": "https://www.jiyu.co.jp/singo/index.php?eid=00028",
+          "pron_ko": "오시멘",
+          "reading": "おしめん",
+          "years": 20
+        },
+        {
+          "word": "萌え",
+          "meaning": "특정 인물이나 캐릭터에 대해 품는 열렬한 애정과 설렘의 감정을 뜻하는 말로, 좋아하는 대상에 깊이 몰입하며 헌신하는 '오시카츠'의 정서적 바탕과 일맥상통합니다.",
+          "source": "https://www.jiyu.co.jp/singo/index.php?eid=00022",
+          "pron_ko": "모에",
+          "reading": "もえ",
+          "years": 20
+        }
+      ],
+      "related": [
+        {
+          "word": "オタ卒",
+          "meaning": "오타쿠를 졸업한다는 의미의 줄임말로, 흥미가 줄어들거나 취업, 결혼 같은 현실적 여건의 변화로 인해 지속해 오던 팬 활동이나 응원을 정리하고 그만두는 것을 말합니다.",
+          "source": "https://jp.quizcastle.com/dictionary/n467n1n28v",
+          "pron_ko": "오타소츠",
+          "reading": "おたそつ",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true
     },
     {
       "lang": "en",
@@ -390,6 +435,110 @@
       ],
       "enriched": true,
       "date": "2026-10-17"
+    },
+    {
+      "lang": "en",
+      "word": "crash out",
+      "pron_ko": "크래시 아웃",
+      "meaning": "감정 통제를 잃고 극심한 분노나 좌절감으로 폭발하거나, 사소한 자극에 이성을 잃고 무모한 행동을 저지르는 것을 뜻합니다.",
+      "origin": "미국 흑인 영어(AAVE)에서 유래해 힙합 음악과 틱톡 등 SNS 영상 콘텐츠를 통해 널리 확산되었습니다.",
+      "example": "If the internet disconnects one more time during my exam, I might crash out.",
+      "example_ko": "시험 중에 인터넷이 한 번만 더 끊기면 나 진짜 이성 잃고 폭발할지도 몰라.",
+      "source": "https://www.merriam-webster.com/slang/crash-out",
+      "category": "SNS 표현",
+      "note": "과거에는 극단적인 범죄나 사고를 저지르는 행위를 뜻하기도 했으나, 최근 SNS에서는 일상적인 짜증이나 스트레스에 과장되게 발끈하는 가벼운 맥락으로 자주 쓰입니다.",
+      "past": [
+        {
+          "word": "salty",
+          "meaning": "사소한 일이나 게임 패배 등에 감정을 삭이지 못하고 속이 꼬여 불만을 터뜨린다는 점에서 비슷한 반응 표현입니다.",
+          "source": "https://www.dictionary.com/browse/salty",
+          "pron_ko": "솔티",
+          "years": 10
+        },
+        {
+          "word": "going postal",
+          "meaning": "극심한 스트레스를 참지 못하고 자제력을 완전히 잃은 채 통제 불능의 격렬한 분노를 폭발시킨다는 점에서 유사합니다.",
+          "source": "https://en.wikipedia.org/wiki/Going_postal",
+          "pron_ko": "고잉 포스털",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-19"
+    },
+    {
+      "lang": "ja",
+      "word": "タイパ",
+      "pron_ko": "타이파",
+      "meaning": "시간 대비 효율 또는 들인 시간 대비 얻을 수 있는 만족도나 성과를 뜻하는 말입니다.",
+      "origin": "비용 대비 효율을 뜻하는 '코스트 퍼포먼스(コスパ)'의 '코스트'를 '타임'으로 바꾼 조어로, 영상 배속 시청 등 디지털 콘텐츠를 효율적으로 소비하려는 트렌드와 함께 널리 퍼졌습니다.",
+      "example": "倍速で動画を見るのはタイパがいい。",
+      "example_ko": "배속으로 영상을 보는 것은 타이파가 좋다.",
+      "source": "https://www.shikokubank.co.jp/room/2024/02/space-performance.html",
+      "reading": "たいぱ",
+      "category": "줄임말",
+      "related": [
+        {
+          "word": "スペパ",
+          "meaning": "한정된 면적이나 공간을 얼마나 유용하게 쓰는지 나타내는 공간 대비 효율을 뜻합니다.",
+          "source": "https://www.shikokubank.co.jp/room/2024/02/space-performance.html",
+          "pron_ko": "스페파",
+          "reading": "すぺぱ",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "メンパ",
+          "meaning": "정신적 스트레스나 피로를 줄여 마음의 안정과 만족을 얻는 효율을 뜻합니다.",
+          "source": "https://ja.wikipedia.org/wiki/%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9",
+          "pron_ko": "멘파",
+          "reading": "めんぱ",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-19"
+    },
+    {
+      "lang": "zh",
+      "word": "班味",
+      "pron_ko": "반웨이",
+      "meaning": "출근과 근무에 시달려 얼굴에 묻어나는 피로감, 다크서클, 생기 없는 눈빛 등 직장인의 번아웃과 고단함을 자조적으로 이르는 말이다.",
+      "origin": "2024년 초 중국 SNS에서 출근 후 사람의 인상과 분위기가 피폐하게 변한다는 공감대와 함께 급속히 확산되었다.",
+      "example": "周末去公园散步，正好可以洗掉一身班味。",
+      "example_ko": "주말에 공원에 산책을 가니 온몸에 찌든 직장인 티를 털어내기에 딱 좋다.",
+      "source": "https://www.chinawriter.com.cn/n1/2024/1213/c403994-40381439.html",
+      "reading": "bānwèi",
+      "category": "사회 현상",
+      "past": [
+        {
+          "word": "郁闷",
+          "meaning": "마음이 답답하고 우울하다는 뜻으로, 일상과 학업의 스트레스에서 오는 복잡한 피로감을 자조적으로 털어놓던 유행어였다.",
+          "source": "https://news.sina.cn/sa/2006-12-04/detail-ikkntiam8242511.d.html?vt=4",
+          "pron_ko": "위먼",
+          "reading": "yùmèn",
+          "years": 20
+        },
+        {
+          "word": "下岗",
+          "meaning": "국유기업 구조조정 시기 직장에서 물러나 대기하게 된 상황을 뜻하며, 노동과 직업 현장에서 겪는 고단함을 담은 시대적 표현이다.",
+          "source": "https://news.cctv.com/program/jzql/20041002/100222.shtml",
+          "pron_ko": "샤강",
+          "reading": "xiàgǎng",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "松弛感",
+          "meaning": "업무 압박과 긴장에서 벗어나 매사를 여유롭고 느긋하게 받아들이는 마음가짐이다.",
+          "source": "https://www.chinawriter.com.cn/n1/2024/1213/c403994-40381439.html",
+          "pron_ko": "송츠간",
+          "reading": "sōngchígǎn",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-19"
     }
   ]
 }

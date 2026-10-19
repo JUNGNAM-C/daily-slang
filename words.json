@@ -26,7 +26,48 @@
       "example": "리뷰가 갈려서 기대컨 하고 갔더니 오히려 만족했어.",
       "origin": "기대(期待)와 컨트롤(control)을 합친 말이에요.",
       "category": "줄임말",
-      "source": "https://news.nate.com/view/20260724n04232"
+      "source": "https://news.nate.com/view/20260724n04232",
+      "past": [
+        {
+          "word": "설레발은 필패",
+          "meaning": "결과가 확정되기 전에 미리 들뜨면 실패한다는 뜻으로, 섣부른 기대로 인한 실망과 좌절을 사전에 막기 위해 기대치를 통제하려는 '기대컨'과 심리적 방어 맥락이 통합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2016/05/19/2016051901289.html",
+          "years": 10
+        },
+        {
+          "word": "행복회로",
+          "meaning": "힘든 현실 속에서 심리적 안정을 얻기 위해 낙관적인 상상을 품는 행동을 뜻하며, 정신적 충격을 완화하기 위해 내면의 기대치를 의도적으로 조절한다는 점에서 '기대컨'과 유사합니다.",
+          "source": "https://namu.wiki/w/%ED%96%89%EB%B3%B5%ED%9A%8C%EB%A1%9C",
+          "years": 10
+        },
+        {
+          "word": "설레발",
+          "meaning": "결과가 나오기 전에 지나치게 기대하며 호들갑을 떠는 행동을 가리키는 말로, 실망을 줄이기 위해 기대를 억누르는 '기대컨'과 통제의 대상이 되는 상황 측면에서 밀접하게 맞닿아 있습니다.",
+          "source": "https://namu.wiki/w/%EC%84%A4%EB%A0%88%EB%B0%9C",
+          "years": 20
+        },
+        {
+          "word": "내로남불",
+          "meaning": "'내가 하면 로맨스 남이 하면 불륜'의 머리글자를 모아 이중 잣대를 비판하는 말로, 긴 구절의 앞 글자를 따서 간결하게 축약하는 방식이 '기대컨'과 같습니다.",
+          "source": "https://namu.wiki/w/%EB%82%B4%EB%A1%9C%EB%82%A8%EB%B6%88",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "설레발",
+          "meaning": "어떤 결과가 나오기도 전에 지레 짐작하여 크게 들뜨거나 기대를 부풀려 소란스럽게 행동하는 것을 뜻합니다.",
+          "source": "https://namu.wiki/w/%EC%84%A4%EB%A0%88%EB%B0%9C",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "토컨",
+          "meaning": "인터넷 방송 팬덤 등에서 기대치를 낮추지 않고 대상에 대한 기대감을 한껏 표출하거나 띄워주는 행위를 뜻하는 은어입니다.",
+          "source": "https://namu.wiki/w/%EB%A7%88%EB%A0%88%20%ED%94%8C%EB%A1%9C%EC%8A%A4",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "동결건조",
@@ -34,7 +75,46 @@
       "example": "오늘 노을 진짜 예쁘다. 이 장면 동결건조해서 두고 싶어.",
       "origin": "식품을 얼려서 오래 보관하는 '동결건조' 기술에 빗댄 표현이에요.",
       "category": "감성 리액션",
-      "source": "https://news.nate.com/view/20260724n04232"
+      "source": "https://news.nate.com/view/20260724n04232",
+      "past": [
+        {
+          "word": "내 마음속에 저장",
+          "meaning": "마음에 드는 대상이나 잊고 싶지 않은 소중한 순간을 마음속에 영구히 담아두겠다는 표현으로, 좋은 순간을 얼려 영원히 간직하고 싶어 하는 '동결건조'와 감정적 목적이 유사하다.",
+          "source": "https://ko.wikipedia.org/wiki/%EB%82%B4_%EB%A7%88%EC%9D%8C%EC%86%8D%EC%97%90_%EC%A0%80%EC%9E%A5",
+          "years": 10
+        },
+        {
+          "word": "팬아저",
+          "meaning": "'팬이 아니어도 저장'의 줄임말로 인상 깊고 매력적인 순간을 사진이나 영상으로 소장하겠다는 뜻이며, 아름다운 찰나를 영구히 남기려는 '동결건조'와 기능적 역할이 비슷하다.",
+          "source": "https://sports.donga.com/ent/article/all/20161223/82001600/1",
+          "years": 10
+        },
+        {
+          "word": "갠소",
+          "meaning": "개인 소장의 줄임말로 소중한 대상을 혼자 깊이 간직한다는 뜻이며, 놓치고 싶지 않은 대상을 보존하고 싶어 하는 심리를 담았다는 점에서 동결건조와 비슷합니다.",
+          "source": "https://bkno123.tistory.com/1669",
+          "years": 20
+        },
+        {
+          "word": "완소",
+          "meaning": "완전 소중의 줄임말로 매우 아끼고 사랑스러운 대상을 가리키며, 특정 대상에게 극진한 애정과 소중함을 표현한다는 점에서 동결건조와 비슷합니다.",
+          "source": "https://www.nongshim.com/shinramyunevent",
+          "years": 20
+        },
+        {
+          "word": "캡",
+          "meaning": "최고나 으뜸을 뜻하는 말로, 감탄스러울 만큼 좋은 대상이나 순간의 가치를 높이 사며 찬사를 보낸다는 점에서 동결건조와 비슷합니다.",
+          "source": "https://namu.wiki/w/%EC%BA%A1",
+          "years": 30
+        },
+        {
+          "word": "짱",
+          "meaning": "제일 대단하거나 최고라는 뜻으로, 무척 마음에 드는 대상이나 순간에 대해 강한 호감과 애정 어린 감탄을 드러낸다는 점에서 동결건조와 비슷합니다.",
+          "source": "https://prezi.com/hn7wliaufc0f/presentation/",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "샤갈",
@@ -427,7 +507,89 @@
       "origin": "자신의 취향으로 멋을 드러내는 Z세대의 특성이 담긴 말이라고 설명됩니다. 독서·기록 같은 텍스트 활동을 '힙하다'고 여기는 흐름에서 나온 말입니다.",
       "category": "SNS 표현",
       "source": "https://kbthink.com/main/living-finance/consumption-life/mz-consumption/text-hip.html",
-      "enriched": false,
+      "enriched": true,
+      "date": "2026-10-19",
+      "past": [
+        {
+          "word": "책맥",
+          "meaning": "맥주를 마시며 책을 읽는 여가 문화를 뜻하는 말로, 독서를 딱딱한 공부가 아닌 감각적이고 세련된 라이프스타일로 즐긴다는 점에서 텍스트힙과 비슷합니다.",
+          "source": "https://digitalchosun.dizzo.com/site/data/html_dir/2016/10/18/2016101812673.html",
+          "years": 10
+        },
+        {
+          "word": "있어빌리티",
+          "meaning": "SNS 등에서 자신의 지적 교양이나 감각적인 취향이 있어 보이도록 매력적으로 연출하는 능력을 뜻하며, 독서와 기록을 통해 멋진 이미지를 표현하려는 텍스트힙의 심리와 통합니다.",
+          "source": "https://www.hani.co.kr/arti/culture/book/717246.html",
+          "years": 10
+        },
+        {
+          "word": "간지",
+          "meaning": "멋이나 스타일, 느낌이 남다르고 멋지다는 뜻으로 쓰인 유행어로, 특정 행동이나 취향을 개성 있고 멋진 것으로 치켜세우는 텍스트힙의 '힙하다'와 유사한 역할을 합니다.",
+          "source": "https://namu.wiki/w/%EA%B0%84%EC%A7%80(%EC%9C%A0%ED%96%89%EC%96%B4)",
+          "years": 20
+        },
+        {
+          "word": "보보스족",
+          "meaning": "물질적 풍요보다 감성과 지적·문화적 취향을 중시하는 소비 계층을 일컫는 말로, 텍스트와 책이라는 문화적 요소를 자신만의 멋으로 소비하는 텍스트힙의 태도와 닮았습니다.",
+          "source": "https://www.hani.co.kr/arti/culture/culture_general/114465.html",
+          "years": 20
+        },
+        {
+          "word": "X세대",
+          "meaning": "기존 관습에 얽매이지 않고 자신만의 독특한 개성과 문화적 취향을 적극적으로 드러내던 젊은 층을 뜻하며, 독서와 기록을 주체적 멋으로 즐기는 신세대의 문화와 맥을 같이합니다.",
+          "source": "https://www.arenakorea.com/news/articleView.html?idxno=71964",
+          "years": 30
+        },
+        {
+          "word": "폼생폼사",
+          "meaning": "겉으로 드러나는 멋과 자신만의 스타일을 매우 중시하는 태도를 뜻하며, 독서를 시각적 패션이나 트렌디한 멋으로 즐기는 텍스트힙의 심미적 측면과 통합니다.",
+          "source": "https://namu.wiki/w/%EC%82%AC%EB%82%98%EC%9D%B4%20%EA%B0%80%EB%8A%94%20%EA%B8%B8%20(%ED%8F%BC%EC%83%9D%ED%8F%BC%EC%82%AC)",
+          "years": 30
+        }
+      ]
+    },
+    {
+      "word": "추구미",
+      "meaning": "자신이 바라고 지향하는 외모 스타일이나 분위기, 라이프스타일 전반을 뜻하는 신조어입니다.",
+      "example": "이번 봄에는 단정하면서도 편안한 스타일이 내 추구미야.",
+      "origin": "목표로 삼아 나아간다는 뜻의 '추구(追求)'에 아름다움을 뜻하는 한자 '미(美)'를 합쳐 만들어졌습니다.",
+      "category": "SNS 표현",
+      "source": "https://www.womennews.co.kr/news/articleView.html?idxno=266887",
+      "related": [
+        {
+          "type": "반대 뜻",
+          "word": "도달가능미",
+          "meaning": "바라는 이상향인 추구미와 달리 현실적인 조건 안에서 실제로 달성할 수 있는 외모나 스타일을 뜻합니다.",
+          "source": "https://www.kihoilbo.co.kr/news/articleView.html?idxno=1129660"
+        },
+        {
+          "type": "비슷한 뜻",
+          "word": "워너비",
+          "meaning": "동경하여 닮고 싶어 하는 대상이나 이상적인 모습을 가리키는 외래어입니다.",
+          "source": "https://www.careet.net/1396"
+        }
+      ],
+      "past": [
+        {
+          "word": "워너비",
+          "meaning": "자신이 닮고 싶어 하는 연예인이나 스타일을 일컫는 말로, 동경하는 미적 지향점을 가리키는 점이 추구미와 유사합니다.",
+          "source": "https://www.joongang.co.kr/article/4503004",
+          "years": 10
+        },
+        {
+          "word": "얼짱",
+          "meaning": "얼굴이 아주 뛰어난 사람을 가리키는 말로, 인터넷 문화에서 선망받던 이상적인 외모 기준을 상징하는 점이 비슷합니다.",
+          "source": "https://www.i-boss.co.kr/ab-1486505-10081",
+          "years": 20
+        },
+        {
+          "word": "신인류",
+          "meaning": "기존 관습에서 벗어나 나만의 개성과 독특한 취향을 적극적으로 드러내던 젊은 세대를 지칭하는 말로, 지향하는 개성을 추구한다는 점이 통합니다.",
+          "source": "https://www.donga.com/news/Society/article/all/20170320/83400131/1",
+          "years": 30
+        }
+      ],
+      "enriched": true,
       "date": "2026-10-19"
     }
   ]

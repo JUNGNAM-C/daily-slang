@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "words": [
     {
       "word": "감다살",
@@ -157,7 +157,28 @@
       "example": "자리 맡아줬네, 아자스!",
       "origin": "일본어 '아리가토 고자이마스(감사합니다)'를 빠르게 줄여 부르는 데서 나왔어요.",
       "category": "감탄사",
-      "source": "https://dailyttut.blogspot.com/2026/09/50.html"
+      "source": "https://dailyttut.blogspot.com/2026/09/50.html",
+      "past": [
+        {
+          "word": "ㄳ",
+          "meaning": "'감사'라는 인사말의 초성을 딴 줄임말로, 온라인과 모바일 대화에서 격식 없이 신속하고 가볍게 고마움을 전한다는 점에서 '아자스'와 쓰임새가 비슷합니다.",
+          "source": "https://myseouldream.com/2017/02/12/%ED%95%9C%EA%B5%AD%EC%96%B4-%EC%8B%A0%EC%A1%B0%EC%96%B4-%EC%A4%84%EC%9E%84%EB%A7%90-%EB%AA%A9%EB%A1%9D-easy-korean-slang-for-texting/",
+          "years": 10
+        },
+        {
+          "word": "쌩유",
+          "meaning": "영어 'Thank you'를 익살스럽게 발음한 감사 인사로, 외국어를 장난스럽게 비틀어 격식 없이 고마움을 전한다는 점에서 '아자스'와 비슷합니다.",
+          "source": "https://v.daum.net/v/M0KMeg3F9D?f=p",
+          "years": 20
+        },
+        {
+          "word": "하이루",
+          "meaning": "영어 인사 'Hi'에 어미를 붙여 친근하게 건네는 인사말로, 외국어 표현을 대화 상황에 맞춰 가볍게 변형해 썼다는 점에서 '아자스'와 닮았습니다.",
+          "source": "https://www.koreaes.com/news/articleView.html?idxno=359740",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "멘고멘고",
@@ -165,7 +186,40 @@
       "example": "답장 늦었다, 멘고멘고~",
       "origin": "'미안하다'는 뜻의 일본어 '고멘'에서 파생됐어요.",
       "category": "감탄사",
-      "source": "https://news.nate.com/view/20260724n04232"
+      "source": "https://news.nate.com/view/20260724n04232",
+      "past": [
+        {
+          "word": "뎨동",
+          "meaning": "'죄송'을 혀 짧은 소리처럼 귀엽게 발음한 말로, 미안한 마음을 무겁지 않고 애교 섞인 장난스러운 어투로 전한다는 점에서 '멘고멘고'와 비슷합니다.",
+          "source": "https://select.ridibooks.com/book/805042020",
+          "years": 10
+        },
+        {
+          "word": "데헷",
+          "meaning": "사소한 실수를 저지른 뒤 귀여운 태도로 상황을 장난스레 넘기고자 덧붙이는 감탄사로, 일본어 구어에서 유래해 가벼운 사과와 애교의 기능을 한다는 점에서 '멘고멘고'와 비슷합니다.",
+          "source": "https://namu.wiki/w/%EB%8D%B0%ED%97%B7",
+          "years": 10
+        },
+        {
+          "word": "지못미",
+          "meaning": "'지켜주지 못해서 미안해'를 줄인 말로 곤란한 처지에 놓인 대상을 보며 유감과 미안함을 나타내는 표현이며, 멘고멘고처럼 격식을 차리지 않고 유머러스하게 미안함을 전한다는 점이 비슷합니다.",
+          "source": "https://www.sisajournal.com/news/articleView.html?idxno=124464",
+          "years": 20
+        },
+        {
+          "word": "ㅈㅅ",
+          "meaning": "'죄송'의 초성을 딴 통신체 표현으로 일상 대화나 온라인에서 가볍게 사과할 때 쓰이며, 멘고멘고처럼 사소한 상황에서 부담 없이 미안한 뜻을 건네는 표현이라는 점에서 비슷합니다.",
+          "source": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0000992190",
+          "years": 20
+        },
+        {
+          "word": "방가방가",
+          "meaning": "'반갑다'를 소리 나는 대로 귀엽게 변형해 거듭 말하는 인사말로, 멘고멘고처럼 단어를 장난스럽게 비틀고 반복하여 친근하고 애교 있는 느낌을 준다는 점이 비슷합니다.",
+          "source": "https://www.korea.kr/news/cultureColumnView.do?newsId=148801819",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "야르",
@@ -173,7 +227,46 @@
       "example": "드디어 금요일이다, 야르! 오늘 퇴근하고 치킨 먹을 거야 할렐야루!",
       "origin": "'꺄르'는 '꺅'과 '야르'가 합쳐진 말이고, '할렐야루'는 '할렐루야'와 '야르'를 합친 말이에요.",
       "category": "감탄사",
-      "source": "https://news.nate.com/view/20260724n04232"
+      "source": "https://news.nate.com/view/20260724n04232",
+      "past": [
+        {
+          "word": "히트다 히트",
+          "meaning": "매우 대박이거나 좋은 상황에서 외치던 감탄사로, 기분 좋은 상황에서 분위기를 띄우며 외치는 긍정적 반응이라는 점에서 '야르'와 비슷합니다.",
+          "source": "https://namu.wiki/w/%ED%9E%88%ED%8A%B8%EB%8B%A4%20%ED%9E%88%ED%8A%B8",
+          "years": 10
+        },
+        {
+          "word": "가즈아",
+          "meaning": "'가자'를 길게 늘려 부르며 긍정적인 기대감이나 기쁨을 고조시킬 때 외치던 환호성으로, 신나는 감정이 터져 나오는 감탄사라는 점에서 '야르'와 유사합니다.",
+          "source": "https://ko.wikipedia.org/wiki/%EA%B0%80%EC%A6%88%EC%95%84",
+          "years": 10
+        },
+        {
+          "word": "올레",
+          "meaning": "기분이 최고로 좋은 상황에서 외치는 감탄사로, 일반적인 환호보다 한 단계 더 고조된 신나는 감정을 나타낸다는 점에서 '야르'와 비슷합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2009/08/19/2009081901585.html",
+          "years": 20
+        },
+        {
+          "word": "대박",
+          "meaning": "예상 밖의 큰 행운이나 기쁜 일에 내뱉는 감탄사로, 좋은 순간에 직관적으로 터져 나오는 환호 반응이라는 점에서 '야르'와 유사합니다.",
+          "source": "https://journal.kci.go.kr/erits/archive/articlePdf?artiId=ART002853078",
+          "years": 20
+        },
+        {
+          "word": "따봉",
+          "meaning": "매우 좋다는 뜻을 담아 외치던 감탄사로, 극도로 만족스럽고 신나는 기분을 외마디 환호로 표출한다는 점에서 '야르'와 쓰임새가 비슷합니다.",
+          "source": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0000430243",
+          "years": 30
+        },
+        {
+          "word": "캡",
+          "meaning": "최고나 으뜸이라는 뜻으로 쓰이던 유행어로, 신나는 대상이나 흡족한 상황에 대해 긍정적인 감탄 반응을 보인다는 점에서 '야르'와 비슷합니다.",
+          "source": "https://journal.kci.go.kr/erits/archive/articlePdf?artiId=ART002853078",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "가슴에 국밥 쏟음",
@@ -591,6 +684,88 @@
       ],
       "enriched": true,
       "date": "2026-10-19"
+    },
+    {
+      "word": "럭키비키",
+      "meaning": "자신에게 닥친 부정적이거나 곤란한 상황을 긍정적인 행운으로 바꾸어 생각할 때 외치는 감탄사형 표현입니다.",
+      "example": "지하철을 놓쳤지만 덕분에 날씨 좋은 길을 산책하게 됐으니 완전 럭키비키잖아!",
+      "origin": "걸그룹 아이브(IVE)의 장원영이 빵집에서 사려던 빵이 품절되자 새로 구운 빵을 먹게 되어 운이 좋다고 말한 일화에서 비롯되었으며, 행운을 뜻하는 '럭키(Lucky)'와 장원영의 영어 이름 '비키(Vicky)'를 합쳐 만들어졌습니다.",
+      "category": "감성 리액션",
+      "source": "https://www.youtube.com/watch?v=YtR7zrrRTO8",
+      "related": [
+        {
+          "type": "비슷한 뜻",
+          "word": "원영적 사고",
+          "meaning": "어떤 난관이나 불운이 닥치더라도 결국 자신에게 득이 되는 방향으로 치환해 받아들이는 절대적인 긍정적 사고방식입니다.",
+          "source": "https://namu.wiki/w/%EC%9B%90%EC%98%81%EC%A0%81%20%EC%82%AC%EA%B3%A0"
+        }
+      ],
+      "past": [
+        {
+          "word": "꽃길만 걷자",
+          "meaning": "힘든 시기를 겪은 상대에게 앞으로 행운과 좋은 일만 가득하길 바라는 긍정의 유행어로, 긍정적인 앞날을 기원한다는 점에서 비슷합니다.",
+          "source": "https://www.insight.co.kr/news/87639",
+          "years": 10
+        },
+        {
+          "word": "할 수 있다",
+          "meaning": "패색이 짙은 위기 상황에서 스스로에게 되뇌어 승리를 이끌어낸 주문으로, 극한의 상황을 긍정적인 힘으로 돌파한다는 점에서 비슷합니다.",
+          "source": "https://www.insight.co.kr/news/87639",
+          "years": 10
+        },
+        {
+          "word": "급방긋",
+          "meaning": "우울하거나 난처한 상황에서 순식간에 얼굴을 활짝 펴고 웃는 모습을 뜻하는 말로, 감정의 즉각적인 긍정적 반전을 나타내는 점에서 비슷합니다.",
+          "source": "https://m.cafe.daum.net/wantkorean/23Tu/168",
+          "years": 20
+        },
+        {
+          "word": "미나공",
+          "meaning": "'미안해 나 공주야'의 줄임말로, 곤란하거나 민망한 상황을 유머러스한 자기긍정으로 유쾌하게 넘긴다는 점에서 비슷합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/1996/12/18/1996121870072.html",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-20"
+    },
+    {
+      "word": "도달가능미",
+      "meaning": "이상적으로 바라는 모습인 '추구미'와 달리, 현실적인 조건이나 한계를 고려했을 때 실제로 실현하거나 도달할 수 있는 외모와 스타일을 유머러스하게 일컫는 말입니다.",
+      "example": "미용실 사진 속 모델은 추구미고, 거울 속 내 모습은 도달가능미야.",
+      "origin": "자신이 지향하는 미적 기준을 뜻하는 '추구미'에 빗대어 이상과 현실의 간극을 재치 있게 나타내려는 SNS 이용자들 사이에서 생겨났습니다.",
+      "category": "SNS 표현",
+      "source": "https://weekly.donga.com/culture/article/all/11/5380534/1",
+      "related": [
+        {
+          "type": "반대 뜻",
+          "word": "추구미",
+          "meaning": "자신이 이상적으로 닮고자 하거나 동경하는 외모, 분위기, 스타일 등의 지향점을 뜻합니다.",
+          "source": "https://www.imaeil.com/page/view/2024091811260679057"
+        }
+      ],
+      "past": [
+        {
+          "word": "현타",
+          "meaning": "'현실 자각 타임'의 줄임말로 헛된 기대나 망상에서 벗어나 냉정한 현실을 깨닫는 순간을 뜻하며, 이상과 현실의 차이를 마주한다는 점에서 비슷합니다.",
+          "source": "https://www.kwanhun.com/page/brd_download.php?idx=41872&download=0",
+          "years": 10
+        },
+        {
+          "word": "쌩얼",
+          "meaning": "화장을 전혀 하지 않은 본래의 맨얼굴을 뜻하며, 화려하게 꾸며낸 이상 대신 있는 그대로의 현실적인 외모를 가리킨다는 맥락에서 통합니다.",
+          "source": "https://www.korean.go.kr/nkview/nklife/2019_3/29_0302.pdf",
+          "years": 20
+        },
+        {
+          "word": "공주병",
+          "meaning": "자신이 실제보다 훨씬 예쁘고 특별하다고 착각하는 태도를 꼬집는 말로, 이상적 이미지와 실제 모습 사이의 괴리를 풍자한다는 점에서 비슷합니다.",
+          "source": "https://www.donga.com/news/Culture/article/all/19961215/7215230/1",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-20"
     }
   ]
 }

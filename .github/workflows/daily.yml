@@ -3,7 +3,8 @@ name: 오늘의 신조어 자동 갱신
 on:
   schedule:
     # 매일 한국 시간 오전 6시 (UTC 21:00, 전날)
-    - cron: "0 21 * * *"
+    - cron: "7 21 * * *"
+    - cron: "7 23 * * *"   # 예비: 아침 실행이 누락됐을 때 한국 시간 08:07에 한 번 더 (오늘 단어가 있으면 새로 만들지 않습니다)
   workflow_dispatch: {}   # Actions 탭에서 수동 실행도 가능
 
 permissions:

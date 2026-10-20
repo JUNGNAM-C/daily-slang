@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -539,6 +539,101 @@
       ],
       "enriched": true,
       "date": "2026-10-19"
+    },
+    {
+      "lang": "en",
+      "word": "delulu",
+      "pron_ko": "들룰루",
+      "meaning": "현실이나 객관적 사실이 아님을 알면서도 자신이 믿고 싶은 대로 믿는 망상적이거나 지나치게 낙관적인 상태를 뜻합니다.",
+      "origin": "영어 형용사 'delusional(망상적인)'을 줄여 만든 말로, 원래 K-pop 해외 팬덤에서 아이돌과 실제로 사귈 수 있다고 믿는 과몰입 팬을 가리키던 은어에서 출발해 SNS 전반의 유행어로 확산되었습니다.",
+      "example": "I might be a bit delulu, but I still believe I will get this dream job.",
+      "example_ko": "내가 조금 망상에 빠진 걸 수도 있지만, 그래도 이 꿈의 직장에 합격할 거라고 믿어.",
+      "source": "https://www.cambridge.org/news-and-insights/cambridge-dictionary-adds-skibidi-delulu-and-tradwife",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "post-truth",
+          "meaning": "객관적 사실보다 개인의 감정이나 주관적 믿음이 여론과 판단에 더 큰 영향을 미치는 현상을 뜻하며, 객관적 현실보다 자신이 믿고 싶은 바를 우선시한다는 점에서 delulu와 통합니다.",
+          "source": "https://global.oup.com/academic/content/word-of-the-year/",
+          "pron_ko": "포스트 트루스",
+          "years": 10
+        },
+        {
+          "word": "truthiness",
+          "meaning": "사실이나 논리적 근거가 없더라도 자신의 직관이나 마음에 따라 진실이라고 느껴지면 사실로 받아들이는 태도를 뜻하며, 근거 없는 믿음을 고수하는 delulu의 심리와 유사합니다.",
+          "source": "https://simple.wikipedia.org/wiki/Truthiness",
+          "pron_ko": "트루시니스",
+          "years": 20
+        },
+        {
+          "word": "As if!",
+          "meaning": "상대방의 터무니없는 착각이나 비현실적인 기대를 '말도 안 된다'며 단칼에 일축할 때 쓰던 1990년대 유행어로, 누군가의 delulu한 생각에 반응하는 표현으로 쓰였습니다.",
+          "source": "https://thedissolve.com/features/movie-of-the-week/502-1990s-pop-culture-and-teen-slang-as-seen-through-c/",
+          "pron_ko": "애즈 이프",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "solulu",
+          "meaning": "해결책을 뜻하는 'solution'을 delulu와 운을 맞추어 귀엽게 변형한 단어입니다.",
+          "source": "https://en.wiktionary.org/wiki/solulu",
+          "pron_ko": "솔룰루",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "relulu",
+          "meaning": "허황된 망상에서 벗어나 현실을 직시하는 상태를 뜻하는 delulu의 반대 표현입니다.",
+          "source": "https://subjop.tistory.com/entry/15-Viral-TikTok-Slang-Words-in-2026-Gen-Z-Gen-Alpha-Guide",
+          "pron_ko": "렐룰루",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-20"
+    },
+    {
+      "lang": "ja",
+      "word": "蛙化現象",
+      "pron_ko": "카에루카겐쇼",
+      "meaning": "호감을 갖고 있던 상대의 사소한 행동이나 실수를 보았을 때 환상이 깨지며 애정이 급격히 식거나 생리적 거부감을 느끼는 현상을 뜻합니다.",
+      "origin": "그림 동화 《개구리 왕자》에서 징그러운 개구리가 멋진 왕자로 변하는 이야기와 반대로, 호감 가던 상대가 사소한 계기로 볼품없는 개구리처럼 느껴진다는 의미에서 유래했습니다.",
+      "example": "改札で引っかかった姿を見て蛙化現象が起きてしまった。",
+      "example_ko": "개찰구에서 잔액 부족으로 멈칫거리는 모습을 보고 개구리화 현상이 와 버렸다.",
+      "source": "https://imidas.jp/series/l-91-068-23-08-g241/",
+      "reading": "かえるかげんしょう",
+      "category": "SNS 표현",
+      "note": "본래 심리학에서는 '자신이 짝사랑하던 상대가 호의를 품은 것을 알았을 때 거부감이 드는 심리'를 뜻했으나, 최근 SNS에서는 '상대방의 깬 행동 하나로 애정이 급격히 식는 현상'이라는 확장된 의미로 주로 쓰입니다.",
+      "past": [
+        {
+          "word": "草食系男子",
+          "meaning": "연애나 이성 관계에 소극적이고 담담한 태도를 취하는 남성을 가리키는 말로, 전통적 연애 규범에서 벗어나 연애 감정에 거리를 두는 심리를 나타낸다는 점에서 비슷합니다.",
+          "source": "https://www.oya-bunko.or.jp/magazine/introduction/tabid/476/Default.aspx",
+          "pron_ko": "소쇼쿠케이단시",
+          "reading": "そうしょくけいだんし",
+          "years": 20
+        },
+        {
+          "word": "キモい",
+          "meaning": "상대방의 외모나 특정 행동에서 생리적인 혐오감이나 거부감을 느낄 때 쓰던 말로, 사소한 계기로 거부 반응이 생기는 감정선과 맞닿아 있습니다.",
+          "source": "https://ananweb.jp/categories/lifestyle/45238",
+          "pron_ko": "키모이",
+          "reading": "きもい",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "蛇化現象",
+          "meaning": "좋아하는 상대의 결점이나 볼품없는 행동마저 뱀이 먹이를 통째로 삼키듯 모두 귀엽고 사랑스럽게 긍정하는 현상을 뜻합니다.",
+          "source": "https://news.mynavi.jp/article/20230620-2708159/",
+          "pron_ko": "헤비카겐쇼",
+          "reading": "へびかげんしょう",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-20"
     }
   ]
 }

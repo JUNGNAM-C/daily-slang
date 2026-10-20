@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "words": [
     {
       "word": "감다살",
@@ -274,7 +274,40 @@
       "example": "할머니 손 꼭 잡고 가는 아이 영상 보고 가슴에 국밥 쏟음.",
       "origin": "따끈한 국밥이 가슴에 퍼지는 듯한 느낌에 빗댄 표현이에요.",
       "category": "감성 리액션",
-      "source": "https://news.nate.com/view/20260724n04232"
+      "source": "https://news.nate.com/view/20260724n04232",
+      "past": [
+        {
+          "word": "심쿵",
+          "meaning": "설레거나 감동적인 대상을 보았을 때 심장이 쿵 하고 뛸 만큼 크게 동요하는 상태를 뜻하며, 마음을 울리는 장면에 반응하여 신체적 반응을 빌려 감정을 표현한다는 점에서 '가슴에 국밥 쏟음'과 비슷합니다.",
+          "source": "https://www.seoul.co.kr/news/society/2015/03/26/20150326002006",
+          "years": 10
+        },
+        {
+          "word": "가슴이 웅장해진다",
+          "meaning": "벅찬 감동이나 깊은 전율을 느끼는 상태를 뜻하며, 감동적인 순간에 느끼는 마음의 울림을 가슴이라는 신체 부위에 빗대어 유머러스하게 드러내는 인터넷 반응 표현이라는 점에서 '가슴에 국밥 쏟음'과 비슷합니다.",
+          "source": "https://www.newstopkorea.com/news/articleView.html?idxno=11773",
+          "years": 10
+        },
+        {
+          "word": "훈남",
+          "meaning": "보고 있으면 마음이 훈훈해지는 남자를 뜻하는 말로, 마음이 따뜻해진다는 정서적 반응을 온기에 빗대어 나타낸 점이 비슷합니다.",
+          "source": "https://www.ajunews.com/view/20140326105643170",
+          "years": 20
+        },
+        {
+          "word": "완소",
+          "meaning": "'완전 소중한'의 줄임말로, 마음을 울리거나 훈훈한 대상에 대해 벅찬 애정과 호감을 드러내는 반응 표현이라는 점에서 비슷합니다.",
+          "source": "https://www.ajunews.com/view/20140326105643170",
+          "years": 20
+        },
+        {
+          "word": "따봉",
+          "meaning": "매우 좋거나 최고라는 뜻의 감탄 표현으로, 긍정적이거나 감탄스러운 장면에 엄지손가락을 세우며 강한 호응을 보내던 역할이 비슷합니다.",
+          "source": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0000430243",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "밤티",
@@ -283,7 +316,48 @@
       "origin": "'밤탱이'에서 변형된 말로 알려져 있어요.",
       "category": "SNS 표현",
       "note": "다른 자료에서는 좋아하는 연예인의 허당 같은 반전 매력을 귀엽게 부르는 말로도 설명해요. 쓰는 사람과 상황에 따라 뜻이 갈려요.",
-      "source": "https://news.nate.com/view/20260724n04232"
+      "source": "https://news.nate.com/view/20260724n04232",
+      "past": [
+        {
+          "word": "노답",
+          "meaning": "해결책이 없거나 상황·결과물이 엉망이라는 뜻으로, 기대에 미치지 못해 별로라고 느끼는 대상에 대해 불만을 드러낸다는 점에서 '밤티'와 쓰임이 비슷합니다.",
+          "source": "https://forcar.tistory.com/18",
+          "years": 10
+        },
+        {
+          "word": "창렬스럽다",
+          "meaning": "겉보기나 가격에 비해 품질이나 완성도가 조잡하고 부실하다는 뜻으로, 물건이나 결과물이 기대 이하로 엉성하고 별로일 때 깎아내리는 표현이라는 점에서 '밤티'와 유사합니다.",
+          "source": "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98_%EC%9D%B8%ED%84%B0%EB%84%B7_%EC%8B%A0%EC%A1%B0%EC%96%B4_%EB%AA%A9%EB%A1%9D",
+          "years": 10
+        },
+        {
+          "word": "안습",
+          "meaning": "'안구에 습기 찬다'의 줄임말로 볼품없고 처량하여 눈물이 날 만큼 딱하다는 뜻이며, 대상의 미흡한 상태를 꼬집고 놀리는 반응 표현이라는 점에서 '밤티'와 비슷하다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2009/08/06/2009080601216.html",
+          "years": 20
+        },
+        {
+          "word": "굴욕",
+          "meaning": "완벽해야 할 모습과 달리 엉성하거나 망가져 체면을 구긴 모습을 일컫는 말로, 촌스럽거나 기대에 못 미쳐 멋없는 외형을 낮추어 평가하는 '밤티'와 쓰임새가 비슷하다.",
+          "source": "https://www.joongang.co.kr/article/2517004",
+          "years": 20
+        },
+        {
+          "word": "공주병",
+          "meaning": "실제 모습에 비해 스스로를 지나치게 미인으로 착각하는 태도를 꼬집는 말로, 촌스럽거나 어색한 스타일과 외형을 비꼬고 가볍게 놀리는 '밤티'와 역할이 비슷하다.",
+          "source": "https://www.chosun.com/site/data/html_dir/1996/12/18/1996121870072.html",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "장원영",
+          "meaning": "외모나 상태가 흠잡을 곳 없이 완벽하고 아름다우며 매우 세련된 모습을 뜻합니다.",
+          "source": "https://namu.wiki/w/%EB%B0%A4%ED%8B%B0",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "드렁슨",
@@ -291,7 +365,22 @@
       "example": "어제 여행 가서 룸메가 드렁슨 하는 바람에 한숨도 못 잤어.",
       "origin": "코 고는 소리 '드렁'에 '슨'을 붙여 만든 말이에요.",
       "category": "SNS 표현",
-      "source": "https://news.nate.com/view/20260724n04232"
+      "source": "https://news.nate.com/view/20260724n04232",
+      "past": [
+        {
+          "word": "드르렁",
+          "meaning": "코 고는 소리에서 유래하여 바닥에 드러눕거나 잠을 자는 상황을 가리키는 은어로, 코를 골며 잠든 모습을 장난스럽게 묘사한다는 점에서 '드렁슨'과 비슷합니다.",
+          "source": "https://namu.wiki/w/%EB%93%9C%EB%A5%B4%EB%A0%81",
+          "years": 10
+        },
+        {
+          "word": "안습",
+          "meaning": "'안구에 습기 차다'의 줄임말로 눈물이 날 만큼 안타깝거나 민망한 상황을 가리키며, 신체적 반응을 빌려 특정 상태에 놓인 대상을 장난스럽게 희화화한다는 점에서 유사합니다.",
+          "source": "https://www.i-boss.co.kr/ab-1486505-10081",
+          "years": 20
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "진지스칸",
@@ -766,6 +855,68 @@
       ],
       "enriched": true,
       "date": "2026-10-20"
+    },
+    {
+      "word": "이븐하게",
+      "meaning": "어떤 대상이 치우침 없이 골고루 익거나 균형이 알맞게 잡힌 상태를 뜻합니다.",
+      "example": "오늘 구운 고기는 속까지 이븐하게 잘 익었네.",
+      "origin": "요리 서바이벌 예능 《흑백요리사》에서 심사위원이 고기의 조리 상태를 영어 단어 'even'을 써서 평가한 말에서 비롯되었습니다.",
+      "category": "SNS 표현",
+      "source": "https://namu.wiki/w/%EA%B3%A0%EA%B8%B0%EA%B0%80%20%EC%9D%B4%EB%B8%90%ED%95%98%EA%B2%8C%20%EC%9D%B5%EC%A7%80%20%EC%95%8A%EC%95%98%EC%96%B4%EC%9A%94",
+      "past": [
+        {
+          "word": "히트다 히트",
+          "meaning": "어떤 대상이 매우 큰 인기를 끌거나 뛰어나다는 뜻으로, 예능 방송 속 발언이 유행어가 되었다는 점에서 비슷합니다.",
+          "source": "https://www.insight.co.kr/news/87639",
+          "years": 10
+        },
+        {
+          "word": "당근이지",
+          "meaning": "'당연하지'라는 뜻을 재치 있게 표현한 말로, 일상 대화 속 반응 표현으로 널리 유행했다는 점에서 비슷합니다.",
+          "source": "https://news.tf.co.kr/read/life/1006008.htm",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-21"
+    },
+    {
+      "word": "책없쾌",
+      "meaning": "어떠한 의무나 뒷감당에 대한 부담 없이 순수한 도파민과 즐거움만을 가볍게 취하는 상태를 이르는 말입니다.",
+      "example": "오늘 남의 팀 라이벌전 완전 난타전이라던데, 난 책없쾌 즐기러 야구 중계나 켜야겠다.",
+      "origin": "'책임 없는 쾌락'이라는 구절의 앞 글자들을 따서 만든 줄임말로, 조카 돌보기나 타 팀 간의 프로야구 경기 관전처럼 부담 없는 거리두기식 유희를 즐기는 Z세대의 정서가 맞물려 유행했습니다.",
+      "category": "줄임말",
+      "source": "https://www.careet.net/1945",
+      "related": [
+        {
+          "type": "반대 뜻",
+          "word": "스불재",
+          "meaning": "스스로 불러온 재앙의 줄임말로 본인이 자초한 일 때문에 모든 책임과 고통을 고스란히 떠안아야 하는 상황을 뜻합니다.",
+          "source": "https://thestarfriends.tistory.com/entry/MZ%EC%84%B8%EB%8C%80-%EC%8B%A0%EC%A1%B0%EC%96%B4-%EC%A0%95%EB%A6%AC-2025%EB%85%84-%ED%8A%B8%EB%A0%8C%EB%93%9C-%EA%B0%80%EC%9D%B4%EB%93%9C"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "오살힘",
+          "meaning": "오늘을 살아갈 힘의 줄임말로 문장형 표현을 세 글자로 압축해 긍정적인 감정 상태를 드러냅니다.",
+          "source": "https://www.instablank.com/meme/171"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "무공해",
+          "meaning": "무조건 공감해드림의 줄임말로 세 글자 축약을 통해 인터넷 소통 태도를 나타냅니다.",
+          "source": "https://www.arenakorea.com/news/articleView.html?idxno=71964"
+        }
+      ],
+      "past": [
+        {
+          "word": "눈팅",
+          "meaning": "온라인 공간에서 글을 쓰거나 소통해야 하는 의무 없이 눈으로 보기만 하며 정보를 즐기는 행위로, 책임을 배제한 채 재미를 추구하는 태도가 맞닿아 있습니다.",
+          "source": "https://ko.wikipedia.org/wiki/%EB%B6%84%EB%A5%98:1990%EB%85%84%EB%8C%80_%EC%8B%A0%EC%A1%B0%EC%96%B4",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-21"
     }
   ]
 }

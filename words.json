@@ -388,7 +388,42 @@
       "example": "다 같이 웃고 떠드는데 혼자 회의록 쓰고 있네, 진지스칸이다.",
       "origin": "'진지하다'에 몽골 제국의 칭기즈 칸 이름을 붙여 만든 말장난이에요.",
       "category": "사람 유형",
-      "source": "https://news.nate.com/view/20260724n04232"
+      "source": "https://news.nate.com/view/20260724n04232",
+      "past": [
+        {
+          "word": "진지병",
+          "meaning": "가벼운 농담이나 유머를 지나치게 심각하게 받아들이는 태도를 뜻하며, 여럿이 즐기는 분위기에서 혼자 심각해진다는 점에서 '진지스칸'과 유사합니다.",
+          "source": "https://v.daum.net/v/J7H0gnZXPH",
+          "years": 10
+        },
+        {
+          "word": "개그를 다큐로 받는다",
+          "meaning": "가벼운 유머나 장난을 지나치게 심각하게 받아들이는 태도를 가리키는 말로, 유쾌한 자리에서 혼자 정색해 분위기를 어색하게 만든다는 점에서 '진지스칸'과 비슷합니다.",
+          "source": "https://www.pressian.com/pages/articles/178830",
+          "years": 20
+        },
+        {
+          "word": "대략 난감",
+          "meaning": "어처구니없거나 곤란한 상황을 마주했을 때 쓰던 반응 표현으로, 분위기를 깨뜨리는 사람 때문에 좌중이 당황하고 어색해졌을 때 사용되었다는 점에서 역할이 비슷합니다.",
+          "source": "https://weekly.donga.com/3/all/11/77508/1",
+          "years": 20
+        },
+        {
+          "word": "사오정",
+          "meaning": "대화의 맥락을 읽지 못하고 동문서답을 하거나 엉뚱한 태도로 분위기를 흐리는 사람을 빗대던 말로, 가벼운 대화 흐름에 맞추지 못하는 인물을 가리킨다는 점에서 '진지스칸'과 유사합니다.",
+          "source": "https://ko.wikipedia.org/wiki/%EC%82%AC%EC%98%A4%EC%A0%95",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "분위기 메이커",
+          "meaning": "모임이나 대화의 자리에서 흥을 돋우며 유쾌하고 활기찬 분위기를 이끌어 내는 사람을 뜻합니다.",
+          "source": "https://igotit0819.tistory.com/101",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "영크크",
@@ -397,7 +432,54 @@
       "origin": "기사에서는 '영크레이터 크루'의 줄임말로 소개해요.",
       "category": "커뮤니티",
       "note": "'Young'과 웃음소리 '크크'의 합성어라는 해석도 있어요. 정확한 유래는 자료마다 달라요.",
-      "source": "https://news.nate.com/view/20260724n04232"
+      "source": "https://news.nate.com/view/20260724n04232",
+      "past": [
+        {
+          "word": "스웨그",
+          "meaning": "자신만의 독특한 멋과 개성을 당당하게 드러내는 태도를 뜻하며, 젊은 세대의 자유분방하고 트렌디한 감각을 표현한다는 점에서 '영크크'와 쓰임새가 비슷합니다.",
+          "source": "https://www.wikitree.co.kr/articles/286956",
+          "years": 10
+        },
+        {
+          "word": "힙하다",
+          "meaning": "고유한 개성을 지니면서 최신 유행에 밝고 감각적이라는 뜻으로, 젊은 층 특유의 신선하고 세련된 분위기를 가리킨다는 점에서 '영크크'와 유사합니다.",
+          "source": "https://dbr.donga.com/article/view/1203/article_no/8517",
+          "years": 10
+        },
+        {
+          "word": "간지",
+          "meaning": "멋이나 세련된 스타일을 뜻하는 은어로, 젊은 층 특유의 감각적이고 트렌디한 멋을 긍정하는 신조어라는 점에서 영크크와 비슷합니다.",
+          "source": "https://www.munhwa.com/article/10559899",
+          "years": 20
+        },
+        {
+          "word": "X세대",
+          "meaning": "기존 관습에 얽매이지 않고 자신만의 개성과 감각적 소비문화를 추구하던 청년층을 뜻하며, 젊은 층만의 뚜렷한 유행 문화를 대변한다는 점에서 영크크와 유사합니다.",
+          "source": "https://www.advertising.co.kr/data/sem/20011113_adkor2001/20011113_2session1.html",
+          "years": 30
+        },
+        {
+          "word": "신세대",
+          "meaning": "이전 세대와 구별되는 독창적인 감성과 자유분방한 생활 방식을 지닌 젊은 층을 뜻하며, 기성세대와 차별화된 젊은 감각의 트렌디함을 나타낸다는 점에서 영크크와 맥락이 같습니다.",
+          "source": "https://www.donga.com/archive/newslibrary/view?ymd=19961123",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "늙크크",
+          "meaning": "최신 유행이나 트렌드에 뒤처지고 예전 기성세대의 감성을 지닌 사람을 뜻하는 말입니다.",
+          "source": "https://namu.wiki/w/%EC%98%81%ED%81%AC%ED%81%AC",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "올크크",
+          "meaning": "젊은 세대의 감성이나 유행에 밝지 못하고 과거의 취향을 선호하는 사람을 가리키는 표현입니다.",
+          "source": "https://www.chosun.com/culture-life/culture_general/2026/06/05/VLZKAJLEJBAHRPN322ISXJPRVQ/",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "느좋",
@@ -405,7 +487,36 @@
       "example": "이 카페 조명이랑 음악 다 느좋이다.",
       "origin": "'느낌 좋다'의 앞 글자만 딴 대표적인 초성 줄임말이에요.",
       "category": "줄임말",
-      "source": "https://www.tiktok.com/discover/%EC%9A%94%EC%A6%98-%EC%8B%A0%EC%A1%B0%EC%96%B42026"
+      "source": "https://www.tiktok.com/discover/%EC%9A%94%EC%A6%98-%EC%8B%A0%EC%A1%B0%EC%96%B42026",
+      "past": [
+        {
+          "word": "분위기 깡패",
+          "meaning": "공간이나 인물이 풍기는 분위기가 대단히 매력적임을 뜻하며, 감성적인 장소나 사람의 남다른 분위기에 호감을 표할 때 쓰는 점이 '느좋'과 비슷합니다.",
+          "source": "https://kiramonthly.com/722",
+          "years": 10
+        },
+        {
+          "word": "취저",
+          "meaning": "'취향저격'의 줄임말로 자신의 취향이나 감성에 꼭 맞는 대상을 가리키며, 마음에 드는 스타일이나 장소를 보고 두 글자로 가볍게 호감을 나타내는 축약 표현이라는 점이 '느좋'과 비슷합니다.",
+          "source": "https://www.100ssd.co.kr/news/articleView.html?idxno=40755",
+          "years": 10
+        }
+      ],
+      "related": [
+        {
+          "word": "반느좋",
+          "meaning": "'반대로 느낌이 좋지 않다'의 축약어로, 어떤 대상이나 분위기가 마음에 들지 않고 별로일 때 사용하는 표현입니다.",
+          "source": "https://linda302.tistory.com/694",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "느싫",
+          "meaning": "'느낌이 싫다'의 줄임말로, 자신과 감성이나 성향이 맞지 않아 꺼려지는 상대를 가리킬 때 쓰는 표현입니다.",
+          "source": "https://dingdo.tistory.com/7619",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "두존크",

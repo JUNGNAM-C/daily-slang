@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -634,6 +634,141 @@
       ],
       "enriched": true,
       "date": "2026-10-20"
+    },
+    {
+      "lang": "en",
+      "word": "demure",
+      "pron_ko": "디뮤어",
+      "meaning": "원래는 얌전하고 조용하다는 뜻이지만, SNS에서는 과하지 않고 단정하며 절제된 태도나 모습을 능청스럽고 유머러스하게 뽐낼 때 쓰는 표현입니다.",
+      "origin": "2024년 8월 틱톡 크리에이터 줄스 르브론이 단정한 출근 메이크업을 보여주며 쓴 'Very demure, very mindful' 영상이 폭발적인 인기를 얻으며 전 세계적 유행어가 되었습니다.",
+      "example": "I'm only putting on light lip balm and drinking my iced coffee quietly—very demure, very mindful.",
+      "example_ko": "연한 립밤만 바르고 아이스 커피를 조용히 마시는 중이야—아주 얌전하고 아주 사려 깊지.",
+      "source": "https://trending.knowyourmeme.com/editorials/guides/what-does-demure-mean-and-what-is-the-very-demure-very-mindful-trend-on-tiktok-tiktoker-joolieannies-how-to-be-demure-videos-explained",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "on fleek",
+          "meaning": "한 치의 오차 없이 깔끔하고 완벽하다는 뜻으로, 숏폼 영상에서 외모나 스타일의 완벽함을 뽐내며 유행했다는 점에서 비슷합니다.",
+          "source": "https://www.merriam-webster.com/dictionary/on%20fleek",
+          "pron_ko": "온 플릭",
+          "years": 10
+        },
+        {
+          "word": "that's hot",
+          "meaning": "멋지고 끝내준다는 찬사의 표현으로, 셀럽의 독특한 말투에서 시작해 일상적인 모든 상황에 능청스럽게 붙여 쓰였다는 점에서 비슷합니다.",
+          "source": "https://www.bustle.com/entertainment/paris-hilton-thats-hot-catchphrase-origin-memoir-book",
+          "pron_ko": "댓츠 핫",
+          "years": 20
+        },
+        {
+          "word": "as if",
+          "meaning": "말도 안 된다며 어이없어하는 감탄사로, 당대 젊은 여성층의 스타일과 유행을 상징하며 톡 쏘는 독특한 어투로 쓰였다는 점에서 비슷합니다.",
+          "source": "https://www.urbandictionary.com/define.php?term=as+if",
+          "pron_ko": "애즈 이프",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "brat",
+          "meaning": "완벽하려 애쓰지 않고 결점과 혼란을 당당히 드러내며 거침없이 즐기는 태도를 뜻해, 차분함과 절제를 내세우는 표현과 정반대 흐름으로 쓰였습니다.",
+          "source": "https://www.businessinsider.com/heres-why-brat-summer-is-turning-into-demure-fall-2024-8",
+          "pron_ko": "브랫",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-21"
+    },
+    {
+      "lang": "ja",
+      "word": "キャパい",
+      "pron_ko": "캬파이",
+      "meaning": "자신의 수용 한도나 역량을 초과하여 벅차거나 패닉에 빠진 상태를 뜻합니다. 일이 많아 정신이 없을 때뿐만 아니라 좋아하는 대상을 보고 감격에 겨워 가슴이 벅찰 때도 사용됩니다.",
+      "origin": "외래어 '캐파시티 오버(capacity over)'를 줄여 형용사화한 말로, 모델 유차미가 방송 등에서 사용하면서 널리 퍼졌습니다.",
+      "example": "提出期限が迫っている課題が多すぎてマジでキャパい。",
+      "example_ko": "제출 기한이 다가온 과제가 너무 많아서 진짜 한계 초과야.",
+      "source": "https://www.weblio.jp/content/%E3%82%AD%E3%83%A3%E3%83%91%E3%81%84",
+      "reading": "きゃぱい",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "メンブレ",
+          "meaning": "'멘탈 브레이크'의 줄임말로 심한 스트레스나 충격으로 정신적 한계에 부딪혔을 때 쓰인다는 점에서 유사합니다.",
+          "source": "https://jimaru.net/japanese-slang/ma-line/menbure/",
+          "pron_ko": "멘부레",
+          "reading": "めんぶれ",
+          "years": 10
+        },
+        {
+          "word": "チョベリバ",
+          "meaning": "'초 베리 배드'를 줄여 감당하기 어려울 만큼 최악이거나 곤란한 심리 상태를 외래어로 축약해 나타냈다는 점에서 비슷합니다.",
+          "source": "https://ja.wikipedia.org/wiki/%E3%83%81%E3%83%A7%E3%83%99%E3%83%AA%E3%83%90",
+          "pron_ko": "초베리바",
+          "reading": "ちょべりば",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "余裕",
+          "meaning": "시간이나 심리적으로 한도를 넘지 않고 넉넉하게 남아 있는 상태를 뜻하는 반의어입니다.",
+          "source": "https://kanji.reader.bz/slang/%E3%81%8D%E3%82%83%E3%81%B1%E3%81%84",
+          "pron_ko": "요유",
+          "reading": "よゆう",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-21"
+    },
+    {
+      "lang": "zh",
+      "word": "松弛感",
+      "pron_ko": "쏭츠간",
+      "meaning": "예상치 못한 돌발 상황이나 일상의 치열한 경쟁 속에서도 초조해하거나 예민해지지 않고, 차분함과 여유를 유지하는 심리적 태도나 분위기를 뜻합니다.",
+      "origin": "2022년 공항에서 수하물이 반송되는 사고에도 서로를 탓하지 않던 한 가족의 침착한 태도에서 회자되기 시작했으며, 2024년 파리 올림픽 선수들의 긴장하지 않는 여유로운 모습으로 폭발적인 유행어가 되었습니다.",
+      "example": "面对工作中的突发状况，我们要保持一种松弛感，不要太焦虑。",
+      "example_ko": "업무 중 돌발 상황이 생기더라도 너무 불안해하지 말고 여유로운 태도를 유지해야 한다.",
+      "source": "https://www.news.cn/politics/20241202/59496b2d344b4382b6c12d03d78b8f13/c.html?fromModule=lemma_middle-info",
+      "reading": "sōng chí gǎn",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "佛系",
+          "meaning": "작은 일에 일희일비하지 않고 집착을 내려놓으며 담담하게 임한다는 뜻으로, 마음의 평온과 여유를 추구한다는 점에서 비슷합니다.",
+          "source": "https://huacheng.gz-cmc.com/pages/2023/01/09/4ac198aa75524b81ab4daf54d98e60d5.html",
+          "pron_ko": "포시",
+          "reading": "fó xì",
+          "years": 10
+        },
+        {
+          "word": "葛优躺",
+          "meaning": "소파에 널브러져 온몸에 힘을 빼고 편안히 쉬는 모습을 뜻하며, 긴장을 완전히 푼 상태를 보여준다는 점에서 일맥상통합니다.",
+          "source": "https://www.zaobao.com.sg/realtime/world/story20161214-702093",
+          "pron_ko": "거요우탕",
+          "reading": "gě yōu tǎng",
+          "years": 10
+        },
+        {
+          "word": "慢活",
+          "meaning": "빠른 도시 생활의 압박 속에서 삶의 속도를 늦추고 심신의 여유를 되찾자는 뜻으로, 조급해하지 않는 태도를 지향한다는 점이 닮았습니다.",
+          "source": "https://www.chinanews.com.cn/cul/news/2007/08-16/1003559.shtml",
+          "pron_ko": "만훠",
+          "reading": "mànhuó",
+          "years": 20
+        },
+        {
+          "word": "潇洒",
+          "meaning": "주변 시선이나 사소한 속박에 얽매이지 않고 자유롭고 자연스럽게 산다는 의미로, 외부 압박에 흔들리지 않는 태연함이라는 점이 유사합니다.",
+          "source": "https://paper.people.com.cn/rmlt/html/2022-05/20/content_25925074.htm",
+          "pron_ko": "샤오싸",
+          "reading": "xiāosǎ",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-21"
     }
   ]
 }

@@ -649,7 +649,46 @@
       "example": "마감 날 사무실 분위기가 완전 난리자베스였어.",
       "origin": "'난리'에 영국 여왕 '엘리자베스' 이름을 붙인 말장난이에요.",
       "category": "감탄사",
-      "source": "https://dailyttut.blogspot.com/2026/09/50.html"
+      "source": "https://dailyttut.blogspot.com/2026/09/50.html",
+      "past": [
+        {
+          "word": "아무 말 대잔치",
+          "meaning": "맥락 없이 두서없는 말을 쏟아내어 대화가 난장판이 된 상황을 가리키는 말로, 통제되지 않는 어수선한 상태를 유머러스하고 과장되게 표현한다는 점에서 '난리자베스'와 비슷합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2016/09/12/2016091200562.html",
+          "years": 10
+        },
+        {
+          "word": "이거 실화냐",
+          "meaning": "믿기지 않을 만큼 황당하거나 어이없는 일이 벌어졌을 때 되묻는 감탄 표현으로, 상상을 초월하는 혼란스럽고 당혹스러운 소동을 마주했을 때의 반응이라는 점에서 '난리자베스'와 비슷합니다.",
+          "source": "https://digitalchosun.dizzo.com/site/data/html_dir/2017/12/18/2017121811910.html",
+          "years": 10
+        },
+        {
+          "word": "안습",
+          "meaning": "'안구에 습기 차다'를 줄여 눈물이 날 만큼 낭패를 보거나 처량한 상태를 이르는 말로, 난감하고 어처구니없는 상황을 해학적으로 과장해 표현한다는 점에서 난리자베스와 비슷합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2009/08/06/2009080601216.html",
+          "years": 20
+        },
+        {
+          "word": "굴욕",
+          "meaning": "체면을 구기거나 민망한 처지에 놓인 순간을 가볍게 희화화하는 말로, 당황스럽고 소란스러운 사건을 극적으로 부각해 웃음거리로 만든다는 점에서 난리자베스와 쓰임새가 통합니다.",
+          "source": "https://kr.aving.net/news/articleView.html?idxno=29370",
+          "years": 20
+        },
+        {
+          "word": "빠떼루",
+          "meaning": "레슬링 벌칙 자세에서 비롯되어 황당하거나 얄미운 상황을 만든 사람을 유쾌하게 나무라는 표현으로, 외래어 어휘를 활용해 소란스러운 상황을 익살스럽게 과장한다는 점에서 난리자베스와 유사합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/1996/12/18/1996121870072.html",
+          "years": 30
+        },
+        {
+          "word": "당근이지",
+          "meaning": "'당연하지'라는 긍정의 대답을 비슷한 발음의 채소에 빗대어 장난스럽게 건네는 말로, 본래 단어에 엉뚱한 요소를 결합해 재미와 과장을 더하는 조어 방식이 난리자베스와 닮았습니다.",
+          "source": "https://www.donga.com/news/home/article/all/20120201/43705387/4",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "엠비스찬",
@@ -658,7 +697,28 @@
       "origin": "MBTI와 크리스천(Christian)을 합친 말이에요.",
       "category": "사람 유형",
       "note": "출처에는 합성어 구성만 나와 있어서, 의미 풀이는 이름을 바탕으로 정리한 거예요.",
-      "source": "https://dailyttut.blogspot.com/2026/09/50.html"
+      "source": "https://dailyttut.blogspot.com/2026/09/50.html",
+      "past": [
+        {
+          "word": "있어빌리티",
+          "meaning": "실제보다 훨씬 그럴듯하고 멋있어 보이도록 꾸미는 능력을 뜻하며, 한국어와 영단어를 조합해 특정 이미지나 프레임에 집착하는 현대인의 태도를 위트 있게 표현했다는 점에서 비슷합니다.",
+          "source": "https://www.segye.com/newsView/20160725003481",
+          "years": 10
+        },
+        {
+          "word": "폐인",
+          "meaning": "특정 취미나 콘텐츠에 일상을 잊을 정도로 깊이 몰두하는 사람을 뜻하며, 성격 검사에 과하게 몰입하는 사람을 가리키는 엠비스찬과 특정 대상에 과몰입한다는 점에서 비슷합니다.",
+          "source": "https://www.happycampus.com/report-doc/4180909/",
+          "years": 20
+        },
+        {
+          "word": "오렌지족",
+          "meaning": "1990년대 초반 부유한 환경 속에서 독특한 소비와 향락 문화를 누리던 젊은이들을 일컫는 말로, 특정 하위문화에 몰두하며 기성세대와 다른 성향을 드러내는 인간 집단을 규정한 신조어라는 점에서 비슷합니다.",
+          "source": "https://www.thescoop.co.kr/news/articleView.html?idxno=58487",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "긁?",
@@ -667,7 +727,40 @@
       "origin": "'자극을 받았니?'라는 뜻의 '긁혔니'에서 나왔어요.",
       "category": "커뮤니티",
       "note": "상대를 도발하는 말투라 싸움이 될 수 있어요.",
-      "source": "https://valuepick.kr/issue/2026-latest-korean-slang-trends-analysis/"
+      "source": "https://valuepick.kr/issue/2026-latest-korean-slang-trends-analysis/",
+      "past": [
+        {
+          "word": "부들부들",
+          "meaning": "몹시 분하거나 약이 올라 몸을 떠는 상태를 나타내는 말로, 상대방이 화가 나 발끈했을 때 약을 올리는 의도로 쓰였다는 점에서 '긁?'과 비슷합니다.",
+          "source": "https://namu.wiki/w/%EB%B6%80%EB%93%A4%EB%B6%80%EB%93%A4",
+          "years": 10
+        },
+        {
+          "word": "어쩔티비",
+          "meaning": "상대방의 지적이나 말을 무시하며 약을 올릴 때 쓰는 말로, 상대가 기분 나빠하거나 발끈하도록 자극하고 놀린다는 점에서 '긁?'과 비슷합니다.",
+          "source": "https://ko.wikipedia.org/wiki/%EC%96%B4%EC%A9%94%ED%8B%B0%EB%B9%84",
+          "years": 10
+        },
+        {
+          "word": "즐",
+          "meaning": "상대방의 말을 단호하게 끊거나 무시하고 거절할 때 쓰던 유행어로, 단어를 극도로 줄인 형태로 상대방의 반응을 약올리고 도발한다는 점에서 '긁?'과 비슷합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2006/04/10/2006041070005.html",
+          "years": 20
+        },
+        {
+          "word": "내로남불",
+          "meaning": "자신에게는 관대하고 남에게는 엄격한 이중잣대를 꼬집는 축약어로, 상대방이 정곡을 찔려 발끈할 때 그 모순된 태도를 비꼬아 무안을 주는 용도로 쓰인다는 점에서 '긁?'과 유사합니다.",
+          "source": "https://www.chosun.com/national/weekend/2023/05/27/VWC2AYZI2REHJDAQEI2HFRC3KE/",
+          "years": 30
+        },
+        {
+          "word": "썰렁",
+          "meaning": "상대방의 재미없는 우스갯소리나 행동에 면박을 줄 때 쓰던 감탄사로, 상대의 언행 직후에 던져 무안하게 만들고 가볍게 놀리는 반응 표현이라는 점에서 '긁?'과 통합니다.",
+          "source": "https://view.asiae.co.kr/article/2014052616531215653",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "늙크크",

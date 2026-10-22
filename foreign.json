@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -769,6 +769,108 @@
       ],
       "enriched": true,
       "date": "2026-10-21"
+    },
+    {
+      "lang": "en",
+      "word": "glazing",
+      "pron_ko": "글레이징",
+      "meaning": "특정 인물이나 대상을 민망할 정도로 지나치게 치켜세우고 아첨하는 행위를 뜻합니다.",
+      "origin": "도넛 겉면에 달콤한 설탕 시럽을 두껍게 코팅하듯 상대방에게 듣기 좋은 과장된 칭찬을 쏟아붓는 모습에서 유래했습니다.",
+      "example": "Stop glazing him, he only scored one point.",
+      "example_ko": "걔 1점밖에 못 넣었으니까 그만 좀 띄워줘.",
+      "source": "https://parade.com/living/glazing-meaning-slang",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "gas up",
+          "meaning": "자동차에 연료를 채우듯 과도한 칭찬으로 상대방의 기를 잔뜩 살려준다는 뜻으로, 상대를 크게 띄워주는 맥락에서 쓰였습니다.",
+          "source": "https://emperorgrapevine.com/3514/features/whats-that-youre-saying-slang-words-explained/",
+          "pron_ko": "가스 업",
+          "years": 10
+        },
+        {
+          "word": "brownnose",
+          "meaning": "자신의 이익이나 환심을 사기 위해 권력자나 윗사람에게 굽신거리며 아첨하는 행위를 가리킵니다.",
+          "source": "https://grammarphobia.com/blog/category/slang",
+          "pron_ko": "브라운노즈",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-22"
+    },
+    {
+      "lang": "ja",
+      "word": "蛇化現象",
+      "pron_ko": "헤비카겐쇼오",
+      "meaning": "연인의 촌스럽거나 부끄러운 행동, 사소한 실수까지도 모두 사랑스럽고 귀엽게 느껴지는 연애 심리 현상입니다.",
+      "origin": "2023년 4월 틱톡 크리에이터 '코챠모챠'가 처음 고안한 말로, 단점이 보이면 정이 떨어지는 '개구리화 현상(蛙化現象)'의 반대 개념이자 뱀이 먹이를 통째로 삼키듯 상대방의 모든 모습을 포용한다는 뜻에서 붙여졌습니다.",
+      "example": "彼氏が派手に転んだ姿すら可愛くて、完全に蛇化現象になっている。",
+      "example_ko": "남자친구가 크게 넘어진 모습마저 귀여워서 완전히 뱀화 현상에 빠져 있다.",
+      "source": "https://shingakunet.com/journal/trend/20231018000001/",
+      "reading": "へびかげんしょう",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "壁ドン",
+          "meaning": "벽을 짚어 상대를 가두며 두근거림을 유발하는 행동을 가리키는 말로, 젊은 층 사이에서 연애 감정을 표현하고 유행한 신조어라는 점이 비슷합니다.",
+          "source": "https://ja.wikipedia.org/wiki/%E5%A3%81%E3%83%89%E3%83%B3",
+          "pron_ko": "카베돈",
+          "reading": "かべどん",
+          "years": 10
+        },
+        {
+          "word": "ツンデレ",
+          "meaning": "쌀쌀맞게 굴다가도 상대에 대한 호감과 애정을 드러내는 심리 태도를 뜻하는 말로, 연애 대상에 대한 독특한 감정적 반응을 개념화했다는 점이 비슷합니다.",
+          "source": "https://ja.wikipedia.org/wiki/%E3%83%84%E3%83%B3%E3%83%87%E3%83%AC",
+          "pron_ko": "춘데레",
+          "reading": "つんでれ",
+          "years": 20
+        },
+        {
+          "word": "チョベリグ",
+          "meaning": "'초 베리 굿(Super Very Good)'을 줄인 말로, 대상을 무조건적이고 과장되게 긍정하며 애착을 보이는 감탄 표현이라는 점이 비슷합니다.",
+          "source": "https://www.jiyu.co.jp/singo/index.php?eid=00013",
+          "pron_ko": "쵸베리구",
+          "reading": "ちょべりぐ",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "蛙化現象",
+          "meaning": "호감 있던 상대방의 사소한 행동이나 단점을 보고 한순간에 마음이 식어버리는 현상으로, 뱀화 현상의 반대어입니다.",
+          "source": "https://www.glam.jp/post-337572/",
+          "pron_ko": "카에루카겐쇼오",
+          "reading": "かえるかげんしょう",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "キング化現象",
+          "meaning": "상대방의 엉뚱한 행동이나 실수를 귀여워하는 것을 넘어 재미있고 유쾌하게 받아들이는 긍정적 연애 심리 현상입니다.",
+          "source": "https://jp.quizcastle.com/dictionary/1n7ve9dk0w",
+          "pron_ko": "킹구카겐쇼오",
+          "reading": "きんぐかげんしょう",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-22"
+    },
+    {
+      "lang": "zh",
+      "word": "显眼包",
+      "pron_ko": "셴옌바오",
+      "meaning": "남의 시선을 두려워하지 않고 넘치는 활력과 엉뚱하고 유쾌한 행동으로 주변의 분위기를 띄우며 시선을 사로잡는 사람을 친근하게 이르는 말이다.",
+      "origin": "원래는 남의 눈에 띄려고 주책을 부려 꼴불견인 사람을 가리키던 방언 구어였으나, 2023년 예능과 SNS에서 분위기를 밝히는 매력적인 캐릭터를 긍정적으로 묘사하면서 유행어로 정착했다.",
+      "example": "他是我们团队里的显眼包，每次活动都能让大家笑得合不拢嘴。",
+      "example_ko": "그는 우리 팀의 분위기 메이커라서, 행사 때마다 모두를 입이 다물어지지 않을 정도로 웃게 만든다.",
+      "source": "https://m.bjnews.com.cn/detail/1701687444129523.html",
+      "reading": "xiǎnyǎnbāo",
+      "category": "사람 유형",
+      "note": "과거에는 튀려고 용쓰는 사람을 비꼬는 부정적 어감이 강했으나, 현재는 개성 넘치고 사랑스러운 매력으로 주목받는 사람이나 독특한 사물을 귀엽게 칭찬하는 긍정적 의미로 변화했다.",
+      "enriched": true,
+      "date": "2026-10-22"
     }
   ]
 }

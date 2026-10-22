@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "words": [
     {
       "word": "감다살",
@@ -1301,6 +1301,83 @@
       ],
       "enriched": true,
       "date": "2026-10-22"
+    },
+    {
+      "word": "시성비",
+      "meaning": "'시간 대비 성능'의 줄임말로, 쓴 시간에 비해 얻는 효율이나 만족도가 얼마나 높은지를 따지는 기준을 뜻합니다.",
+      "example": "요즘은 긴 영상 끝까지 다 볼 여유가 없어서 요약본으로 시성비 챙겨.",
+      "origin": "기존에 널리 쓰이던 '가성비(가격 대비 성능)'에서 가격 대신 시간을 넣어 만든 말로, 현대 사회에서 시간의 효율적 사용을 중시하는 흐름에 맞춰 퍼졌습니다.",
+      "category": "줄임말",
+      "source": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0700&key=20240726.99099008277",
+      "note": "영상 배속 시청이나 요약본 소비처럼 콘텐츠를 빠르게 즐기는 맥락과, 간편식이나 예약 앱처럼 가사 및 대기 시간을 줄여주는 소비 서비스를 가리키는 맥락에서 두루 쓰입니다.",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "가성비",
+          "meaning": "가격 대비 성능의 줄임말로 들인 돈에 비해 제품이나 서비스의 성능이 뛰어남을 뜻합니다.",
+          "source": "https://www.dailian.co.kr/news/view/1293010/%EC%99%B8%EC%8B%9D%EC%97%85%EA%B3%84-%E2%80%98%EC%8B%9C%EC%84%B1%EB%B9%84%E2%80%99-%EC%9C%84%ED%95%9C-%EA%B0%84%ED%8E%B8%EC%8B%9D-%EC%9D%B8%EA%B8%B0-2023"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "가심비",
+          "meaning": "가격 대비 심리적 만족도의 줄임말로 가격 대비 효용보다는 스스로 느끼는 심리적 만족을 우선하는 소비 형태를 뜻합니다.",
+          "source": "https://m.fashionn.com/board/read.php?table=1004&number=23061"
+        }
+      ],
+      "past": [
+        {
+          "word": "가성비",
+          "meaning": "가격 대비 성능을 뜻하는 말로, 한정된 자원 안에서 효용을 극대화하려는 점이 시간의 효용을 따지는 '시성비'와 닮았습니다.",
+          "source": "https://www.fairtravelkorea.com/app/research/do_download?md_id=rd_youth&code=7206",
+          "years": 10
+        },
+        {
+          "word": "지름신",
+          "meaning": "충동구매를 부추기는 가상의 신을 이르는 말로, 효율과 낭비 최소화를 철저히 계산하는 '시성비'와 상반된 즉흥적 소비 심리를 나타냅니다.",
+          "source": "https://www.donga.com/news/It/article/all/20050519/8190990/1",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-23"
+    },
+    {
+      "word": "굳이데이",
+      "meaning": "효율성이나 편리함 대신 오직 낭만과 기분 전환을 위해 번거롭고 수고스러운 일을 일부러 찾아 실천하는 날을 뜻합니다.",
+      "example": "날씨도 좋은데 오늘 퇴근하고 굳이 바다 보러 갈 사람, 완전 굳이데이 각이야.",
+      "origin": "가수 우즈가 자체 유튜브 영상에서 낭만을 즐기려면 번거로움을 감수해야 한다고 말한 일화가 SNS에서 크게 화제가 되며 유행어로 정착했습니다.",
+      "category": "SNS 표현",
+      "source": "https://www.sisajournal-e.com/news/articleView.html?idxno=408577",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "치팅데이",
+          "meaning": "엄격하게 식단을 조절하던 중 몸을 속인다는 취지로 먹고 싶은 음식을 하루 마음껏 먹는 날을 가리키는 말로, 특정 행위를 정해 실천하는 날에 '데이'를 결합한 조어 방식이 유사합니다.",
+          "source": "https://www.ytn.co.kr/_ln/0106_202001170044153974"
+        }
+      ],
+      "past": [
+        {
+          "word": "탕진잼",
+          "meaning": "소소한 비용을 낭비하며 재미를 찾는 행동을 뜻하며, 효율성보다 즉각적인 기분 전환과 자기만족을 중시한다는 점에서 굳이데이와 태도가 닮았습니다.",
+          "source": "https://digitalchosun.dizzo.com/site/data/html_dir/2016/11/24/2016112411680.html",
+          "years": 10
+        },
+        {
+          "word": "귀차니즘",
+          "meaning": "만사를 귀찮아하며 게으름을 피우려는 태도를 가리키는 말로, 굳이데이는 이러한 귀차니즘을 의도적으로 거스르고 번거로움을 택한다는 점에서 맞닿아 있습니다.",
+          "source": "https://www.korean.go.kr/nkview/nklife/2006_4/2006_0403.pdf",
+          "years": 20
+        },
+        {
+          "word": "엑스세대",
+          "meaning": "기성세대의 획일적이고 효율 중심적인 기준 대신 자신만의 개성과 낭만을 추구하던 1990년대 중반 청년층을 일컫는 말로, 굳이데이의 낭만 추구 정서와 연결됩니다.",
+          "source": "https://www.gachon.ac.kr/bbs/asiaculture/398/120890/download.do",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-23"
     }
   ]
 }

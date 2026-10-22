@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "words": [
     {
       "word": "감다살",
@@ -525,7 +525,40 @@
       "origin": "두바이 쫀득 쿠키, '두쫀쿠'가 유행하면서 그 소리를 따라 만든 말장난이에요.",
       "category": "SNS 표현",
       "note": "외모를 두고 하는 농담이라 상대가 불편해할 수 있어요.",
-      "source": "https://www.tiktok.com/discover/%EC%9A%94%EC%A6%98-%EC%8B%A0%EC%A1%B0%EC%96%B42026"
+      "source": "https://www.tiktok.com/discover/%EC%9A%94%EC%A6%98-%EC%8B%A0%EC%A1%B0%EC%96%B42026",
+      "past": [
+        {
+          "word": "어깨깡패",
+          "meaning": "어깨가 넓고 체격이 좋은 사람을 뜻하며, 특정 신체 부위의 크기를 장난스럽게 부각하여 별명처럼 부르는 표현이라는 점에서 '두존크'와 비슷합니다.",
+          "source": "https://motioneffect.tistory.com/entry/%EB%82%A8%EC%9E%90-%ED%8F%89%EA%B7%A0-%EC%96%B4%EA%B9%A8-%EB%84%93%EC%9D%B4-%ED%86%B5%EA%B3%84-%EC%A0%95%EB%B3%B4-Feat-%EC%A4%84%EB%A6%AC%EC%97%94%EA%B0%95-%EC%96%B4%EA%B9%A8%EB%84%93%EC%9D%B4",
+          "years": 10
+        },
+        {
+          "word": "세젤예",
+          "meaning": "'세상에서 제일 예쁘다'를 줄인 말로, 외모에 대한 평가나 묘사를 세 글자로 압축해 부르는 조어 방식이 '두존크'와 비슷합니다.",
+          "source": "https://www.updownnews.co.kr/news/articleView.html?idxno=64830",
+          "years": 10
+        },
+        {
+          "word": "대두",
+          "meaning": "머리나 얼굴이 큰 사람을 이르는 표현으로, 방송이나 일상에서 머리 크기를 유머 소재로 삼아 놀릴 때 쓰인 점이 '두존크'와 유사합니다.",
+          "source": "https://www.starnewskorea.com/broadcast-drama/2008/04/13/2008041315230532786",
+          "years": 20
+        },
+        {
+          "word": "소두",
+          "meaning": "머리가 유독 작은 사람을 뜻하며, 머리가 큰 사람과 대비해 머리 크기 차이로 장난스럽게 굴욕을 주는 맥락에서 함께 쓰였다는 점이 '두존크'와 통합니다.",
+          "source": "https://www.ajunews.com/view/20110223000298",
+          "years": 20
+        },
+        {
+          "word": "얼큰이",
+          "meaning": "얼굴이나 머리가 유독 큰 사람을 가리키는 말로, 머리 크기를 부각해 장난스럽게 놀릴 때 쓰였다는 점에서 '두존크'와 비슷합니다.",
+          "source": "https://www.sisajournal.com/news/articleView.html?idxno=77925",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "사바사",
@@ -533,7 +566,34 @@
       "example": "매운 거 잘 먹는지는 사바사지, 난 못 먹어.",
       "origin": "영어 전치사 'by'가 섞인 대표적인 한영 혼합 신조어예요.",
       "category": "줄임말",
-      "source": "https://www.tiktok.com/discover/%EC%9A%94%EC%A6%98-%EC%8B%A0%EC%A1%B0%EC%96%B42026"
+      "source": "https://www.tiktok.com/discover/%EC%9A%94%EC%A6%98-%EC%8B%A0%EC%A1%B0%EC%96%B42026",
+      "past": [
+        {
+          "word": "케바케",
+          "meaning": "경우에 따라 다르다는 뜻의 'case by case'를 줄인 말로, 조건이나 대상에 따라 차이가 난다는 상황을 '명사 by 명사' 형태로 줄여 표현했다는 점에서 '사바사'와 비슷합니다.",
+          "source": "https://www.ahnlab.com/ko/contents/content-center/24541",
+          "years": 10
+        },
+        {
+          "word": "사바사",
+          "meaning": "사람마다 각기 다르다는 뜻으로, 2016년 무렵에도 디지털 환경에서 획일적이지 않고 개인마다 편차가 큰 상황을 나타내는 유행어로 널리 쓰였습니다.",
+          "source": "https://www.ahnlab.com/ko/contents/content-center/24541",
+          "years": 10
+        },
+        {
+          "word": "그때그때 달라요",
+          "meaning": "상황이나 조건에 따라 결과나 기준이 매번 바뀐다는 뜻으로, 절대적인 기준 대신 상대적 차이가 존재함을 나타내는 반응 표현이라는 점에서 '사바사'와 쓰임새가 비슷합니다.",
+          "source": "https://namu.wiki/w/%EA%B7%B8%EB%95%8C%EA%B7%B8%EB%95%8C%20%EB%8B%AC%EB%9D%BC%EC%9A%94",
+          "years": 20
+        },
+        {
+          "word": "케바케",
+          "meaning": "'경우에 따라 다르다'는 뜻의 영어 표현 'Case by case'를 줄인 신조어로, 대상을 획일화하지 않고 개별 차이에 따라 달라진다고 설명하는 축약 조어 방식과 역할이 '사바사'와 유사합니다.",
+          "source": "https://namu.wiki/w/Case%20by%20case",
+          "years": 20
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "테무인간",
@@ -542,7 +602,46 @@
       "origin": "저가 쇼핑 플랫폼 '테무(Temu)'에서 유래했어요.",
       "category": "사람 유형",
       "note": "출처 글에는 구체적인 용례가 길게 나와 있지 않아, 예문은 쓰임새를 추정해 만든 거예요.",
-      "source": "https://dailyttut.blogspot.com/2026/09/50.html"
+      "source": "https://dailyttut.blogspot.com/2026/09/50.html",
+      "past": [
+        {
+          "word": "창렬",
+          "meaning": "포장이나 겉보기와 달리 내용물과 실속이 턱없이 부족함을 뜻하며, 특정 명칭에서 유래해 겉만 번지르르하고 속은 조악한 대상을 풍자한다는 점에서 테무인간과 비슷합니다.",
+          "source": "https://economychosun.com/site/data/html_dir/2016/11/06/2016110600031.html",
+          "years": 10
+        },
+        {
+          "word": "호모인턴스",
+          "meaning": "취업난으로 인해 정규직이 되지 못하고 인턴 과정만 반복하는 구직자를 뜻하며, 특정한 처지나 양상을 보이는 사람 유형을 '인간'이라는 조어로 묶어 풍자했다는 점에서 테무인간과 비슷합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2016/09/29/2016092900980.html",
+          "years": 10
+        },
+        {
+          "word": "된장녀",
+          "meaning": "자신의 분수에 넘치는 명품이나 비싼 브랜드 소비에 치중하는 사람을 꼬집는 말로, 특정 소비문화나 브랜드를 인물 유형에 빗대어 겉치레와 내실의 괴리를 풍자한다는 점에서 테무인간과 유사합니다.",
+          "source": "https://www.joongang.co.kr/article/2517004",
+          "years": 20
+        },
+        {
+          "word": "엄친아",
+          "meaning": "부모가 다른 자녀와 비교할 때 흔히 내세우는 모든 면에서 결점 없이 뛰어난 사람을 이르는 말로, 일상 대화에서 사람의 완성도나 특성을 규정해 부르는 대표적인 유형어라는 점에서 쓰임새가 비슷합니다.",
+          "source": "https://www.donga.com/news/Culture/article/all/20100305/26630971/1",
+          "years": 20
+        },
+        {
+          "word": "낑깡족",
+          "meaning": "1990년대 부유층 청년 소비문화를 흉내 내려 하지만 능력이 따르지 않아 조잡하게 겉멋만 따라 하던 사람들을 금귤에 빗댄 말로, 저렴하거나 어설픈 대상을 차용해 실속 없는 사람을 풍자한 발상이 테무인간과 닮았습니다.",
+          "source": "https://issuu.com/hknu-design/docs/2014286054___",
+          "years": 30
+        },
+        {
+          "word": "오렌지족",
+          "meaning": "부모의 재력을 바탕으로 고가의 소비와 유흥 문화를 즐기던 젊은이들을 가리키는 말로, 당대의 소비 행태를 상징적 명칭에 결합하여 사람 유형을 표현했다는 점에서 테무인간과 유사합니다.",
+          "source": "https://issuu.com/hknu-design/docs/2014286054___",
+          "years": 30
+        }
+      ],
+      "enriched": true
     },
     {
       "word": "난리자베스",
@@ -1028,6 +1127,87 @@
       ],
       "enriched": true,
       "date": "2026-10-21"
+    },
+    {
+      "word": "오살힘",
+      "meaning": "‘오늘을 살아갈 힘’의 줄임말로, 좋아하는 대상이나 소소하고 맛있는 음식처럼 지친 일상을 버티게 해주는 작지만 확실한 원동력을 뜻합니다.",
+      "example": "오늘 야근하느라 너무 힘들었는데 퇴근길에 최애 셀카 보고 오살힘 충전했어.",
+      "origin": "아이돌 팬덤에서 좋아하는 가수의 콘텐츠를 보고 오늘을 살아갈 힘을 얻었다고 표현하던 문장이 세 글자로 축약되며 SNS 전반으로 널리 퍼졌습니다.",
+      "category": "줄임말",
+      "source": "https://www.arenakorea.com/news/articleView.html?idxno=71964",
+      "note": "대다수 매체에서는 '오늘을 살아갈(가는) 힘'으로 정의되나, 일부 해외 질의응답 사이트 등에서 '오타쿠는 살다 보면 힘든 일이 많다'의 약칭으로 풀이하는 비주류 사례가 있습니다.",
+      "related": [
+        {
+          "type": "비슷한 뜻",
+          "word": "소확행",
+          "meaning": "일상 속에서 느낄 수 있는 소소하지만 확실한 행복을 뜻합니다.",
+          "source": "https://v.daum.net/v/fd8WFfCEhy?f=p"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "사보필",
+          "meaning": "‘사생활 보호 필름’을 세 글자로 줄여 부르는 말입니다.",
+          "source": "https://www.careet.net/1945"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "오하운",
+          "meaning": "‘오늘 하루 운동’의 줄임말로 매일 꾸준히 운동하는 습관을 가리킵니다.",
+          "source": "https://www.instablank.com/slang?q=%ED%95%98%EB%A3%A8"
+        }
+      ],
+      "past": [
+        {
+          "word": "꽃길만 걷자",
+          "meaning": "앞으로 좋은 일만 가득하길 바란다는 응원의 표현으로, 고단한 현실 속에서 긍정적인 힘과 위로를 북돋는다는 점에서 비슷합니다.",
+          "source": "https://www.ytn.co.kr/_ln/0106_201612220108237415",
+          "years": 10
+        },
+        {
+          "word": "좋아, 가는 거야",
+          "meaning": "막막한 상황에서도 긍정적인 활력과 힘을 내어 전진하자는 유행어로, 삶의 의욕과 기운을 불어넣는 역할을 한다는 점에서 상통합니다.",
+          "source": "https://www.donga.com/news/Culture/article/all/20051208/8254780/1",
+          "years": 20
+        },
+        {
+          "word": "검프족",
+          "meaning": "야간 조깅을 통해 일상의 스트레스를 풀고 활력을 얻던 사람들을 뜻하며, 지친 일상을 버티게 하는 활력소를 찾는다는 맥락이 통합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2006/04/10/2006041070005.html",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-22"
+    },
+    {
+      "word": "무공해",
+      "meaning": "'무조건 공감해드림'의 줄임말로, 고민이나 이야기를 들었을 때 논리적인 잘잘못을 따지지 않고 상대방의 감정에 전적으로 공감하고 지지해 주는 태도를 뜻합니다.",
+      "example": "오늘 상사한테 혼나서 너무 속상하니까 해결책 말고 무공해로 위로해 줘.",
+      "origin": "MBTI 담론에서 이성적 해결책을 제시하는 T 성향과 감정적 공감을 우선하는 F 성향의 차이가 대중화되면서, 조언 대신 무조건적인 감정적 공감이 필요하다는 맥락에서 만들어졌습니다.",
+      "category": "줄임말",
+      "source": "https://www.arenakorea.com/news/articleView.html?idxno=71964",
+      "past": [
+        {
+          "word": "할많하않",
+          "meaning": "'할 말은 많지만 하지 않겠다'의 줄임말로, 구체적인 설명 대신 감정과 상황을 압축해 전하던 축약어라는 점에서 비슷합니다.",
+          "source": "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98_%EC%9D%B8%ED%84%B0%EB%84%B7_%EC%8B%A0%EC%A1%B0%EC%96%B4_%EB%AA%A9%EB%A1%9D",
+          "years": 10
+        },
+        {
+          "word": "안습",
+          "meaning": "'안구에 습기 차다'의 줄임말로, 상대방의 안타까운 상황에 깊이 감정 이입하고 공감을 표할 때 쓰였다는 점에서 비슷합니다.",
+          "source": "https://m.cafe.daum.net/wantkorean/23Tu/168",
+          "years": 20
+        },
+        {
+          "word": "당근이지",
+          "meaning": "'당연하지'를 유쾌하게 비틀어 부르던 말로, 대화 중 상대방의 의견에 무조건적인 동의와 맞장구를 보낼 때 쓰였다는 점에서 비슷합니다.",
+          "source": "https://prezi.com/hn7wliaufc0f/presentation/",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-22"
     }
   ]
 }

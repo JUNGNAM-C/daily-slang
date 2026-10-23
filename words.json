@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "words": [
     {
       "word": "감다살",
@@ -1378,6 +1378,80 @@
       ],
       "enriched": true,
       "date": "2026-10-23"
+    },
+    {
+      "word": "GMG",
+      "meaning": "'가면 가'의 한글 초성을 영문 알파벳으로 축약한 말로, 상대방이 가자고 하면 무심한 듯 쿨하게 따라나서겠다는 동행 의사나 가벼운 찬성을 나타냅니다.",
+      "example": "오늘 새로 오픈한 성수동 팝업스토어 같이 둘러볼래? 네가 가면 나도 GMG!",
+      "origin": "한글 구어 표현인 '가면 가'의 초성(ㄱㅁㄱ)을 알파벳으로 옮긴 축약 표현으로, 망설임 없이 결정을 내리는 10~20대의 메신저 대화와 숏폼 콘텐츠를 중심으로 퍼져나갔습니다.",
+      "category": "줄임말",
+      "source": "https://avocadogiant.com/newsletter/korea/2025-mz%EC%84%B8%EB%8C%80-%EC%8B%A0%EC%A1%B0%EC%96%B4-%EB%B0%88/",
+      "past": [
+        {
+          "word": "고고씽",
+          "meaning": "어딘가로 이동하거나 행동을 시작하자는 의미로 널리 쓰여, 제안에 맞춰 행동에 동참한다는 맥락이 비슷합니다.",
+          "source": "https://www.cctoday.co.kr/news/articleView.html?idxno=2034374",
+          "years": 20
+        },
+        {
+          "word": "당근이지",
+          "meaning": "'당연하지'라는 말을 재미있게 비틀어 상대의 제안이나 물음에 시원스럽게 긍정의 답을 보낸다는 점에서 유사합니다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2009/08/06/2009080601216.html",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-24"
+    },
+    {
+      "word": "요노",
+      "meaning": "'You Only Need One'의 앞 글자를 딴 말로, 과소비를 줄이고 꼭 필요한 물건 한두 가지만 신중하고 실용적으로 구매하는 절약형 소비 방식을 이른다.",
+      "example": "요즘 물가가 너무 올라서 잡다한 쇼핑은 다 끊고 요노 실천하고 있어.",
+      "origin": "현재의 쾌락을 위해 아낌없이 지출하던 '욜로(YOLO)' 문화의 반작용과 고물가 경기 불황이 맞물리면서 2024년경부터 언론과 청년층을 중심으로 널리 쓰이기 시작했다.",
+      "category": "줄임말",
+      "source": "https://www.thescoop.co.kr/news/articleView.html?idxno=303052",
+      "related": [
+        {
+          "type": "반대 뜻",
+          "word": "욜로",
+          "meaning": "'You Only Live Once'의 줄임말로 현재 자신의 행복과 다양한 경험을 위해 아낌없이 돈을 쓰는 생활 방식을 뜻한다.",
+          "source": "https://monthly.chosun.com/news/articleView.html?idxno=22633"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "요노족",
+          "meaning": "불필요한 과소비를 피하고 최소한의 실용적인 지출만을 고수하는 사람들을 일컫는다.",
+          "source": "https://www.mk.co.kr/news/culture/11095762"
+        },
+        {
+          "type": "비슷한 뜻",
+          "word": "무지출 챌린지",
+          "meaning": "일정 기간 동안 돈을 한 푼도 쓰지 않는 극단적 절약을 실천하고 인증하는 유행을 의미한다.",
+          "source": "https://kbthink.com/main/living-finance/consumption-life/mz-consumption/yono.html"
+        }
+      ],
+      "past": [
+        {
+          "word": "탕진잼",
+          "meaning": "적은 금액을 소소하게 낭비하며 느끼는 재미를 뜻하는 말로, 팍팍한 경제 현실 속 청년층의 소비 심리를 반영했다는 점에서 비슷하다.",
+          "source": "https://digitalchosun.dizzo.com/site/data/html_dir/2016/11/24/2016112411680.html",
+          "years": 10
+        },
+        {
+          "word": "지름신",
+          "meaning": "충동구매를 부추기는 가상의 신을 뜻하는 표현으로, 꼭 필요한 것만 절제해 사는 요노와 대조적인 소비 행태를 해학적으로 나타낸다.",
+          "source": "https://www.hani.co.kr/arti/society/schooling/127318.html",
+          "years": 20
+        },
+        {
+          "word": "아나바다",
+          "meaning": "'아껴 쓰고 나눠 쓰고 바꿔 쓰고 다시 쓰자'의 첫 글자를 딴 말로, 불필요한 새 물건 구매를 줄이자는 취지와 머리글자 축약 방식이 닮았다.",
+          "source": "https://www.thescoop.co.kr/news/articleView.html?idxno=58487",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-24"
     }
   ]
 }

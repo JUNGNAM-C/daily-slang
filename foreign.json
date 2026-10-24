@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -979,6 +979,127 @@
       ],
       "enriched": true,
       "date": "2026-10-23"
+    },
+    {
+      "lang": "en",
+      "word": "beige flag",
+      "pron_ko": "베이지 플래그",
+      "meaning": "데이트 상대나 연인의 행동 중 위험한 신호(red flag)도 아니고 특별한 장점(green flag)도 아니지만, 다소 엉뚱하거나 특이해서 잠시 멈칫하게 만드는 사소한 기벽이나 독특한 습관을 뜻하는 말.",
+      "origin": "2022년 틱톡에서 지루하고 뻔한 데이트 상대를 가리키는 말로 처음 쓰인 뒤, 2023년 유행을 거치며 해롭지는 않지만 독특하고 기이한 연인의 버릇을 애정 어린 시선으로 지칭하는 의미로 널리 퍼졌다.",
+      "example": "My partner's beige flag is that he insists on sorting his gummy bears by color before eating them.",
+      "example_ko": "내 연인의 베이지 플래그는 구미베어를 먹기 전에 반드시 색깔별로 분류해 둔다는 점이야.",
+      "source": "https://www.charliehealth.com/post/what-is-a-beige-flag",
+      "category": "SNS 표현",
+      "note": "초기에는 데이트 앱에서 지루하고 개성 없는 사람을 뜻했으나, 점차 무해하지만 다소 특이한 행동 특성을 뜻하는 표현으로 의미가 확장되었다.",
+      "past": [
+        {
+          "word": "breadcrumbing",
+          "meaning": "진지하게 교제할 생각은 없으면서 미련을 갖도록 가벼운 관심만 간헐적으로 흘리는 행위로, 모바일 데이트 환경에서 상대의 미묘한 행동 특성을 포착한 신조어라는 점이 비슷하다.",
+          "source": "https://strangephrases.com/phrases/breadcrumbing",
+          "pron_ko": "브레드크러밍",
+          "years": 10
+        },
+        {
+          "word": "friend zone",
+          "meaning": "한쪽은 연인 관계를 원하지만 상대방이 친구 사이로만 한정하여 선을 긋는 상태로, 연애 맥락에서 상대방의 태도와 관계적 경계를 규정하는 슬랭이라는 점이 비슷하다.",
+          "source": "https://www.indy100.com/lifestyle/friend-zone-origins-friends-sitcom",
+          "pron_ko": "프렌드 존",
+          "years": 20
+        }
+      ],
+      "related": [
+        {
+          "word": "red flag",
+          "meaning": "관계에서 교제를 중단해야 할 만큼 심각한 결함이나 위험 요인이 있음을 경고하는 신호.",
+          "source": "https://www.dictionary.com/culture/pop-culture/beige-flag",
+          "pron_ko": "레드 플래그",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "green flag",
+          "meaning": "관계가 건강하고 신뢰할 수 있으며 안정적임을 보여주는 매우 긍정적인 신호.",
+          "source": "https://www.dictionary.com/culture/pop-culture/beige-flag",
+          "pron_ko": "그린 플래그",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-24"
+    },
+    {
+      "lang": "ja",
+      "word": "しごでき",
+      "pron_ko": "시고데키",
+      "meaning": "직장에서 업무를 빈틈없이 잘 해낼 뿐만 아니라, 일상생활이나 모임에서도 눈치 빠르게 센스를 발휘하는 사람 또는 그러한 행동을 칭찬하는 말입니다.",
+      "origin": "‘일을 잘한다’를 뜻하는 일본어 ‘仕事ができる(시고토가 데키루)’의 앞 글자들을 따서 줄인 말입니다.",
+      "example": "急な予約変更もすぐ済ませてくれるなんて、本当にしごできだね。",
+      "example_ko": "갑작스러운 예약 변경도 바로 해결해 주다니, 정말 센스 있고 일 잘하네.",
+      "source": "https://rensa.jp.net/life0295",
+      "category": "줄임말",
+      "past": [
+        {
+          "word": "神対応",
+          "meaning": "상대방의 요구나 상황에 맞춰 신처럼 정성스럽고 훌륭하게 대처하는 일로, 뛰어난 상황 대처 센스를 극찬한다는 점에서 통합니다.",
+          "source": "https://woman.mynavi.jp/article/210929-14/",
+          "pron_ko": "가미타이오",
+          "reading": "かみたいおう",
+          "years": 10
+        },
+        {
+          "word": "KY",
+          "meaning": "분위기를 파악하지 못한다는 말을 로마자 머리글자로 줄인 것으로, 상황 판단력과 센스 유무를 평가하는 표현이라는 점에서 맥락이 닿아 있습니다.",
+          "source": "https://www.oricon.co.jp/news/50168/full/",
+          "pron_ko": "케이와이",
+          "reading": "けーわい",
+          "years": 20
+        }
+      ],
+      "related": [
+        {
+          "word": "ポンコツ",
+          "meaning": "덜렁거리고 실수가 잦아 어설픈 사람을 뜻하며, 센스 있게 일을 척척 해내는 상태와 대조되는 반대 성향의 말로 쓰입니다.",
+          "source": "https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10275749210",
+          "pron_ko": "폰코쓰",
+          "reading": "ぽんこつ",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-24"
+    },
+    {
+      "lang": "zh",
+      "word": "硬控",
+      "pron_ko": "잉콩",
+      "meaning": "매력적인 비주얼이나 흥미진진한 콘텐츠에 시선과 마음을 단숨에 빼앗겨 꼼짝없이 몰입하게 되는 상태를 뜻합니다.",
+      "origin": "적 캐릭터의 조작 권한을 완전히 박탈하는 대전 게임 용어인 '하드 군중 제어기(하드 CC)'에서 유래하여, 쇼트폼 영상과 SNS를 중심으로 시선을 사로잡는 대상을 향한 찬사의 표현으로 확장되었습니다.",
+      "example": "这段魔性舞蹈硬控了我好几分钟。",
+      "example_ko": "이 마성의 댄스 영상에 시선을 완전히 빼앗겨 몇 분 동안 넋을 놓고 보았다.",
+      "source": "https://ci.cn/zwkt/kywkt/9c4318ab-9096-4560-80d8-bf91e9157db1",
+      "reading": "yìng kòng",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "魔性",
+          "meaning": "한 번 보면 잊히지 않고 넋을 잃은 채 반복해서 보게 만드는 기묘한 중독성을 뜻하여 시각적 몰입감을 표현하는 점에서 비슷합니다.",
+          "source": "https://www.gamersky.com/ent/201512/698912.shtml",
+          "pron_ko": "모싱",
+          "reading": "mó xìng",
+          "years": 10
+        }
+      ],
+      "related": [
+        {
+          "word": "软控",
+          "meaning": "행동을 부분적으로만 제한하는 게임의 소프트 CC에서 파생된 반대 개념으로, 사람의 주의를 완전히 사로잡지 못하거나 약간의 관심에 그치는 상황을 가리킵니다.",
+          "source": "https://ci.cn/zwkt/kywkt/9c4318ab-9096-4560-80d8-bf91e9157db1",
+          "pron_ko": "롼콩",
+          "reading": "ruǎn kòng",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-24"
     }
   ]
 }

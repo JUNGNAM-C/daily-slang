@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "words": [
     {
       "word": "감다살",
@@ -1452,6 +1452,62 @@
       ],
       "enriched": true,
       "date": "2026-10-24"
+    },
+    {
+      "word": "야름답다",
+      "meaning": "매혹적이고 섹시한 분위기와 아름다움이 함께 어우러진 대상을 보고 감탄할 때 쓰는 표현입니다.",
+      "example": "이번 화보 콘셉트랑 스타일링 보니까 진짜 야름답다는 말이 절로 나온다.",
+      "origin": "예능 프로그램에서 배우 노재원이 가수 권은비의 워터밤 의상 사진을 보고 말실수로 '아름답다' 대신 '야름답다'라고 잘못 말한 장면에서 유래했습니다.",
+      "category": "감성 리액션",
+      "source": "https://www.arenakorea.com/news/articleView.html?idxno=71964",
+      "past": [
+        {
+          "word": "하태핫태",
+          "meaning": "'하얗게 태우자 핫하게 태워'를 줄인 말로, 화끈하고 매력적인 분위기나 대상을 찬사하는 유행어로 널리 쓰인 점이 비슷합니다.",
+          "source": "https://news.tf.co.kr/stars/read/starwars/1688147.htm",
+          "years": 10
+        },
+        {
+          "word": "사모님",
+          "meaning": "코미디 방송 프로그램 속 캐릭터의 말투와 우아한 태도가 대중적 유행어로 번져 일상에서 활용된 점이 비슷합니다.",
+          "source": "https://www.autotribune.co.kr/news/articleView.html?idxno=24206",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-25"
+    },
+    {
+      "word": "폭룡적이다",
+      "meaning": "대상의 외모나 맛, 분위기 등이 충격적일 정도로 대단하고 압도적인 느낌을 줄 때 쓰는 찬양과 감탄의 표현이다.",
+      "example": "오늘 새로 나온 신메뉴 먹어봤는데 비주얼이랑 맛이 진짜 폭룡적이더라.",
+      "origin": "만화가 김성모의 작품 속 문구인 '폭룡의 시'에서 유래하여 엑스(구 트위터) 이용자들이 강렬함을 나타내는 수식어로 쓰기 시작했다.",
+      "category": "SNS 표현",
+      "source": "https://namu.wiki/w/%ED%8F%AD%EB%A3%A1%EC%A0%81%EC%9D%B4%EB%8B%A4",
+      "related": [
+        {
+          "type": "반대 뜻",
+          "word": "암룡적이다",
+          "meaning": "'폭룡적이다'의 반대 개념으로 상황이나 결과가 극도로 어둡고 부정적일 때 쓰는 표현이다.",
+          "source": "https://jeongbo-ttali.tistory.com/entry/%ED%8F%AD%EB%A3%A1%EC%A0%81%EC%9C%BC%EB%A1%9C-mz%ED%95%9C-%ED%8F%AD%EB%A3%A1%EC%A0%81-%EB%9C%BB-%EC%9C%A0%EB%9E%98-%EC%9A%94%EC%A6%98-%EB%B0%88"
+        }
+      ],
+      "past": [
+        {
+          "word": "오지다",
+          "meaning": "'흡족할 만큼 놀랍고 대단하다'는 의미로 강렬한 대상을 마주했을 때 감탄하는 반응이라는 점에서 유사하다.",
+          "source": "https://www.news1.kr/society/general-society/3445195",
+          "years": 10
+        },
+        {
+          "word": "킹왕짱",
+          "meaning": "최고를 뜻하는 단어들을 합성해 엄청나게 대단한 대상을 과장하여 극찬한다는 점에서 유사하다.",
+          "source": "https://ko.wikipedia.org/wiki/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98_%EC%9D%B8%ED%84%B0%EB%84%B7_%EC%8B%A0%EC%A1%B0%EC%96%B4_%EB%AA%A9%EB%A1%9D",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-25"
     }
   ]
 }

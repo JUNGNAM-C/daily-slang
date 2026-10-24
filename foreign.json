@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -1100,6 +1100,114 @@
       ],
       "enriched": true,
       "date": "2026-10-24"
+    },
+    {
+      "lang": "en",
+      "word": "slop",
+      "pron_ko": "슬롭",
+      "meaning": "생성형 인공지능(AI)을 이용해 대량으로 무분별하게 찍어내는 조잡하고 질 낮은 디지털 콘텐츠를 낮잡아 이르는 말입니다.",
+      "origin": "원래 가축 여물이나 진흙, 무가치한 잡동사니를 뜻하던 단어였으나, 생성형 AI로 만든 영혼 없는 게시물이 소셜 미디어를 뒤덮자 이에 대한 피로감과 조롱을 담아 디지털 쓰레기를 가리키는 말로 확장되었습니다.",
+      "example": "My social media feed is completely ruined by useless AI slop.",
+      "example_ko": "내 소셜 미디어 피드가 쓸모없는 AI 쓰레기 콘텐츠로 완전히 뒤덮였어.",
+      "source": "https://www.merriam-webster.com/wordplay/word-of-the-year",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "clickbait",
+          "meaning": "자극적인 제목으로 사람들의 클릭을 유도하지만 알맹이는 없는 조잡한 콘텐츠를 뜻하며, 이용자들에게 피로감을 주는 저품질 온라인 저작물이라는 점이 비슷합니다.",
+          "source": "https://en.wikipedia.org/wiki/Clickbait",
+          "pron_ko": "클릭베이트",
+          "years": 10
+        },
+        {
+          "word": "content farm",
+          "meaning": "검색 엔진 알고리즘의 유입을 노려 질 낮은 글을 공장식으로 대량 생산하던 웹사이트를 가리키며, 알고리즘 트래픽을 위해 무성의하게 양산된 콘텐츠라는 점이 비슷합니다.",
+          "source": "https://en.wikipedia.org/wiki/Content_farm",
+          "pron_ko": "콘텐츠 팜",
+          "years": 20
+        },
+        {
+          "word": "shovelware",
+          "meaning": "CD-ROM 용량을 채우기 위해 쓸모없고 질 낮은 소프트웨어를 마구잡이로 퍼담아 팔던 번들을 비하하던 말로, 기술적 수단을 이용해 질보다 양으로 밀어붙인 디지털 쓰레기라는 점이 비슷합니다.",
+          "source": "https://dictionary.nu.edu.pk/sites/docs/lxk06948GWfc/Shovelware",
+          "pron_ko": "셔블웨어",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-25"
+    },
+    {
+      "lang": "ja",
+      "word": "横転",
+      "pron_ko": "오텐",
+      "meaning": "차량 전복을 뜻하던 말에서 유래해, 너무 어처구니가 없거나 황당하고 놀라워서 맥이 풀려 뒤로 자빠질 것 같은 상태를 나타내는 신조어입니다.",
+      "origin": "물리적인 차량 전복 사고를 가리키던 한자어 '횡전'이 SNS 상에서 어이없는 상황에 맥이 빠져 넘어지는 리액션 표현으로 쓰이면서 퍼졌습니다.",
+      "example": "推しのビジュアルが良すぎて横転した。",
+      "example_ko": "최애의 비주얼이 너무 뛰어나서 기가 막혀 뒤집어질 뻔했다.",
+      "source": "https://webtan.impress.co.jp/n/2025/12/09/51799",
+      "reading": "おうてん",
+      "category": "SNS 표현",
+      "note": "물리적인 차량 전복 사고를 알리는 뉴스나 게시물과 헷갈릴 수 있어 문맥 구분이 필요합니다.",
+      "past": [
+        {
+          "word": "激おこぷんぷん丸",
+          "meaning": "엄청나게 화가 난 감정을 캐릭터 이름처럼 희화화해 표현한 말로, 황당하거나 기막힌 상황에 격하게 반응할 때 쓰였다는 점이 비슷합니다.",
+          "source": "https://ja.wikipedia.org/wiki/%E6%BF%80%E3%81%8A%E3%81%93%E3%81%B7%E3%82%93%E3%81%B7%E3%82%93%E4%B8%B8",
+          "pron_ko": "게키오코푼푼마루",
+          "reading": "げきおこぷんぷんまる",
+          "years": 10
+        },
+        {
+          "word": "どんだけ〜",
+          "meaning": "상황이나 행동이 상식을 벗어나 어처구니없을 때 놀람과 황당함을 담아 외치던 감탄사라는 점에서 성격이 통합니다.",
+          "source": "https://ja.wikipedia.org/wiki/%E3%81%A9%E3%82%93%E3%81%A0%E3%81%91%E3%80%9C",
+          "pron_ko": "돈다케~",
+          "years": 20
+        },
+        {
+          "word": "チョベリバ",
+          "meaning": "매우 나쁘다는 영어를 축약한 표현으로, 어이없거나 부정적인 상황에 즉각 반응하며 쓰였다는 점에서 유사합니다.",
+          "source": "https://ja.wikipedia.org/wiki/%E3%83%81%E3%83%A7%E3%83%99%E3%83%AA%E3%83%90",
+          "pron_ko": "초베리바",
+          "reading": "ちょべりば",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-25"
+    },
+    {
+      "lang": "zh",
+      "word": "city不city",
+      "pron_ko": "시티부시티",
+      "meaning": "도시적이고 세련되었는지, 혹은 유행에 어울리고 멋진지를 묻거나 감탄할 때 쓰는 표현입니다.",
+      "origin": "중국을 여행하던 외국인 크리에이터가 특유의 익살스러운 억양으로 도시 분위기를 묻던 영상이 화제가 되며 널리 퍼졌습니다.",
+      "example": "这家咖啡馆的设计很有现代感，你看city不city？",
+      "example_ko": "이 카페 인테리어 진짜 현대적이고 감각적인데, 너 보기에 완전 힙하지 않아?",
+      "source": "https://www.chinawriter.com.cn/n1/2024/1213/c403994-40381439.html",
+      "reading": "city bù city",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "潮",
+          "meaning": "유행의 흐름을 이끌어 트렌디하고 감각적이라는 뜻으로, 유행에 앞서가는 멋진 분위기를 나타내는 점에서 비슷합니다.",
+          "source": "https://www.guandian.cn/article/20090304/79994.html",
+          "pron_ko": "차오",
+          "reading": "cháo",
+          "years": 20
+        },
+        {
+          "word": "酷",
+          "meaning": "영어 단어 cool에서 유래하여 개성 있고 멋진 모습을 뜻하며, 외래어를 활용해 젊은 세대의 감각을 표현한 점에서 비슷합니다.",
+          "source": "https://edu.sina.com.cn/en/2004-06-03/22408.html",
+          "pron_ko": "쿠",
+          "reading": "kù",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-25"
     }
   ]
 }

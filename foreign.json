@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -1208,6 +1208,149 @@
       ],
       "enriched": true,
       "date": "2026-10-25"
+    },
+    {
+      "lang": "en",
+      "word": "lore",
+      "pron_ko": "로어",
+      "meaning": "한 개인의 인생에 얽힌 독특하고 극적인 과거사, 사적인 배경 이야기나 기상천외한 일화를 뜻하는 말입니다.",
+      "origin": "판타지 소설이나 게임 속 세계관 설정·배경 스토리를 뜻하던 말이 틱톡과 SNS에서 자신을 캐릭터처럼 표현하며 개인의 과거사를 털어놓는 신조어로 확장되었습니다.",
+      "example": "I had no idea you used to work at a travelling circus, your personal lore is insane.",
+      "example_ko": "네가 예전에 유랑 서커스단에서 일했다니 전혀 몰랐어, 네 인생 배경 이야기는 진짜 말도 안 된다.",
+      "source": "https://www.merriam-webster.com/slang/lore",
+      "category": "SNS 표현",
+      "note": "전통적인 구전 지식이나 전설을 뜻하는 단어에서 서브컬처의 세계관 설정을 거쳐, SNS에서는 개인의 사적인 과거 일화나 TMI를 가리키는 슬랭으로 정착했습니다.",
+      "past": [
+        {
+          "word": "TMI",
+          "meaning": "굳이 알고 싶지 않은 지나치게 사적인 정보나 과도한 세부 사항을 뜻하며, 자신의 내밀한 사생활이나 과거사를 털어놓는 상황에서 쓰였다는 점에서 lore와 유사합니다.",
+          "source": "https://www.merriam-webster.com/slang/lore",
+          "pron_ko": "티엠아이",
+          "years": 10
+        },
+        {
+          "word": "overshare",
+          "meaning": "인터넷이나 SNS에서 지나치게 사적인 정보나 사생활 이야기를 과도하게 털어놓는 행위를 뜻하며, 개인의 과거사를 늘어놓는 lore 현상과 맥락이 통합니다.",
+          "source": "https://www.visualthesaurus.com/cm/wordroutes/2008-the-year-of-oversharing/",
+          "pron_ko": "오버셰어",
+          "years": 20
+        },
+        {
+          "word": "411",
+          "meaning": "특정 인물이나 상황에 얽힌 내막, 뒷이야기, 유용한 정보 등을 뜻하며, 상대방의 배경 사정이나 과거사를 묻고 전달할 때 쓰였다는 점에서 lore와 쓰임새가 비슷합니다.",
+          "source": "https://www.wikihow.com/Slang-from-the-90%27s",
+          "pron_ko": "포원원",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "lore drop",
+          "meaning": "대화 도중 자신의 충격적이거나 독특한 과거사 일화를 불쑥 털어놓는 행위를 뜻합니다.",
+          "source": "https://www.fastcompany.com/91282803/how-lore-became-the-internets-favorite-way-to-overshare",
+          "pron_ko": "로어 드롭",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "backstory",
+          "meaning": "어떤 인물이나 사건이 현재 상태에 이르기까지 겪은 배경 이야기나 과거사를 뜻하는 표준 표현입니다.",
+          "source": "https://www.merriam-webster.com/dictionary/backstory",
+          "pron_ko": "백스토리",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-26"
+    },
+    {
+      "lang": "ja",
+      "word": "顔ない",
+      "pron_ko": "가오나이",
+      "meaning": "난처하거나 부끄러운 실수를 저질렀을 때 남을 볼 면목이 없거나 얼굴을 들 수 없다는 뜻으로 쓰는 속어이다.",
+      "origin": "얼굴을 뜻하는 명사 '顔'와 없다는 뜻의 형용사 'ない'를 합친 말로, 남을 볼 낯이 없다는 전통적 관용 표현에서 비롯되었다.",
+      "example": "朝寝坊してミーティングに遅刻しそうで顔ない。",
+      "example_ko": "늦잠을 자서 회의에 지각할 것 같아 낯을 들 수가 없다.",
+      "source": "https://dictionary.sanseido-publ.co.jp/shingo/2024/best10/Preference06.html",
+      "reading": "かおない",
+      "category": "SNS 표현",
+      "note": "출처에 따라 면목이 없다는 뜻 외에도 당황스럽고 곤란한 상황 자체를 가볍게 던지는 감탄사처럼 쓰이기도 한다.",
+      "past": [
+        {
+          "word": "きまZ",
+          "meaning": "어색하다는 말에서 유래해 무안하거나 뻘쭘한 순간을 넘길 때 쓰는 반응어로, 민망하고 난처한 감정을 나타낸다는 점에서 顔ない와 비슷하다.",
+          "source": "https://www.bcnretail.com/market/detail/20211210_257350.html",
+          "pron_ko": "기마젯토",
+          "reading": "きまぜっと",
+          "years": 10
+        },
+        {
+          "word": "ぴえん",
+          "meaning": "일이 마음대로 풀리지 않을 때 우는 소리를 흉내 낸 말로, 가벼운 곤혹스러움이나 낭패감을 자조적으로 드러낸다는 점이 顔ない와 닮았다.",
+          "source": "https://prtimes.jp/main/html/rd/p/000000097.000014647.html",
+          "pron_ko": "피엔",
+          "years": 10
+        },
+        {
+          "word": "人生オワタ",
+          "meaning": "인생이 끝났다는 뜻의 인터넷 은어로, 곤란한 처지에 빠졌을 때 자학적인 유머로 상황을 표현한다는 점에서 顔ない와 상통한다.",
+          "source": "https://ja.wikipedia.org/wiki/%E4%BA%BA%E7%94%9F%E3%82%AA%E3%83%AF%E3%82%BF",
+          "pron_ko": "진세이 오와타",
+          "reading": "じんせいおわた",
+          "years": 20
+        },
+        {
+          "word": "チョベリバ",
+          "meaning": "최악의 상태를 뜻하는 축약어로, 난감하고 난처한 상황에 직면했을 때 감정을 직설적으로 내뱉는 반응어라는 점에서 顔ない와 유사하다.",
+          "source": "https://ja.wikipedia.org/wiki/%E3%83%81%E3%83%A7%E3%83%99%E3%83%AA%E3%83%90",
+          "pron_ko": "초베리바",
+          "reading": "ちょべりば",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-26"
+    },
+    {
+      "lang": "zh",
+      "word": "情绪价值",
+      "pron_ko": "칭쉬자즈",
+      "meaning": "대인관계나 소비 생활에서 상대방에게 심리적 위로, 공감, 안정감 등 긍정적인 정서적 만족과 지지를 전해주는 능력이나 감정적 효용을 뜻합니다.",
+      "origin": "본래 고객의 정서적 편익을 다루던 마케팅·경영학 용어였으나, 점차 청년층의 연애와 인간관계 및 힐링 소비를 설명하는 일상 신조어로 정착했습니다.",
+      "example": "谈恋爱时彼此能提供情绪价值比物质条件更重要。",
+      "example_ko": "연애할 때 서로에게 정서적 가치를 제공해 줄 수 있는지가 물질적 조건보다 더 중요하다.",
+      "source": "https://www.sohu.com/a/741282998_539687",
+      "reading": "qíng xù jià zhí",
+      "category": "사회 현상",
+      "past": [
+        {
+          "word": "正能量",
+          "meaning": "삶에 대한 긍정적인 태도와 건강한 힘을 북돋아 준다는 뜻으로, 사람들에게 따뜻한 위안과 선한 에너지를 전해준다는 점에서 지금의 표현과 유사합니다.",
+          "source": "https://zh.wikipedia.org/zh-cn/%E5%92%AC%E6%96%87%E5%9A%BC%E5%AD%97",
+          "pron_ko": "정넝량",
+          "reading": "zhèng néng liàng",
+          "years": 10
+        },
+        {
+          "word": "知心姐姐",
+          "meaning": "마음을 알아주는 언니라는 뜻으로, 타인의 고민을 경청하고 따뜻한 위안을 전해주는 상담자 역할을 비유하여 정서적 만족감을 주던 점에서 통합니다.",
+          "source": "https://m.jiemian.com/article/12972731.html",
+          "pron_ko": "즈신제제",
+          "reading": "zhī xīn jiě jie",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "精神内耗",
+          "meaning": "과도한 생각과 스트레스로 인해 마음속 에너지를 스스로 갉아먹는 심리적 소모 상태를 뜻하며, 긍정적인 힘을 주는 정서적 가치와 정반대되는 현상입니다.",
+          "source": "https://view.inews.qq.com/a/20221226A08T3E00",
+          "pron_ko": "징선네이하오",
+          "reading": "jīng shén nèi hào",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-26"
     }
   ]
 }

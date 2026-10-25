@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "words": [
     {
       "word": "감다살",
@@ -1508,6 +1508,77 @@
       ],
       "enriched": true,
       "date": "2026-10-25"
+    },
+    {
+      "word": "맛꿀마",
+      "meaning": "음식이 아주 맛있거나 만족스러울 때 내뱉는 감탄사로, 대상의 뛰어난 매력을 칭찬할 때도 쓴다.",
+      "example": "오늘 점심에 먹은 마라탕 국물 진짜 맛꿀마더라.",
+      "origin": "유튜브 채널 피식대학의 코너에서 경상도 출신임을 과장하며 아무렇게나 지어낸 가짜 경상도 사투리에서 유래했다.",
+      "category": "감탄사",
+      "source": "https://www.careet.net/1281",
+      "note": "일부 글에서는 '맛있어서 꿀맛' 등의 줄임말로 해석하기도 하나, 실제로는 가짜 사투리 억양을 흉내 내며 만들어진 조어이다.",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "깔끼하다",
+          "meaning": "'멋있다' 또는 '맛깔나다'라는 뜻으로 쓰이며, 맛꿀마와 마찬가지로 피식대학에서 지어낸 가짜 사투리 표현이다.",
+          "source": "https://www.theden.co.kr/news/articleView.html?idxno=2658"
+        }
+      ],
+      "past": [
+        {
+          "word": "존맛",
+          "meaning": "'정말 맛있다'는 감정을 강하게 나타내는 표현으로, 맛있는 대상을 극찬하며 감탄할 때 쓰였다는 점에서 비슷하다.",
+          "source": "https://news.sbs.co.kr/news/endPage.do?news_id=N1003214499",
+          "years": 10
+        },
+        {
+          "word": "원츄",
+          "meaning": "대상이 최고로 마음에 들거나 강력히 추천하고 싶을 때 엄지를 치켜세우며 쓰던 표현으로, 높은 만족감을 드러내는 감탄사라는 점이 유사하다.",
+          "source": "https://www.korea.kr/news/policyNewsView.do?newsId=135086844",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-26"
+    },
+    {
+      "word": "드르륵 칵",
+      "meaning": "편의점 야외 파라솔 플라스틱 의자를 끌어당길 때 나는 마찰음과 걸리는 소리를 본뜬 말로, 편의점 앞 간이의자나 그곳에 앉아 나누는 진솔한 대화 문화를 뜻합니다.",
+      "example": "오늘 퇴근길에 편의점 앞 드르륵 칵에서 맥주 한잔하면서 속마음 토크나 할래?",
+      "origin": "편의점 앞 플라스틱 의자를 바닥에 끌 때 나는 소리를 흉내 낸 의성어에서 비롯되었으며, SNS와 젊은 층 사이에서 편의점 노상 좌석과 그곳의 소통 문화를 가리키는 유행어로 퍼졌습니다.",
+      "category": "SNS 표현",
+      "source": "https://m.beyondpost.co.kr/view.php?ud=202410021057142537d2326fc69c_30",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "드르륵 탁",
+          "meaning": "카세트테이프를 되감았다가 다시 재생하는 소리를 흉내 낸 말로, 마음에 드는 장면이나 대사를 계속 반복해 보는 행동을 의미합니다.",
+          "source": "https://www.joongang.co.kr/article/25070548"
+        },
+        {
+          "type": "비슷한 뜻",
+          "word": "편맥",
+          "meaning": "편의점에서 파는 맥주를 뜻하며 편의점 앞 야외 파라솔에 앉아 가볍게 마시는 음주 문화를 가리키기도 합니다.",
+          "source": "https://www.100ssd.co.kr/news/articleView.html?idxno=50774"
+        }
+      ],
+      "past": [
+        {
+          "word": "야르",
+          "meaning": "2000년대 중반 10대들이 기분이 매우 좋거나 신날 때 사용하던 감탄사로, 또래 집단 특유의 정서와 감성을 독특한 소리로 나타냈다는 점에서 비슷합니다.",
+          "source": "https://www.jnilbo.com/news/articleView.html?idxno=90000069647",
+          "years": 20
+        },
+        {
+          "word": "번개",
+          "meaning": "1990년대 PC통신 채팅 중 즉흥적으로 약속을 잡아 오프라인 모임을 갖는 일을 뜻하며, 일상 속에서 격식 없이 가볍게 모여 소통하던 문화라는 점에서 상통합니다.",
+          "source": "https://www.segye.com/newsView/20220306509477",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-26"
     }
   ]
 }

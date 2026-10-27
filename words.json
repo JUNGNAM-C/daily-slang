@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "words": [
     {
       "word": "감다살",
@@ -1579,6 +1579,55 @@
       ],
       "enriched": true,
       "date": "2026-10-26"
+    },
+    {
+      "word": "위쑤시개",
+      "meaning": "극심한 스트레스를 풀기 위해 찾는 아주 맵고 위장을 자극하는 음식을 비유적으로 이르는 말이다.",
+      "example": "오늘 하루 종일 일 때문에 골치 아팠는데 저녁에 위쑤시개나 먹으러 갈래?",
+      "origin": "위벽을 쑤시듯이 강한 자극을 주는 매운 음식이라는 표현에서 비롯되었다.",
+      "category": "SNS 표현",
+      "source": "https://health.chosun.com/site/data/html_dir/2025/02/28/2025022802150.html",
+      "enriched": true,
+      "date": "2026-10-27"
+    },
+    {
+      "word": "사보필",
+      "meaning": "스마트폰이나 태블릿 등 전자기기 화면에 붙여 옆 각도에서는 화면이 보이지 않게 막아주는 사생활 보호 필름을 줄여 부르는 말입니다.",
+      "example": "지하철에서 누가 화면 볼까 봐 사보필 새로 샀어.",
+      "origin": "'사생활 보호 필름'의 각 단어 앞 글자를 따서 만든 축약어입니다.",
+      "category": "줄임말",
+      "source": "https://www.arenakorea.com/news/articleView.html?idxno=71964",
+      "note": "대부분의 매체에서는 '사생활 보호 필름'으로 풀이하지만 일부 SNS 콘텐츠에서는 '사진에서 사소한 보정은 필수'라는 뜻으로 사용하기도 합니다.",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "책없쾌",
+          "meaning": "부담이나 책임은 지지 않고 재미와 이득만 누리는 상황을 가리키는 말입니다.",
+          "source": "https://www.arenakorea.com/news/articleView.html?idxno=71964"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "오살힘",
+          "meaning": "지치고 바쁜 일상 속에서 하루를 버텨내게 해주는 소소한 원동력을 뜻합니다.",
+          "source": "https://www.arenakorea.com/news/articleView.html?idxno=71964"
+        }
+      ],
+      "past": [
+        {
+          "word": "버카충",
+          "meaning": "버스 카드 충전의 줄임말로, 일상생활의 익숙한 사물이나 행위를 세 글자로 압축해 부른다는 점에서 비슷합니다.",
+          "source": "https://www.ytn.co.kr/_ln/0106_201610101123154017",
+          "years": 10
+        },
+        {
+          "word": "완소",
+          "meaning": "완전 소중의 줄임말로, 긴 표현의 핵심 어구를 줄여 부르던 조어 방식에서 공통점을 가집니다.",
+          "source": "https://m.cafe.daum.net/wantkorean/23Tu/168",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-27"
     }
   ]
 }

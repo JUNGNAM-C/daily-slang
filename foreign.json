@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -1351,6 +1351,154 @@
       ],
       "enriched": true,
       "date": "2026-10-26"
+    },
+    {
+      "lang": "en",
+      "word": "doom spending",
+      "pron_ko": "둠 스펜딩",
+      "meaning": "경제적 불안이나 암울한 미래 전망에 대한 스트레스를 해소하기 위해 장기적인 저축을 포기하고 현재의 즉각적인 기분 전환을 위해 충동적으로 돈을 쓰는 소비 행태를 뜻합니다.",
+      "origin": "파멸을 뜻하는 doom과 소비를 뜻하는 spending이 결합된 조어로, 고물가와 불경기 속 청년 세대의 자포자기식 과소비 심리를 설명하며 SNS와 경제 매체를 통해 확산되었습니다.",
+      "example": "Feeling hopeless about ever buying a house, she ended up doom spending on luxury fashion items.",
+      "example_ko": "내 집 마련이 불가능하다고 느낀 그녀는 결국 스트레스를 풀기 위해 명품 패션 잡화에 충동적으로 돈을 탕진했다.",
+      "source": "https://www.cnn.com/2024/11/10/business/doom-spending-wellness",
+      "category": "사회 현상",
+      "note": "매체와 사전에 따라 한 단어인 doomspending과 띄어 쓴 doom spending 표기가 혼용됩니다.",
+      "past": [
+        {
+          "word": "YOLO",
+          "meaning": "'인생은 한 번뿐이다'라는 뜻의 줄임말로, 미래를 걱정하기보다 현재의 쾌락과 만족을 위해 위험이나 과소비를 감수한다는 점에서 비슷한 소비 심리를 공유합니다.",
+          "source": "https://www.merriam-webster.com/slang/yolo",
+          "pron_ko": "욜로",
+          "years": 10
+        },
+        {
+          "word": "make it rain",
+          "meaning": "공중에 지폐를 비처럼 마구 뿌리거나 돈을 생각 없이 펑펑 탕진한다는 속어로, 재정적 결과를 고려하지 않고 순간적인 기분으로 돈을 쏟아붓는 점이 유사합니다.",
+          "source": "https://www.dictionary.com/culture/slang/make-it-rain",
+          "pron_ko": "메이크 잇 레인",
+          "years": 20
+        }
+      ],
+      "related": [
+        {
+          "word": "loud budgeting",
+          "meaning": "자신의 재정 목표와 절약 계획을 주변에 당당하게 공개하며 불필요한 소비를 거절하는 태도로, 무분별하게 탕진하는 둠 스펜딩의 정반대 대안입니다.",
+          "source": "https://www.britannica.com/money/what-is-loud-budgeting",
+          "pron_ko": "라우드 버젯팅",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-27"
+    },
+    {
+      "lang": "ja",
+      "word": "沼る",
+      "pron_ko": "누마루",
+      "meaning": "취미, 인물, 작품 등에 바닥없는 늪에 발이 빠진 것처럼 깊이 매료되어 도저히 헤어나오지 못하고 열중하는 상태를 뜻합니다.",
+      "origin": "빠져나올 수 없는 취미나 팬 활동을 '늪'에 빗댄 명사 은어 '沼(누마)'에 동사 어미 'る'가 붙어 만들어진 신조어입니다.",
+      "example": "友達に勧められたドラマを一気見したら、完全に沼って抜け出せない。",
+      "example_ko": "친구가 추천해 준 드라마를 정주행했더니, 완전히 늪에 빠져 헤어나올 수가 없다.",
+      "source": "https://news.1242.com/article/464767",
+      "reading": "ぬまる",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "ドハマり",
+          "meaning": "어떤 대상에 매우 깊이 빠져든 상태를 가리키며, 헤어나오지 못할 정도로 열중한다는 점에서 '沼る'와 쓰임새가 비슷합니다.",
+          "source": "https://note.com/sumida_world/n/neb5fa769c747",
+          "pron_ko": "도하마리",
+          "reading": "どはまり",
+          "years": 10
+        },
+        {
+          "word": "沼落ち",
+          "meaning": "바닥없는 늪에 떨어지듯 팬이 되어 깊이 빠져드는 현상을 뜻하며, '沼る'가 동사로 활성화되기 전 같은 맥락으로 쓰였습니다.",
+          "source": "https://www.weblio.jp/content/%E6%B2%BC%E8%90%BD%E3%81%A1",
+          "pron_ko": "누마오치",
+          "reading": "ぬまおち",
+          "years": 10
+        },
+        {
+          "word": "萌え",
+          "meaning": "특정 캐릭터나 대상에 강한 애정과 매력을 느껴 깊이 몰입하는 심리 상태를 나타내며, 팬덤의 심취 상태를 가리킨다는 점에서 '沼る'와 유사합니다.",
+          "source": "https://www.weblio.jp/content/%E8%90%8C",
+          "pron_ko": "모에",
+          "reading": "もえ",
+          "years": 20
+        },
+        {
+          "word": "ハマる",
+          "meaning": "구멍에 꼭 끼듯 취미나 오락 등에 푹 빠져 열중한다는 뜻으로, 무언가에 사로잡혀 벗어나지 못하는 상태를 나타낸다는 점에서 '沼る'의 원조 격 표현입니다.",
+          "source": "https://news.1242.com/article/464767",
+          "pron_ko": "하마루",
+          "reading": "はまる",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "沼落ち",
+          "meaning": "어떤 대상의 매력에 늪처럼 빠져들어 본격적으로 입덕하게 되는 현상을 뜻합니다.",
+          "source": "https://www.weblio.jp/content/%E6%B2%BC%E8%90%BD%E3%81%A1",
+          "pron_ko": "누마오치",
+          "reading": "ぬまおち",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-27"
+    },
+    {
+      "lang": "zh",
+      "word": "淡人",
+      "pron_ko": "단런",
+      "meaning": "감정의 기복이 적고 매사에 담담하며, 일이나 인간관계에서 갈등이나 과도한 감정 소모를 피하고 차분하게 마음의 평정을 유지하는 사람을 뜻합니다.",
+      "origin": "수필가 리거의 에세이 구절 등에서 착안되어, 2024년 봄 중국 SNS에서 MBTI처럼 개인의 성향을 규정하는 유행어로 확산되며 큰 공감을 얻었습니다.",
+      "example": "面对生活中的很多烦心事，他总是表现得像个淡人，情绪非常稳定。",
+      "example_ko": "삶의 수많은 골치 아픈 일들 앞에서도 그는 늘 '단런'처럼 매우 차분한 감정을 유지한다.",
+      "source": "https://m.gmw.cn/toutiao/2024-03/23/content_1303693341.htm",
+      "reading": "dànrén",
+      "category": "사람 유형",
+      "note": "사회를 포기하고 단절하는 탕핑(躺平)과 달리, 일상과 사회생활을 성실히 이어가면서도 불필요한 감정 소모만 줄여 멘탈을 지키려는 긍정적 자기방어 태도로 해석됩니다.",
+      "past": [
+        {
+          "word": "宅男",
+          "meaning": "번잡한 대외적 인간관계를 피해 집 안에서 자신만의 생활을 즐기는 사람을 뜻하며, 대인관계에 거리를 두고 심리적 안정을 찾는 인간 유형이라는 점에서 비슷합니다.",
+          "source": "https://news.sina.cn/sa/2009-03-06/detail-ikknscsk4546954.d.html?vt=4",
+          "pron_ko": "자이난",
+          "reading": "zháinán",
+          "years": 20
+        },
+        {
+          "word": "大款",
+          "meaning": "1990년대 중반 시장경제 도입 속에서 막대한 부를 쌓은 사람을 뜻하며, 당시에는 물질적 성취로 인간 유형을 규정했던 반면 현대에는 감정적 평온함으로 스스로를 규정한다는 대비점을 보여줍니다.",
+          "source": "https://www.rmlt.com.cn/2023/0302/667213.shtml",
+          "pron_ko": "다콴",
+          "reading": "dàkuǎn",
+          "years": 30
+        },
+        {
+          "word": "下海",
+          "meaning": "안정적인 체제를 떠나 시장의 거친 물결로 뛰어들던 청년층의 뜨거운 에너지를 가리키던 말로, 과열된 경쟁을 피해 감정의 힘을 빼는 오늘날 단런의 라이프스타일과 뚜렷한 시대적 대조를 이룹니다.",
+          "source": "https://www.chinanews.com.cn/gn/2013/03-25/4672690.shtml",
+          "pron_ko": "샤하이",
+          "reading": "xiàhǎi",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "浓人",
+          "meaning": "단런(淡人)의 반대어로, 매사에 에너지가 넘치고 감정 표현이 뚜렷하며 사람들과 열정적으로 교류하는 성향의 사람을 뜻합니다.",
+          "source": "https://m.gmw.cn/toutiao/2024-03/23/content_1303693341.htm",
+          "pron_ko": "눙런",
+          "reading": "nóngrén",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-27"
     }
   ]
 }

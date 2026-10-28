@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "words": [
     {
       "word": "감다살",
@@ -1628,6 +1628,75 @@
       ],
       "enriched": true,
       "date": "2026-10-27"
+    },
+    {
+      "word": "아보하",
+      "meaning": "과시적인 소비나 특별한 이벤트 없이도 아무 탈 없이 평온하게 지나가는 평범한 일상에 만족하는 삶의 태도를 뜻합니다.",
+      "example": "주말에 집 청소하고 산책만 다녀왔는데 이게 바로 아보하지 싶어.",
+      "origin": "'아주 보통의 하루'의 머리글자를 딴 줄임말로, 일상의 행복마저 소비와 과시의 경쟁이 되어 버린 분위기에 피로를 느끼며 별일 없는 평범한 날 자체를 긍정하자는 맥락에서 생겨났습니다.",
+      "category": "줄임말",
+      "source": "https://www.joongang.co.kr/article/25280053",
+      "related": [
+        {
+          "type": "반대 뜻",
+          "word": "소확행",
+          "meaning": "일상 속 작고 확실한 행복을 뜻하나 점차 소비를 통한 과시 경쟁으로 변질되면서 이에 대한 피로감으로 아보하가 대안처럼 등장했습니다.",
+          "source": "https://www.joongang.co.kr/article/25280053"
+        },
+        {
+          "type": "비슷한 뜻",
+          "word": "무해력",
+          "meaning": "자극적이거나 위협적이지 않고 해가 되지 않는 작고 순수한 것에서 위로와 편안함을 얻는 성향을 의미합니다.",
+          "source": "https://newneek.co/@user_2l11hs7adw/article/13401"
+        }
+      ],
+      "past": [
+        {
+          "word": "소확행",
+          "meaning": "거창한 성공 대신 일상의 소소하고 확실한 행복을 찾던 표현으로, 평범한 일상에서 마음의 안정을 추구한다는 점이 아보하와 비슷합니다.",
+          "source": "https://www.joongang.co.kr/article/25280053",
+          "years": 10
+        },
+        {
+          "word": "웰빙",
+          "meaning": "몸과 마음의 건강을 지키며 편안하고 지속 가능한 삶의 질을 가꾸던 경향으로, 무탈하고 평온한 일상의 가치를 중시한다는 점에서 아보하와 통합니다.",
+          "source": "https://www.womennews.co.kr/news/articleView.html?idxno=29638",
+          "years": 20
+        },
+        {
+          "word": "방가방가",
+          "meaning": "PC통신에서 '반갑습니다'를 줄여 친근하게 인사를 나누던 유행어로, 일상 소통을 위해 간결한 축약형 말을 만들어 쓰던 방식이 아보하와 닮았습니다.",
+          "source": "https://namu.wiki/w/%EB%B0%A9%EA%B0%80%EB%B0%A9%EA%B0%80",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-28"
+    },
+    {
+      "word": "분깨미",
+      "meaning": "'분위기 깨서 미안하지만'을 줄인 말로, 기존 대화 흐름과 무관한 화제를 불쑥 꺼내거나 좌중의 분위기를 가라앉힐 수 있는 이야기를 전하기에 앞서 미리 양해를 구할 때 쓰는 표현이다.",
+      "example": "분깨미인데 우리 지금 당장 밥부터 먹으러 가면 안 될까?",
+      "origin": "방송 예능 프로그램에서 쓰인 이후 소셜미디어와 온라인 커뮤니티로 퍼져나가 어색한 화제 전환을 부드럽게 만들기 위한 쿠션어로 정착했다.",
+      "category": "줄임말",
+      "source": "https://soonyguide.com/tag/%EB%B6%84%EB%AA%A8%EC%9E%90%EC%B2%98%EB%9F%BC%EB%BD%91%EB%8A%94%EB%8B%A4/",
+      "note": "대화 흐름을 끊는 발언 자체뿐 아니라 분위기를 깨뜨리는 사람을 직접 지칭하는 명사로 쓰이기도 한다.",
+      "past": [
+        {
+          "word": "갑분싸",
+          "meaning": "분위기가 갑자기 가라앉거나 식는 상황을 가리키는 유행어로 분위기를 어색하게 깨뜨리는 상황을 다룬다는 점에서 분깨미와 맥락이 통한다.",
+          "source": "https://www.donga.com/news/amp/all/20190101/93519161/9",
+          "years": 10
+        },
+        {
+          "word": "썰렁하다",
+          "meaning": "부적절한 말이나 재미없는 농담으로 대화 분위기를 차갑게 식혔을 때 쓰이던 대표적인 반응 표현이다.",
+          "source": "https://www.koredu.net/download?path=%2Fuploads%2Fpapers%2FKERD_53C2BBE26.pdf&name=%EB%82%A8%EC%B2%9C%20(%E5%8D%97%E5%B7%9D)%20%EB%B0%95%EA%B0%91%EC%88%98%20(%E6%9C%B4%E7%94%B2%E6%B4%99)%20%EA%B5%90%EC%88%98%20%EC%A0%95%EB%85%84%ED%87%B4%EC%9E%84%20%EA%B8%B0%EB%85%90%20%EB%85%BC%EB%AC%B8%EC%A7%91%20%3A%20%22%20%EC%8D%B0%EB%A0%81%ED%95%98%EB%8B%A4%20%22%20%EC%9D%98%20%EB%8B%B4%ED%99%94%20%EB%B6%84%EC%84%9D%20-%20%EB%86%80%EC%9D%B4%20%EB%8B%B4%ED%99%94%EC%9D%98%20%EC%A2%85%EA%B2%B0%20%EB%B0%A9%EC%8B%9D%EC%97%90%20%EB%8C%80%ED%95%9C%20%EC%97%B0%EA%B5%AC%20-.pdf",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-28"
     }
   ]
 }

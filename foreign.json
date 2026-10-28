@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -1499,6 +1499,140 @@
       ],
       "enriched": true,
       "date": "2026-10-27"
+    },
+    {
+      "lang": "en",
+      "word": "loud budgeting",
+      "pron_ko": "라우드 버짓팅",
+      "meaning": "자신의 재정 한계나 저축 목표를 주변 사람들에게 숨기지 않고 당당하게 공개하며, 불필요한 과소비나 부담스러운 사교 모임 초대를 솔직하게 거절하는 태도와 소비 방식입니다.",
+      "origin": "2023년 말에서 2024년 초 미국의 틱톡 크리에이터 루카스 배틀이 부유층의 은근한 과시를 뜻하는 '콰이어트 럭셔리'의 반대 개념으로 처음 제시하며 유행하기 시작했습니다.",
+      "example": "I'm practicing loud budgeting this month, so I can't join that expensive dinner.",
+      "example_ko": "나 이번 달에 라우드 버짓팅 실천 중이라 그 비싼 저녁 모임엔 못 가.",
+      "source": "https://www.forbes.com/sites/jimwang/2024/02/02/what-is-loud-budgeting-and-how-much-can-it-save-you/",
+      "category": "사회 현상",
+      "past": [
+        {
+          "word": "FIRE movement",
+          "meaning": "경제적 자립과 조기 은퇴를 목표로 지출을 극단적으로 줄이고 공격적으로 저축하는 운동으로, 미래 목표를 위해 불필요한 소비를 자발적으로 통제한다는 점에서 비슷합니다.",
+          "source": "https://en.wikipedia.org/wiki/FIRE_movement",
+          "pron_ko": "파이어 무브먼트",
+          "years": 10
+        },
+        {
+          "word": "recessionista",
+          "meaning": "경기 침체기 속에서도 절약과 똑똑한 예산 관리를 통해 스타일과 품위를 유지하는 사람을 뜻하며, 지출 한계와 절약을 당당한 태도로 여긴 점에서 비슷합니다.",
+          "source": "https://www.dictionary.com/browse/recessionista",
+          "pron_ko": "리세셔니스타",
+          "years": 20
+        },
+        {
+          "word": "staycation",
+          "meaning": "비싼 여행 경비를 줄이기 위해 집이나 근처에서 휴가를 보내는 방식을 뜻하며, 경제적 부담을 덜기 위해 소비를 줄이고 실속을 챙겼다는 점에서 비슷합니다.",
+          "source": "https://en.wikipedia.org/wiki/Staycation",
+          "pron_ko": "스테이케이션",
+          "years": 20
+        },
+        {
+          "word": "downshifting",
+          "meaning": "과도한 소비와 치열한 경쟁에서 벗어나 소득과 지출을 자발적으로 줄이고 삶의 여유를 찾는 생활 방식으로, 과시적 소비를 거부하고 절약을 주체적으로 선택했다는 점에서 비슷합니다.",
+          "source": "https://en.wikipedia.org/wiki/Downshifting_(lifestyle)",
+          "pron_ko": "다운시프팅",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "quiet luxury",
+          "meaning": "로고를 드러내지 않고 은은하게 부를 과시하는 고급스러운 소비 트렌드로, 지출 한계를 솔직하게 밝히며 소비를 거부하는 라우드 버짓팅과 반대되는 개념입니다.",
+          "source": "https://strangephrases.com/phrases/loud-budgeting",
+          "pron_ko": "콰이어트 럭셔리",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-28"
+    },
+    {
+      "lang": "ja",
+      "word": "界隈",
+      "pron_ko": "카이와이",
+      "meaning": "SNS에서 특정 관심사나 취미, 라이프스타일, 행동 습관 등을 공유하는 사람들 집단이나 커뮤니티를 뜻하는 말입니다.",
+      "origin": "원래는 특정 지리적 주변 지역이나 일대를 가리키던 단어였으나, SNS상에서 공통된 속성을 가진 사람들의 무리를 접미사처럼 묶어 부르는 신조어로 의미가 확장되었습니다.",
+      "example": "最近SNSのコスメ界隈でバズっているリップを買ってみた。",
+      "example_ko": "최근 SNS 뷰티 판에서 입소문 난 립스틱을 사 보았다.",
+      "source": "https://ja.wikipedia.org/wiki/%E7%95%8C%E9%9A%88",
+      "reading": "かいわい",
+      "category": "커뮤니티",
+      "past": [
+        {
+          "word": "クラスタ",
+          "meaning": "트위터 등에서 동일한 취미나 관심사를 가진 사람들의 무리를 가리키던 말로, SNS 커뮤니티 집단을 범주화한다는 점에서 지금의 카이와이와 쓰임새가 같습니다.",
+          "source": "https://makitani.net/shimauma/page/8",
+          "pron_ko": "쿠라스타",
+          "reading": "くらすた",
+          "years": 10
+        },
+        {
+          "word": "系",
+          "meaning": "아키바계나 시부야계처럼 특정 취향과 패션, 라이프스타일을 지닌 인물군을 분류할 때 붙이던 접미사로, 무리를 정의하는 역할이 비슷합니다.",
+          "source": "https://galture.com/trend/gal-language2.html",
+          "pron_ko": "케이",
+          "reading": "けい",
+          "years": 20
+        },
+        {
+          "word": "族",
+          "meaning": "특정 행동 양식이나 사회적 경향을 공유하는 집단을 명명하던 유행 접미어로, 개성이나 행동 유형별로 집단 이름을 짓는 방식이 유사합니다.",
+          "source": "https://imidas.jp/ryuko/detail/N-05-1-013-90.html",
+          "pron_ko": "조쿠",
+          "reading": "ぞく",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "他界隈",
+          "meaning": "자신이 속하지 않은 다른 취미나 장르, 다른 팬덤의 집단을 가리키는 말입니다.",
+          "source": "https://ja.wikipedia.org/wiki/%E7%95%8C%E9%9A%88",
+          "pron_ko": "타카이와이",
+          "reading": "たかいわい",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-28"
+    },
+    {
+      "lang": "zh",
+      "word": "浓人",
+      "pron_ko": "눙런",
+      "meaning": "감정 표현이 분명하고 매사에 열정과 에너지가 넘치며, 사람들과의 적극적인 교류와 몰입을 즐기는 외향적·정열적 성향의 사람을 뜻합니다.",
+      "origin": "MBTI의 외향형(E) 개념에서 더 나아가 감정의 농담(濃淡)에 빗대어 삶을 대하는 정서적 온도와 태도를 분류하면서 SNS를 중심으로 유행하기 시작했습니다.",
+      "example": "她是个典型的浓人，每次聚会只要有她在就绝对不会冷场。",
+      "example_ko": "그녀는 전형적인 '눙런'이라 모임에 그녀만 있으면 절대 분위기가 가라앉지 않는다.",
+      "source": "https://m.gmw.cn/toutiao/2024-04/14/content_1303712205.htm",
+      "reading": "nóngrén",
+      "category": "사람 유형",
+      "past": [
+        {
+          "word": "佛系",
+          "meaning": "매사에 집착하지 않고 초연하게 순리대로 살아가는 태도를 뜻하며, 사람의 생활 방식과 심리 상태를 규정하는 유행어로 널리 쓰였다는 점에서 성격 유형을 범주화하는 지금의 표현과 맥락이 통합니다.",
+          "source": "https://www.rmzxw.com.cn/c/2018-12-07/2235926.shtml",
+          "pron_ko": "포시",
+          "reading": "fóxì",
+          "years": 10
+        },
+        {
+          "word": "追星族",
+          "meaning": "좋아하는 스타를 열정적으로 쫓아다니며 온 에너지를 쏟아붓는 젊은 층을 일컫는 말로, 강한 감정과 에너지를 적극적으로 표출하는 사람들의 특성을 묶어 부른 표현이라는 점에서 유사합니다.",
+          "source": "https://www.sohu.com/a/806467267_313745",
+          "pron_ko": "주이싱주",
+          "reading": "zhuīxīngzú",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-28"
     }
   ]
 }

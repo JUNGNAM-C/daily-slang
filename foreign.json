@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-29",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -1633,6 +1633,106 @@
       ],
       "enriched": true,
       "date": "2026-10-28"
+    },
+    {
+      "lang": "en",
+      "word": "yapping",
+      "pron_ko": "야핑",
+      "meaning": "알맹이나 영양가 없는 사소한 이야기나 쓸데없는 잡담을 쉬지 않고 장황하게 늘어놓는 행위를 뜻합니다. 최근 SNS에서는 친근한 수다를 떨거나 스스로 말이 많음을 자조적인 장난으로 드러낼 때도 자주 쓰입니다.",
+      "origin": "원래 개가 짖는 소리나 시끄러운 잔소리를 뜻하던 단어였으나, 2023년경 틱톡과 인터넷 방송 커뮤니티의 밈으로 재유행하면서 일상적인 장황한 수다를 가리키는 표현으로 널리 퍼졌습니다.",
+      "example": "We stayed up all night yapping about completely random things.",
+      "example_ko": "우리는 온갖 사소한 이야기로 끝없이 수다를 떨며 밤을 새웠다.",
+      "source": "https://knowyourmeme.com/memes/yap-yapping-yapper",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "TL;DR",
+          "meaning": "내용이 너무 길어서 읽지 않았다는 뜻의 약어로, 상대방이 늘어놓는 장황한 말이나 글을 중간에 자르고 무안을 줄 때 쓰였다는 점에서 비슷합니다.",
+          "source": "https://en.wikipedia.org/wiki/TL;DR",
+          "pron_ko": "티엘디알",
+          "years": 20
+        },
+        {
+          "word": "talk to the hand",
+          "meaning": "들을 생각이 없으니 손바닥에 대고 말하라는 뜻으로, 상대방의 쓸데없는 수다나 참견을 차단하는 반응으로 쓰였다는 점에서 비슷합니다.",
+          "source": "https://en.wikipedia.org/wiki/Talk_to_the_hand",
+          "pron_ko": "토크 투 더 핸드",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-29"
+    },
+    {
+      "lang": "ja",
+      "word": "好ハオ",
+      "pron_ko": "하오",
+      "meaning": "'좋다', '너무 마음에 든다', '최애가 최고다'라는 뜻으로, 강한 애정과 만족감을 드러낼 때 사용하는 표현입니다.",
+      "origin": "중국어로 '좋다'를 뜻하는 한자 '好(hǎo)'에서 유래했으며, 읽는 법을 함께 병기하던 표기에서 괄호가 탈락해 굳어졌습니다.",
+      "example": "推しの新衣装の写真が好ハオすぎて何回も見ちゃう。",
+      "example_ko": "최애의 새 의상 사진이 너무 마음에 들어서 몇 번이고 다시 보게 된다.",
+      "source": "https://oggi.jp/6358036",
+      "reading": "はお",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "すこ",
+          "meaning": "'좋아하다'를 뜻하는 인터넷 신조어로, 온라인 커뮤니티와 SNS에서 가볍고 귀여운 어감으로 최애나 마음에 드는 대상에 호감을 표시했다는 점이 비슷합니다.",
+          "source": "https://oggi.jp/6358036",
+          "pron_ko": "스코",
+          "years": 10
+        },
+        {
+          "word": "萌え",
+          "meaning": "캐릭터나 특정 대상을 향해 애정과 호감이 솟구치는 감정을 나타내는 말로, 팬덤 문화에서 최애 대상을 향해 열렬한 감탄을 쏟아내는 쓰임새가 닮았습니다.",
+          "source": "https://ja.wikipedia.org/wiki/%E8%90%8C%E3%81%88",
+          "pron_ko": "모에",
+          "reading": "もえ",
+          "years": 20
+        },
+        {
+          "word": "チョベリグ",
+          "meaning": "'초 베리 굿(超 very good)'의 줄임말로, 젊은 층이 외래어를 변형해 일상 속 대상이나 기분을 최고라고 치켜세우며 감탄하던 점이 통합니다.",
+          "source": "https://www.weblio.jp/content/%E3%83%81%E3%83%A7%E3%83%99%E3%83%AA%E3%82%B0",
+          "pron_ko": "쵸베리그",
+          "reading": "ちょべりぐ",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-29"
+    },
+    {
+      "lang": "zh",
+      "word": "特种兵式旅游",
+      "pron_ko": "터종빙스 뤼유",
+      "meaning": "특수부대 군인의 작전처럼 짧은 시간과 한정된 비용으로 최대한 많은 관광 명소를 쉼 없이 돌아다니는 초고강도 압축 여행 방식입니다.",
+      "origin": "2023년 코로나19 방역 완화 이후 중국 대학생과 젊은 직장인들이 주말이나 짧은 연휴 동안 야간 열차로 이동하고 하루 수만 보씩 걸으며 명소를 인증하는 유행에서 비롯되었습니다.",
+      "example": "利用周末两天挑战特种兵式旅游，一口气打卡了八个景点。",
+      "example_ko": "주말 이틀을 활용해 특수부대식 여행에 도전해서 단숨에 여덟 개 명소를 찍고 왔다.",
+      "source": "https://zh.wikipedia.org/zh-cn/%E7%89%B9%E7%A7%8D%E5%85%B5%E5%BC%8F%E6%97%85%E6%B8%B8",
+      "reading": "tèzhǒngbīng shì lǚyóu",
+      "category": "사회 현상",
+      "related": [
+        {
+          "word": "度假游",
+          "meaning": "여러 장소를 빠르게 둘러보는 대신 한 휴양지에 머물며 여유롭게 휴식과 여가를 즐기는 휴양형 여행을 의미합니다.",
+          "source": "https://zh.wikipedia.org/zh-cn/%E7%89%B9%E7%A7%8D%E5%85%B5%E5%BC%8F%E6%97%85%E6%B8%B8",
+          "pron_ko": "두자유",
+          "reading": "dùjiàyóu",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "慢游",
+          "meaning": "속도를 늦추고 특정 지역의 문화와 일상을 깊이 체험하며 여유를 누리는 슬로우 트래블을 가리킵니다.",
+          "source": "https://www.sina.cn/news/detail/5349887268880769.html",
+          "pron_ko": "만유",
+          "reading": "mànyóu",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-29"
     }
   ]
 }

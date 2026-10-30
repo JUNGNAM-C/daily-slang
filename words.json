@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "words": [
     {
       "word": "감다살",
@@ -1767,6 +1767,64 @@
       ],
       "enriched": true,
       "date": "2026-10-29"
+    },
+    {
+      "word": "육각형 인간",
+      "meaning": "외모, 학력, 자산, 직업, 성격 등 여러 방면에서 단점 없이 고르게 완벽한 역량을 갖춘 사람을 뜻한다.",
+      "example": "그 친구는 노래와 춤은 기본이고 센스에 인성까지 다 갖춘 완전 육각형 인간이야.",
+      "origin": "게임이나 스포츠에서 캐릭터의 다면적인 능력치를 비교하기 위해 사용하는 방사형 헥사곤 차트에서 유래했다. 6개의 꼭짓점이 가득 차 완벽한 정육각형을 그리는 모양을 사람의 조건에 비유해 부르기 시작했다.",
+      "category": "사람 유형",
+      "source": "https://namu.wiki/w/%EC%9C%A1%EA%B0%81%ED%98%95%20%EC%9D%B8%EA%B0%84",
+      "note": "다재다능함을 칭찬하는 표현으로 쓰이기도 하지만, 지나친 완벽주의와 사회적 비교 문화를 반영한다는 비판적 시각도 존재한다.",
+      "past": [
+        {
+          "word": "엄친아",
+          "meaning": "학업, 외모, 집안 등 모든 조건이 뛰어나 비교 대상이 되던 인물을 가리키며 결점 없는 완벽한 대상을 지칭한다는 점에서 비슷하다.",
+          "source": "https://h21.hani.co.kr/arti/special/special_general/27317.html",
+          "years": 10
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-30"
+    },
+    {
+      "word": "휀걸",
+      "meaning": "아이돌이나 특정 대상을 열성적으로 응원하고 좋아하는 여성 팬을 친근하고 익살스럽게 이르는 말이다.",
+      "example": "나 휀걸 생활 5년 차인데 이번 컴백 앨범은 전곡이 다 명곡이야.",
+      "origin": "영단어 '팬걸(fan girl)'에서 '팬(fan)'을 옛날 외래어 발음 방식인 '휀'으로 비틀어 표기한 데서 유래했다.",
+      "category": "사람 유형",
+      "source": "https://www.news1.kr/society/incident-accident/5895526",
+      "note": "과거 열성 팬을 낮잡아 부르던 멸칭과 달리, 팬덤 내부에서 스스로를 유쾌하고 긍정적으로 자칭하는 어휘로 정착했다.",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "휀보이",
+          "meaning": "'팬보이(fan boy)'를 같은 방식으로 표기하여 특정 대상을 열성적으로 좋아하는 남성 팬을 이르는 말이다.",
+          "source": "https://cdnm.tworld.co.kr/skt/ttime/story/25/ttime_soda_trend_w.html?username="
+        }
+      ],
+      "past": [
+        {
+          "word": "어덕행덕",
+          "meaning": "'어차피 덕질할 거 행복하게 덕질하자'의 줄임말로, 2016년경 팬덤 문화에서 즐겁게 팬 활동을 하자는 태도를 대변했다.",
+          "source": "https://www.is.cuni.cz/studium/eng/predmety/index.php?do=download&did=248933&kod=AKO100132",
+          "years": 10
+        },
+        {
+          "word": "빠순이",
+          "meaning": "스타를 맹목적으로 추종하는 여성 팬을 일컫던 말로, 2006년 무렵 열성적인 여성 팬 집단을 지칭하는 역할로 쓰였다.",
+          "source": "https://www.news1.kr/society/incident-accident/5895526",
+          "years": 20
+        },
+        {
+          "word": "오빠부대",
+          "meaning": "1990년대 남성 스타나 가수를 열광적으로 응원하던 소녀 팬 집단을 가리키던 대표적인 유행어다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2006/04/10/2006041070005.html",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-30"
     }
   ]
 }

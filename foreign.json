@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -1733,6 +1733,89 @@
       ],
       "enriched": true,
       "date": "2026-10-29"
+    },
+    {
+      "lang": "en",
+      "word": "maxxing",
+      "pron_ko": "맥싱",
+      "meaning": "외모, 휴식, 건강 등 삶의 특정 영역을 극단적으로 끌어올려 최적화하려는 행위나 태도를 뜻합니다.",
+      "origin": "게임에서 능력치를 최적화하는 표현에서 비롯되어 틱톡 등 소셜미디어를 중심으로 일상 전반을 관리하는 유행어로 퍼졌습니다.",
+      "example": "I'm sleepmaxxing this weekend to recover from exam fatigue.",
+      "example_ko": "시험 피로를 풀기 위해 이번 주말에는 숙면을 취하는 데만 집중하고 있어.",
+      "source": "https://www.dictionary.com/culture/slang/maxxing",
+      "category": "SNS 표현",
+      "enriched": true,
+      "date": "2026-10-30"
+    },
+    {
+      "lang": "ja",
+      "word": "ほんmoney",
+      "pron_ko": "혼마네",
+      "meaning": "간사이 방언으로 '정말로, 진짜로'를 뜻하는 'ほんまに'를 영어 단어 'money'와 결합해 만든 표현으로, SNS나 일상 대화에서 상대방에게 강하게 맞장구치거나 감탄할 때 씁니다.",
+      "origin": "인플루언서 케미오(kemio)의 영상 속 독특한 억양에서 비롯되어 10대 여중·고생을 중심으로 유행하기 시작했습니다.",
+      "example": "この新作スイーツ、美味しすぎてほんmoneyヤバい。",
+      "example_ko": "이 신상 디저트, 너무 맛있어서 진짜 대박이다.",
+      "source": "https://resemom.jp/article/2024/12/03/79740.html",
+      "reading": "ほんまねー",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "それな",
+          "meaning": "상대방의 의견에 즉각적으로 강하게 동의하며 맞장구칠 때 쓰이던 말로, 대화 중 가볍게 공감을 표하는 역할이 비슷합니다.",
+          "source": "https://prtimes.jp/main/html/rd/p/000000165.000026876.html",
+          "pron_ko": "소레나",
+          "years": 10
+        },
+        {
+          "word": "神ってる",
+          "meaning": "신이 내린 듯 대단하다는 감탄과 극찬의 반응 표현으로 쓰였다는 점에서 감정을 강하게 실어 반응하는 쓰임새가 비슷합니다.",
+          "source": "https://www.jiyu.co.jp/singo/index.php?eid=00033",
+          "pron_ko": "가밋테루",
+          "reading": "かみってる",
+          "years": 10
+        },
+        {
+          "word": "チョベリグ",
+          "meaning": "일본어와 영어를 합성해 매우 좋다는 감탄을 나타내던 갸루 유행어로, 외래어를 섞어 감정을 강조하는 조어 방식이 비슷합니다.",
+          "source": "https://nendai-ryuukou.com/article/146.html",
+          "pron_ko": "초베리구",
+          "reading": "ちょべりぐ",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "おったまgetdown",
+          "meaning": "깜짝 놀랐다는 일본어 감탄사에 영어를 합친 신조어로, ほんmoney와 같은 인플루언서의 유행어에서 파생되어 함께 유행했습니다.",
+          "source": "https://oscar-formen.com/content/what-is-ottama-getdown/",
+          "pron_ko": "옷타마겟다운",
+          "reading": "おったまげっとダウン",
+          "type": "반대 뜻"
+        },
+        {
+          "word": "ほんまに",
+          "meaning": "진짜로 혹은 정말로를 뜻하는 간사이 방언으로, ほんmoney라는 신조어의 바탕이 된 원형 표현입니다.",
+          "source": "https://trendnonews.hatenablog.com/entry/honmoney-motoneta",
+          "pron_ko": "혼마니",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-30"
+    },
+    {
+      "lang": "zh",
+      "word": "脆皮大学生",
+      "pron_ko": "취피대학생",
+      "meaning": "젊고 혈기왕성해야 할 나이임에도 불규칙한 생활과 운동 부족, 스트레스 등으로 인해 사소한 일에도 쉽게 다치거나 아픈 허약한 대학생들을 해학적이고 자조적으로 부르는 말입니다.",
+      "origin": "음식의 바삭한 껍질을 뜻하던 '취피(脆皮)'가 게임에서 방어력과 체력이 극히 약한 캐릭터를 뜻하는 은어로 쓰이다가, 사소한 동작에도 병원 신세를 지는 대학생들의 신체적 취약성과 결합하여 유행하게 되었습니다.",
+      "example": "他打个喷嚏都能闪到腰，真不愧是脆皮大学生。",
+      "example_ko": "그는 재채기 한 번에 허리를 삐끗하다니, 정말 취피대학생답다.",
+      "source": "https://news.cctv.com/2023/12/20/ARTIQLYHVhW7oQ7yg4CCLdnL231220.shtml",
+      "reading": "cuì pí dà xué shēng",
+      "category": "사람 유형",
+      "enriched": true,
+      "date": "2026-10-30"
     }
   ]
 }

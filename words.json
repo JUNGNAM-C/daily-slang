@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "words": [
     {
       "word": "감다살",
@@ -1825,6 +1825,106 @@
       ],
       "enriched": true,
       "date": "2026-10-30"
+    },
+    {
+      "word": "L을 가져가",
+      "meaning": "영어 표현 'Take the L'을 직역한 말로, 패배나 실패를 깨끗이 인정하라는 의미를 담아 상대를 도발하거나 숏폼 챌린지 춤을 출 때 외치는 표현이다.",
+      "example": "이번 게임은 내가 완벽하게 이겼으니까 핑계 대지 말고 L을 가져가!",
+      "origin": "패배를 뜻하는 'Loss'의 머리글자 L을 따온 게임 이모트가 로블록스 한국어판에서 어색하게 직역된 뒤, 이를 따라 하는 숏폼 댄스 영상이 퍼지며 유행어가 되었다.",
+      "category": "SNS 표현",
+      "source": "https://goat-1.tistory.com/entry/L%EC%9D%84-%EA%B0%80%EC%A0%B8%EA%B0%80-%EB%9C%BB-%E2%80%93-%ED%81%AC%EB%A6%BC%EC%B9%98%EC%A6%88-%ED%97%88%EB%8B%88%C2%B7%ED%81%AC%EB%A6%AC%EC%8A%A4-%ED%81%AC%EB%A1%9C%EC%8A%A4-%EC%A0%95%EC%B2%B4-%EA%B6%8C%EB%A3%A8%ED%8A%B8-%EC%B1%8C%EB%A6%B0%EC%A7%80-%EC%9B%90%EB%B3%B8%EA%B3%BC-Take-the-L-%EC%9C%A0%EB%9E%98-%EC%B4%9D%EC%A0%95%EB%A6%AC",
+      "related": [
+        {
+          "type": "반대 뜻",
+          "word": "Take the W",
+          "meaning": "승리를 뜻하는 W를 취하라는 말로 패배를 뜻하는 L과 반대로 성공이나 승리를 거두었음을 나타낸다.",
+          "source": "https://chickpea.tistory.com/96"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "크림치즈 허니",
+          "meaning": "게임 내 춤 동작 이름이자 숏폼 챌린지에서 'L을 가져가'와 짝을 이루어 연속해서 부르는 표현이다.",
+          "source": "https://goat-1.tistory.com/entry/L%EC%9D%84-%EA%B0%80%EC%A0%B8%EA%B0%80-%EB%9C%BB-%E2%80%93-%ED%81%AC%EB%A6%BC%EC%B9%98%EC%A6%88-%ED%97%88%EB%8B%88%C2%B7%ED%81%AC%EB%A6%AC%EC%8A%A4-%ED%81%AC%EB%A1%9C%EC%8A%A4-%EC%A0%95%EC%B2%B4-%EA%B6%8C%EB%A3%A8%ED%8A%B8-%EC%B1%8C%EB%A6%B0%EC%A7%80-%EC%9B%90%EB%B3%B8%EA%B3%BC-Take-the-L-%EC%9C%A0%EB%9E%98-%EC%B4%9D%EC%A0%95%EB%A6%AC"
+        }
+      ],
+      "past": [
+        {
+          "word": "대략 낭패",
+          "meaning": "상대방의 실수나 자신이 처한 곤란한 패배 상황을 자조하거나 조롱할 때 쓰이던 유행어이다.",
+          "source": "https://ksc.koreaxin.com/topic-35966-4.html",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-31"
+    },
+    {
+      "word": "홈 프로텍터",
+      "meaning": "직업이나 직장이 없는 무직자나 백수를 '집을 지키는 사람'에 빗대어 유쾌하고 완곡하게 이르는 말이다.",
+      "example": "나 다음 달부터 첫 출근하게 돼서 드디어 홈 프로텍터 은퇴해!",
+      "origin": "집을 뜻하는 영어 '홈(Home)'과 수호자를 뜻하는 '프로텍터(Protector)'를 합친 말로, 일자리가 없어 집안에만 머무는 청년들이 스스로 집을 지키고 있다며 위트 있게 표현한 데서 유래했다.",
+      "category": "사람 유형",
+      "source": "https://www.thescoop.co.kr/news/articleView.html?idxno=303656",
+      "related": [
+        {
+          "type": "비슷한 뜻",
+          "word": "전업자녀",
+          "meaning": "취업을 준비하거나 직장을 구하는 대신 집에 머물며 가사를 도맡고 부모에게 생활비를 지원받는 청년을 이르는 말이다.",
+          "source": "https://www.busan.com/view/busan/view.php?code=2023090520095418241"
+        },
+        {
+          "type": "비슷한 뜻",
+          "word": "자택경비원",
+          "meaning": "경제활동을 하지 않고 집에 틀어박혀 지내는 백수를 스스로 집 지키는 경비원에 비유한 표현이다.",
+          "source": "https://namu.wiki/w/%EC%9E%90%ED%83%9D%EA%B2%BD%EB%B9%84%EC%9B%90"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "시간 빌 게이츠",
+          "meaning": "할 일이 없어 남아도는 시간이 세계적인 부호 빌 게이츠의 재산만큼 많다는 뜻으로 백수를 유쾌하게 칭하는 표현이다.",
+          "source": "https://www.sedaily.com/article/13998414"
+        }
+      ],
+      "past": [
+        {
+          "word": "잉여인간",
+          "meaning": "사회적 생산 활동에 참여하지 못하고 남아도는 존재라는 뜻으로, 청년들이 일자리를 구하지 못한 처지를 자조적으로 유희화한 점이 비슷하다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2016/11/22/2016112201838.html",
+          "years": 10
+        },
+        {
+          "word": "청년실신",
+          "meaning": "청년 실업자와 신용불량자를 결합한 말로, 졸업 후에도 취업하지 못해 고통받는 청년 백수의 처지를 풍자한 점이 비슷하다.",
+          "source": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0002124010",
+          "years": 10
+        },
+        {
+          "word": "이태백",
+          "meaning": "'이십대 태반이 백수'를 줄인 말로, 취업난으로 인해 청년 다수가 무직 상태에 놓인 현실을 대변한 점이 비슷하다.",
+          "source": "https://www.hani.co.kr/arti/society/society_general/138087.html",
+          "years": 20
+        },
+        {
+          "word": "장미족",
+          "meaning": "'장기간 미취업 청년'을 꽃 이름에 빗대어 부른 말로, 졸업 후 일자리를 얻지 못한 백수 상태를 완곡하게 표현한 발상이 닮았다.",
+          "source": "https://economist.co.kr/article/view/ecn200803030031",
+          "years": 20
+        },
+        {
+          "word": "명태",
+          "meaning": "외환위기 무렵 구조조정으로 비자발적 실직자가 된 '명예퇴직자'를 생선 이름에 빗대어 자조적으로 유희화한 점이 비슷하다.",
+          "source": "https://www.chosun.com/site/data/html_dir/2016/11/22/2016112201838.html",
+          "years": 30
+        },
+        {
+          "word": "방콕족",
+          "meaning": "바깥 활동을 하지 않고 방 안에 콕 틀어박혀 지내는 사람들을 뜻하는 말로, 출근하지 않고 집에만 상주하는 모습이 비슷하다.",
+          "source": "https://namu.wiki/w/%ED%9E%88%ED%82%A4%EC%BD%94%EB%AA%A8%EB%A6%AC",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-31"
     }
   ]
 }

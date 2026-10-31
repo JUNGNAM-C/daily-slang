@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -1816,6 +1816,111 @@
       "category": "사람 유형",
       "enriched": true,
       "date": "2026-10-30"
+    },
+    {
+      "lang": "en",
+      "word": "cooked",
+      "pron_ko": "쿡트",
+      "meaning": "돌이킬 수 없는 실패를 겪거나 절망적인 곤경에 빠져 완전히 끝장나 버린 상태를 의미합니다.",
+      "origin": "과거부터 쓰이던 구어 표현이었으나, 최근 틱톡과 트위치 등 인터넷 방송 및 SNS 밈 문화와 결합하면서 청년층 사이에서 자조적인 유행어로 크게 재확산되었습니다.",
+      "example": "I completely forgot to submit my final term paper, so I am officially cooked.",
+      "example_ko": "기말 보고서 제출하는 걸 완전히 깜빡했으니, 난 이제 공식적으로 끝장났어.",
+      "source": "https://www.merriam-webster.com/slang/cooked",
+      "category": "SNS 표현",
+      "note": "음식을 익히거나 장부를 조작한다는 본래 뜻 외에, 최근 온라인에서는 심각한 곤경이나 망해 버린 상황을 자조하는 용도로 굳어져 쓰입니다.",
+      "past": [
+        {
+          "word": "rekt",
+          "meaning": "파괴되었다는 뜻의 'wrecked'를 소리 나는 대로 변형한 말로, 게임 등에서 완패하거나 처참히 박살 난 상태를 나타내어 비참한 실패를 나타낸다는 점에서 비슷합니다.",
+          "source": "https://www.dictionary.com/browse/rekt",
+          "pron_ko": "렉트",
+          "years": 10
+        },
+        {
+          "word": "pwned",
+          "meaning": "'owned'의 오타에서 유래한 표현으로, 대결 상대에게 완벽히 제압당해 구제 불능의 패배를 겪었음을 뜻한다는 점이 유사합니다.",
+          "source": "https://www.merriam-webster.com/dictionary/pwn",
+          "pron_ko": "폰드",
+          "years": 20
+        },
+        {
+          "word": "toast",
+          "meaning": "가망 없이 완전히 끝나 버린 상태를 비유적으로 가리키며, 절체절명의 위기 상황을 자조적으로 묘사한다는 점에서 쓰임새가 같습니다.",
+          "source": "https://www.merriam-webster.com/dictionary/toast",
+          "pron_ko": "토스트",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-31"
+    },
+    {
+      "lang": "ja",
+      "word": "ぬい活",
+      "pron_ko": "누이카쓰",
+      "meaning": "좋아하는 인형을 카페나 여행지에 데리고 가 풍경이나 음식과 함께 사진을 찍어 SNS에 올리거나, 인형 옷을 입히며 교감하는 문화 활동 전반을 뜻한다.",
+      "origin": "봉제인형을 뜻하는 일본어 '누이구루미(ぬいぐるみ)'의 앞 글자 '누이(ぬい)'에 활동을 의미하는 접미사 '카쓰(活)'를 합쳐 만든 조어이다.",
+      "example": "お気に入りのカフェでぬい活の写真を撮ってSNSに投稿した。",
+      "example_ko": "마음에 드는 카페에서 인형 활동 사진을 찍어 SNS에 게시했다.",
+      "source": "https://kotobank.jp/word/%E3%81%AC%E3%81%84%E6%B4%BB-3258354",
+      "reading": "ぬいかつ",
+      "category": "사회 현상",
+      "past": [
+        {
+          "word": "ぬい撮り",
+          "meaning": "여행지나 일상에서 인형을 피사체로 삼아 사진을 촬영하는 행위로, 인형을 동반자로 삼아 기록을 남기는 오늘날 누이카쓰의 바탕이 된 표현이다.",
+          "source": "https://ja.wikipedia.org/wiki/%E3%81%AC%E3%81%84%E6%B4%BB",
+          "pron_ko": "누이도리",
+          "reading": "ぬいどり",
+          "years": 10
+        }
+      ],
+      "related": [
+        {
+          "word": "ぬい撮り",
+          "meaning": "인형을 일상이나 외출 장소의 풍경과 어우러지게 배치하여 사진을 찍는 행위를 뜻한다.",
+          "source": "https://ja.wikipedia.org/wiki/%E3%81%AC%E3%81%84%E6%B4%BB",
+          "pron_ko": "누이도리",
+          "reading": "ぬいどり",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-31"
+    },
+    {
+      "lang": "zh",
+      "word": "草台班子",
+      "pron_ko": "차오타이반즈",
+      "meaning": "겉보기에는 전문적이고 완벽해 보이는 조직이나 세상도 실은 어설프고 주먹구구식으로 굴러간다는 점을 풍자하며, 완벽주의에 대한 불안을 내려놓고 스스로를 위안할 때 쓰는 말입니다.",
+      "origin": "원래 농촌 야외에 임시 무대를 세우고 순회하던 소규모 유랑 극단을 가리키던 말로, 2024년 '세계는 거대한 차오타이반즈다'라는 문장이 소셜미디어에서 큰 공감을 얻으며 널리 퍼졌습니다.",
+      "example": "别为工作太焦虑，其实大家都是草台班子。",
+      "example_ko": "일 때문에 너무 불안해하지 마, 사실 다들 어설픈 아마추어 조직이나 다름없어.",
+      "source": "https://kuku.baidu.com/landing/tscp_doc/a3bc9a322e24a292f5ac753173e52827",
+      "reading": "cǎo tái bān zi",
+      "category": "사회 현상",
+      "past": [
+        {
+          "word": "大忽悠",
+          "meaning": "실속이나 알맹이 없이 그럴듯한 껍데기와 말재간으로 포장하는 인물을 풍자한 말로, 겉포장 뒤에 숨겨진 부실한 실체를 냉소적으로 꿰뚫어 본다는 맥락이 일맥상통합니다.",
+          "source": "https://news.ifeng.com/history/zhongguoxiandaishi/special/chunwan/",
+          "pron_ko": "다후유",
+          "reading": "dà hū you",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "正规军",
+          "meaning": "임시변통적이고 전문성이 떨어지는 조직과 대조적으로, 표준화된 규격과 체계적인 시스템을 갖춘 정규 전문 조직을 뜻하는 반대 개념입니다.",
+          "source": "https://www.163.com/dy/article/JJJNEPSH05566FR1.html",
+          "pron_ko": "정구이쥔",
+          "reading": "zhèng guī jūn",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-10-31"
     }
   ]
 }

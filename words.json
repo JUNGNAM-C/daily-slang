@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "words": [
     {
       "word": "감다살",
@@ -1925,6 +1925,74 @@
       ],
       "enriched": true,
       "date": "2026-10-31"
+    },
+    {
+      "word": "테토녀",
+      "meaning": "남성 호르몬인 테스토스테론과 여성을 결합한 말로, 결단력과 추진력이 강하고 털털하며 리더십이 돋보이는 성향의 여성을 뜻합니다.",
+      "example": "우리 언니는 식당 예약부터 여행 일정까지 혼자 다 정하고 앞장서는 완전 테토녀 스타일이야.",
+      "origin": "성호르몬 특성에 빗대어 사람의 성격과 연애 궁합을 설명하는 콘텐츠에서 유래해 SNS와 청년층 커뮤니티로 널리 퍼졌습니다.",
+      "category": "사람 유형",
+      "source": "https://www.hani.co.kr/arti/society/women/1275409.html",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "에겐남",
+          "meaning": "에스트로겐과 남성의 합성어로, 감수성이 풍부하고 타인의 감정에 세심하게 공감하는 성향의 남성을 뜻합니다.",
+          "source": "https://www.news1.kr/society/general-society/6257506"
+        }
+      ],
+      "past": [
+        {
+          "word": "걸크러시",
+          "meaning": "여성이 다른 여성의 당당하고 매력적인 모습에 반하거나 선망하는 현상을 뜻하며, 전통적 성 역할에서 벗어난 주도적인 여성을 긍정적으로 묘사한다는 점에서 테토녀와 통합니다.",
+          "source": "https://www.segye.com/newsView/20160612000988",
+          "years": 10
+        },
+        {
+          "word": "알파걸",
+          "meaning": "학업, 리더십 등 다양한 방면에서 남성을 능가하거나 두각을 나타내는 엘리트 여성을 지칭하며, 추진력과 리더십을 갖춘 여성을 뜻한다는 점에서 테토녀와 비슷합니다.",
+          "source": "https://www.mk.co.kr/news/economy/4339838",
+          "years": 20
+        },
+        {
+          "word": "미시족",
+          "meaning": "결혼 후에도 기존의 정형화된 주부상에 머무르지 않고 자기계발과 개성을 적극적으로 추구하던 신세대 기혼 여성을 뜻하며, 주체적인 여성상을 표현한다는 점에서 맥락이 맞닿아 있습니다.",
+          "source": "https://ko.wikisource.org/wiki/%EA%B8%80%EB%A1%9C%EB%B2%8C_%EC%84%B8%EA%B3%84_%EB%8C%80%EB%B0%B1%EA%B3%BC%EC%82%AC%EC%A0%84/%EC%8B%9C%EC%82%AC/%ED%98%84%EB%8C%80%EC%82%AC%ED%9A%8C%EC%99%80_%EC%8B%9C%EC%82%AC/%EC%82%AC%ED%9A%8C%C2%B7%ED%99%98%EA%B2%BD%C2%B7%ED%95%99%EC%88%A0%C2%B7%EB%AC%B8%ED%99%94/%EC%82%AC%ED%9A%8C%C2%B7%ED%99%98%EA%B2%BD",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-01"
+    },
+    {
+      "word": "에겐남",
+      "meaning": "여성 호르몬인 에스트로겐에서 이름을 딴 신조어로, 거칠고 지배적인 전통적 남성성 대신 뛰어난 공감 능력과 섬세하고 다정한 감수성을 지닌 남성을 뜻합니다.",
+      "example": "내 친구는 성격이 워낙 다정다감하고 상대방 기분을 세심하게 잘 맞춰줘서 전형적인 에겐남 스타일이야.",
+      "origin": "남성 호르몬과 여성 호르몬의 특성에 빗대어 연애 및 성격을 분석하던 SNS 웹툰과 성향 테스트가 Z세대를 중심으로 유행하면서 만들어진 말입니다.",
+      "category": "사람 유형",
+      "source": "https://www.joongang.co.kr/article/25352634",
+      "past": [
+        {
+          "word": "뇌섹남",
+          "meaning": "'뇌가 섹시한 남자'의 줄임말로, 신체적인 완력보다 주관이 뚜렷하고 지적인 면모를 매력으로 삼았다는 점에서 남성의 성향을 새롭게 범주화한 에겐남과 맥을 같이합니다.",
+          "source": "https://www.donga.com/news/Society/article/all/20150325/70322520/3",
+          "years": 10
+        },
+        {
+          "word": "초식남",
+          "meaning": "초식동물처럼 온순하고 거친 경쟁이나 지배적 남성성을 지양하며 섬세한 감성과 취미를 즐기는 남성을 뜻해 부드러운 남성 유형이라는 점에서 유사합니다.",
+          "source": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0001213963",
+          "years": 20
+        },
+        {
+          "word": "미스터 맘마",
+          "meaning": "가부장적 권위에서 벗어나 가사와 자녀 돌봄을 다정하게 해내는 남성을 지칭하던 말로, 세심하고 부드러운 남성상을 드러냈다는 점에서 통합니다.",
+          "source": "https://www.kado.net/news/articleView.html?idxno=152639",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-01"
     }
   ]
 }

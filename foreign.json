@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -1921,6 +1921,124 @@
       ],
       "enriched": true,
       "date": "2026-10-31"
+    },
+    {
+      "lang": "en",
+      "word": "soft launch",
+      "pron_ko": "소프트 론치",
+      "meaning": "SNS에서 연인의 얼굴이나 신원을 명확히 드러내지 않고 손, 실루엣, 2인분의 식사 사진 등만을 올려 새로운 연애를 시작했음을 은근하게 넌지시 암시하는 행위입니다.",
+      "origin": "기업에서 신제품이나 서비스를 정식 출시하기 전 결함을 확인하기 위해 제한된 인원에게 시범적으로 선보이던 비즈니스 용어가 SNS 연애 문화로 옮겨오며 비유적으로 정착했습니다.",
+      "example": "She soft launched her new boyfriend by posting a photo of two coffee cups on the table.",
+      "example_ko": "그녀는 식탁 위에 놓인 커피잔 두 개가 찍힌 사진을 올려 새 남자친구와의 연애를 은근히 암시했다.",
+      "source": "https://www.merriam-webster.com/slang/soft-launch",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "Facebook official",
+          "meaning": "페이스북 프로필의 연애 상태를 변경해 교제 사실을 공인하던 행위로, SNS 플랫폼을 활용해 연애 사실을 외부에 알린다는 점에서 맥락이 비슷합니다.",
+          "source": "https://knowyourmeme.com/memes/facebook-official",
+          "pron_ko": "페이스북 오피셜",
+          "years": 10
+        },
+        {
+          "word": "DTR",
+          "meaning": "모호한 사이에서 두 사람의 관계를 명확히 규정하는 대화를 뜻하며, 관계를 공식화하기 전 단계의 심리적 기준점으로 쓰였다는 점이 닮아 있습니다.",
+          "source": "https://www.urbandictionary.com/define.php?term=DTR",
+          "pron_ko": "디티알",
+          "years": 20
+        },
+        {
+          "word": "going steady",
+          "meaning": "한 사람과만 독점적이고 진지하게 교제함을 밝히던 전통적 표현으로, 연인 관계임을 주변에 공식화하던 사회적 역할이 같습니다.",
+          "source": "https://kvia.com/lifestyle/stacker-lifestyle/2023/03/24/25-idioms-that-were-common-in-the-60s/",
+          "pron_ko": "고잉 스테디",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "hard launch",
+          "meaning": "SNS에 연인의 얼굴과 이름을 숨김없이 공개하고 계정을 태그해 연애 사실을 대대적으로 공표하는 행위로, soft launch와 대비되는 반대 개념입니다.",
+          "source": "https://grammeanify.com/hard-launch-meaning/",
+          "pron_ko": "하드 론치",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-01"
+    },
+    {
+      "lang": "ja",
+      "word": "おったまgetdown",
+      "pron_ko": "오타마겟다운",
+      "meaning": "예상치 못한 상황에 깜짝 놀라 기겁했거나, 너무 좋아서 흥분과 텐션이 솟구칠 때 외치는 감탄사이다.",
+      "origin": "놀라 자빠진다는 뜻의 일본어 속어 'おったまげ'에 영어 'get down'을 결합한 언어유희로, 인플루언서 케미오(kemio)의 SNS 콘텐츠를 통해 10대와 청년층 사이에서 빠르게 유행했다.",
+      "example": "まって、推しの新ビジュが良すぎておったまgetdownなんだけど！",
+      "example_ko": "잠깐만, 최애의 새 비주얼이 너무 좋아서 완전 기절초풍이잖아!",
+      "source": "https://lineresearch-platform.blog.jp/archives/46988888.html",
+      "reading": "おったまげっとだうん",
+      "category": "감탄사",
+      "past": [
+        {
+          "word": "やばたにえん",
+          "meaning": "'위험하다'나 '대단하다'를 뜻하는 '야바이'에 식품 기업명을 덧붙인 말장난 유행어로, 놀라움이나 감정의 고조를 위트 있게 과장해 표현하는 점이 비슷하다.",
+          "source": "https://ja.wikipedia.org/wiki/%E2%97%8B%E2%97%8B%E3%81%BE%E3%82%8B%E6%B0%B4%E7%94%A3",
+          "pron_ko": "야바타니엔",
+          "years": 10
+        },
+        {
+          "word": "チョベリバ",
+          "meaning": "'초(超)'와 영어 'very bad'를 줄여 합쳐 어처구니없는 상황에 대한 놀라움을 나타내던 말로, 일본어와 영어를 결합해 격한 감정을 표현하는 점이 비슷하다.",
+          "source": "https://ja.wikipedia.org/wiki/1996%E5%B9%B4%E3%81%AE%E6%97%A5%E6%9C%AC",
+          "pron_ko": "초베리바",
+          "reading": "ちょべりば",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-01"
+    },
+    {
+      "lang": "zh",
+      "word": "泼天的富贵",
+      "pron_ko": "포천더푸구이",
+      "meaning": "알고리즘의 간택이나 뜻밖의 화제 몰이로 특정 인물, 지역, 브랜드 등에 갑작스럽게 쏟아져 들어온 막대한 관심과 트래픽, 상업적 대박의 기회를 뜻합니다.",
+      "origin": "고전 문학에서 큰 부귀를 비유하던 표현으로, 최근 인터넷 라이브 방송과 지역 관광 붐에서 예상치 못한 대규모 관심과 기회가 한꺼번에 쏟아지는 현상을 묘사하면서 유행어로 정착했습니다.",
+      "example": "面对突然暴涨的网络流量，如何接住这泼天的富贵考验着当地的文旅服务能力。",
+      "example_ko": "갑자기 폭증한 인터넷 트래픽에 직면하여, 하늘이 내린 이 대박 기회를 어떻게 온전히 받아낼 것인가가 현지 관광 서비스 역량을 시험하고 있다.",
+      "source": "https://www.xinhuanet.com/politics/20240113/0912ee199a9646f8a495bc41054b1d26/c.html",
+      "reading": "pōtiān de fùguì",
+      "category": "사회 현상",
+      "past": [
+        {
+          "word": "锦鲤",
+          "meaning": "원래 잉어를 뜻하나 대규모 추첨 이벤트를 계기로 예기치 않은 엄청난 행운을 거머쥔 사람을 비유하며, 갑작스러운 대박과 행운을 상징한다는 점에서 유사합니다.",
+          "source": "https://www.12371.cn/2018/12/21/ARTI1545347261135495.shtml",
+          "pron_ko": "진리",
+          "reading": "jǐnlǐ",
+          "years": 10
+        },
+        {
+          "word": "暴发户",
+          "meaning": "단기간에 갑자기 큰 재산을 모은 벼락부자를 일컫는 말로, 뜻밖의 거대한 부를 일시에 맞이한 대상을 가리킨다는 맥락에서 통합니다.",
+          "source": "https://zh.wikipedia.org/zh-cn/%E6%9A%B4%E5%8F%91%E6%88%B7",
+          "pron_ko": "바오파후",
+          "reading": "bàofāhù",
+          "years": 20
+        }
+      ],
+      "related": [
+        {
+          "word": "人在家中坐，锅从天上来",
+          "meaning": "가만히 집에 앉아 있는데 하늘에서 억울한 누명이나 재앙이 떨어진다는 뜻으로, 아무것도 하지 않았는데 뜻밖의 거대한 행운이 쏟아지는 현상과 정반대의 처지를 나타냅니다.",
+          "source": "https://m.baike.com/wikiid/7368126302233002019",
+          "pron_ko": "런짜이자중쭤, 궈충톈상라이",
+          "reading": "rén zài jiā zhōng zuò, guō cóng tiān shàng lái",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-01"
     }
   ]
 }

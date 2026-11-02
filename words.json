@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "words": [
     {
       "word": "감다살",
@@ -1993,6 +1993,76 @@
       ],
       "enriched": true,
       "date": "2026-11-01"
+    },
+    {
+      "word": "행집욕부",
+      "meaning": "'행복에 집중하기 욕심 부리지 말기'의 줄임말로, 지나친 경쟁과 불안 속에서 스트레스를 덜어내고 일상의 소소한 행복을 먼저 챙기자는 긍정적인 자기 암시의 표현이다.",
+      "example": "오늘 업무 때문에 스트레스 받지 말고, 우리 행집욕부 하면서 맛있는 저녁이나 먹으러 가자.",
+      "origin": "인스타그램 크리에이터 '셍이'가 릴스 영상에서 리듬에 맞춰 박수를 치며 외친 긍정 구호 숏폼 콘텐츠에서 유래했다.",
+      "category": "줄임말",
+      "source": "https://maily.so/trendaword/posts/5xrxkw8qo2v",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "짜않투않",
+          "meaning": "'짜증 내지 않기 투덜대지 않기'의 줄임말로, 행집욕부와 함께 연이어 외치며 마음을 다잡을 때 쓰이는 표현이다.",
+          "source": "https://gogumafarm.kr/%ED%96%89%EC%A7%91%EC%9A%95%EB%B6%80-%EC%A7%9C%EC%95%8A%ED%88%AC%EC%95%8A-%EC%9D%B8%ED%94%8C%EB%A3%A8%EC%96%B8%EC%84%9C-%EC%85%8D%EC%9D%B4%EA%B0%80-%EB%82%98%EC%97%90%EA%B2%8C-%EC%A0%84%ED%95%98/"
+        },
+        {
+          "type": "반대 뜻",
+          "word": "이생망",
+          "meaning": "'이번 생은 망했다'의 줄임말로, 불만족스러운 현실을 자조하고 체념하는 태도를 담고 있어 삶의 만족을 찾으려는 행집욕부와 대조된다.",
+          "source": "https://www.careet.net/1456"
+        }
+      ],
+      "past": [
+        {
+          "word": "소확행",
+          "meaning": "'소소하지만 확실한 행복'의 줄임말로, 거창한 성취 대신 일상의 작은 기쁨에 집중하자는 취지에서 행집욕부와 지향점이 통한다.",
+          "source": "https://www.donga.com/news/Society/article/all/20190101/93519161/1",
+          "years": 10
+        },
+        {
+          "word": "웰빙",
+          "meaning": "물질적 성공만을 좇던 세태에서 벗어나 몸과 마음의 건강과 평온을 추구하자는 유행어로, 삶의 만족을 우선시하는 행집욕부와 유사하다.",
+          "source": "https://www.hangyo.com/news/article_print.html?no=47341",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-02"
+    },
+    {
+      "word": "농협은행",
+      "meaning": "상대방의 외모나 스타일, 사진 등을 보고 '너무 예쁘네요' 또는 '너무 예쁘다'라며 칭찬할 때 쓰는 표현입니다.",
+      "example": "오늘 올린 셀카 스타일링 진짜 농협은행이라서 나도 모르게 하트 눌렀잖아.",
+      "origin": "외국인이 서툰 발음으로 편의점 직원에게 '농협은행 어디예요?'라고 길을 물어보았으나 이를 '너무 예쁘네요'라는 고백으로 잘못 알아들었다는 사연에서 유래했습니다.",
+      "category": "SNS 표현",
+      "source": "https://www.chosun.com/kid/kid_literacy/kid_sisanews/2024/02/18/3ML6AQZGFVTOH675O7LKYV2EHU/",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "기업은행",
+          "meaning": "'귀엽네요'라는 말을 비슷한 발음의 은행 이름에 빗대어 상대방의 귀여운 모습을 칭찬할 때 쓰는 신조어입니다.",
+          "source": "https://www.news1.kr/finance/general-finance/5317129"
+        }
+      ],
+      "past": [
+        {
+          "word": "심쿵",
+          "meaning": "심장이 쿵 내려앉을 만큼 설렌다는 뜻으로, 매력적인 외모를 보고 반했을 때 감탄하는 반응이라는 점에서 비슷합니다.",
+          "source": "https://www.seoul.co.kr/news/society/2015/03/26/20150326002001",
+          "years": 10
+        },
+        {
+          "word": "얼짱",
+          "meaning": "얼굴이 아주 뛰어난 사람을 가리키는 말로, 돋보이는 외모를 칭찬하고 강조할 때 쓰였다는 점에서 비슷합니다.",
+          "source": "https://www.donga.com/news/amp/all/20060303/8280889/9",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-02"
     }
   ]
 }

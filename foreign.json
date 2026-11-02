@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -2039,6 +2039,115 @@
       ],
       "enriched": true,
       "date": "2026-11-01"
+    },
+    {
+      "lang": "en",
+      "word": "underconsumption core",
+      "pron_ko": "언더컨섬션 코어",
+      "meaning": "소셜 미디어에서 유행하는 대량 구매나 과소비를 거부하고, 이미 가진 물건을 끝까지 쓰거나 필요한 것만 사며 소박하게 살아가는 모습을 공유하는 라이프스타일 트렌드입니다.",
+      "origin": "과소 소비를 뜻하는 underconsumption에 특정 스타일이나 미학을 나타내는 접미사 -core가 결합되어 틱톡 등 SNS에서 유행하기 시작했습니다.",
+      "example": "I stopped buying new clothes every season and decided to embrace underconsumption core instead.",
+      "example_ko": "나는 매 시즌 새 옷을 사는 것을 멈추고 대신 언더컨섬션 코어를 실천하기로 했다.",
+      "source": "https://www.makeinfluence.com/en/academy/what-is-deinfluencing-and-what-does-it-mean-for-brand-strategy",
+      "category": "사회 현상",
+      "past": [
+        {
+          "word": "treat yo self",
+          "meaning": "자신을 위해 아낌없이 사치나 소비를 허용하던 유행어로, 절제를 강조하는 지금의 흐름과 대조적인 소비 심리를 대변했습니다.",
+          "source": "https://edspace.american.edu/atrium/portfolio-item/johnson-ellen-analyzing-treat-yo-self-in-parks-and-recreation-as-a-norm/",
+          "pron_ko": "트리트 요 셀프",
+          "years": 10
+        },
+        {
+          "word": "freeganism",
+          "meaning": "소비주의와 자본주의적 낭비에 저항해 버려진 음식을 수거하거나 물건을 재활용하며 살아가는 반소비주의 운동으로, 물질 만능주의를 거부한다는 점에서 유사합니다.",
+          "source": "https://en.wikipedia.org/wiki/Freeganism",
+          "pron_ko": "프리거니즘",
+          "years": 20
+        },
+        {
+          "word": "downshifting",
+          "meaning": "치열한 출세 경쟁과 과소비에서 벗어나 소득을 줄이더라도 삶의 여유와 단순함을 추구하던 경향으로, 덜 소유하고 검소하게 살아가려는 태도가 비슷합니다.",
+          "source": "https://www.workforce.com/news/downshifters-workers-are-scaling-back-are-you-ready",
+          "pron_ko": "다운시프팅",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "deinfluencing",
+          "meaning": "불필요한 제품이나 과대광고 상품을 구매하지 말라고 경고하는 SNS 흐름으로, 과소비에 저항하는 태도가 언더컨섬션 코어로 이어졌습니다.",
+          "source": "https://www.makeinfluence.com/en/academy/what-is-deinfluencing-and-what-does-it-mean-for-brand-strategy",
+          "pron_ko": "디인플루언싱",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-02"
+    },
+    {
+      "lang": "ja",
+      "word": "ギリハッピー",
+      "pron_ko": "기리핫피",
+      "meaning": "'아슬아슬하지만 행복하다(ギリギリハッピー)'의 줄임말로, 지각 직전이거나 돈이 부족한 난처하고 아슬아슬한 위기 속에서도 최악을 면했음에 감사하며 긍정적으로 웃어넘길 때 쓰는 표현이다.",
+      "origin": "5인조 힙합 그룹 코모레비(KOMOREBI)가 2024년 5월에 발표한 음원 'Giri Giri'의 후렴구 가사와 챌린지 안무가 숏폼 영상 플랫폼을 타고 확산되면서 유행하기 시작했다.",
+      "example": "電車に乗り遅れそうだったけど、ギリハッピーで間に合った！",
+      "example_ko": "전철을 놓칠 뻔했지만 아슬아슬하게 세이프해서 다행이야!",
+      "source": "https://slangverse.jp/giri-happy-original-source/",
+      "reading": "ぎりはっぴー",
+      "category": "SNS 표현",
+      "past": [
+        {
+          "word": "あげみざわ",
+          "meaning": "기분이나 텐션이 한껏 올라간 상태를 뜻하는 말로, 신나고 긍정적인 감정을 가볍게 표현한다는 점에서 ギリハッピー와 쓰임새가 닮았다.",
+          "source": "https://jimaru.net/japanese-slang/a-line/agemizawa/",
+          "pron_ko": "아게미자와",
+          "years": 10
+        },
+        {
+          "word": "アゲアゲ",
+          "meaning": "텐션이 최고조로 올라가 몹시 흥겨운 상태를 뜻하며, 대중가요 댄스와 함께 유행하며 긍정적인 흥과 에너지를 나눴다는 점에서 ギリハッピー와 통한다.",
+          "source": "https://kw-note.com/2008-shingo-ryukogo-taisho/",
+          "pron_ko": "아게아게",
+          "reading": "あげあげ",
+          "years": 20
+        },
+        {
+          "word": "チョベリグ",
+          "meaning": "'초 베리 굿(超 very good)'을 줄인 말로 아주 기분 좋고 훌륭한 상황을 뜻하며, 외래어를 재치 있게 축약해 긍정적 기분을 표출한다는 점에서 ギリハッピー와 유사하다.",
+          "source": "https://www.jiyu.co.jp/singo/index.php?eid=00013",
+          "pron_ko": "초베리구",
+          "reading": "ちょべりぐ",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "チョベリバ",
+          "meaning": "'초 베리 배드(超 very bad)'의 줄임말로 최악의 기분이나 곤경을 뜻하여, 긍정적인 위안을 나타내는 ギリハッピー의 반대 상황에 해당한다.",
+          "source": "https://ja.wikipedia.org/wiki/%E3%83%81%E3%83%A7%E3%83%99%E3%83%AA%E3%83%90",
+          "pron_ko": "초베리바",
+          "reading": "ちょべりば",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-02"
+    },
+    {
+      "lang": "zh",
+      "word": "水灵灵地",
+      "pron_ko": "수이링링디",
+      "meaning": "본래 싱싱하고 생기 넘치는 모양을 뜻하던 표현이 변형되어, 어떤 행동을 주저 없이 태연하고 거침없이 직행하거나 어이없는 상황을 유쾌하게 자조할 때 쓰는 말이다.",
+      "origin": "한국 아이돌 멤버의 인터뷰 번역 자막에 쓰인 어색하면서도 독특한 표현이 소셜미디어상에서 주목받으며 다양한 일상 행동에 붙여 쓰는 밈으로 확산되었다.",
+      "example": "我们今天水灵灵地把这个棘手的问题解决了。",
+      "example_ko": "우리는 오늘 아무렇지도 않게 거침없이 이 골치 아픈 문제를 해결했다.",
+      "source": "https://news.gmw.cn/2025-01/06/content_37778830.htm",
+      "reading": "shuǐ líng líng de",
+      "category": "SNS 표현",
+      "note": "본래 생기 있는 용모나 상태를 뜻하는 전통 형용사였으나, 인터넷에서는 동사 앞에 붙어 거침없는 행동이나 황당한 상황을 자조하는 부사어로 쓰이며 화자의 어조에 따라 다양한 뉘앙스를 띤다.",
+      "enriched": true,
+      "date": "2026-11-02"
     }
   ]
 }

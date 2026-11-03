@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "note": "날짜가 없는 항목은 기본 목록이고, 매일 자동으로 날짜가 붙은 새 단어가 추가됩니다.",
   "words": [
     {
@@ -2148,6 +2148,52 @@
       "note": "본래 생기 있는 용모나 상태를 뜻하는 전통 형용사였으나, 인터넷에서는 동사 앞에 붙어 거침없는 행동이나 황당한 상황을 자조하는 부사어로 쓰이며 화자의 어조에 따라 다양한 뉘앙스를 띤다.",
       "enriched": true,
       "date": "2026-11-02"
+    },
+    {
+      "lang": "en",
+      "word": "unc",
+      "pron_ko": "언크",
+      "meaning": "삼촌(uncle)의 줄임말로, 온라인과 일상에서 나이가 들어 최신 트렌드에 뒤처지거나 꼰대스러운 행동을 하는 사람을 가볍게 놀릴 때 쓰는 신조어입니다.",
+      "origin": "본래 흑인 영어에서 존경받는 나이 든 남성 멘토나 친족을 부르던 말이었으나, 틱톡 등 SNS에서 어린 세대가 20대 후반 이상의 기성세대를 장난스럽게 놀리는 밈으로 퍼져나갔습니다.",
+      "example": "He pulled a muscle while trying a TikTok dance, and now everyone in the chat is calling him unc.",
+      "example_ko": "그는 틱톡 댄스를 따라 하다 근육이 삐끗했고, 이제 채팅방의 모든 사람들이 그를 삼촌이라 부르고 있다.",
+      "source": "https://www.merriam-webster.com/slang/unc",
+      "category": "사람 유형",
+      "note": "맥락에 따라 조롱조가 아니라 인생 경험이 많은 연장자나 친근한 멘토를 부르는 애칭으로 쓰이기도 합니다.",
+      "past": [
+        {
+          "word": "OK boomer",
+          "meaning": "기성세대의 훈계나 시대착오적인 태도를 젊은 세대가 짧게 일축하며 조롱하던 표현으로, 세대 차이를 짚으며 상대를 낮춰 부른다는 점에서 비슷합니다.",
+          "source": "https://www.merriam-webster.com/slang/ok-boomer",
+          "pron_ko": "오케이 부머",
+          "years": 10
+        },
+        {
+          "word": "geezer",
+          "meaning": "나이 많고 괴팍하거나 별난 노인을 희화화하여 부르던 속어로, 젊은 층이 나이 든 인물에게 거리감을 두고 부를 때 쓰였다는 점이 유사합니다.",
+          "source": "https://www.merriam-webster.com/dictionary/geezer",
+          "pron_ko": "기저",
+          "years": 20
+        },
+        {
+          "word": "fossil",
+          "meaning": "사고방식이나 스타일이 몹시 낡고 시대에 뒤떨어진 기성세대를 화석에 빗대어 부르던 표현으로, 최신 유행에 둔감한 어른을 비꼬는 역할이 통합니다.",
+          "source": "https://www.merriam-webster.com/dictionary/fossil",
+          "pron_ko": "포슬",
+          "years": 30
+        }
+      ],
+      "related": [
+        {
+          "word": "whippersnapper",
+          "meaning": "어른들이 보기에 세상 물정 모르고 건방지게 구는 젊은이나 어린아이를 가리키는 말로, 나이 든 사람을 뜻하는 unc의 반대어입니다.",
+          "source": "https://www.merriam-webster.com/dictionary/whippersnapper",
+          "pron_ko": "위퍼스내퍼",
+          "type": "반대 뜻"
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-03"
     }
   ]
 }

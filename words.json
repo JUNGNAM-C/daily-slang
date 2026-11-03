@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "words": [
     {
       "word": "감다살",
@@ -2063,6 +2063,82 @@
       ],
       "enriched": true,
       "date": "2026-11-02"
+    },
+    {
+      "word": "밥플릭스",
+      "meaning": "'밥'과 온라인 동영상 서비스 '넷플릭스'를 합친 말로, 식사할 때 함께 곁들여 보는 영상 콘텐츠나 밥을 먹으며 영상을 즐기는 행위를 뜻한다.",
+      "example": "오늘 저녁에 라면 끓여 먹으면서 볼 만한 재밌는 밥플릭스 하나만 골라줘.",
+      "origin": "유튜브 콘텐츠에서 코미디언 문상훈이 유행할 신조어로 제안한 이후, 혼밥을 즐기는 청년층의 일상적인 식사 문화와 맞물리며 SNS와 미디어에서 널리 쓰이기 시작했다.",
+      "category": "줄임말",
+      "source": "https://doraemiph.tistory.com/entry/%EB%B0%A5%ED%94%8C%EB%A6%AD%EC%8A%A4-%EB%9C%BB-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%95%8C%EC%95%84%EB%B4%85%EC%8B%9C%EB%8B%A4",
+      "related": [
+        {
+          "type": "비슷한 뜻",
+          "word": "밥친구",
+          "meaning": "혼자 식사할 때 적적함을 달래기 위해 틀어두는 가볍고 친근한 영상 콘텐츠를 뜻한다.",
+          "source": "https://weekly.donga.com/culture/article/all/11/5473480/1"
+        }
+      ],
+      "past": [
+        {
+          "word": "혼밥",
+          "meaning": "혼자 밥을 먹는 행위나 사람을 뜻하며, 1인 가구의 식사 문화를 대변하며 밥플릭스가 생겨난 토대가 되었다.",
+          "source": "https://doraemiph.tistory.com/entry/%EB%B0%A5%ED%94%8C%EB%A6%AD%EC%8A%A4-%EB%9C%BB-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%95%8C%EC%95%84%EB%B4%85%EC%8B%9C%EB%8B%A4",
+          "years": 10
+        },
+        {
+          "word": "혼자놀기",
+          "meaning": "타인의 시선을 신경 쓰지 않고 혼자 여가를 즐기는 문화로, 화면을 보며 홀로 식사하는 라이프스타일의 초기적 형태를 보여준다.",
+          "source": "https://doraemiph.tistory.com/entry/%EB%B0%A5%ED%94%8C%EB%A6%AD%EC%8A%A4-%EB%9C%BB-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%95%8C%EC%95%84%EB%B4%85%EC%8B%9C%EB%8B%A4",
+          "years": 20
+        },
+        {
+          "word": "식구",
+          "meaning": "한집에서 끼니를 함께하는 사람들을 뜻하며, 디지털 화면을 보며 홀로 식사하는 밥플릭스와 정반대되는 대면 밥상 공동체를 상징한다.",
+          "source": "https://doraemiph.tistory.com/entry/%EB%B0%A5%ED%94%8C%EB%A6%AD%EC%8A%A4-%EB%9C%BB-%EB%AC%B4%EC%97%87%EC%9D%B8%EC%A7%80-%EC%95%8C%EC%95%84%EB%B4%85%EC%8B%9C%EB%8B%A4",
+          "years": 30
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-03"
+    },
+    {
+      "word": "막나귀",
+      "meaning": "외출할 준비를 마쳤거나 약속 시간이 다가왔을 때 갑자기 집 밖으로 나가기 싫어지는 심리 상태를 뜻한다.",
+      "example": "옷 다 입고 신발 신으려니까 갑자기 막나귀 와서 침대에 도로 누웠어.",
+      "origin": "'막상 나가려니 귀찮다'라는 문장의 각 단어 앞 글자를 따서 동물 당나귀처럼 장난스럽게 부른 데서 유래했다.",
+      "category": "줄임말",
+      "source": "https://v.daum.net/v/6fZVmGHlLI",
+      "related": [
+        {
+          "type": "비슷한 구성",
+          "word": "내또출",
+          "meaning": "'내일 또 출근한다'라는 말을 머리글자만 모아 줄인 표현이다.",
+          "source": "https://thestarfriends.tistory.com/entry/MZ%EC%84%B8%EB%8C%80-%EC%8B%A0%EC%A1%B0%EC%96%B4-%EC%A0%95%EB%A6%AC-2025%EB%85%84-%ED%8A%B8%EB%A0%8C%EB%93%9C-%EA%B0%80%EC%9D%B4%EB%93%9C"
+        },
+        {
+          "type": "비슷한 구성",
+          "word": "스불재",
+          "meaning": "'스스로 불러온 재앙'의 줄임말로 자신이 직접 벌인 일이나 잡은 약속 때문에 곤란해하는 상황을 가리킨다.",
+          "source": "https://thestarfriends.tistory.com/entry/MZ%EC%84%B8%EB%8C%80-%EC%8B%A0%EC%A1%B0%EC%96%B4-%EC%A0%95%EB%A6%AC-2025%EB%85%84-%ED%8A%B8%EB%A0%8C%EB%93%9C-%EA%B0%80%EC%9D%B4%EB%93%9C"
+        }
+      ],
+      "past": [
+        {
+          "word": "이불 밖은 위험해",
+          "meaning": "따뜻하고 아늑한 집이나 이불 밖으로 나가기를 꺼리는 심리를 유머러스하게 표현했다는 점에서 막나귀와 통한다.",
+          "source": "https://biz.heraldcorp.com/article/794366",
+          "years": 10
+        },
+        {
+          "word": "귀차니즘",
+          "meaning": "만사를 번거롭게 여기고 움직이기 싫어하는 태도를 사상처럼 명명한 말로, 외출 직전에 게으름을 느끼는 막나귀의 원조 격 표현이다.",
+          "source": "https://biz.heraldcorp.com/article/794366",
+          "years": 20
+        }
+      ],
+      "enriched": true,
+      "date": "2026-11-03"
     }
   ]
 }
